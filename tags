@@ -31,7 +31,6 @@ ALPHA_XOR_PREMUL	include/opencv2/gpu/gpu.hpp	/^       ALPHA_ATOP_PREMUL, ALPHA_X
 ANGLE_ROW	include/opencv2/gpu/gpu.hpp	/^        ANGLE_ROW,$/;"	e	enum:cv::gpu::ORB_GPU::__anon231
 ANGLE_ROW	include/opencv2/gpu/gpu.hpp	/^        ANGLE_ROW,$/;"	e	enum:cv::gpu::SURF_GPU::KeypointLayout
 ANN_MLP_TrainParams	include/opencv2/ml/ml.hpp	/^typedef CvANN_MLP_TrainParams ANN_MLP_TrainParams;$/;"	t	namespace:cv
-APPLICATION_H	check_cli/camara_get.h	2;"	d
 AR	Makefile	/^AR            = ar cqs$/;"	m
 AR	check_cli/Makefile	/^AR            = ar cqs$/;"	m
 ARRAY_BUFFER	include/opencv2/core/opengl_interop.hpp	/^        ARRAY_BUFFER = 0x8892,  \/\/ buffer will use for OpenGL arrays (vertices, colors, normals, etc)$/;"	e	enum:cv::GlBuffer::Usage
@@ -122,8 +121,6 @@ Allocator	include/opencv2/core/core.hpp	/^template<typename _Tp> class CV_EXPORT
 AlmostEquals	include/opencv2/ts/ts_gtest.h	/^  bool AlmostEquals(const FloatingPoint& rhs) const {$/;"	f	class:testing::internal::FloatingPoint
 AlwaysFalse	include/opencv2/ts/ts_gtest.h	/^inline bool AlwaysFalse() { return !AlwaysTrue(); }$/;"	f	namespace:testing::internal
 AppendMessage	include/opencv2/ts/ts_gtest.h	/^  void AppendMessage(const Message& a_message) {$/;"	f	class:testing::AssertionResult
-ApplicationWindow	check_cli/camara_get.cpp	/^ApplicationWindow::ApplicationWindow()$/;"	f	class:ApplicationWindow
-ApplicationWindow	check_cli/camara_get.h	/^class ApplicationWindow: public QMainWindow$/;"	c
 AreaFilter	include/opencv2/gpu/device/filters.hpp	/^        explicit __host__ __device__ __forceinline__ AreaFilter(const Ptr2D& src_, float scale_x_, float scale_y_)$/;"	f	struct:cv::gpu::device::AreaFilter
 AreaFilter	include/opencv2/gpu/device/filters.hpp	/^    template <typename Ptr2D> struct AreaFilter$/;"	s	namespace:cv::gpu::device
 ArrayAwareFind	include/opencv2/ts/ts_gtest.h	/^Iter ArrayAwareFind(Iter begin, Iter end, const Element& elem) {$/;"	f	namespace:testing::internal
@@ -154,6 +151,10 @@ AtEnd	include/opencv2/ts/ts_gtest.h	/^    bool AtEnd() const {$/;"	f	class:testi
 AtEnd	include/opencv2/ts/ts_gtest.h	/^    bool AtEnd() const {$/;"	f	class:testing::internal::CartesianProductGenerator9::Iterator
 AutoBuffer	include/opencv2/core/operations.hpp	/^template<typename _Tp, size_t fixed_size> inline AutoBuffer<_Tp, fixed_size>::AutoBuffer()$/;"	f	class:cv::AutoBuffer
 AutoBuffer	include/opencv2/core/operations.hpp	/^template<typename _Tp, size_t fixed_size> inline AutoBuffer<_Tp, fixed_size>::AutoBuffer(size_t _size)$/;"	f	class:cv::AutoBuffer
+AutoType	Modules/Net/autotype.h	/^AutoType::AutoType(const AutoType& at)$/;"	f	class:AutoType
+AutoType	Modules/Net/autotype.h	/^AutoType::AutoType(const char* str)$/;"	f	class:AutoType
+AutoType	Modules/Net/autotype.h	/^AutoType::AutoType(long num)$/;"	f	class:AutoType
+AutoType	Modules/Net/autotype.h	/^class AutoType {$/;"	c
 AutotunedIndex	include/opencv2/flann/autotuned_index.h	/^    AutotunedIndex(const Matrix<ElementType>& inputData, const IndexParams& params = AutotunedIndexParams(), Distance d = Distance()) :$/;"	f	class:cvflann::AutotunedIndex
 AutotunedIndex	include/opencv2/flann/autotuned_index.h	/^class AutotunedIndex : public NNIndex<Distance>$/;"	c	namespace:cvflann
 AutotunedIndexParams	include/opencv2/flann/autotuned_index.h	/^    AutotunedIndexParams(float target_precision = 0.8, float build_weight = 0.01, float memory_weight = 0, float sample_fraction = 0.1)$/;"	f	struct:cvflann::AutotunedIndexParams
@@ -381,7 +382,6 @@ CALIB_SAME_FOCAL_LENGTH	include/opencv2/calib3d/calib3d.hpp	/^    CALIB_SAME_FOC
 CALIB_USE_INTRINSIC_GUESS	include/opencv2/calib3d/calib3d.hpp	/^    CALIB_USE_INTRINSIC_GUESS = CV_CALIB_USE_INTRINSIC_GUESS,$/;"	e	enum:cv::__anon306
 CALIB_ZERO_DISPARITY	include/opencv2/calib3d/calib3d.hpp	/^    CALIB_ZERO_DISPARITY = CV_CALIB_ZERO_DISPARITY$/;"	e	enum:cv::__anon306
 CALIB_ZERO_TANGENT_DIST	include/opencv2/calib3d/calib3d.hpp	/^    CALIB_ZERO_TANGENT_DIST = CV_CALIB_ZERO_TANGENT_DIST,$/;"	e	enum:cv::__anon306
-CAMARA_GETZ16296_H	check_cli/ui_camara_get.h	11;"	d
 CASCADE_DO_CANNY_PRUNING	include/opencv2/objdetect/objdetect.hpp	/^    CASCADE_DO_CANNY_PRUNING=1,$/;"	e	enum:cv::__anon280
 CASCADE_DO_ROUGH_SEARCH	include/opencv2/objdetect/objdetect.hpp	/^    CASCADE_DO_ROUGH_SEARCH=8$/;"	e	enum:cv::__anon280
 CASCADE_FIND_BIGGEST_OBJECT	include/opencv2/objdetect/objdetect.hpp	/^    CASCADE_FIND_BIGGEST_OBJECT=4,$/;"	e	enum:cv::__anon280
@@ -392,7 +392,7 @@ CENTERS_GONZALES	include/opencv2/flann/defines.h	/^    CENTERS_GONZALES = 1,$/;"
 CENTERS_KMEANSPP	include/opencv2/flann/defines.h	/^    CENTERS_KMEANSPP = 2$/;"	e	enum:cvflann::flann_centers_init_t
 CENTERS_RANDOM	include/opencv2/flann/defines.h	/^    CENTERS_RANDOM = 0,$/;"	e	enum:cvflann::flann_centers_init_t
 CFLAGS	Makefile	/^CFLAGS        = -m64 -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
-CFLAGS	check_cli/Makefile	/^CFLAGS        = -m64 -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CFLAGS	check_cli/Makefile	/^CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
 CHAIN_APPROX_NONE	include/opencv2/imgproc/imgproc.hpp	/^    CHAIN_APPROX_NONE=CV_CHAIN_APPROX_NONE,$/;"	e	enum:cv::__anon50
 CHAIN_APPROX_SIMPLE	include/opencv2/imgproc/imgproc.hpp	/^    CHAIN_APPROX_SIMPLE=CV_CHAIN_APPROX_SIMPLE,$/;"	e	enum:cv::__anon50
 CHAIN_APPROX_TC89_KCOS	include/opencv2/imgproc/imgproc.hpp	/^    CHAIN_APPROX_TC89_KCOS=CV_CHAIN_APPROX_TC89_KCOS$/;"	e	enum:cv::__anon50
@@ -2003,7 +2003,7 @@ CV_mRGBA2RGBA	include/opencv2/imgproc/types_c.h	/^    CV_mRGBA2RGBA = 126,$/;"	e
 CXX	Makefile	/^CXX           = g++$/;"	m
 CXX	check_cli/Makefile	/^CXX           = g++$/;"	m
 CXXFLAGS	Makefile	/^CXXFLAGS      = -m64 -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
-CXXFLAGS	check_cli/Makefile	/^CXXFLAGS      = -m64 -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CXXFLAGS	check_cli/Makefile	/^CXXFLAGS      = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
 CYCLE_O	include/opencv2/contrib/contrib.hpp	/^        enum {CYCLE_O, CYCLE_V};$/;"	e	enum:cv::StereoVar::__anon296
 CYCLE_V	include/opencv2/contrib/contrib.hpp	/^        enum {CYCLE_O, CYCLE_V};$/;"	e	enum:cv::StereoVar::__anon296
 C_SVC	include/opencv2/ml/ml.hpp	/^    enum { C_SVC=100, NU_SVC=101, ONE_CLASS=102, EPS_SVR=103, NU_SVR=104 };$/;"	e	enum:CvSVM::__anon87
@@ -2664,7 +2664,7 @@ DEL_FILE	check_cli/Makefile	/^DEL_FILE      = rm -f$/;"	m
 DESCR_FORMAT_COL_BY_COL	include/opencv2/gpu/gpu.hpp	/^    enum { DESCR_FORMAT_ROW_BY_ROW, DESCR_FORMAT_COL_BY_COL };$/;"	e	enum:cv::gpu::HOGDescriptor::__anon229
 DESCR_FORMAT_ROW_BY_ROW	include/opencv2/gpu/gpu.hpp	/^    enum { DESCR_FORMAT_ROW_BY_ROW, DESCR_FORMAT_COL_BY_COL };$/;"	e	enum:cv::gpu::HOGDescriptor::__anon229
 DESTDIR	Makefile	/^DESTDIR       = $/;"	m
-DESTDIR	check_cli/Makefile	/^DESTDIR       = $/;"	m
+DESTDIR	check_cli/Makefile	/^DESTDIR       = bin\/$/;"	m
 DEVIANCE_LOSS	include/opencv2/ml/ml.hpp	/^    enum {SQUARED_LOSS=0, ABSOLUTE_LOSS, HUBER_LOSS=3, DEVIANCE_LOSS};$/;"	e	enum:CvGBTrees::__anon97
 DFT_COMPLEX_OUTPUT	include/opencv2/core/core.hpp	/^enum { DFT_INVERSE=1, DFT_SCALE=2, DFT_ROWS=4, DFT_COMPLEX_OUTPUT=16, DFT_REAL_OUTPUT=32,$/;"	e	enum:cv::__anon6
 DFT_INVERSE	include/opencv2/core/core.hpp	/^enum { DFT_INVERSE=1, DFT_SCALE=2, DFT_ROWS=4, DFT_COMPLEX_OUTPUT=16, DFT_REAL_OUTPUT=32,$/;"	e	enum:cv::__anon6
@@ -3614,7 +3614,7 @@ HSV2RGB	include/opencv2/gpu/device/detail/color_detail.hpp	/^        template <t
 HSV2RGBConvert	include/opencv2/gpu/device/detail/color_detail.hpp	/^        template <int bidx, int HR, typename T> static __device__ void HSV2RGBConvert(const T& src, uchar* dst)$/;"	f	namespace:cv::gpu::device::color_detail
 HSV2RGBConvert	include/opencv2/gpu/device/detail/color_detail.hpp	/^        template <int bidx, int hr, typename T> static __device__ void HSV2RGBConvert(const T& src, float* dst)$/;"	f	namespace:cv::gpu::device::color_detail
 HSV2RGBConvert	include/opencv2/gpu/device/detail/color_detail.hpp	/^        template <int bidx, int hr> static __device__ uint HSV2RGBConvert(uint src)$/;"	f	namespace:cv::gpu::device::color_detail
-HTML_LOG	Modules/Log/log.h	22;"	d
+HTML_LOG	Modules/Log/log.h	/^const char HTML_LOG =  1;     \/\/输出为html格式$/;"	v
 HUBER_LOSS	include/opencv2/ml/ml.hpp	/^    enum {SQUARED_LOSS=0, ABSOLUTE_LOSS, HUBER_LOSS=3, DEVIANCE_LOSS};$/;"	e	enum:CvGBTrees::__anon97
 Hamming	include/opencv2/features2d/features2d.hpp	/^struct CV_EXPORTS Hamming$/;"	s	namespace:cv
 Hamming	include/opencv2/flann/dist.h	/^struct Hamming$/;"	s	namespace:cvflann
@@ -3781,7 +3781,7 @@ IMatch	include/opencv2/contrib/openfabmap.hpp	/^struct CV_EXPORTS IMatch {$/;"	s
 IMotionStabilizer	include/opencv2/videostab/motion_stabilizing.hpp	/^class CV_EXPORTS IMotionStabilizer$/;"	c	namespace:cv::videostab
 INCLUSIVE	include/opencv2/gpu/device/scan.hpp	/^    enum ScanKind { EXCLUSIVE = 0,  INCLUSIVE = 1 };$/;"	e	enum:cv::gpu::device::ScanKind
 INCPATH	Makefile	/^INCPATH       = -I\/usr\/share\/qt4\/mkspecs\/linux-g++-64 -I. -I\/usr\/include\/qt4\/QtCore -I\/usr\/include\/qt4\/QtGui -I\/usr\/include\/qt4 -I. -I.$/;"	m
-INCPATH	check_cli/Makefile	/^INCPATH       = -I\/usr\/share\/qt4\/mkspecs\/linux-g++-64 -I. -I\/usr\/include\/qt4\/QtCore -I\/usr\/include\/qt4\/QtGui -I\/usr\/include\/qt4 -I. -I..\/include -I.$/;"	m
+INCPATH	check_cli/Makefile	/^INCPATH       = -I\/usr\/share\/qt4\/mkspecs\/linux-g++ -I. -I\/usr\/include\/qt4\/QtCore -I\/usr\/include\/qt4\/QtGui -I\/usr\/include\/qt4 -I..\/include\/opencv -Ibuild -Ibuild$/;"	m
 INPAINT_NS	include/opencv2/photo/photo.hpp	/^    INPAINT_NS=CV_INPAINT_NS, \/\/ Navier-Stokes algorithm$/;"	e	enum:cv::__anon311
 INPAINT_TELEA	include/opencv2/photo/photo.hpp	/^    INPAINT_TELEA=CV_INPAINT_TELEA \/\/ A. Telea algorithm$/;"	e	enum:cv::__anon311
 INPUT	include/opencv2/ts/ts.hpp	/^    enum { INPUT, INPUT_OUTPUT, OUTPUT, REF_INPUT_OUTPUT, REF_OUTPUT, TEMP, MASK, MAX_ARR };$/;"	e	enum:cvtest::ArrayTest::__anon78
@@ -4095,9 +4095,9 @@ LDA	include/opencv2/contrib/contrib.hpp	/^        LDA(int num_components = 0) :$
 LDA	include/opencv2/contrib/contrib.hpp	/^    class CV_EXPORTS LDA$/;"	c	namespace:cv
 LDetector	include/opencv2/legacy/legacy.hpp	/^class CV_EXPORTS LDetector$/;"	c	namespace:cv
 LFLAGS	Makefile	/^LFLAGS        = -m64 -Wl,-O1$/;"	m
-LFLAGS	check_cli/Makefile	/^LFLAGS        = -m64 -Wl,-O1$/;"	m
+LFLAGS	check_cli/Makefile	/^LFLAGS        = -Wl,-O1$/;"	m
 LIBS	Makefile	/^LIBS          = $(SUBLIBS)  -L\/usr\/lib\/x86_64-linux-gnu -lQtGui -lQtCore -lpthread $/;"	m
-LIBS	check_cli/Makefile	/^LIBS          = $(SUBLIBS)  -L\/usr\/lib\/x86_64-linux-gnu ..\/lib\/libopencv_calib3d.so ..\/lib\/libopencv_contrib.so ..\/lib\/libopencv_core.so ..\/lib\/libopencv_features2d.so ..\/lib\/libopencv_flann.so ..\/lib\/libopencv_gpu.so.2.3 ..\/lib\/libopencv_highgui.so ..\/lib\/libopencv_imgproc.so ..\/lib\/libopencv_legacy.so ..\/lib\/libopencv_ml.so ..\/lib\/libopencv_objdetect.so ..\/lib\/libopencv_video.so -lQtGui -lQtCore -lpthread $/;"	m
+LIBS	check_cli/Makefile	/^LIBS          = $(SUBLIBS)  -L\/usr\/lib\/x86_64-linux-gnu ..\/lib\/libopencv_calib3d.so ..\/lib\/libopencv_contrib.so ..\/lib\/libopencv_core.so ..\/lib\/libopencv_features2d.so ..\/lib\/libopencv_flann.so ..\/lib\/libopencv_highgui.so ..\/lib\/libopencv_imgproc.so ..\/lib\/libopencv_legacy.so ..\/lib\/libopencv_ml.so ..\/lib\/libopencv_objdetect.so ..\/lib\/libopencv_video.so -lQtGui -lQtCore -lpthread $/;"	m
 LINEAR	include/opencv2/flann/defines.h	/^    LINEAR = 0,$/;"	e	enum:cvflann::flann_algorithm_t
 LINEAR	include/opencv2/ml/ml.hpp	/^    enum { LINEAR=0, POLY=1, RBF=2, SIGMOID=3 };$/;"	e	enum:CvSVM::__anon88
 LINEAR_SIMILARITY	include/opencv2/videostab/global_motion.hpp	/^    LINEAR_SIMILARITY = 2,$/;"	e	enum:cv::videostab::MotionModel
@@ -4153,7 +4153,7 @@ Load	include/opencv2/gpu/device/datamov_utils.hpp	/^            __device__ __for
 Load	include/opencv2/legacy/blobtrack.hpp	/^    virtual void Load(CvFileStorage* fs, CvFileNode* node)$/;"	f	class:CvBlobSeq
 Lock	include/opencv2/ts/ts_gtest.h	/^  void Lock() {$/;"	f	class:std::tr1::MutexBase
 Lock	include/opencv2/ts/ts_gtest.h	/^  void Lock() {}$/;"	f	class:std::tr1::Mutex
-Log	Modules/Log/log.h	/^Log::Log(const char *funcName, int level)$/;"	f	class:Log
+Log	Modules/Log/log.h	/^Log::Log(const char *fileName, int line, const char *funcName, int logLevel)$/;"	f	class:Log
 Log	Modules/Log/log.h	/^class Log$/;"	c
 LogPolar_Adjacent	include/opencv2/contrib/contrib.hpp	/^        LogPolar_Adjacent() {}$/;"	f	class:cv::LogPolar_Adjacent
 LogPolar_Adjacent	include/opencv2/contrib/contrib.hpp	/^    class CV_EXPORTS LogPolar_Adjacent$/;"	c	namespace:cv
@@ -4452,9 +4452,9 @@ NullFrameSource	include/opencv2/videostab/frame_source.hpp	/^class CV_EXPORTS Nu
 NullInpainter	include/opencv2/videostab/inpainting.hpp	/^class CV_EXPORTS NullInpainter : public InpainterBase$/;"	c	namespace:cv::videostab
 NullLog	include/opencv2/videostab/log.hpp	/^class CV_EXPORTS NullLog : public ILog$/;"	c	namespace:cv::videostab
 OBJECTS	Makefile	/^OBJECTS       = QtHello.o$/;"	m
-OBJECTS	check_cli/Makefile	/^OBJECTS       = camara_get.o \\$/;"	m
+OBJECTS	check_cli/Makefile	/^OBJECTS       = build\/mainwindowimpl.o \\$/;"	m
 OBJECTS_DIR	Makefile	/^OBJECTS_DIR   = .\/$/;"	m
-OBJECTS_DIR	check_cli/Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+OBJECTS_DIR	check_cli/Makefile	/^OBJECTS_DIR   = build\/$/;"	m
 OCTAVE_ROW	include/opencv2/gpu/gpu.hpp	/^        OCTAVE_ROW,$/;"	e	enum:cv::gpu::ORB_GPU::__anon231
 OCTAVE_ROW	include/opencv2/gpu/gpu.hpp	/^        OCTAVE_ROW,$/;"	e	enum:cv::gpu::SURF_GPU::KeypointLayout
 OK	include/opencv2/stitching/stitcher.hpp	/^    enum Status { OK, ERR_NEED_MORE_IMGS };$/;"	e	enum:cv::Stitcher::Status
@@ -4801,6 +4801,8 @@ PriorErrorCovariance	include/opencv2/video/tracking.hpp	/^    float* PriorErrorC
 PriorState	include/opencv2/video/tracking.hpp	/^    float* PriorState;          \/* =state_post->data.fl *\/$/;"	m	struct:CvKalman
 ProfileLevel	include/opencv2/gpu/gpu.hpp	/^        int       ProfileLevel;    \/\/    NVVE_PROFILE_LEVEL,$/;"	m	struct:cv::gpu::VideoWriter_GPU::EncoderParams
 ProjectorBase	include/opencv2/stitching/detail/warpers.hpp	/^struct CV_EXPORTS ProjectorBase$/;"	s	namespace:cv::detail
+Prot	Modules/Net/prot.h	/^Prot::Prot(const char* protName)$/;"	f	class:Prot
+Prot	Modules/Net/prot.h	/^class Prot$/;"	c
 PsGd	include/opencv2/contrib/openfabmap.hpp	/^    double PsGd;$/;"	m	class:cv::of2::FabMapFBO
 Ptr	include/opencv2/core/operations.hpp	/^template<typename _Tp> inline Ptr<_Tp>::Ptr() : obj(0), refcount(0) {}$/;"	f	class:cv::Ptr
 Ptr	include/opencv2/core/operations.hpp	/^template<typename _Tp> inline Ptr<_Tp>::Ptr(_Tp* _obj) : obj(_obj)$/;"	f	class:cv::Ptr
@@ -4844,7 +4846,7 @@ PzGL	include/opencv2/contrib/openfabmap.hpp	/^    double (FabMap::*PzGL)(int q, 
 PzGNe	include/opencv2/contrib/openfabmap.hpp	/^    double PzGNe;$/;"	m	class:cv::of2::FabMap
 PzGe	include/opencv2/contrib/openfabmap.hpp	/^    double PzGe;$/;"	m	class:cv::of2::FabMap
 QMAKE	Makefile	/^QMAKE         = \/usr\/bin\/qmake$/;"	m
-QMAKE	check_cli/Makefile	/^QMAKE         = \/usr\/bin\/qmake$/;"	m
+QMAKE	check_cli/Makefile	/^QMAKE         = \/usr\/bin\/qmake-qt4$/;"	m
 QMAKE_TARGET	Makefile	/^QMAKE_TARGET  = qt$/;"	m
 QMAKE_TARGET	check_cli/Makefile	/^QMAKE_TARGET  = check_cli$/;"	m
 QP_Level_InterB	include/opencv2/gpu/gpu.hpp	/^        int       QP_Level_InterB; \/\/    NVVE_QP_LEVEL_INTER_B,$/;"	m	struct:cv::gpu::VideoWriter_GPU::EncoderParams
@@ -5075,6 +5077,10 @@ S	include/opencv2/contrib/contrib.hpp	/^        CvMat* S; \/\/big matrix of bloc
 S	include/opencv2/contrib/contrib.hpp	/^        int S, R, M, N, ind1;$/;"	m	class:cv::LogPolar_Overlapping
 S	include/opencv2/contrib/contrib.hpp	/^        int S, R, M, N;$/;"	m	class:cv::LogPolar_Adjacent
 S	include/opencv2/contrib/contrib.hpp	/^        int S, R, M, N;$/;"	m	class:cv::LogPolar_Interp
+S2A	Modules/Net/prot.h	/^typedef std::map<String, AutoType, StrCmp>     S2A;$/;"	t
+S2AIter	Modules/Net/prot.h	/^typedef S2A::iterator                          S2AIter;$/;"	t
+S2M	Modules/Net/prot.h	/^typedef std::map<String, S2A, StrCmp>          S2M;$/;"	t
+S2MIter	Modules/Net/prot.h	/^typedef S2M::iterator                          S2MIter;$/;"	t
 SADWindowSize	include/opencv2/calib3d/calib3d.hpp	/^    CV_PROP_RW int SADWindowSize;$/;"	m	class:cv::StereoSGBM
 SADWindowSize	include/opencv2/calib3d/calib3d.hpp	/^    int SADWindowSize; \/\/ ~5x5..21x21$/;"	m	struct:CvStereoBMState
 SAMPLED	include/opencv2/contrib/openfabmap.hpp	/^        SAMPLED = 2,$/;"	e	enum:cv::of2::FabMap::__anon288
@@ -5107,7 +5113,7 @@ SL2	include/opencv2/features2d/features2d.hpp	/^struct CV_EXPORTS SL2$/;"	s	name
 SMALL_POLICY	include/opencv2/flann/any.h	135;"	d
 SMALL_POLICY	include/opencv2/flann/any.h	151;"	d
 SOURCES	Makefile	/^SOURCES       = QtHello.cpp $/;"	m
-SOURCES	check_cli/Makefile	/^SOURCES       = camara_get.cpp moc_camara_get.cpp$/;"	m
+SOURCES	check_cli/Makefile	/^SOURCES       = src\/mainwindowimpl.cpp \\$/;"	m
 SQERR	include/opencv2/ml/ml.hpp	/^    enum { DEFAULT=0, GINI=1, MISCLASS=3, SQERR=4 };$/;"	e	enum:CvBoost::__anon96
 SQUARED_LOSS	include/opencv2/ml/ml.hpp	/^    enum {SQUARED_LOSS=0, ABSOLUTE_LOSS, HUBER_LOSS=3, DEVIANCE_LOSS};$/;"	e	enum:CvGBTrees::__anon97
 STARTED	include/opencv2/calib3d/calib3d.hpp	/^    enum { DONE=0, STARTED=1, CALC_J=2, CHECK_ERR=3 };$/;"	e	enum:CvLevMarq::__anon301
@@ -5292,6 +5298,7 @@ Stitcher	include/opencv2/stitching/stitcher.hpp	/^    Stitcher() {}$/;"	f	class:
 Stitcher	include/opencv2/stitching/stitcher.hpp	/^class CV_EXPORTS Stitcher$/;"	c	namespace:cv
 Str	include/opencv2/legacy/blobtrack.hpp	/^    char*               Str;$/;"	m	struct:CvDefParam
 StrCaseCmp	include/opencv2/ts/ts_gtest.h	/^inline int StrCaseCmp(const char* s1, const char* s2) {$/;"	f	namespace:std::tr1::posix
+StrCmp	Modules/Net/prot.h	/^class StrCmp:std::greater<String>$/;"	c
 StrDup	include/opencv2/ts/ts_gtest.h	/^inline char* StrDup(const char* src) { return _strdup(src); }$/;"	f	namespace:std::tr1::posix
 StrDup	include/opencv2/ts/ts_gtest.h	/^inline char* StrDup(const char* src) { return strdup(src); }$/;"	f	namespace:std::tr1::posix
 StrError	include/opencv2/ts/ts_gtest.h	/^inline const char* StrError(int errnum) { return strerror(errnum); }$/;"	f	namespace:std::tr1::posix
@@ -5301,6 +5308,9 @@ StreamAccessor	include/opencv2/gpu/stream_accessor.hpp	/^        struct StreamAc
 StreamHelper	include/opencv2/ts/ts_gtest.h	/^  inline void StreamHelper(internal::false_type \/*dummy*\/, const T& value) {$/;"	f	class:testing::Message
 StreamHelper	include/opencv2/ts/ts_gtest.h	/^  inline void StreamHelper(internal::true_type \/*dummy*\/, T* pointer) {$/;"	f	class:testing::Message
 StreamableToString	include/opencv2/ts/ts_gtest.h	/^String StreamableToString(const T& streamable) {$/;"	f	namespace:testing::internal
+String	Modules/Net/String.h	/^String::String(const String &s)$/;"	f	class:String
+String	Modules/Net/String.h	/^String::String(const char *s)$/;"	f	class:String
+String	Modules/Net/String.h	/^class String$/;"	c
 String	include/opencv2/core/core.hpp	/^typedef std::string String;$/;"	t	namespace:cv
 String	include/opencv2/ts/ts_gtest.h	/^  String() : c_str_(NULL), length_(0) {}$/;"	f	class:testing::internal::String
 String	include/opencv2/ts/ts_gtest.h	/^  String(const ::std::string& str) {  \/\/ NOLINT$/;"	f	class:testing::internal::String
@@ -5325,11 +5335,14 @@ T	include/opencv2/ts/ts_gtest.h	/^  static void Print(const T (&value)[N], ::std
 T	include/opencv2/ts/ts_gtest.h	/^inline bool ArrayEq(const T(&lhs)[N], const U(&rhs)[N]) {$/;"	m	namespace:testing::internal
 T	include/opencv2/ts/ts_gtest.h	/^inline void CopyArray(const T(&from)[N], U(*to)[N]) {$/;"	m	namespace:testing::internal
 T	include/opencv2/ts/ts_gtest.h	/^internal::ParamGenerator<T> ValuesIn(const T (&array)[N]);$/;"	m	namespace:testing
+T1	Modules/Net/prot.cpp	/^static const char T1 = 0xF1; \/\/ 正,8位$/;"	v	file:
+T2	Modules/Net/prot.cpp	/^static const char T2 = 0xF2; \/\/ 正,16位$/;"	v	file:
+T3	Modules/Net/prot.cpp	/^static const char T3 = 0xF4; \/\/ 正,32位$/;"	v	file:
 TAG_MASK	include/opencv2/gpu/device/emulation.hpp	/^            enum { TAG_MASK = (1U << ( (sizeof(unsigned int) << 3) - 5U)) - 1U };$/;"	e	enum:cv::gpu::device::Emulation::smem::__anon212
 TAR	Makefile	/^TAR           = tar -cf$/;"	m
 TAR	check_cli/Makefile	/^TAR           = tar -cf$/;"	m
 TARGET	Makefile	/^TARGET        = qt$/;"	m
-TARGET	check_cli/Makefile	/^TARGET        = check_cli$/;"	m
+TARGET	check_cli/Makefile	/^TARGET        = bin\/check_cli$/;"	m
 TEMP	include/opencv2/ts/ts.hpp	/^    enum { INPUT, INPUT_OUTPUT, OUTPUT, REF_INPUT_OUTPUT, REF_OUTPUT, TEMP, MASK, MAX_ARR };$/;"	e	enum:cvtest::ArrayTest::__anon78
 TERM_EXCEPTION	include/opencv2/ts/ts_perf.hpp	/^        TERM_EXCEPTION = 3,$/;"	e	enum:perf::performance_metrics::__anon79
 TERM_INTERRUPT	include/opencv2/ts/ts_perf.hpp	/^        TERM_INTERRUPT = 2,$/;"	e	enum:perf::performance_metrics::__anon79
@@ -5369,7 +5382,7 @@ TRUE	include/opencv2/core/internal.hpp	82;"	d
 TS	include/opencv2/ts/ts.hpp	/^class CV_EXPORTS TS$/;"	c	namespace:cvtest
 TS	include/opencv2/ts/ts.hpp	/^class CV_EXPORTS TS;$/;"	m	namespace:cvtest	typeref:class:cvtest::CV_EXPORTS
 TSParams	include/opencv2/ts/ts.hpp	/^struct CV_EXPORTS TSParams$/;"	s	namespace:cvtest
-TXT_LOG	Modules/Log/log.h	23;"	d
+TXT_LOG	Modules/Log/log.h	/^const char TXT_LOG  =  2;     \/\/输出为txt格式$/;"	v
 TYPED_TEST	include/opencv2/ts/ts_gtest.h	17516;"	d
 TYPED_TEST_CASE	include/opencv2/ts/ts_gtest.h	17512;"	d
 TYPED_TEST_CASE_P	include/opencv2/ts/ts_gtest.h	17566;"	d
@@ -5775,7 +5788,6 @@ USE_SMART_ID	include/opencv2/contrib/contrib.hpp	/^        enum {USE_INITIAL_DIS
 USE_UNORDERED_MAP	include/opencv2/flann/lsh_table.h	44;"	d
 USE_UNORDERED_MAP	include/opencv2/flann/lsh_table.h	46;"	d
 Ui	check_cli/build/ui_mainwindow.h	/^namespace Ui {$/;"	n
-Ui_Form	check_cli/ui_camara_get.h	/^class Ui_Form$/;"	c
 Ui_MainWindow	check_cli/build/ui_mainwindow.h	/^class Ui_MainWindow$/;"	c
 UnConst	include/opencv2/gpu/device/detail/type_traits_detail.hpp	/^        template <class U> struct UnConst$/;"	s	namespace:cv::gpu::device::type_traits_detail
 UnConst	include/opencv2/gpu/device/detail/type_traits_detail.hpp	/^        template <class U> struct UnConst<const U&>$/;"	s	namespace:cv::gpu::device::type_traits_detail
@@ -5826,6 +5838,8 @@ V	include/opencv2/contrib/contrib.hpp	/^        CvMat** V; \/\/size of array is 
 V	include/opencv2/contrib/openfabmap.hpp	/^        mutable double V;$/;"	m	struct:cv::of2::FabMapFBO::WordStats
 V	include/opencv2/objdetect/objdetect.hpp	/^    CvLSVMFilterPosition V;$/;"	m	struct:CvLSVMFilterObject
 V0CompressionParameter	include/opencv2/contrib/retina.hpp	/^               float parasolCells_beta, parasolCells_tau, parasolCells_k, amacrinCellsTemporalCutFrequency, V0CompressionParameter, localAdaptintegration_tau, localAdaptintegration_k;$/;"	m	struct:cv::Retina::RetinaParameters::IplMagnoParameters
+VALUE_TYPE_NUMBER	Modules/Net/autotype.h	/^const char VALUE_TYPE_NUMBER = 'n';$/;"	v
+VALUE_TYPE_STRING	Modules/Net/autotype.h	/^const char VALUE_TYPE_STRING = 's';$/;"	v
 VC1	include/opencv2/gpu/gpu.hpp	/^        VC1,$/;"	e	enum:cv::gpu::VideoReader_GPU::Codec
 VIBE_GPU	include/opencv2/gpu/gpu.hpp	/^class CV_EXPORTS VIBE_GPU$/;"	c	namespace:cv::gpu
 Value	include/opencv2/legacy/blobtrack.hpp	/^    virtual double Value(int* \/*comp*\/, int \/*x*\/ = 0, int \/*y*\/ = 0){return -1;};$/;"	f	class:CvProb
@@ -6251,6 +6265,7 @@ _OutputArray	include/opencv2/core/mat.hpp	/^template<typename _Tp> inline _Outpu
 _OutputArray	include/opencv2/core/mat.hpp	/^template<typename _Tp> inline _OutputArray::_OutputArray(vector<vector<_Tp> >& vec)$/;"	f	class:cv::_OutputArray
 _WIN32	include/opencv2/core/internal.hpp	58;"	d
 _WIN32	include/opencv2/core/internal.hpp	71;"	d
+__AUTOTYPE_H_	Modules/Net/autotype.h	12;"	d
 __BEGIN__	include/opencv2/core/internal.hpp	85;"	d
 __CVMSVCLOC__	include/opencv/cv.h	50;"	d
 __CVSTR1__	include/opencv/cv.h	49;"	d
@@ -6272,6 +6287,7 @@ __CV_GPU_DEPR_BEFORE__	include/opencv2/core/gpumat.hpp	274;"	d
 __CV_GPU_HOST_DEVICE__	include/opencv2/core/cuda_devptrs.hpp	49;"	d
 __CV_GPU_HOST_DEVICE__	include/opencv2/core/cuda_devptrs.hpp	51;"	d
 __END__	include/opencv2/core/internal.hpp	86;"	d
+__LOGARG__	Modules/Log/log.h	26;"	d
 __LOG_H_	Modules/Log/log.h	13;"	d
 __OPENCV_ALL_HPP__	include/opencv2/opencv.hpp	44;"	d
 __OPENCV_BACKGROUND_SEGM_HPP__	include/opencv2/video/background_segm.hpp	44;"	d
@@ -6376,8 +6392,11 @@ __OPENCV_VIDEOSTAB_OPTICAL_FLOW_HPP__	include/opencv2/videostab/optical_flow.hpp
 __OPENCV_VIDEOSTAB_STABILIZER_HPP__	include/opencv2/videostab/stabilizer.hpp	44;"	d
 __OPENCV_VIDEOSURVEILLANCE_H__	include/opencv2/legacy/blobtrack.hpp	44;"	d
 __OPENCV_VIDEO_HPP__	include/opencv2/video/video.hpp	44;"	d
+__PROT_H_	Modules/Net/prot.h	13;"	d
+__STRING_H_	Modules/Net/String.h	12;"	d
 __TRACE_H_	Modules/Log/trace.h	12;"	d
 ___cudaSafeCall	include/opencv2/gpu/device/common.hpp	/^static inline void ___cudaSafeCall(cudaError_t err, const char *file, const int line, const char *func = "")$/;"	f
+__pf	Modules/Log/log.h	/^Log& Log::operator<<(Log& (*__pf)(Log&))$/;"	f	class:Log
 __xgetbv	include/opencv2/core/internal.hpp	129;"	d
 __xgetbv	include/opencv2/core/internal.hpp	131;"	d
 _dataAsRow	include/opencv2/contrib/contrib.hpp	/^        bool _dataAsRow;$/;"	m	class:cv::LDA
@@ -6416,8 +6435,6 @@ a5	include/opencv2/gpu/device/vec_traits.hpp	/^        double a0, a1, a2, a3, a4
 a6	include/opencv2/gpu/device/vec_traits.hpp	/^        double a0, a1, a2, a3, a4, a5, a6, a7;$/;"	m	struct:cv::gpu::device::double8
 a7	include/opencv2/gpu/device/vec_traits.hpp	/^        double a0, a1, a2, a3, a4, a5, a6, a7;$/;"	m	struct:cv::gpu::device::double8
 ab	include/opencv2/gpu/gpu.hpp	/^    GpuMat lab, l, ab;$/;"	m	class:cv::gpu::FastNonLocalMeansDenoising
-about	check_cli/camara_get.cpp	/^void ApplicationWindow::about()$/;"	f	class:ApplicationWindow
-aboutQt	check_cli/camara_get.cpp	/^void ApplicationWindow::aboutQt()$/;"	f	class:ApplicationWindow
 abs	include/opencv2/core/core.hpp	72;"	d
 abs	include/opencv2/core/mat.hpp	/^template<typename _Tp> static inline MatExpr abs(const Mat_<_Tp>& m)$/;"	f	namespace:cv
 abs	include/opencv2/core/operations.hpp	/^double abs(const Complex<_Tp>& a)$/;"	f	namespace:cv
@@ -6867,6 +6884,7 @@ buf_	include/opencv2/video/background_segm.hpp	/^    cv::Mat buf_;$/;"	m	class:c
 buf_count	include/opencv2/ml/ml.hpp	/^    int buf_count, buf_size;$/;"	m	struct:CvDTreeTrainData
 buf_idx	include/opencv2/ml/ml.hpp	/^    int buf_idx;$/;"	m	struct:CvDTreeNode
 buf_size	include/opencv2/ml/ml.hpp	/^    int buf_count, buf_size;$/;"	m	struct:CvDTreeTrainData
+buffer	Modules/Net/autotype.h	/^    char *buffer;$/;"	m	class:AutoType
 buffer	include/opencv2/calib3d/calib3d.hpp	/^    Mat buffer;$/;"	m	class:cv::StereoSGBM
 buffer	include/opencv2/gpu/gpu.hpp	/^    GpuMat buffer, extended_src_buffer;$/;"	m	class:cv::gpu::FastNonLocalMeansDenoising
 buildIndex	include/opencv2/flann/autotuned_index.h	/^    virtual void buildIndex()$/;"	f	class:cvflann::AutotunedIndex
@@ -6911,6 +6929,7 @@ c_YCrCb2RGBCoeffs_f	include/opencv2/gpu/device/detail/color_detail.hpp	/^       
 c_YCrCb2RGBCoeffs_i	include/opencv2/gpu/device/detail/color_detail.hpp	/^        __constant__ int   c_YCrCb2RGBCoeffs_i[5] = {22987, -11698, -5636, 29049};$/;"	m	namespace:cv::gpu::device::color_detail
 c_YUV2RGBCoeffs_f	include/opencv2/gpu/device/detail/color_detail.hpp	/^        __constant__ float c_YUV2RGBCoeffs_f[5] = { 2.032f, -0.395f, -0.581f, 1.140f };$/;"	m	namespace:cv::gpu::device::color_detail
 c_YUV2RGBCoeffs_i	include/opencv2/gpu/device/detail/color_detail.hpp	/^        __constant__ int   c_YUV2RGBCoeffs_i[5] = { 33292, -6472, -9519, 18678 };$/;"	m	namespace:cv::gpu::device::color_detail
+c_str	Modules/Net/String.h	/^    const char* c_str() const {return str;}$/;"	f	class:String
 c_str	include/opencv2/ts/ts_gtest.h	/^  const char* c_str() const { return c_str_; }$/;"	f	class:testing::internal::String
 c_str	include/opencv2/ts/ts_gtest.h	/^  const char* c_str() const { return pathname_.c_str(); }$/;"	f	class:testing::internal::FilePath
 c_str_	include/opencv2/ts/ts_gtest.h	/^  const char* c_str_;$/;"	m	class:testing::internal::String
@@ -7011,7 +7030,6 @@ children	include/opencv2/contrib/contrib.hpp	/^            int children[8];$/;"	
 children	include/opencv2/contrib/openfabmap.hpp	/^    vector<vector<int> > children;$/;"	m	class:cv::of2::FabMap2
 childs	include/opencv2/flann/hierarchical_clustering_index.h	/^        Node** childs;$/;"	m	struct:cvflann::HierarchicalClusteringIndex::Node
 childs	include/opencv2/flann/kmeans_index.h	/^        KMeansNode** childs;$/;"	m	struct:cvflann::KMeansIndex::KMeansNode
-choose	check_cli/camara_get.cpp	/^void ApplicationWindow::choose()$/;"	f	class:ApplicationWindow
 chooseCenters	include/opencv2/flann/hierarchical_clustering_index.h	/^    centersAlgFunction chooseCenters;$/;"	m	class:cvflann::HierarchicalClusteringIndex
 chooseCenters	include/opencv2/flann/kmeans_index.h	/^    centersAlgFunction chooseCenters;$/;"	m	class:cvflann::KMeansIndex
 chooseCentersGonzales	include/opencv2/flann/hierarchical_clustering_index.h	/^    void chooseCentersGonzales(int k, int* dsindices, int indices_length, int* centers, int& centers_length)$/;"	f	class:cvflann::HierarchicalClusteringIndex
@@ -7070,9 +7088,7 @@ clone	include/opencv2/legacy/legacy.hpp	/^    CvImage clone() { return CvImage(i
 clone	include/opencv2/legacy/legacy.hpp	/^    CvMatrix clone() { return CvMatrix(matrix ? cvCloneMat(matrix) : 0); }$/;"	f	class:CvMatrix
 clone_op	include/opencv2/features2d/features2d.hpp	/^        static Mat clone_op( Mat m ) { return m.clone(); }$/;"	f	class:cv::GenericDescriptorMatcher::KeyPointCollection
 clone_op	include/opencv2/features2d/features2d.hpp	/^    static Mat clone_op( Mat m ) { return m.clone(); }$/;"	f	class:cv::DescriptorMatcher
-closeCam	check_cli/ui_camara_get.h	/^    QPushButton *closeCam;$/;"	m	class:Ui_Form
 closeCamara	check_cli/src/mainwindowimpl.cpp	/^void MainWindowImpl::closeCamara()$/;"	f	class:MainWindowImpl
-closeEvent	check_cli/camara_get.cpp	/^void ApplicationWindow::closeEvent( QCloseEvent* ce )$/;"	f	class:ApplicationWindow
 cls_labels	include/opencv2/ml/ml.hpp	/^    CvMat*  cls_labels;$/;"	m	class:CvNormalBayesClassifier
 clusterCount	include/opencv2/features2d/features2d.hpp	/^    int clusterCount;$/;"	m	class:cv::BOWKMeansTrainer
 clusterSize	include/opencv2/contrib/openfabmap.hpp	/^    double clusterSize;$/;"	m	class:cv::of2::BOWMSCTrainer
@@ -7997,7 +8013,6 @@ dy_	include/opencv2/stitching/detail/seam_finders.hpp	/^    std::vector<Mat> dx_
 dy_buf	include/opencv2/gpu/gpu.hpp	/^    GpuMat dx_buf, dy_buf;$/;"	m	struct:cv::gpu::CannyBuf
 dy_buf_	include/opencv2/gpu/gpu.hpp	/^    GpuMat dy_buf_;$/;"	m	class:cv::gpu::PyrLKOpticalFlow
 dy_calcBuf_	include/opencv2/gpu/gpu.hpp	/^    GpuMat dy_calcBuf_;$/;"	m	class:cv::gpu::PyrLKOpticalFlow
-e	check_cli/camara_get.h	/^    QTextEdit *e;$/;"	m	class:ApplicationWindow
 ea	include/opencv2/contrib/contrib.hpp	/^        CvMat** ea; \/\/ sum_i  AijT * e_ij , used as right part of normal equation$/;"	m	class:cv::LevMarqSparse
 eb	include/opencv2/contrib/contrib.hpp	/^        CvMat** eb; \/\/ sum_j  BijT * e_ij , used as right part of normal equation$/;"	m	class:cv::LevMarqSparse
 edge	include/opencv2/core/core_c.h	/^    CvGraphEdge* edge;     \/* current edge *\/$/;"	m	struct:CvGraphScanner
@@ -8155,8 +8170,7 @@ endY	include/opencv2/imgproc/imgproc.hpp	/^    int bufStep, startY, startY0, end
 end_	include/opencv2/ts/ts_gtest.h	/^  const T end_;$/;"	m	class:testing::internal::RangeGenerator
 end_index	include/opencv2/core/types_c.h	/^    int  start_index, end_index;$/;"	m	struct:CvSlice
 end_index_	include/opencv2/ts/ts_gtest.h	/^  const int end_index_;$/;"	m	class:testing::internal::RangeGenerator
-endl	Modules/Log/log.h	/^    static const char *endl;$/;"	m	class:Log
-endl	Modules/Log/log.h	/^const char       *Log::endl = "\\n";$/;"	m	class:Log
+endl	Modules/Log/log.h	/^Log& Log::endl(Log& log)$/;"	f	class:Log
 ensemble	include/opencv2/ml/ml.hpp	/^    CvBoost* ensemble;$/;"	m	class:CvBoostTree
 ensureSizeIsEnough	include/opencv2/core/gpumat.hpp	/^    inline void ensureSizeIsEnough(Size size, int type, GpuMat& m)$/;"	f	namespace:cv::gpu
 ensureSizeIsEnough	include/opencv2/core/gpumat.hpp	/^    inline void ensureSizeIsEnough(int rows, int cols, int type, GpuMat& m)$/;"	f	namespace:cv::gpu
@@ -8298,7 +8312,6 @@ file	include/opencv2/ts/ts_gtest.h	/^  String file() const { return file_; }$/;"
 file_	include/opencv2/ts/ts_gtest.h	/^  String file_;$/;"	m	class:testing::internal::InternalRunDeathTestFlag
 file_name	include/opencv2/ts/ts_gtest.h	/^  const char* file_name() const { return file_name_.c_str(); }$/;"	f	class:testing::TestPartResult
 file_name_	include/opencv2/ts/ts_gtest.h	/^  internal::String file_name_;$/;"	m	class:testing::TestPartResult
-filename	check_cli/camara_get.h	/^    QString filename;$/;"	m	class:ApplicationWindow
 filename	include/opencv2/legacy/legacy.hpp	/^        string filename;$/;"	m	class:cv::FernDescriptorMatcher::Params
 fill	include/opencv2/gpu/device/warp.hpp	/^        static __device__ __forceinline__ void fill(It beg, It end, const T& value)$/;"	f	struct:cv::gpu::device::Warp
 fill_xor_mask	include/opencv2/flann/lsh_index.h	/^    void fill_xor_mask(lsh::BucketKey key, int lowest_index, unsigned int level,$/;"	f	class:cvflann::LshIndex
@@ -8617,6 +8630,7 @@ getClusterCenters	include/opencv2/flann/kmeans_index.h	/^    int getClusterCente
 getData	include/opencv2/legacy/legacy.hpp	/^inline uchar* getData(IplImage* image)$/;"	f	namespace:cv
 getDistanceToBorder	include/opencv2/flann/kmeans_index.h	/^    DistanceType getDistanceToBorder(DistanceType* p, DistanceType* c, DistanceType* q)$/;"	f	class:cvflann::KMeansIndex
 getExactNeighbors	include/opencv2/flann/kdtree_index.h	/^    void getExactNeighbors(ResultSet<DistanceType>& result, const ElementType* vec, float epsError)$/;"	f	class:cvflann::KDTreeIndex
+getField	Modules/Net/prot.h	/^const AutoType& Prot::getField(const char* fieldName)$/;"	f	class:Prot
 getFirstTopLevelNode	include/opencv2/core/operations.hpp	/^inline FileNode FileStorage::getFirstTopLevelNode() const$/;"	f	class:cv::FileStorage
 getFloatSignature	include/opencv2/legacy/legacy.hpp	/^    void getFloatSignature(IplImage *patch, float *sig) const { getSignature(patch, sig); }$/;"	f	class:cv::RTreeClassifier
 getIndex	include/opencv2/flann/flann_base.hpp	/^    FLANN_DEPRECATED NNIndex<Distance>* getIndex()$/;"	f	class:cvflann::Index
@@ -8636,6 +8650,7 @@ getNeighbors	include/opencv2/flann/lsh_index.h	/^    void getNeighbors(const Ele
 getNeighbors	include/opencv2/flann/lsh_index.h	/^    void getNeighbors(const ElementType* vec, bool \/*do_radius*\/, float radius, bool do_k, unsigned int k_nn,$/;"	f	class:cvflann::LshIndex
 getNextId	include/opencv2/contrib/detection_based_tracker.hpp	/^            static int getNextId()$/;"	f	struct:DetectionBasedTracker::TrackedObject
 getNodes	include/opencv2/contrib/contrib.hpp	/^        const vector<Node>& getNodes() const { return nodes; }$/;"	f	class:cv::Octree
+getNum	Modules/Net/autotype.h	/^long AutoType::getNum() {$/;"	f	class:AutoType
 getParameters	include/opencv2/flann/autotuned_index.h	/^    IndexParams getParameters() const$/;"	f	class:cvflann::AutotunedIndex
 getParameters	include/opencv2/flann/composite_index.h	/^    IndexParams getParameters() const$/;"	f	class:cvflann::CompositeIndex
 getParameters	include/opencv2/flann/flann.hpp	/^        ::cvflann::IndexParams getParameters() { return nnIndex->getParameters(); }$/;"	f	class:cv::flann::GenericIndex
@@ -8659,8 +8674,11 @@ getSpinCount	include/opencv2/contrib/contrib.hpp	/^        size_t getSpinCount()
 getSpinImage	include/opencv2/contrib/contrib.hpp	/^        Mat getSpinImage(size_t index) const { return spinImages.row((int)index); }$/;"	f	class:cv::SpinImageModel
 getSpinNormal	include/opencv2/contrib/contrib.hpp	/^        const Point3f& getSpinNormal(size_t index) const { return mesh.normals[subset[index]]; }$/;"	f	class:cv::SpinImageModel
 getSpinVertex	include/opencv2/contrib/contrib.hpp	/^        const Point3f& getSpinVertex(size_t index) const { return mesh.vtx[subset[index]]; }$/;"	f	class:cv::SpinImageModel
+getStaticMetaObject	check_cli/build/moc_mainwindowimpl.cpp	/^const QMetaObject &MainWindowImpl::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:MainWindowImpl
 getStats	include/opencv2/flann/lsh_table.h	/^inline LshStats LshTable<unsigned char>::getStats() const$/;"	f	class:cvflann::lsh::LshTable
+getStr	Modules/Net/autotype.h	/^const char* AutoType::getStr()$/;"	f	class:AutoType
 getT	include/opencv2/objdetect/objdetect.hpp	/^  int getT(int pyramid_level) const { return T_at_level[pyramid_level]; }$/;"	f	class:cv::linemod::Detector
+getType	Modules/Net/autotype.h	/^    char getType() {return type;}$/;"	f	class:AutoType
 getType	include/opencv2/flann/autotuned_index.h	/^    virtual flann_algorithm_t getType() const$/;"	f	class:cvflann::AutotunedIndex
 getType	include/opencv2/flann/composite_index.h	/^    flann_algorithm_t getType() const$/;"	f	class:cvflann::CompositeIndex
 getType	include/opencv2/flann/flann_base.hpp	/^    flann_algorithm_t getType() const$/;"	f	class:cvflann::Index
@@ -9281,10 +9299,8 @@ l	include/opencv2/gpu/gpu.hpp	/^    GpuMat u, d, l, r, u2, d2, l2, r2;$/;"	m	cla
 l	include/opencv2/objdetect/objdetect.hpp	/^    int l;$/;"	m	struct:CvLSVMFilterPosition
 l2	include/opencv2/gpu/gpu.hpp	/^    GpuMat u, d, l, r, u2, d2, l2, r2;$/;"	m	class:cv::gpu::StereoBeliefPropagation
 lab	include/opencv2/gpu/gpu.hpp	/^    GpuMat lab, l, ab;$/;"	m	class:cv::gpu::FastNonLocalMeansDenoising
-label	check_cli/ui_camara_get.h	/^    QLabel *label;$/;"	m	class:Ui_Form
 label	include/opencv2/objdetect/objdetect.hpp	/^  int label; \/\/\/< Quantization$/;"	m	struct:cv::linemod::Feature
 labelShow	check_cli/build/ui_mainwindow.h	/^    QLabel *labelShow;$/;"	m	class:Ui_MainWindow
-label_2	check_cli/ui_camara_get.h	/^    QLabel *label_2;$/;"	m	class:Ui_Form
 labels	include/opencv2/contrib/hybridtracker.hpp	/^    CvMat* labels;$/;"	m	class:cv::CvHybridTracker
 labels	include/opencv2/gpu/gpu.hpp	/^    GpuMat labels, labels_buf;$/;"	m	struct:cv::gpu::HOGDescriptor
 labels_	include/opencv2/stitching/detail/seam_finders.hpp	/^    Mat_<int> labels_;$/;"	m	class:cv::detail::DpSeamFinder
@@ -9325,6 +9341,7 @@ latestCounts	include/opencv2/legacy/legacy.hpp	/^    int     latestCounts[MAX_CA
 latestPoints	include/opencv2/legacy/legacy.hpp	/^    CvPoint2D32f* latestPoints[MAX_CAMERAS];$/;"	m	class:CvCalibFilter
 layer0_	include/opencv2/gpu/gpu.hpp	/^    GpuMat layer0_;$/;"	m	class:cv::gpu::ImagePyramid
 layer_sizes	include/opencv2/ml/ml.hpp	/^    CvMat* layer_sizes;$/;"	m	class:CvANN_MLP
+layoutWidget	check_cli/build/ui_mainwindow.h	/^    QWidget *layoutWidget;$/;"	m	class:Ui_MainWindow
 ldetector	include/opencv2/legacy/legacy.hpp	/^    LDetector ldetector;$/;"	m	class:cv::PlanarObjectDetector
 ldh	include/opencv2/contrib/contrib.hpp	/^        int ldx, ldy, ldw, ldh, numShifts, numIters;$/;"	m	class:CvFuzzyMeanShiftTracker::SearchWindow
 ldw	include/opencv2/contrib/contrib.hpp	/^        int ldx, ldy, ldw, ldh, numShifts, numIters;$/;"	m	class:CvFuzzyMeanShiftTracker::SearchWindow
@@ -9391,7 +9408,6 @@ linked_ptr	include/opencv2/ts/ts_gtest.h	/^class linked_ptr {$/;"	c	namespace:te
 linked_ptr_internal	include/opencv2/ts/ts_gtest.h	/^class linked_ptr_internal {$/;"	c	namespace:testing::internal
 list	include/opencv2/gpu/gpu.hpp	/^    GpuMat list;$/;"	m	struct:cv::gpu::HoughCirclesBuf
 list	include/opencv2/gpu/gpu.hpp	/^    GpuMat list;$/;"	m	struct:cv::gpu::HoughLinesBuf
-load	check_cli/camara_get.cpp	/^void ApplicationWindow::load( const QString &fileName )$/;"	f	class:ApplicationWindow
 loadIndex	include/opencv2/flann/autotuned_index.h	/^    virtual void loadIndex(FILE* stream)$/;"	f	class:cvflann::AutotunedIndex
 loadIndex	include/opencv2/flann/composite_index.h	/^    void loadIndex(FILE* stream)$/;"	f	class:cvflann::CompositeIndex
 loadIndex	include/opencv2/flann/flann_base.hpp	/^    virtual void loadIndex(FILE* stream)$/;"	f	class:cvflann::Index
@@ -9521,6 +9537,7 @@ m_pca_hr_eigenvectors	include/opencv2/legacy/legacy.hpp	/^    CvMat* m_pca_hr_ei
 m_pose_count	include/opencv2/legacy/legacy.hpp	/^    int m_pose_count; \/\/ the number of poses for each descriptor$/;"	m	class:cv::OneWayDescriptorBase
 m_pose_count	include/opencv2/legacy/legacy.hpp	/^    int m_pose_count; \/\/ the number of poses$/;"	m	class:cv::OneWayDescriptor
 m_poses	include/opencv2/legacy/legacy.hpp	/^    CvAffinePose* m_poses; \/\/ array of poses$/;"	m	class:cv::OneWayDescriptorBase
+m_prot	Modules/Net/prot.h	/^    S2MIter m_prot;             \/\/当前协议$/;"	m	class:Prot
 m_pyr_levels	include/opencv2/legacy/legacy.hpp	/^    int m_pyr_levels;$/;"	m	class:cv::OneWayDescriptorBase
 m_samples	include/opencv2/legacy/legacy.hpp	/^    IplImage** m_samples; \/\/ an array of length m_pose_count containing the patch in different poses$/;"	m	class:cv::OneWayDescriptor
 m_shape	include/opencv2/legacy/blobtrack.hpp	/^    CvDrawShape m_shape[16];$/;"	m	class:CvImageDrawer
@@ -9533,8 +9550,8 @@ m_train_patch	include/opencv2/legacy/legacy.hpp	/^    IplImage* m_train_patch;$/
 m_transforms	include/opencv2/legacy/legacy.hpp	/^    CvMat** m_transforms; \/\/ an array of affine transforms corresponding to poses$/;"	m	class:cv::OneWayDescriptor
 m_transforms	include/opencv2/legacy/legacy.hpp	/^    CvMat** m_transforms; \/\/ array of affine transformations corresponding to poses$/;"	m	class:cv::OneWayDescriptorBase
 main	Modules/Log/test.cpp	/^int main(int argc, char** argv)$/;"	f
+main	Modules/Net/test.cpp	/^int main(int argc, const char** argv)$/;"	f
 main	QtHello.cpp	/^int main(int argc, char *argv[]) $/;"	f
-main	check_cli/main.cpp	/^int main( int argc, char ** argv ) {$/;"	f
 main	check_cli/src/main.cpp	/^int main(int argc, char ** argv)$/;"	f
 majorVersion	include/opencv2/core/gpumat.hpp	/^        int majorVersion() const { return majorVersion_; }$/;"	f	class:cv::gpu::DeviceInfo
 majorVersion_	include/opencv2/core/gpumat.hpp	/^        int majorVersion_;$/;"	m	class:cv::gpu::DeviceInfo
@@ -9765,6 +9782,7 @@ message	include/opencv2/ts/ts_gtest.h	/^  const char* message() const {$/;"	f	cl
 message_	include/opencv2/ts/ts_gtest.h	/^  internal::String message_;  \/\/ The test failure message.$/;"	m	class:testing::TestPartResult
 message_	include/opencv2/ts/ts_gtest.h	/^  internal::scoped_ptr< ::std::string> message_;$/;"	m	class:testing::AssertionResult
 messages_buffers	include/opencv2/gpu/gpu.hpp	/^    GpuMat messages_buffers;$/;"	m	class:cv::gpu::StereoConstantSpaceBP
+metaObject	check_cli/build/moc_mainwindowimpl.cpp	/^const QMetaObject *MainWindowImpl::metaObject() const$/;"	f	class:MainWindowImpl
 method_	include/opencv2/videostab/inpainting.hpp	/^    int method_;$/;"	m	class:cv::videostab::ColorInpainter
 metrics	include/opencv2/ts/ts_perf.hpp	/^    performance_metrics metrics;$/;"	m	class:perf::TestBase
 middleSplit	include/opencv2/flann/kdtree_single_index.h	/^    void middleSplit(int* ind, int count, int& index, int& cutfeat, DistanceType& cutval, const BoundingBox& bbox)$/;"	f	class:cvflann::KDTreeSingleIndex
@@ -9882,15 +9900,15 @@ motions_	include/opencv2/videostab/stabilizer.hpp	/^    std::vector<Mat> motions
 move	include/opencv2/flann/any.h	/^    virtual void move(void* const* src, void** dest) { *dest = *src; }$/;"	f	struct:cvflann::anyimpl::small_any_policy
 move	include/opencv2/flann/any.h	/^    virtual void move(void* const* src, void** dest)$/;"	f	struct:cvflann::anyimpl::big_any_policy
 mpi	include/opencv2/flann/hdf5.h	/^namespace mpi$/;"	n	namespace:cvflann
+ms_file	Modules/Log/log.cpp	/^std::ofstream     Log::ms_file;$/;"	m	class:Log	file:
 ms_file	Modules/Log/log.h	/^    static std::ofstream     ms_file;          \/\/log文件流$/;"	m	class:Log
-ms_file	Modules/Log/log.h	/^std::ofstream     Log::ms_file;$/;"	m	class:Log
+ms_logFileType	Modules/Log/log.cpp	/^int               Log::ms_logFileType = 0;   \/\/log文件类型$/;"	m	class:Log	file:
 ms_logFileType	Modules/Log/log.h	/^    static int               ms_logFileType;   \/\/log文件类型$/;"	m	class:Log
-ms_logFileType	Modules/Log/log.h	/^int               Log::ms_logFileType = 0;   \/\/log文件类型$/;"	m	class:Log
+ms_logLevel	Modules/Log/log.cpp	/^int               Log::ms_logLevel = 0;      \/\/小于logLevel的log将被打印出来$/;"	m	class:Log	file:
 ms_logLevel	Modules/Log/log.h	/^    static int               ms_logLevel;      \/\/小于logLevel的log将被打印出来$/;"	m	class:Log
-ms_logLevel	Modules/Log/log.h	/^int               Log::ms_logLevel = 0;      \/\/小于logLevel的log将被打印出来$/;"	m	class:Log
 ms_params	include/opencv2/contrib/hybridtracker.hpp	/^    CvMeanShiftTrackerParams ms_params;$/;"	m	struct:cv::CvHybridTrackerParams
+ms_path	Modules/Log/log.cpp	/^const char       *Log::ms_path = NULL;       \/\/log文件路径$/;"	m	class:Log	file:
 ms_path	Modules/Log/log.h	/^    static const char       *ms_path;          \/\/log文件路径$/;"	m	class:Log
-ms_path	Modules/Log/log.h	/^const char       *Log::ms_path = NULL;       \/\/log文件路径$/;"	m	class:Log
 ms_tracker_weight	include/opencv2/contrib/hybridtracker.hpp	/^    float ms_tracker_weight;$/;"	m	struct:cv::CvHybridTrackerParams
 msg	include/opencv2/core/core.hpp	/^    string msg; \/\/\/< the formatted error message$/;"	m	class:cv::Exception
 msg	include/opencv2/objdetect/objdetect.hpp	/^  char msg[4];$/;"	m	struct:CvDataMatrixCode
@@ -9998,7 +10016,6 @@ negate	include/opencv2/gpu/device/functional.hpp	/^        __device__ __forceinl
 negate	include/opencv2/gpu/device/functional.hpp	/^        __device__ __forceinline__ negate(const negate& other):unary_function<T,T>(){}$/;"	f	struct:cv::gpu::device::negate
 negate	include/opencv2/gpu/device/functional.hpp	/^    template <typename T> struct negate : unary_function<T, T>$/;"	s	namespace:cv::gpu::device
 neighbors	include/opencv2/objdetect/objdetect.hpp	/^    int neighbors;$/;"	m	struct:CvAvgComp
-newDoc	check_cli/camara_get.cpp	/^void ApplicationWindow::newDoc()$/;"	f	class:ApplicationWindow
 next	include/opencv2/core/operations.hpp	/^inline unsigned RNG::next()$/;"	f	class:cv::RNG
 next	include/opencv2/core/types_c.h	/^    struct CvAttrList* next;   \/* Pointer to next chunk of the attributes list.                    *\/$/;"	m	struct:CvAttrList	typeref:struct:CvAttrList::CvAttrList
 next	include/opencv2/core/types_c.h	/^    struct CvMemBlock*  next;$/;"	m	struct:CvMemBlock	typeref:struct:CvMemBlock::CvMemBlock
@@ -10206,7 +10223,6 @@ oob_error	include/opencv2/ml/ml.hpp	/^    double oob_error;$/;"	m	class:CvRTrees
 op	include/opencv2/core/mat.hpp	/^    const MatOp* op;$/;"	m	class:cv::MatExpr
 op	include/opencv2/gpu/device/functional.hpp	/^        const Op op;$/;"	m	struct:cv::gpu::device::binder1st
 op	include/opencv2/gpu/device/functional.hpp	/^        const Op op;$/;"	m	struct:cv::gpu::device::binder2nd
-open	check_cli/ui_camara_get.h	/^    QPushButton *open;$/;"	m	class:Ui_Form
 openCamara	check_cli/src/mainwindowimpl.cpp	/^void MainWindowImpl::openCamara()$/;"	f	class:MainWindowImpl
 operator !	include/opencv2/core/operations.hpp	/^static inline bool operator !(const Range& r)$/;"	f	namespace:cv
 operator !=	include/opencv2/core/mat.hpp	/^inline bool Mat::MSize::operator != (const MSize& sz) const$/;"	f	class:cv::Mat::MSize
@@ -10237,6 +10253,7 @@ operator &=	include/opencv2/core/mat.hpp	/^static inline Mat& operator &= (const
 operator &=	include/opencv2/core/mat.hpp	/^static inline Mat& operator &= (const Mat& a, const Scalar& s)$/;"	f	namespace:cv
 operator &=	include/opencv2/core/operations.hpp	/^static inline Range& operator &= (Range& r1, const Range& r2)$/;"	f	namespace:cv
 operator &=	include/opencv2/core/operations.hpp	/^template<typename _Tp> static inline Rect_<_Tp>& operator &= ( Rect_<_Tp>& a, const Rect_<_Tp>& b )$/;"	f	namespace:cv
+operator ()	Modules/Net/prot.h	/^    bool operator()(const String& str1, const String& str2) const{$/;"	f	class:StrCmp
 operator ()	include/opencv2/core/cuda_devptrs.hpp	/^            __CV_GPU_HOST_DEVICE__       T& operator ()(int y, int x)       { return ptr(y)[x]; }$/;"	f	struct:cv::gpu::PtrStep
 operator ()	include/opencv2/core/cuda_devptrs.hpp	/^            __CV_GPU_HOST_DEVICE__ T& operator ()(int y, int x) { return ptr(y)[x]; }$/;"	f	struct:cv::gpu::PtrElemStep_
 operator ()	include/opencv2/core/cuda_devptrs.hpp	/^            __CV_GPU_HOST_DEVICE__ const T& operator ()(int y, int x) const { return ptr(y)[x]; }$/;"	f	struct:cv::gpu::PtrElemStep_
@@ -10666,6 +10683,8 @@ operator <<	include/opencv2/ts/ts_gtest.h	/^::std::basic_ostream<Char, CharTrait
 operator <<	include/opencv2/ts/ts_gtest.h	/^inline ::std::ostream& operator<<(::std::ostream& os, const String& str) {$/;"	f	namespace:testing::internal
 operator <<	include/opencv2/ts/ts_gtest.h	/^inline std::ostream& operator <<(std::ostream& os, const Message& sb) {$/;"	f	namespace:testing
 operator <=	include/opencv2/core/mat.hpp	/^operator <= (const MatConstIterator& a, const MatConstIterator& b)$/;"	f	namespace:cv
+operator =	Modules/Net/String.h	/^String& String::operator=(const String& s)$/;"	f	class:String
+operator =	Modules/Net/autotype.h	/^AutoType& AutoType::operator=(const AutoType& at)$/;"	f	class:AutoType
 operator =	include/opencv2/core/gpumat.hpp	/^    inline GpuMat& GpuMat::operator = (Scalar s)$/;"	f	class:cv::gpu::GpuMat
 operator =	include/opencv2/core/mat.hpp	/^    MatConstIterator_<_Tp>::operator = (const MatConstIterator_& it )$/;"	f	class:cv::MatConstIterator_
 operator =	include/opencv2/core/mat.hpp	/^SparseMatConstIterator_<_Tp>::operator = (const SparseMatConstIterator_<_Tp>& it)$/;"	f	class:cv::SparseMatConstIterator_
@@ -11027,7 +11046,6 @@ phiMin	include/opencv2/legacy/legacy.hpp	/^    double phiMin, phiMax;$/;"	m	clas
 photoreceptorsLocalAdaptationSensitivity	include/opencv2/contrib/retina.hpp	/^               float photoreceptorsLocalAdaptationSensitivity, photoreceptorsTemporalConstant, photoreceptorsSpatialConstant, horizontalCellsGain, hcellsTemporalConstant, hcellsSpatialConstant, ganglionCellsSensitivity;$/;"	m	struct:cv::Retina::RetinaParameters::OPLandIplParvoParameters
 photoreceptorsSpatialConstant	include/opencv2/contrib/retina.hpp	/^               float photoreceptorsLocalAdaptationSensitivity, photoreceptorsTemporalConstant, photoreceptorsSpatialConstant, horizontalCellsGain, hcellsTemporalConstant, hcellsSpatialConstant, ganglionCellsSensitivity;$/;"	m	struct:cv::Retina::RetinaParameters::OPLandIplParvoParameters
 photoreceptorsTemporalConstant	include/opencv2/contrib/retina.hpp	/^               float photoreceptorsLocalAdaptationSensitivity, photoreceptorsTemporalConstant, photoreceptorsSpatialConstant, horizontalCellsGain, hcellsTemporalConstant, hcellsSpatialConstant, ganglionCellsSensitivity;$/;"	m	struct:cv::Retina::RetinaParameters::OPLandIplParvoParameters
-pic	check_cli/ui_camara_get.h	/^    QPushButton *pic;$/;"	m	class:Ui_Form
 pitch_	include/opencv2/core/opengl_interop.hpp	/^    double pitch_;$/;"	m	class:cv::GlCamera
 pivot	include/opencv2/flann/hierarchical_clustering_index.h	/^        int pivot;$/;"	m	struct:cvflann::HierarchicalClusteringIndex::Node
 pivot	include/opencv2/flann/kmeans_index.h	/^        DistanceType* pivot;$/;"	m	struct:cvflann::KMeansIndex::KMeansNode
@@ -11125,7 +11143,6 @@ prev_trackwindow	include/opencv2/contrib/hybridtracker.hpp	/^    Rect prev_track
 prev_window	include/opencv2/contrib/hybridtracker.hpp	/^    Rect prev_window;$/;"	m	class:cv::CvHybridTracker
 principal_point	include/opencv2/legacy/legacy.hpp	/^    CvPoint2D32f principal_point; \/* copied from intrinsics so this structure *\/$/;"	m	struct:Cv3dTrackerCameraInfo
 principal_point	include/opencv2/legacy/legacy.hpp	/^    CvPoint2D32f principal_point;$/;"	m	struct:Cv3dTrackerCameraIntrinsics
-print	check_cli/camara_get.cpp	/^void ApplicationWindow::print()$/;"	f	class:ApplicationWindow
 print	include/opencv2/flann/any.h	/^    virtual void print(std::ostream& out, void* const* src) { out << *reinterpret_cast<T const*>(*src); }$/;"	f	struct:cvflann::anyimpl::big_any_policy
 print	include/opencv2/flann/any.h	/^    virtual void print(std::ostream& out, void* const* src) { out << *reinterpret_cast<T const*>(src); }$/;"	f	struct:cvflann::anyimpl::small_any_policy
 print	include/opencv2/flann/any.h	/^template<> inline void big_any_policy<flann_algorithm_t>::print(std::ostream& out, void* const* src)$/;"	f	class:cvflann::anyimpl::big_any_policy
@@ -11133,7 +11150,6 @@ print	include/opencv2/flann/any.h	/^template<> inline void big_any_policy<flann_
 print	include/opencv2/videostab/log.hpp	/^    virtual void print(const char * \/*format*\/, ...) {}$/;"	f	class:cv::videostab::NullLog
 printFuncAttrib	include/opencv2/gpu/device/funcattrib.hpp	/^    void printFuncAttrib(Func& func)$/;"	f	namespace:cv::gpu::device
 print_params	include/opencv2/flann/params.h	/^inline void print_params(const IndexParams& params)$/;"	f	namespace:cvflann
-printer	check_cli/camara_get.h	/^    QPrinter *printer;$/;"	m	class:ApplicationWindow
 priorMatches	include/opencv2/contrib/openfabmap.hpp	/^    vector<IMatch> priorMatches;$/;"	m	class:cv::of2::FabMap
 priors	include/opencv2/ml/ml.hpp	/^    CvMat* priors;$/;"	m	struct:CvDTreeTrainData
 priors	include/opencv2/ml/ml.hpp	/^    const float* priors;$/;"	m	struct:CvDTreeParams
@@ -11202,8 +11218,11 @@ ptrLeft	include/opencv2/legacy/legacy.hpp	/^    CvMat* ptrLeft;$/;"	m	struct:CvS
 ptrRight	include/opencv2/legacy/legacy.hpp	/^    CvMat* ptrRight;$/;"	m	struct:CvStereoGCState
 ptr_	include/opencv2/ts/ts_gtest.h	/^  T* ptr_;$/;"	m	struct:std::tr1::tuple_element
 pushBack	include/opencv2/videostab/inpainting.hpp	/^    void pushBack(Ptr<InpainterBase> inpainter) { inpainters_.push_back(inpainter); }$/;"	f	class:cv::videostab::InpaintingPipeline
+pushButtonAgain	check_cli/build/ui_mainwindow.h	/^    QPushButton *pushButtonAgain;$/;"	m	class:Ui_MainWindow
 pushButtonCamara	check_cli/build/ui_mainwindow.h	/^    QPushButton *pushButtonCamara;$/;"	m	class:Ui_MainWindow
+pushButtonCheckIn	check_cli/build/ui_mainwindow.h	/^    QPushButton *pushButtonCheckIn;$/;"	m	class:Ui_MainWindow
 pushButtonSearch	check_cli/build/ui_mainwindow.h	/^    QPushButton *pushButtonSearch;$/;"	m	class:Ui_MainWindow
+pushButtonSubmit	check_cli/build/ui_mainwindow.h	/^    QPushButton *pushButtonSubmit;$/;"	m	class:Ui_MainWindow
 push_back	include/opencv2/core/mat.hpp	/^template<typename _Tp> inline void Mat::push_back(const Mat_<_Tp>& m)$/;"	f	class:cv::Mat
 push_back	include/opencv2/core/mat.hpp	/^template<typename _Tp> inline void Mat::push_back(const _Tp& elem)$/;"	f	class:cv::Mat
 push_back	include/opencv2/core/operations.hpp	/^    Vector<_Tp>& push_back(const _Tp& elem)$/;"	f	class:cv::Vector
@@ -11227,6 +11246,11 @@ q	include/opencv2/contrib/openfabmap.hpp	/^        int q;$/;"	m	struct:cv::of2::
 qangle	include/opencv2/gpu/gpu.hpp	/^    GpuMat grad, qangle, grad_buf, qangle_buf;$/;"	m	struct:cv::gpu::HOGDescriptor
 qangle_buf	include/opencv2/gpu/gpu.hpp	/^    GpuMat grad, qangle, grad_buf, qangle_buf;$/;"	m	struct:cv::gpu::HOGDescriptor
 qedges	include/opencv2/imgproc/imgproc.hpp	/^    vector<QuadEdge> qedges;$/;"	m	class:cv::Subdiv2D
+qt_meta_data_MainWindowImpl	check_cli/build/moc_mainwindowimpl.cpp	/^static const uint qt_meta_data_MainWindowImpl[] = {$/;"	v	file:
+qt_meta_stringdata_MainWindowImpl	check_cli/build/moc_mainwindowimpl.cpp	/^static const char qt_meta_stringdata_MainWindowImpl[] = {$/;"	v	file:
+qt_metacall	check_cli/build/moc_mainwindowimpl.cpp	/^int MainWindowImpl::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:MainWindowImpl
+qt_metacast	check_cli/build/moc_mainwindowimpl.cpp	/^void *MainWindowImpl::qt_metacast(const char *_clname)$/;"	f	class:MainWindowImpl
+qt_static_metacall	check_cli/build/moc_mainwindowimpl.cpp	/^void MainWindowImpl::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:MainWindowImpl
 quad	include/opencv2/legacy/legacy.hpp	/^    CvPoint2D32f quad[2][4]; \/* coordinates of destination quadrangle after$/;"	m	struct:CvStereoCamera
 quality	include/opencv2/ml/ml.hpp	/^    float quality;$/;"	m	struct:CvDTreeSplit
 qualityLevel	include/opencv2/features2d/features2d.hpp	/^    double qualityLevel;$/;"	m	class:cv::GFTTDetector
@@ -11434,7 +11458,6 @@ result_type	include/opencv2/gpu/device/vec_distance.hpp	/^        typedef float 
 result_type	include/opencv2/gpu/device/vec_distance.hpp	/^        typedef int result_type;$/;"	t	struct:cv::gpu::device::HammingDist
 result_type	include/opencv2/gpu/device/vec_distance.hpp	/^        typedef int result_type;$/;"	t	struct:cv::gpu::device::L1Dist
 retranslateUi	check_cli/build/ui_mainwindow.h	/^    void retranslateUi(QMainWindow *MainWindow)$/;"	f	class:Ui_MainWindow
-retranslateUi	check_cli/ui_camara_get.h	/^    void retranslateUi(QWidget *Form)$/;"	f	class:Ui_Form
 rho	include/opencv2/ml/ml.hpp	/^    double rho;$/;"	m	struct:CvSVMDecisionFunc
 rho	include/opencv2/ml/ml.hpp	/^    double rho;$/;"	m	struct:CvSVMSolutionInfo
 riBuf	include/opencv2/gpu/gpu.hpp	/^    GpuMat minSSD, leBuf, riBuf;$/;"	m	class:cv::gpu::StereoBM_GPU
@@ -11532,6 +11555,7 @@ s	include/opencv2/core/types_c.h	/^        short* s;$/;"	m	union:CvMatND::__anon
 s	include/opencv2/legacy/legacy.hpp	/^    int* s; \/\/for selected candidate$/;"	m	struct:CvCliqueFinder
 sFactor	include/opencv2/contrib/openfabmap.hpp	/^    double sFactor;$/;"	m	class:cv::of2::FabMap
 s_init	Modules/Log/log.h	/^void Log::s_init(const char* i_path, int i_logLevel, int i_fileType)$/;"	f	class:Log
+s_init	Modules/Net/prot.h	/^void Prot::s_init()$/;"	f	class:Prot
 s_range	include/opencv2/contrib/hybridtracker.hpp	/^    vector<float> s_range;$/;"	m	struct:cv::CvMeanShiftTrackerParams
 s_stop	Modules/Log/log.h	/^void Log::s_stop()$/;"	f	class:Log
 sample_count	include/opencv2/ml/ml.hpp	/^    int sample_count, var_all, var_count, max_c_count;$/;"	m	struct:CvDTreeTrainData
@@ -11657,11 +11681,9 @@ saturate_cast_caller	include/opencv2/gpu/device/vec_math.hpp	/^        template 
 saturate_cast_func	include/opencv2/gpu/device/functional.hpp	/^        __device__ __forceinline__ saturate_cast_func():unary_function<T, D>(){}$/;"	f	struct:cv::gpu::device::saturate_cast_func
 saturate_cast_func	include/opencv2/gpu/device/functional.hpp	/^        __device__ __forceinline__ saturate_cast_func(const saturate_cast_func& other):unary_function<T, D>(){}$/;"	f	struct:cv::gpu::device::saturate_cast_func
 saturate_cast_func	include/opencv2/gpu/device/functional.hpp	/^    template <typename T, typename D> struct saturate_cast_func : unary_function<T, D>$/;"	s	namespace:cv::gpu::device
-save	check_cli/camara_get.cpp	/^void ApplicationWindow::save()$/;"	f	class:ApplicationWindow
 save	include/opencv2/flann/flann.hpp	/^        void save(std::string filename) { nnIndex->save(filename); }$/;"	f	class:cv::flann::GenericIndex
 save	include/opencv2/flann/flann.hpp	/^    void save(std::string filename)$/;"	f	class:cv::flann::Index_
 save	include/opencv2/flann/flann_base.hpp	/^    void save(std::string filename)$/;"	f	class:cvflann::Index
-saveAs	check_cli/camara_get.cpp	/^void ApplicationWindow::saveAs()$/;"	f	class:ApplicationWindow
 saveIndex	include/opencv2/flann/autotuned_index.h	/^    virtual void saveIndex(FILE* stream)$/;"	f	class:cvflann::AutotunedIndex
 saveIndex	include/opencv2/flann/composite_index.h	/^    void saveIndex(FILE* stream)$/;"	f	class:cvflann::CompositeIndex
 saveIndex	include/opencv2/flann/flann_base.hpp	/^    virtual void saveIndex(FILE* stream)$/;"	f	class:cvflann::Index
@@ -11745,6 +11767,7 @@ separateDetectionWork	include/opencv2/contrib/detection_based_tracker.hpp	/^    
 seq	include/opencv2/core/core_c.h	/^CVAPI(void)  cvClearSeq( CvSeq* seq );$/;"	v
 seq	include/opencv2/core/core_c.h	/^CVAPI(void) cvSeqInvert( CvSeq* seq );$/;"	v
 seq	include/opencv2/core/types_c.h	/^        CvSeq* seq; \/* sequence (ordered collection of file nodes) *\/$/;"	m	union:CvFileNode::__anon28
+serializeIntValue	Modules/Net/prot.cpp	/^int serializeIntValue(long value,char *buffer,int bufferlen){$/;"	f
 set	include/opencv2/core/operations.hpp	/^    void set(_Tp* _data, size_t _size, bool _copyData=false)$/;"	f	class:cv::Vector
 set	include/opencv2/core/operations.hpp	/^inline void Algorithm::set(const char* _name, const Ptr<_Tp>& value)$/;"	f	class:cv::Algorithm
 set	include/opencv2/core/operations.hpp	/^inline void Algorithm::set(const string& _name, const Ptr<_Tp>& value)$/;"	f	class:cv::Algorithm
@@ -11774,6 +11797,8 @@ setExposureCompensator	include/opencv2/stitching/stitcher.hpp	/^    void setExpo
 setFastParams	include/opencv2/gpu/gpu.hpp	/^    inline void setFastParams(int threshold, bool nonmaxSupression = true)$/;"	f	class:cv::gpu::ORB_GPU
 setFeaturesFinder	include/opencv2/stitching/stitcher.hpp	/^    void setFeaturesFinder(Ptr<detail::FeaturesFinder> features_finder)$/;"	f	class:cv::Stitcher
 setFeaturesMatcher	include/opencv2/stitching/stitcher.hpp	/^    void setFeaturesMatcher(Ptr<detail::FeaturesMatcher> features_matcher)$/;"	f	class:cv::Stitcher
+setField	Modules/Net/prot.h	/^void Prot::setField(const char* fieldName, const char *value)$/;"	f	class:Prot
+setField	Modules/Net/prot.h	/^void Prot::setField(const char* fieldName, long value)$/;"	f	class:Prot
 setFlowErrorThreshold	include/opencv2/videostab/inpainting.hpp	/^    void setFlowErrorThreshold(float val) { flowErrorThreshold_ = val; }$/;"	f	class:cv::videostab::MotionInpainter
 setFrameQueue	include/opencv2/gpu/gpu.hpp	/^        void setFrameQueue(detail::FrameQueue* frameQueue) { frameQueue_ = frameQueue; }$/;"	f	class:cv::gpu::VideoReader_GPU::VideoSource
 setFrameSource	include/opencv2/videostab/stabilizer.hpp	/^    void setFrameSource(Ptr<IFrameSource> val) { frameSource_ = val; }$/;"	f	class:cv::videostab::StabilizerBase
@@ -11798,6 +11823,7 @@ setNumBands	include/opencv2/stitching/detail/blenders.hpp	/^    void setNumBands
 setOptFlowEstimator	include/opencv2/videostab/global_motion.hpp	/^    void setOptFlowEstimator(Ptr<ISparseOptFlowEstimator> val) { optFlowEstimator_ = val; }$/;"	f	class:cv::videostab::PyrLkRobustMotionEstimator
 setOptFlowEstimator	include/opencv2/videostab/inpainting.hpp	/^    void setOptFlowEstimator(Ptr<IDenseOptFlowEstimator> val) { optFlowEstimator_ = val; }$/;"	f	class:cv::videostab::MotionInpainter
 setPanoConfidenceThresh	include/opencv2/stitching/stitcher.hpp	/^    void setPanoConfidenceThresh(double conf_thresh) { conf_thresh_ = conf_thresh; }$/;"	f	class:cv::Stitcher
+setProt	Modules/Net/prot.h	/^void Prot::setProt(const char* protName)$/;"	f	class:Prot
 setRadius	include/opencv2/videostab/deblurring.hpp	/^    virtual void setRadius(int val) { radius_ = val; }$/;"	f	class:cv::videostab::DeblurerBase
 setRadius	include/opencv2/videostab/inpainting.hpp	/^    virtual void setRadius(int val) { radius_ = val; }$/;"	f	class:cv::videostab::InpainterBase
 setRadius	include/opencv2/videostab/motion_stabilizing.hpp	/^    virtual void setRadius(int val) { radius_ = val; }$/;"	f	class:cv::videostab::MotionFilterBase
@@ -11839,7 +11865,6 @@ set_threshold	include/opencv2/legacy/legacy.hpp	/^    bool    set_threshold( int
 set_up_tc_	include/opencv2/ts/ts_gtest.h	/^  Test::SetUpTestCaseFunc set_up_tc_;$/;"	m	class:testing::TestCase
 set_window	include/opencv2/legacy/legacy.hpp	/^    bool    set_window( CvRect window)$/;"	f	class:CvCamShiftTracker
 setupUi	check_cli/build/ui_mainwindow.h	/^    void setupUi(QMainWindow *MainWindow)$/;"	f	class:Ui_MainWindow
-setupUi	check_cli/ui_camara_get.h	/^    void setupUi(QWidget *Form)$/;"	f	class:Ui_Form
 severity_	include/opencv2/ts/ts_gtest.h	/^  const GTestLogSeverity severity_;$/;"	m	class:std::tr1::GTestLog
 shape	include/opencv2/legacy/blobtrack.hpp	/^    enum {RECT, ELLIPSE} shape;$/;"	m	struct:CvDrawShape	typeref:enum:CvDrawShape::__anon268
 shared	include/opencv2/ml/ml.hpp	/^    bool shared;$/;"	m	struct:CvDTreeTrainData
@@ -11944,6 +11969,8 @@ size_type	include/opencv2/core/core.hpp	/^    typedef size_t size_type;$/;"	t	cl
 sizes_	include/opencv2/stitching/detail/seam_finders.hpp	/^    std::vector<Size> sizes_;$/;"	m	class:cv::detail::PairwiseSeamFinder
 skinHueHistogram	include/opencv2/contrib/contrib.hpp	/^    Histogram histogramHueMotion, skinHueHistogram;$/;"	m	class:CvAdaptiveSkinDetector
 slidingSumBuf	include/opencv2/calib3d/calib3d.hpp	/^    CvMat* slidingSumBuf;$/;"	m	struct:CvStereoBMState
+sm_protDic	Modules/Net/prot.h	/^    static S2M sm_protDic;      \/\/协议词典 $/;"	m	class:Prot
+sm_protDic	Modules/Net/prot.h	/^S2M Prot::sm_protDic;$/;"	m	class:Prot
 smallSize	include/opencv2/contrib/contrib.hpp	/^        int smallSize;$/;"	m	class:cv::SelfSimDescriptor
 small_any_policy	include/opencv2/flann/any.h	/^struct small_any_policy : typed_base_any_policy<T>$/;"	s	namespace:cvflann::anyimpl
 smart_block_dim_x	include/opencv2/gpu/device/functional.hpp	/^        enum { smart_block_dim_x = 16 };$/;"	e	enum:cv::gpu::device::DefaultTransformFunctorTraits::__anon117
@@ -12028,6 +12055,8 @@ state_	include/opencv2/ts/ts_gtest.h	/^  UInt32 state_;$/;"	m	class:testing::int
 state_post	include/opencv2/video/tracking.hpp	/^    CvMat* state_post;          \/* corrected state (x(k)):$/;"	m	struct:CvKalman
 state_pre	include/opencv2/video/tracking.hpp	/^    CvMat* state_pre;           \/* predicted state (x'(k)):$/;"	m	struct:CvKalman
 states_	include/opencv2/stitching/detail/seam_finders.hpp	/^    std::vector<ComponentState> states_;$/;"	m	class:cv::detail::DpSeamFinder
+staticMetaObject	check_cli/build/moc_mainwindowimpl.cpp	/^const QMetaObject MainWindowImpl::staticMetaObject = {$/;"	m	class:MainWindowImpl	file:
+staticMetaObjectExtraData	check_cli/build/moc_mainwindowimpl.cpp	/^const QMetaObjectExtraData MainWindowImpl::staticMetaObjectExtraData = {$/;"	m	class:MainWindowImpl	file:
 static_delete	include/opencv2/flann/any.h	/^    virtual void static_delete(void** x)$/;"	f	struct:cvflann::anyimpl::big_any_policy
 static_delete	include/opencv2/flann/any.h	/^    virtual void static_delete(void**) { }$/;"	f	struct:cvflann::anyimpl::small_any_policy
 status	include/opencv2/legacy/legacy.hpp	/^    int status;$/;"	m	struct:CvCliqueFinder
@@ -12077,6 +12106,7 @@ storageIn	include/opencv2/ts/ts_perf.hpp	/^    cv::FileStorage storageIn;$/;"	m	
 storageInPath	include/opencv2/ts/ts_perf.hpp	/^    std::string storageInPath;$/;"	m	class:perf::Regression
 storageOut	include/opencv2/ts/ts_perf.hpp	/^    cv::FileStorage storageOut;$/;"	m	class:perf::Regression
 storageOutPath	include/opencv2/ts/ts_perf.hpp	/^    std::string storageOutPath;$/;"	m	class:perf::Regression
+str	Modules/Net/String.h	/^    char *str;$/;"	m	class:String
 str	include/opencv2/core/types_c.h	/^        CvString str; \/* text string *\/$/;"	m	union:CvFileNode::__anon28
 str	include/opencv2/core/types_c.h	/^    CvString str;$/;"	m	struct:CvStringHashNode
 strdup	include/opencv2/legacy/blobtrack.hpp	56;"	d
@@ -12156,6 +12186,9 @@ t	include/opencv2/legacy/legacy.hpp	/^    int t;$/;"	m	struct:CvBGCodeBookModel
 t	include/opencv2/stitching/detail/camera.hpp	/^    Mat t; \/\/ Translation$/;"	m	struct:cv::detail::CameraParams
 t	include/opencv2/stitching/detail/warpers.hpp	/^    float t[3];$/;"	m	struct:cv::detail::ProjectorBase
 t	include/opencv2/ts/ts.hpp	/^    double t, freq;$/;"	m	class:cvtest::BadArgTest
+t1	Modules/Net/prot.cpp	/^static const char t1 = 0x01; \/\/ 负,8位$/;"	v	file:
+t2	Modules/Net/prot.cpp	/^static const char t2 = 0x02; \/\/ 负,16位$/;"	v	file:
+t3	Modules/Net/prot.cpp	/^static const char t3 = 0x04; \/\/ 负,32位$/;"	v	file:
 tLastUpdate	include/opencv2/legacy/legacy.hpp	/^    int tLastUpdate;$/;"	m	struct:CvBGCodeBookElem
 table	include/opencv2/contrib/openfabmap.hpp	/^    int (*table)[8];$/;"	m	class:cv::of2::FabMapLUT
 table_color	include/opencv2/gpu/gpu.hpp	/^    GpuMat table_color;$/;"	m	class:cv::gpu::DisparityBilateralFilter
@@ -12398,6 +12431,7 @@ tuple_size	include/opencv2/ts/ts_gtest.h	/^struct tuple_size<GTEST_6_TUPLE_(T)> 
 tuple_size	include/opencv2/ts/ts_gtest.h	/^struct tuple_size<GTEST_7_TUPLE_(T)> {$/;"	s	namespace:std::tr1
 tuple_size	include/opencv2/ts/ts_gtest.h	/^struct tuple_size<GTEST_8_TUPLE_(T)> {$/;"	s	namespace:std::tr1
 tuple_size	include/opencv2/ts/ts_gtest.h	/^struct tuple_size<GTEST_9_TUPLE_(T)> {$/;"	s	namespace:std::tr1
+type	Modules/Net/autotype.h	/^    char type;$/;"	m	class:AutoType
 type	include/opencv2/core/gpumat.hpp	/^    inline int GpuMat::type() const$/;"	f	class:cv::gpu::GpuMat
 type	include/opencv2/core/mat.hpp	/^inline int Mat::type() const { return CV_MAT_TYPE(flags); }$/;"	f	class:cv::Mat
 type	include/opencv2/core/mat.hpp	/^inline int SparseMat::type() const$/;"	f	class:cv::SparseMat
@@ -12639,6 +12673,7 @@ unroll	include/opencv2/gpu/device/detail/transform_detail.hpp	/^            stat
 unroll	include/opencv2/gpu/device/detail/transform_detail.hpp	/^            static __device__ __forceinline__ void unroll(const T& src, D& dst, const Mask& mask, const UnOp& op, int x_shifted, int y)$/;"	f	struct:cv::gpu::device::transform_detail::OpUnroller
 unroll	include/opencv2/gpu/device/detail/transform_detail.hpp	/^            static __device__ __forceinline__ void unroll(const T1& src1, const T2& src2, D& dst, const Mask& mask, BinOp& op, int x_shifted, int y)$/;"	f	struct:cv::gpu::device::transform_detail::OpUnroller
 unroll	include/opencv2/gpu/device/detail/transform_detail.hpp	/^            static __device__ __forceinline__ void unroll(const T1& src1, const T2& src2, D& dst, const Mask& mask, const BinOp& op, int x_shifted, int y)$/;"	f	struct:cv::gpu::device::transform_detail::OpUnroller
+unserializeIntValue	Modules/Net/prot.cpp	/^int unserializeIntValue(long &value, char* buffer, int bufferlen){$/;"	f
 up_	include/opencv2/core/opengl_interop.hpp	/^    Point3d up_;$/;"	m	class:cv::GlCamera
 update	include/opencv2/videostab/deblurring.hpp	/^    virtual void update() {}$/;"	f	class:cv::videostab::DeblurerBase
 update	include/opencv2/videostab/inpainting.hpp	/^    virtual void update() {}$/;"	f	class:cv::videostab::InpainterBase
@@ -14412,8 +14447,8 @@ zeros	include/opencv2/core/mat.hpp	/^template<typename _Tp> inline MatExpr Mat_<
 zeros	include/opencv2/core/operations.hpp	/^Matx<_Tp,m,n> Matx<_Tp,m,n>::zeros()$/;"	f	class:cv::Matx
 ~AdjusterAdapter	include/opencv2/features2d/features2d.hpp	/^    virtual ~AdjusterAdapter() {}$/;"	f	class:cv::AdjusterAdapter
 ~Allocator	include/opencv2/core/core.hpp	/^    ~Allocator() {}$/;"	f	class:cv::Allocator
-~ApplicationWindow	check_cli/camara_get.cpp	/^ApplicationWindow::~ApplicationWindow()$/;"	f	class:ApplicationWindow
 ~AutoBuffer	include/opencv2/core/operations.hpp	/^template<typename _Tp, size_t fixed_size> inline AutoBuffer<_Tp, fixed_size>::~AutoBuffer()$/;"	f	class:cv::AutoBuffer
+~AutoType	Modules/Net/autotype.h	/^    virtual ~AutoType() {delete [] buffer;}$/;"	f	class:AutoType
 ~AutotunedIndex	include/opencv2/flann/autotuned_index.h	/^    virtual ~AutotunedIndex()$/;"	f	class:cvflann::AutotunedIndex
 ~BFMatcher	include/opencv2/features2d/features2d.hpp	/^    virtual ~BFMatcher() {}$/;"	f	class:cv::BFMatcher
 ~BaseColumnFilter_GPU	include/opencv2/gpu/gpu.hpp	/^    virtual ~BaseColumnFilter_GPU() {}$/;"	f	class:cv::gpu::BaseColumnFilter_GPU
@@ -14498,6 +14533,7 @@ zeros	include/opencv2/core/operations.hpp	/^Matx<_Tp,m,n> Matx<_Tp,m,n>::zeros()
 ~ParameterizedTestCaseInfoBase	include/opencv2/ts/ts_gtest.h	/^  virtual ~ParameterizedTestCaseInfoBase() {}$/;"	f	class:testing::internal::ParameterizedTestCaseInfoBase
 ~ParameterizedTestCaseRegistry	include/opencv2/ts/ts_gtest.h	/^  ~ParameterizedTestCaseRegistry() {$/;"	f	class:testing::internal::ParameterizedTestCaseRegistry
 ~PooledAllocator	include/opencv2/flann/allocator.h	/^    ~PooledAllocator()$/;"	f	class:cvflann::PooledAllocator
+~Prot	Modules/Net/prot.h	/^Prot::~Prot()$/;"	f	class:Prot
 ~Ptr	include/opencv2/core/operations.hpp	/^template<typename _Tp> inline Ptr<_Tp>::~Ptr() { release(); }$/;"	f	class:cv::Ptr
 ~QuantizedPyramid	include/opencv2/objdetect/objdetect.hpp	/^  virtual ~QuantizedPyramid() {}$/;"	f	class:cv::linemod::QuantizedPyramid
 ~RadiusResultSet	include/opencv2/flann/result_set.h	/^    ~RadiusResultSet()$/;"	f	class:cvflann::RadiusResultSet
@@ -14508,6 +14544,7 @@ zeros	include/opencv2/core/operations.hpp	/^Matx<_Tp,m,n> Matx<_Tp,m,n>::zeros()
 ~SeamFinder	include/opencv2/stitching/detail/seam_finders.hpp	/^    virtual ~SeamFinder() {}$/;"	f	class:cv::detail::SeamFinder
 ~SparseMat	include/opencv2/core/mat.hpp	/^inline SparseMat::~SparseMat()$/;"	f	class:cv::SparseMat
 ~StabilizerBase	include/opencv2/videostab/stabilizer.hpp	/^    virtual ~StabilizerBase() {}$/;"	f	class:cv::videostab::StabilizerBase
+~String	Modules/Net/String.h	/^    ~String() {delete [] str;}$/;"	f	class:String
 ~String	include/opencv2/ts/ts_gtest.h	/^  ~String() { delete[] c_str_; }$/;"	f	class:testing::internal::String
 ~TestEventListener	include/opencv2/ts/ts_gtest.h	/^  virtual ~TestEventListener() {}$/;"	f	class:testing::TestEventListener
 ~TestFactoryBase	include/opencv2/ts/ts_gtest.h	/^  virtual ~TestFactoryBase() {}$/;"	f	class:testing::internal::TestFactoryBase

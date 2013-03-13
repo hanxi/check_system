@@ -1,0 +1,34 @@
+[11-03-2013][13:59:24] [Enter function :main] [test.cpp] [26] 
+�
+[11-03-2013][13:59:24] [Enter function :testSerializeIntValueUnserializeIntValue] [prot.cpp] [225] 
+[11-03-2013][13:59:24] [Enter function :serializeIntValue] [prot.cpp] [138] 
++255
+[8bit]0xfffffff2
+[16bit]YES
+[11-03-2013][13:59:24] [Exit  function :serializeIntValue] 
+[11-03-2013][13:59:24] [Enter function :unSerializeIntValue] [prot.cpp] [44] 
+0xfffffff2[+]
+255是16bit的整型
+[11-03-2013][13:59:24] [Exit  function :unSerializeIntValue] 
+value1=255
+[11-03-2013][13:59:24] [Enter function :serializeIntValue] [prot.cpp] [138] 
++65535
+[8bit]0xfffffff2
+[16bit]YES
+[11-03-2013][13:59:24] [Exit  function :serializeIntValue] 
+[11-03-2013][13:59:24] [Enter function :unSerializeIntValue] [prot.cpp] [44] 
+0xfffffff2[+]
+65535是16bit的整型
+[11-03-2013][13:59:24] [Exit  function :unSerializeIntValue] 
+value2=65535
+[11-03-2013][13:59:24] [Enter function :serializeIntValue] [prot.cpp] [138] 
++4294967295
+[8bit]0xfffffff4
+[32bit]YES
+[11-03-2013][13:59:24] [Exit  function :serializeIntValue] 
+[11-03-2013][13:59:24] [Enter function :unSerializeIntValue] [prot.cpp] [44] 
+0xfffffff4[+]
+4294967295是32bit的整型
+[11-03-2013][13:59:24] [Exit  function :unSerializeIntValue] 
+value3=4294967295
+[11-03-2013][13:59:24] [Exit  function :testSerializeIntValueUnserializeIntValue] 

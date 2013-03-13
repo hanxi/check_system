@@ -16,11 +16,14 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cstring>
 #include <ctime>
 #include <cstdlib>
 
-#define HTML_LOG   1     //输出为html格式
-#define TXT_LOG    2     //输出为txt格式
+const char HTML_LOG =  1;     //输出为html格式
+const char TXT_LOG  =  2;     //输出为txt格式
+
+#define __LOGARG__ __FILE__, __LINE__, __FUNCTION__
 
 class Log
 {
@@ -30,28 +33,24 @@ private:
     static int               ms_logLevel;      //小于logLevel的log将被打印出来
     static int               ms_logFileType;   //log文件类型
 
-    int                      m_nowLevel;
     std::string             *m_theFunctionName;//进入的函数名
+    int                      m_nowLevel;
 
 public:
     static void s_init(const char *i_path, int i_logLevel, int i_fileType);
     static void s_stop();
-    static const char *endl;
 
-    Log(const char *funcName, int logLevel);
+    Log(const char *fileName, int line, const char *funcName, int logLevel);
     ~Log();
 
     template<typename Type>
     void debug(Type msg);
     template<typename Type>
     Log& operator<<(Type msg);
+    Log& operator<<(Log& (*__pf)(Log&));
+
+    static Log& endl(Log& log);
 };
-// 初始化静态成员变量
-std::ofstream     Log::ms_file;
-const char       *Log::ms_path = NULL;       //log文件路径
-int               Log::ms_logLevel = 0;      //小于logLevel的log将被打印出来
-int               Log::ms_logFileType = 0;   //log文件类型
-const char       *Log::endl = "\n";
 
 inline
 void Log::s_init(const char* i_path, int i_logLevel, int i_fileType)
@@ -74,7 +73,6 @@ void Log::s_init(const char* i_path, int i_logLevel, int i_fileType)
         ms_file << utf8header;
         const char* styleType = "<head><style type=\"text/css\">r{color: red}b{color: blue}</style></head>";
         ms_file << styleType;
-        Log::endl = "<br>";
     }
 }
 
@@ -96,18 +94,20 @@ std::string get_cur_datetime(const char* format)
 }
 
 inline
-Log::Log(const char *funcName, int level)
-:m_theFunctionName(0),m_nowLevel(level)
+Log::Log(const char *fileName, int line, const char *funcName, int logLevel)
+:m_theFunctionName(0),m_nowLevel(logLevel)
 {
     if(m_nowLevel <= ms_logLevel) {
         if (ms_logFileType==TXT_LOG) {
             ms_file << "[" << get_cur_datetime("%d-%m-%Y][%H:%M:%S") << "] "
-                << "[Enter function] " << funcName << std::endl;
+                << "[Enter function :" << funcName << "] "
+                << "[" << fileName << "] [" << line << "] " << std::endl;
             m_theFunctionName = new std::string(funcName);
         }
         else if (ms_logFileType==HTML_LOG) {
-            ms_file << "<r>[" << get_cur_datetime("%d-%m-%Y][%H:%M:%S") << "]</r> "
-                << "<b>[Enter function]</b><r>" << funcName << "<r><br>";
+            ms_file << "<r>[" << get_cur_datetime("%d-%m-%Y][%H:%M:%S") << "]</r>"
+                << "<b>[Enter function :" << funcName << "]</b>"
+                << "<r>[" << fileName << "][" << line << "]<r><br>";
             m_theFunctionName = new std::string(funcName);
         }
         else
@@ -123,12 +123,12 @@ Log::~Log()
     if(m_nowLevel <= ms_logLevel) {
         if (ms_logFileType==TXT_LOG) {
             ms_file << "[" << get_cur_datetime("%d-%m-%Y][%H:%M:%S") << "] "
-                << "[Exit function] " << *m_theFunctionName << std::endl;
+                << "[Exit  function :" << *m_theFunctionName << "] " << std::endl;
             delete m_theFunctionName;
         }
         else if (ms_logFileType==HTML_LOG) {
-            ms_file << "<r>[" << get_cur_datetime("%d-%m-%Y][%H:%M:%S") << "]</r> "
-                << "<b>[Exit function]</b><r>" << *m_theFunctionName << "<r><br>";
+            ms_file << "<r>[" << get_cur_datetime("%d-%m-%Y][%H:%M:%S") << "]</r>"
+                << "<b>[Exit  function :" << *m_theFunctionName << "]<b><br>";
             delete m_theFunctionName;
         }
         else
@@ -179,6 +179,34 @@ Log& Log::operator<<(Type msg)
         }
     }
     return *this;
+}
+
+inline
+Log& Log::operator<<(Log& (*__pf)(Log&))
+{
+    return __pf(*this);
+}
+
+inline
+Log& Log::endl(Log& log)
+{
+    if(log.m_nowLevel <= ms_logLevel) {
+        if (ms_logFileType==TXT_LOG)
+        {
+            ms_file << '\n';
+            flush(ms_file);
+        }
+        else if (ms_logFileType==HTML_LOG)
+        {
+            ms_file << "</br>";
+            flush(ms_file);
+        }
+        else
+        {
+            std::cout << "ERROR. File type can't define." << std::endl;
+        }
+    }
+    return log;
 }
 
 #endif /* defined(__LOG_H_) */

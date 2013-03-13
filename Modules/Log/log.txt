@@ -1,4 +1,4 @@
-[08-03-2013][13:50:16] [Enter function] test
-1234512356712345
-1234512345
-[08-03-2013][13:50:16] [Exit function] test
+[10-03-2013][21:44:17] [Enter function :test] [test.cpp] [17] 
+3039
+141
+[10-03-2013][21:44:17] [Exit  function :test] 
