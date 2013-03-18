@@ -1,3 +1,13 @@
+/*=============================================================================
+#     FileName: mainwindowimpl.h
+#         Desc: 客户端，实现拍照功能
+#       Author: hanxi
+#        Email: hanxi.com@gmail.com
+#     HomePage: http://hanxi.cnblogs.com
+#      Version: 0.0.1
+#   LastChange: 2013-03-15 18:18:30
+#      History:
+=============================================================================*/
 #ifndef MAINWINDOWIMPL_H
 #define MAINWINDOWIMPL_H
 
@@ -10,6 +20,7 @@
 #include <opencv2/opencv.hpp> //包含opencv库头文件
 
 #include "ui_mainwindow.h"
+
 //
 class MainWindowImpl : public QMainWindow, public Ui::MainWindow
 {
@@ -27,10 +38,10 @@ private slots:
 	void submitPic();       // 提交
 
 private:
-	QTimer *timer;
-	QImage *imag;
-    cv::VideoCapture cap;   // 视频获取结构
-	cv::Mat frame;          // 存放每一帧图像
+	QTimer           *m_timer;
+	QImage            m_image;
+    cv::VideoCapture  m_cap;   // 视频获取结构
+	cv::Mat           m_frame; // 存放每一帧图像
 
 	void openCamara();      // 打开摄像头
 	void closeCamara();     // 关闭摄像头。

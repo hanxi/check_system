@@ -1,0 +1,12 @@
+﻿[protCheckIn_C2S]
+imgBin = "0101010001010101001010"
+
+[protCheckIn_S2C]
+result = -1
+
+[protSearch_C2S]
+imgBin = "0101010101011010101010"
+
+[protSearch_S2C]
+result = -1
+resultInfo = ""

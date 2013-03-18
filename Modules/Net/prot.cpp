@@ -11,24 +11,9 @@
 
 #include "prot.h"
 
-#include "log.h"
 
 I2M Prot::sm_protDic;      //协议词典 
-
-void Prot::s_init()
-{
-    S2A s2a;
-    AutoType a1("hanxi");
-    AutoType a2("911203");
-    s2a.insert(S2A::value_type("name",a1));
-    s2a.insert(S2A::value_type("passwd",a2));
-    sm_protDic.insert(I2M::value_type(1,s2a));
-    s2a.clear();
-    a1 = 256;
-    s2a.insert(S2A::value_type("count",a1));
-    sm_protDic.insert(I2M::value_type(2,s2a));
-}
-
+I2V Prot::sm_protFunc;     //协议handler函数
 
 // 用第一个字节保存整数的位数以及是正还是负
 // 前4位区分正负,0表示负，F表是正
@@ -41,7 +26,7 @@ static const char T3 = 0xF4; // 正,32位
 static const char t3 = 0x04; // 负,32位
 
 int unSerializeIntValue(long &value, char* buffer, int bufferlen){
-    Log log(__LOGARG__,5);
+    Log log(__LOGARG__,1);
 	try{
 		if(bufferlen<=1) return 0;
 		
@@ -134,7 +119,7 @@ int unSerializeIntValue(long &value, char* buffer, int bufferlen){
 }
 
 int serializeIntValue(long value,char *buffer,int bufferlen){
-    Log log(__LOGARG__,5);
+    Log log(__LOGARG__,1);
 	try{
 		bool positive = true;
 		if(value<0) {
@@ -323,7 +308,7 @@ int Prot::serialize(char* bufferAddr, int bufferLength)
     return totellen;
 }
 
-bool Prot::pickBufferInfo(char* bufferAddr, int bufferLength, int& o_protId, int& o_protLen)
+bool Prot::peekBufferInfo(char* bufferAddr, int bufferLength, int& o_protId, int& o_protLen)
 {
     if (bufferLength>=8) {
         int protId=-1;
@@ -357,6 +342,7 @@ int Prot::unSerialize(char* bufferAddr, int bufferLength)
         ret=0;
         AutoType &value = iter->second;
         char type = value.getType();
+        log << "type=" << type << Log::endl;
         if (type==VALUE_TYPE_NUMBER) {
             long num = 0;
             ret = unSerializeIntValue(num,bufferAddr+totellen,lenlimit-totellen);
@@ -367,6 +353,7 @@ int Prot::unSerialize(char* bufferAddr, int bufferLength)
         else if (type==VALUE_TYPE_STRING) {
             long strLen = 0;
             ret = unSerializeIntValue(strLen,bufferAddr+totellen,lenlimit-totellen);
+            log << "strLen=" << strLen << Log::endl;
             if (ret==0) break;
             totellen += ret;
             const char *pstr = bufferAddr+totellen;
@@ -374,6 +361,7 @@ int Prot::unSerialize(char* bufferAddr, int bufferLength)
             totellen += strLen;
         }
     }
+    log << "ret=" << ret << Log::endl;
     if (ret==0) return 0;
     return totellen;
 }
@@ -393,5 +381,33 @@ void testSerializeUnserialize()
     prot.setField("name","hanxixi");
     prot.unSerialize(bufferAddr, 10240);
     log << (prot.getField("name")).getStr() << Log::endl;
+}
+
+// 注册函数
+void Prot::regHandler(int protId, void *func)
+{
+    Log log(__LOGARG__,1);
+    I2VIter iter = sm_protFunc.find(protId);
+    if (iter!=sm_protFunc.end()) {
+        log << "此协议号以被注册过，请检查.protId=" << protId << Log::endl;
+        return;
+    }
+    if (0==func) {
+        log << "func 不是一个函数，注册失败." << Log::endl;
+        return;
+    }
+    sm_protFunc.insert(I2V::value_type(protId,func));
+}
+
+// 根据协议id获取注册函数
+void* Prot::getHandler(int protId)
+{
+    Log log(__LOGARG__,1);
+    I2VIter iter = sm_protFunc.find(protId);
+    if (iter==sm_protFunc.end()) {
+        log << "此协议号没有被注册过，找不到handler函数,请检查.protId=" << protId << Log::endl;
+        return 0;
+    }
+    return iter->second;
 }
 

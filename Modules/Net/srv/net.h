@@ -12,9 +12,9 @@
 #ifndef __NET_H_
 #define __NET_H_
 
+#include "log.h"
 #include <QtNetwork>
 #include <QObject>
-#include <QMutex>
 #include <map>
 
 
@@ -22,19 +22,21 @@ class Net : public QObject
 {
 Q_OBJECT
 private:
-    typedef std::map<QTcpSocket *,int> ConnContainer; // <conn,protLen>
+    typedef std::map<int, QTcpSocket*> ConnContainer;
     ConnContainer  m_cliConns;
-    QTcpServer*    m_tcpServer;
-    QMutex         m_mutexConn; 
+    QTcpServer*           m_tcpServer;
 
 public:
     Net(int port);
     virtual ~Net();
 
+    void sendProt(int sockId, int protId);
+
+
 private slots:
     void handleNewConnection();
     void handleReceive();
-    void handleDisConnected();
+    void handleDisconnected();
 };
 
 inline
@@ -45,7 +47,7 @@ Net::Net(int port):m_tcpServer(0)
         log << "重启服务器中。。。" << Log::endl;
         delete m_tcpServer;
     }
-    m_tcpServer = new QTcpServer(0);
+    m_tcpServer = new QTcpServer(this);
     log<<"新建tcpserver成功"<<Log::endl;
     if (!m_tcpServer->listen(QHostAddress::LocalHost,port)) {
         log << "启动服务器错误,port=" << port << Log::endl;
@@ -58,8 +60,10 @@ Net::Net(int port):m_tcpServer(0)
 inline
 Net::~Net()
 {
+    m_tcpServer->close();
     delete m_tcpServer;
 }
+
 
 #endif
 

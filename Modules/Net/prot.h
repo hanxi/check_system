@@ -19,6 +19,7 @@
 
 #include "autotype.h"
 #include "String.h"
+#include "log.h"
 
 
 void testSerializeIntValueUnserializeIntValue();
@@ -49,28 +50,36 @@ typedef std::map<String, AutoType, StrCmp>     S2A;
 typedef S2A::iterator                          S2AIter;
 typedef std::map<int, S2A>                     I2M;
 typedef I2M::iterator                          I2MIter;
+typedef std::map<int, void*>                   I2V;
+typedef I2V::iterator                          I2VIter;
 
 class Prot
 {
 private:
     static I2M sm_protDic;      //协议词典 
+    static I2V sm_protFunc;     //协议handler函数
 
     I2MIter m_prot;             //当前协议
 
 public:
     static void s_init();       //初始化协议词典
+    static bool peekBufferInfo(char* bufferAddr, int bufferLength, int& o_protId, int& o_protLen);
+    static void regHandler(int protId, void *func);
+    static void* getHandler(int protId);
 
     Prot(int protId);
-    ~Prot();
+    virtual ~Prot();
 
-    void setProt(int protId);
+    bool setProt(int protId);
+    bool isRightProt() const;
 
-    void setField(const char* fieldName, long value);
-    void setField(const char* fieldName, const char *value);
+    bool setField(const char* fieldName, long value);
+    bool setField(const char* fieldName, const char *value);
     AutoType& getField(const char* fieldName);
 
+    void printProt();
+
     int serialize(char* bufferAddr, int bufferLength);
-    bool pickBufferInfo(char* bufferAddr, int bufferLength, int& o_protId, int& o_protLen);
     int unSerialize(char* bufferAddr, int bufferLength);
 };
 
@@ -81,7 +90,7 @@ Prot::Prot(int protId)
     if (m_prot==sm_protDic.end()) {
         // 失败，没有该协议
         std::cout << "protId=" << protId << std::endl;
-        assert(false&&"设置协议失败，协议不存在");
+//        assert(false&&"设置协议失败，协议不存在");
     }
 }
 
@@ -91,53 +100,98 @@ Prot::~Prot()
 }
 
 inline
-void Prot::setProt(int protId)
+bool Prot::setProt(int protId)
 {
     m_prot = sm_protDic.find(protId);
     if (m_prot==sm_protDic.end()) {
         std::cout << "protId=" << protId << std::endl;
-        assert(false&&"设置协议失败，协议不存在");
+//        assert(false&&"设置协议失败，协议不存在");
+        return false;
     }
+    return true;
 }
 
 inline
-void Prot::setField(const char* fieldName, long value)
+bool Prot::isRightProt() const
 {
     if (m_prot==sm_protDic.end()) {
-        assert(false&&"协议不存在");
+        return false;
+    }
+    return true;
+}
+
+inline
+bool Prot::setField(const char* fieldName, long value)
+{
+    if (m_prot==sm_protDic.end()) {
+        return false;
+//        assert(false&&"协议不存在");
         // 失败，没有该协议
     }
     S2AIter iter = (m_prot->second).find(fieldName);
     if ((iter->second).getType() != VALUE_TYPE_NUMBER) {
-        assert(false&&"协议类型初始化后，不能修改.");
+        return false;
+//        assert(false&&"协议类型初始化后，不能修改.");
     }
     iter->second = value;
+    return true;
 }
 
 inline
-void Prot::setField(const char* fieldName, const char *value)
+bool Prot::setField(const char* fieldName, const char *value)
 {
     if (m_prot==sm_protDic.end()) {
+        return false;
         // 失败，没有该协议
-        assert(false&&"协议不存在");
+//        assert(false&&"协议不存在");
     }
     S2AIter iter = (m_prot->second).find(fieldName);
     if ((iter->second).getType() != VALUE_TYPE_STRING) {
-        assert(false&&"协议类型初始化后，不能修改.");
+        return false;
+//        assert(false&&"协议类型初始化后，不能修改.");
     }
     iter->second = value;
+    return true;
 }
 
 inline
 AutoType& Prot::getField(const char* fieldName)
 {
     if (m_prot==sm_protDic.end()) {
+        static AutoType a(-1);
+        return a;
         // 失败，没有该协议
-        assert(false&&"协议不存在");
+//        assert(false&&"协议不存在");
     }
     S2AIter iter = (m_prot->second).find(fieldName);
     return iter->second;
 }
 
+// typedef std::map<int,long> I2L;    // 用于保存protId和handle函数
+// typedef I2L::iterator      I2LIter;
+// bool protRegHandler(protId,func); // 如果协议号已被注册则返回false，否则返回true
+// bool protGetHandler(protId,o_func); // 如果协议号没有注册，则返回false，否则返回true
+
+inline
+void Prot::printProt()
+{
+    Log log(__LOGARG__,1);
+    S2A &prot = m_prot->second;
+    int i=0;
+    for (S2AIter iter=prot.begin(); iter!=prot.end(); ++iter) {
+        i++;
+        log << "[" << i << "]";
+        log << (iter->first).c_str() << "=";
+        if ((iter->second).getType()==VALUE_TYPE_NUMBER) {
+            log << (iter->second).getNum();
+        }
+        else if ((iter->second).getType()==VALUE_TYPE_STRING) {
+            log << (iter->second).getStr();
+        }
+        log << Log::endl;
+    }
+}
+
+#include "protInit.h"      // 由工具生成的协议初始化文件
 #endif
 

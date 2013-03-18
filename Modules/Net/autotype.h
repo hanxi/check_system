@@ -24,6 +24,7 @@ private:
     char *buffer;
 
 public:
+    AutoType();
     AutoType(long num);
     AutoType(const char *str);
     AutoType(const char* str, int len);
@@ -36,6 +37,12 @@ public:
     const char* getStr();
     long getNum();
 };
+
+inline
+AutoType::AutoType()
+:type(VALUE_TYPE_STRING),buffer(0)
+{
+}
 
 inline
 AutoType::AutoType(long num)
