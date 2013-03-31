@@ -1,1 +1,0 @@
-/home/hanxi/workspace/check_system/check_cli/build/CMakeFiles/check_cli.dir
