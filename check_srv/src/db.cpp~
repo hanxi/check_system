@@ -1,0 +1,92 @@
+/*=============================================================================
+#     FileName: db.cpp
+#         Desc: 操作数据库的接口
+#       Author: hanxi
+#        Email: hanxi.com@gmail.com
+#     HomePage: http://hanxi.cnblogs.com
+#      Version: 0.0.1
+#   LastChange: 2013-03-25 22:13:49
+#      History:
+=============================================================================*/
+
+#include "db.h"
+#include "main.h"
+#include <QSqlDatabase>
+
+
+QSqlDatabase gdb;
+
+bool DB::start()
+{
+    // ms QODBC
+    // mysql QMYSQL
+    S2M& confMap = getConfMap();
+    
+    S2S& dbConf = confMap["db"];
+    const char *hostName = (dbConf["hostName"]).c_str();
+    const char *dbName = (dbConf["dbName"]).c_str();
+    const char *userName = (dbConf["userName"]).c_str();
+    const char *passwd = (dbConf["passwd"]).c_str();
+
+    gdb = QSqlDatabase::addDatabase("QMYSQL");
+    gdb.setHostName(hostName);
+    gdb.setDatabaseName(dbName);
+    gdb.setUserName(userName);
+    gdb.setPassword(passwd);
+    return gdb.open();
+}
+
+void DB::stop()
+{
+    gdb.close();
+}
+
+
+// 操作worktime表
+// 插入数据
+bool DB::worktimeInsert(int empId, const char* time, const char* photo)
+{
+	QSqlQuery query;
+	query.exec("INSERT INTO [work_time] (emp_id, check_time, check_photo) VALUES(?,?,?)");
+	QVariantList emp_id;
+	emp_id << empId;
+	query.addBindValue(emp_id);
+	QVariantList check_time;
+	check_time << time;
+	query.addBindValue(check_time);
+	QVariantList check_photo;
+	check_photo << photo;
+	query.addBindValue(check_photo);
+	try  
+	    {  
+		if (!query.execBatch())  
+		{  
+		    qDebug() << query.lastQuery();  
+		    qDebug() << query.lastError();  
+		    return NULL;  
+		}  
+	    }  
+	    catch(...)  
+	    {  
+		QMessageBox::critical(0, "Add New Node error!",  
+		                      "Unable to add a new Node!/n/n"  
+		                               "Click Cancel to exit.", QMessageBox::Cancel);  
+	    }  
+	    if( !UpdateConnectTable(user.getUserId(),user.getUserId(),2))  
+	    {
+		QMessageBox::critical(0,"","Update table Connect error");  
+		return NULL;  
+	    }
+	    return true;
+}
+
+// 修改签到时间
+void DB::worktimeAltTime(const char* time)
+{
+}
+
+// 修改empId
+void DB::worktimeAltEmpId(int empId)
+{
+}
+

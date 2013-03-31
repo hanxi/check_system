@@ -92,9 +92,32 @@ CMakeFiles/check_cli.dir/src/main.cpp.o.provides: CMakeFiles/check_cli.dir/src/m
 
 CMakeFiles/check_cli.dir/src/main.cpp.o.provides.build: CMakeFiles/check_cli.dir/src/main.cpp.o
 
+CMakeFiles/check_cli.dir/src/netOperate.cpp.o: CMakeFiles/check_cli.dir/flags.make
+CMakeFiles/check_cli.dir/src/netOperate.cpp.o: ../src/netOperate.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_cli/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/check_cli.dir/src/netOperate.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/check_cli.dir/src/netOperate.cpp.o -c /home/hanxi/workspace/check_system/check_cli/src/netOperate.cpp
+
+CMakeFiles/check_cli.dir/src/netOperate.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/check_cli.dir/src/netOperate.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hanxi/workspace/check_system/check_cli/src/netOperate.cpp > CMakeFiles/check_cli.dir/src/netOperate.cpp.i
+
+CMakeFiles/check_cli.dir/src/netOperate.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/check_cli.dir/src/netOperate.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hanxi/workspace/check_system/check_cli/src/netOperate.cpp -o CMakeFiles/check_cli.dir/src/netOperate.cpp.s
+
+CMakeFiles/check_cli.dir/src/netOperate.cpp.o.requires:
+.PHONY : CMakeFiles/check_cli.dir/src/netOperate.cpp.o.requires
+
+CMakeFiles/check_cli.dir/src/netOperate.cpp.o.provides: CMakeFiles/check_cli.dir/src/netOperate.cpp.o.requires
+	$(MAKE) -f CMakeFiles/check_cli.dir/build.make CMakeFiles/check_cli.dir/src/netOperate.cpp.o.provides.build
+.PHONY : CMakeFiles/check_cli.dir/src/netOperate.cpp.o.provides
+
+CMakeFiles/check_cli.dir/src/netOperate.cpp.o.provides.build: CMakeFiles/check_cli.dir/src/netOperate.cpp.o
+
 CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o: CMakeFiles/check_cli.dir/flags.make
 CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o: /home/hanxi/workspace/check_system/Modules/Log/log.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_cli/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_cli/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o -c /home/hanxi/workspace/check_system/Modules/Log/log.cpp
 
@@ -115,9 +138,32 @@ CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o
 
 CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o.provides.build: CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o
 
+CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o: CMakeFiles/check_cli.dir/flags.make
+CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o: /home/hanxi/workspace/check_system/Modules/Conf/conf.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_cli/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o -c /home/hanxi/workspace/check_system/Modules/Conf/conf.cpp
+
+CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hanxi/workspace/check_system/Modules/Conf/conf.cpp > CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.i
+
+CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hanxi/workspace/check_system/Modules/Conf/conf.cpp -o CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.s
+
+CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o.requires:
+.PHONY : CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o.requires
+
+CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o.provides: CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o.requires
+	$(MAKE) -f CMakeFiles/check_cli.dir/build.make CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o.provides.build
+.PHONY : CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o.provides
+
+CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o.provides.build: CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o
+
 CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Net/prot.cpp.o: CMakeFiles/check_cli.dir/flags.make
 CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Net/prot.cpp.o: /home/hanxi/workspace/check_system/Modules/Net/prot.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_cli/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_cli/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Net/prot.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Net/prot.cpp.o -c /home/hanxi/workspace/check_system/Modules/Net/prot.cpp
 
@@ -140,7 +186,7 @@ CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Net/prot.cpp.
 
 CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Net/cli/net.cpp.o: CMakeFiles/check_cli.dir/flags.make
 CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Net/cli/net.cpp.o: /home/hanxi/workspace/check_system/Modules/Net/cli/net.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_cli/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_cli/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Net/cli/net.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Net/cli/net.cpp.o -c /home/hanxi/workspace/check_system/Modules/Net/cli/net.cpp
 
@@ -163,7 +209,7 @@ CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Net/cli/net.c
 
 CMakeFiles/check_cli.dir/src/moc_mainwindowimpl.cxx.o: CMakeFiles/check_cli.dir/flags.make
 CMakeFiles/check_cli.dir/src/moc_mainwindowimpl.cxx.o: src/moc_mainwindowimpl.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_cli/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_cli/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/check_cli.dir/src/moc_mainwindowimpl.cxx.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/check_cli.dir/src/moc_mainwindowimpl.cxx.o -c /home/hanxi/workspace/check_system/check_cli/build/src/moc_mainwindowimpl.cxx
 
@@ -186,7 +232,7 @@ CMakeFiles/check_cli.dir/src/moc_mainwindowimpl.cxx.o.provides.build: CMakeFiles
 
 CMakeFiles/check_cli.dir/__/Modules/Net/cli/moc_net.cxx.o: CMakeFiles/check_cli.dir/flags.make
 CMakeFiles/check_cli.dir/__/Modules/Net/cli/moc_net.cxx.o: __/Modules/Net/cli/moc_net.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_cli/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_cli/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/check_cli.dir/__/Modules/Net/cli/moc_net.cxx.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/check_cli.dir/__/Modules/Net/cli/moc_net.cxx.o -c /home/hanxi/workspace/check_system/check_cli/build/__/Modules/Net/cli/moc_net.cxx
 
@@ -208,17 +254,17 @@ CMakeFiles/check_cli.dir/__/Modules/Net/cli/moc_net.cxx.o.provides: CMakeFiles/c
 CMakeFiles/check_cli.dir/__/Modules/Net/cli/moc_net.cxx.o.provides.build: CMakeFiles/check_cli.dir/__/Modules/Net/cli/moc_net.cxx.o
 
 src/moc_mainwindowimpl.cxx: ../src/mainwindowimpl.h
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_cli/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_cli/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating src/moc_mainwindowimpl.cxx"
-	/usr/bin/moc-qt4 -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtDesigner -I/usr/include/qt4/QtDeclarative -I/usr/include/qt4/QtScriptTools -I/usr/include/qt4/QtDBus -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtSql -I/usr/include/qt4/QtOpenGL -I/usr/include/qt4/QtXmlPatterns -I/usr/include/qt4/QtWebKit -I/usr/include/qt4/QtHelp -I/usr/include/qt4/QtUiTools -I/usr/include/qt4/QtTest -I/usr/include/qt4/QtScript -I/usr/include/qt4/QtSvg -I/usr/include/qt4/Qt3Support -I/usr/share/qt4/mkspecs/default -I/home/hanxi/workspace/check_system/check_cli/build -I/home/hanxi/workspace/check_system/check_cli -I/usr/local/include -I/home/hanxi/workspace/check_system/check_cli/./src -I/home/hanxi/workspace/check_system/check_cli/SRC_DIR -I/home/hanxi/workspace/check_system/check_cli/../include -I/home/hanxi/workspace/check_system/check_cli/../Modules/Log -I/home/hanxi/workspace/check_system/check_cli/../Modules/Net -I/home/hanxi/workspace/check_system/check_cli/../Modules/Net/cli -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -o /home/hanxi/workspace/check_system/check_cli/build/src/moc_mainwindowimpl.cxx /home/hanxi/workspace/check_system/check_cli/src/mainwindowimpl.h
+	/usr/bin/moc-qt4 -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtDesigner -I/usr/include/qt4/QtDeclarative -I/usr/include/qt4/QtScriptTools -I/usr/include/qt4/QtDBus -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtSql -I/usr/include/qt4/QtOpenGL -I/usr/include/qt4/QtXmlPatterns -I/usr/include/qt4/QtWebKit -I/usr/include/qt4/QtHelp -I/usr/include/qt4/QtUiTools -I/usr/include/qt4/QtTest -I/usr/include/qt4/QtScript -I/usr/include/qt4/QtSvg -I/usr/include/qt4/Qt3Support -I/usr/share/qt4/mkspecs/default -I/home/hanxi/workspace/check_system/check_cli/build -I/home/hanxi/workspace/check_system/check_cli -I/usr/local/include -I/home/hanxi/workspace/check_system/check_cli/./src -I/home/hanxi/workspace/check_system/check_cli/SRC_DIR -I/home/hanxi/workspace/check_system/check_cli/../include -I/home/hanxi/workspace/check_system/check_cli/../Modules/Log -I/home/hanxi/workspace/check_system/check_cli/../Modules/Conf -I/home/hanxi/workspace/check_system/check_cli/../Modules/Net -I/home/hanxi/workspace/check_system/check_cli/../Modules/Net/cli -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -o /home/hanxi/workspace/check_system/check_cli/build/src/moc_mainwindowimpl.cxx /home/hanxi/workspace/check_system/check_cli/src/mainwindowimpl.h
 
 __/Modules/Net/cli/moc_net.cxx: /home/hanxi/workspace/check_system/Modules/Net/cli/net.h
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_cli/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_cli/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating __/Modules/Net/cli/moc_net.cxx"
-	/usr/bin/moc-qt4 -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtDesigner -I/usr/include/qt4/QtDeclarative -I/usr/include/qt4/QtScriptTools -I/usr/include/qt4/QtDBus -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtSql -I/usr/include/qt4/QtOpenGL -I/usr/include/qt4/QtXmlPatterns -I/usr/include/qt4/QtWebKit -I/usr/include/qt4/QtHelp -I/usr/include/qt4/QtUiTools -I/usr/include/qt4/QtTest -I/usr/include/qt4/QtScript -I/usr/include/qt4/QtSvg -I/usr/include/qt4/Qt3Support -I/usr/share/qt4/mkspecs/default -I/home/hanxi/workspace/check_system/check_cli/build -I/home/hanxi/workspace/check_system/check_cli -I/usr/local/include -I/home/hanxi/workspace/check_system/check_cli/./src -I/home/hanxi/workspace/check_system/check_cli/SRC_DIR -I/home/hanxi/workspace/check_system/check_cli/../include -I/home/hanxi/workspace/check_system/check_cli/../Modules/Log -I/home/hanxi/workspace/check_system/check_cli/../Modules/Net -I/home/hanxi/workspace/check_system/check_cli/../Modules/Net/cli -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -o /home/hanxi/workspace/check_system/check_cli/build/__/Modules/Net/cli/moc_net.cxx /home/hanxi/workspace/check_system/Modules/Net/cli/net.h
+	/usr/bin/moc-qt4 -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtDesigner -I/usr/include/qt4/QtDeclarative -I/usr/include/qt4/QtScriptTools -I/usr/include/qt4/QtDBus -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtSql -I/usr/include/qt4/QtOpenGL -I/usr/include/qt4/QtXmlPatterns -I/usr/include/qt4/QtWebKit -I/usr/include/qt4/QtHelp -I/usr/include/qt4/QtUiTools -I/usr/include/qt4/QtTest -I/usr/include/qt4/QtScript -I/usr/include/qt4/QtSvg -I/usr/include/qt4/Qt3Support -I/usr/share/qt4/mkspecs/default -I/home/hanxi/workspace/check_system/check_cli/build -I/home/hanxi/workspace/check_system/check_cli -I/usr/local/include -I/home/hanxi/workspace/check_system/check_cli/./src -I/home/hanxi/workspace/check_system/check_cli/SRC_DIR -I/home/hanxi/workspace/check_system/check_cli/../include -I/home/hanxi/workspace/check_system/check_cli/../Modules/Log -I/home/hanxi/workspace/check_system/check_cli/../Modules/Conf -I/home/hanxi/workspace/check_system/check_cli/../Modules/Net -I/home/hanxi/workspace/check_system/check_cli/../Modules/Net/cli -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -o /home/hanxi/workspace/check_system/check_cli/build/__/Modules/Net/cli/moc_net.cxx /home/hanxi/workspace/check_system/Modules/Net/cli/net.h
 
 ui_mainwindow.h: ../ui/mainwindow.ui
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_cli/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_cli/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ui_mainwindow.h"
 	/usr/bin/uic-qt4 -o /home/hanxi/workspace/check_system/check_cli/build/ui_mainwindow.h /home/hanxi/workspace/check_system/check_cli/ui/mainwindow.ui
 
@@ -226,7 +272,9 @@ ui_mainwindow.h: ../ui/mainwindow.ui
 check_cli_OBJECTS = \
 "CMakeFiles/check_cli.dir/src/mainwindowimpl.cpp.o" \
 "CMakeFiles/check_cli.dir/src/main.cpp.o" \
+"CMakeFiles/check_cli.dir/src/netOperate.cpp.o" \
 "CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o" \
+"CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o" \
 "CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Net/prot.cpp.o" \
 "CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Net/cli/net.cpp.o" \
 "CMakeFiles/check_cli.dir/src/moc_mainwindowimpl.cxx.o" \
@@ -237,7 +285,9 @@ check_cli_EXTERNAL_OBJECTS =
 
 /home/hanxi/workspace/check_system/bin.check_cli/check_cli: CMakeFiles/check_cli.dir/src/mainwindowimpl.cpp.o
 /home/hanxi/workspace/check_system/bin.check_cli/check_cli: CMakeFiles/check_cli.dir/src/main.cpp.o
+/home/hanxi/workspace/check_system/bin.check_cli/check_cli: CMakeFiles/check_cli.dir/src/netOperate.cpp.o
 /home/hanxi/workspace/check_system/bin.check_cli/check_cli: CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o
+/home/hanxi/workspace/check_system/bin.check_cli/check_cli: CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o
 /home/hanxi/workspace/check_system/bin.check_cli/check_cli: CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Net/prot.cpp.o
 /home/hanxi/workspace/check_system/bin.check_cli/check_cli: CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Net/cli/net.cpp.o
 /home/hanxi/workspace/check_system/bin.check_cli/check_cli: CMakeFiles/check_cli.dir/src/moc_mainwindowimpl.cxx.o
@@ -256,7 +306,9 @@ CMakeFiles/check_cli.dir/build: /home/hanxi/workspace/check_system/bin.check_cli
 
 CMakeFiles/check_cli.dir/requires: CMakeFiles/check_cli.dir/src/mainwindowimpl.cpp.o.requires
 CMakeFiles/check_cli.dir/requires: CMakeFiles/check_cli.dir/src/main.cpp.o.requires
+CMakeFiles/check_cli.dir/requires: CMakeFiles/check_cli.dir/src/netOperate.cpp.o.requires
 CMakeFiles/check_cli.dir/requires: CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o.requires
+CMakeFiles/check_cli.dir/requires: CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o.requires
 CMakeFiles/check_cli.dir/requires: CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Net/prot.cpp.o.requires
 CMakeFiles/check_cli.dir/requires: CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Net/cli/net.cpp.o.requires
 CMakeFiles/check_cli.dir/requires: CMakeFiles/check_cli.dir/src/moc_mainwindowimpl.cxx.o.requires

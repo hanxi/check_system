@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>567</width>
-    <height>442</height>
+    <width>793</width>
+    <height>454</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>541</width>
+      <width>771</width>
       <height>371</height>
      </rect>
     </property>
@@ -32,14 +32,15 @@
     <widget class="QLabel" name="labelShow">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>400</x>
        <y>10</y>
-       <width>371</width>
-       <height>341</height>
+       <width>351</width>
+       <height>291</height>
       </rect>
      </property>
      <property name="text">
-      <string>摄像头显示</string>
+      <string>摄像头显示
+点击注册后对着摄像头3s</string>
      </property>
      <property name="scaledContents">
       <bool>false</bool>
@@ -48,34 +49,48 @@
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>450</x>
-       <y>10</y>
-       <width>87</width>
-       <height>166</height>
+       <x>20</x>
+       <y>340</y>
+       <width>815</width>
+       <height>30</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
+     <layout class="QHBoxLayout" name="horizontalLayout">
       <property name="sizeConstraint">
        <enum>QLayout::SetMinimumSize</enum>
       </property>
       <item>
-       <widget class="QPushButton" name="pushButtonCheckIn">
+       <widget class="QPushButton" name="pushButtonCommitCheck">
         <property name="text">
-         <string>签到</string>
+         <string>确定打卡</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButtonSearch">
+       <widget class="QPushButton" name="pushButtonCheckAgain">
         <property name="text">
-         <string>查询</string>
+         <string>重新打卡</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButtonCamara">
+       <widget class="QPushButton" name="pushButtonSignIn">
         <property name="text">
-         <string>拍照</string>
+         <string>注册</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonCancel">
+        <property name="text">
+         <string>取消</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonSubmit">
+        <property name="text">
+         <string>提交</string>
         </property>
        </widget>
       </item>
@@ -87,13 +102,78 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButtonSubmit">
+       <widget class="QPushButton" name="pushButtonCamara">
         <property name="text">
-         <string>提交</string>
+         <string>拍照</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonSearch">
+        <property name="text">
+         <string>查询</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonCheckIn">
+        <property name="text">
+         <string>签到</string>
         </property>
        </widget>
       </item>
      </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>90</y>
+       <width>176</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QSplitter" name="splitter">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <widget class="QLabel" name="labelName">
+         <property name="text">
+          <string>姓名：</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEditName"/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSplitter" name="splitter_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <widget class="QLabel" name="labelDep">
+         <property name="text">
+          <string>部门：</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEditDep"/>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLabel" name="labelCheckInfo">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>160</y>
+       <width>141</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>签到信息显示</string>
+     </property>
     </widget>
    </widget>
   </widget>
@@ -102,24 +182,38 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>567</width>
+     <width>793</width>
      <height>26</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuFile">
+   <widget class="QMenu" name="menu_2">
     <property name="title">
-     <string>文件</string>
+     <string>菜单</string>
     </property>
+    <addaction name="actionAddNewEmp"/>
+    <addaction name="separator"/>
+    <addaction name="actionManageEmp"/>
+    <addaction name="separator"/>
+    <addaction name="action_3"/>
    </widget>
-   <widget class="QMenu" name="menuManage">
-    <property name="title">
-     <string>管理</string>
-    </property>
-   </widget>
-   <addaction name="menuFile"/>
-   <addaction name="menuManage"/>
+   <addaction name="menu_2"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAddNewEmp">
+   <property name="text">
+    <string>新增员工</string>
+   </property>
+  </action>
+  <action name="actionManageEmp">
+   <property name="text">
+    <string>管理员工</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>特殊打卡</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

@@ -49,6 +49,7 @@ __PROT_INIT_H_	protInit.h	10;"	d
 __STRING_H_	String.h	12;"	d
 buffer	autotype.h	/^    char *buffer;$/;"	m	class:AutoType
 c_str	String.h	/^    const char* c_str() const {return str;}$/;"	f	class:String
+confpath	protInitTool/Makefile	/^confpath = ..\/..\/Conf$/;"	m
 getField	prot.h	/^AutoType& Prot::getField(const char* fieldName)$/;"	f	class:Prot
 getHandler	prot.cpp	/^void* Prot::getHandler(int protId)$/;"	f	class:Prot
 getNum	autotype.h	/^long AutoType::getNum() {$/;"	f	class:AutoType
@@ -65,12 +66,15 @@ handlerFunc	srv/net.cpp	/^typedef void (*handlerFunc)(int,int); \/\/ 协议handl
 isAllDigit	protInitTool.cpp	/^inline bool isAllDigit(const std::string& str)$/;"	f
 isRightProt	prot.h	/^bool Prot::isRightProt() const$/;"	f	class:Prot
 lTrim	protInitTool.cpp	/^inline std::string& lTrim(std::string &ss)$/;"	f
+logpath	protInitTool/Makefile	/^logpath = ..\/..\/Log$/;"	m
 m_cliConns	srv/net.h	/^    ConnContainer  m_cliConns;$/;"	m	class:Net
 m_prot	prot.h	/^    I2MIter m_prot;             \/\/当前协议$/;"	m	class:Prot
 m_tcpServer	srv/net.h	/^    QTcpServer*           m_tcpServer;$/;"	m	class:Net
 m_tcpSocket	cli/net.h	/^    QTcpSocket *m_tcpSocket;$/;"	m	class:Net
 main	cli/test.cpp	/^int main(int argc, char **argv)$/;"	f
 main	protInitTool.cpp	/^int main(int argc, const char **argv)$/;"	f
+main	protInitTool/main.cpp	/^int main(int argc, const char **argv)$/;"	f
+main	protInitTool/protInitTool.cpp	/^int main(int argc, const char **argv)$/;"	f
 main	srv/test.cpp	/^int main(int argc, char **argv)$/;"	f
 main	test.cpp	/^int main(int argc, const char** argv)$/;"	f
 num2str	protInitTool.cpp	/^inline void num2str(int num, std::string& o_s)$/;"	f
@@ -85,6 +89,8 @@ protSearch_C2S	protInit.h	/^const int protSearch_C2S = 3;$/;"	v
 protSearch_S2C	protInit.h	/^const int protSearch_S2C = 4;$/;"	v
 rTrim	protInitTool.cpp	/^inline std::string& rTrim(std::string &ss)$/;"	f
 readProfileWriteProtInit	protInitTool.cpp	/^void readProfileWriteProtInit(const char *profileName, const char* path)$/;"	f
+readProfileWriteProtInit	protInitTool/main.cpp	/^void readProfileWriteProtInit(const char *profileName, const char* path)$/;"	f
+readProfileWriteProtInit	protInitTool/protInitTool.cpp	/^void readProfileWriteProtInit(const char *profileName, const char* path)$/;"	f
 regHandler	prot.cpp	/^void Prot::regHandler(int protId, void *func)$/;"	f	class:Prot
 s_init	protInit.h	/^void Prot::s_init()$/;"	f	class:Prot
 sendProt	cli/net.cpp	/^void Net::sendProt(int sockId, int protId)$/;"	f	class:Net
@@ -95,7 +101,7 @@ serializeStringValue	prot.cpp	/^int serializeStringValue(const char* value,char 
 setField	prot.h	/^bool Prot::setField(const char* fieldName, const char *value)$/;"	f	class:Prot
 setField	prot.h	/^bool Prot::setField(const char* fieldName, long value)$/;"	f	class:Prot
 setProt	prot.h	/^bool Prot::setProt(int protId)$/;"	f	class:Prot
-sm_protDic	prot.cpp	/^I2M Prot::sm_protDic;      \/\/协议词典 $/;"	m	class:Prot	file:
+sm_protDic	prot.cpp	/^I2M Prot::sm_protDic;      \/\/协议词典$/;"	m	class:Prot	file:
 sm_protDic	prot.h	/^    static I2M sm_protDic;      \/\/协议词典 $/;"	m	class:Prot
 sm_protFunc	prot.cpp	/^I2V Prot::sm_protFunc;     \/\/协议handler函数$/;"	m	class:Prot	file:
 sm_protFunc	prot.h	/^    static I2V sm_protFunc;     \/\/协议handler函数$/;"	m	class:Prot

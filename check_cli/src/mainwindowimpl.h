@@ -36,6 +36,12 @@ private slots:
     void readShowImg();     // 读取图片并显示
 	void takingPicAgain();  // 重拍
 	void submitPic();       // 提交
+    void clearUIFace();     // 隐藏界面元素
+    void toAddNewEmp();     // 跳转界面到添加新用户
+    void toCheckFace();     // 跳到签到界面
+    void toCheckRightFace();// 跳到签到确认界面
+    void signIn();          // 注册
+    void cancelSignIn();    // 取消注册
 
 private:
 	QTimer           *m_timer;

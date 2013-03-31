@@ -1,4 +1,24 @@
-﻿[protCheckIn_C2S]
+﻿// 获取系统时间
+[protGetTime_C2S]
+
+[protGetTime_S2C]
+time = "2013-3-30 10:48"
+
+// 查看照片信息
+[protGetPhotoInfo_C2S]
+img = "010"
+[protGetPhotoInfo_S2C]
+result = -1
+dep = "所属部门"
+name = "名字"
+id = "考勤Id"
+// result=0表示有此照片信息
+// result=-1表示无此照片信息
+
+
+
+
+[protCheckIn_C2S]
 imgBin = "0101010001010101001010"
 
 [protCheckIn_S2C]

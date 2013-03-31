@@ -132,6 +132,30 @@ __/Modules/Net/cli/moc_net.cxx.s:
 	$(MAKE) -f CMakeFiles/check_cli.dir/build.make CMakeFiles/check_cli.dir/__/Modules/Net/cli/moc_net.cxx.s
 .PHONY : __/Modules/Net/cli/moc_net.cxx.s
 
+home/hanxi/workspace/check_system/Modules/Conf/conf.o: home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o
+.PHONY : home/hanxi/workspace/check_system/Modules/Conf/conf.o
+
+# target to build an object file
+home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o:
+	$(MAKE) -f CMakeFiles/check_cli.dir/build.make CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o
+.PHONY : home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o
+
+home/hanxi/workspace/check_system/Modules/Conf/conf.i: home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.i
+.PHONY : home/hanxi/workspace/check_system/Modules/Conf/conf.i
+
+# target to preprocess a source file
+home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.i:
+	$(MAKE) -f CMakeFiles/check_cli.dir/build.make CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.i
+.PHONY : home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.i
+
+home/hanxi/workspace/check_system/Modules/Conf/conf.s: home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.s
+.PHONY : home/hanxi/workspace/check_system/Modules/Conf/conf.s
+
+# target to generate assembly for a file
+home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.s:
+	$(MAKE) -f CMakeFiles/check_cli.dir/build.make CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.s
+.PHONY : home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.s
+
 home/hanxi/workspace/check_system/Modules/Log/log.o: home/hanxi/workspace/check_system/Modules/Log/log.cpp.o
 .PHONY : home/hanxi/workspace/check_system/Modules/Log/log.o
 
@@ -276,6 +300,30 @@ src/moc_mainwindowimpl.cxx.s:
 	$(MAKE) -f CMakeFiles/check_cli.dir/build.make CMakeFiles/check_cli.dir/src/moc_mainwindowimpl.cxx.s
 .PHONY : src/moc_mainwindowimpl.cxx.s
 
+src/netOperate.o: src/netOperate.cpp.o
+.PHONY : src/netOperate.o
+
+# target to build an object file
+src/netOperate.cpp.o:
+	$(MAKE) -f CMakeFiles/check_cli.dir/build.make CMakeFiles/check_cli.dir/src/netOperate.cpp.o
+.PHONY : src/netOperate.cpp.o
+
+src/netOperate.i: src/netOperate.cpp.i
+.PHONY : src/netOperate.i
+
+# target to preprocess a source file
+src/netOperate.cpp.i:
+	$(MAKE) -f CMakeFiles/check_cli.dir/build.make CMakeFiles/check_cli.dir/src/netOperate.cpp.i
+.PHONY : src/netOperate.cpp.i
+
+src/netOperate.s: src/netOperate.cpp.s
+.PHONY : src/netOperate.s
+
+# target to generate assembly for a file
+src/netOperate.cpp.s:
+	$(MAKE) -f CMakeFiles/check_cli.dir/build.make CMakeFiles/check_cli.dir/src/netOperate.cpp.s
+.PHONY : src/netOperate.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -288,6 +336,9 @@ help:
 	@echo "... __/Modules/Net/cli/moc_net.o"
 	@echo "... __/Modules/Net/cli/moc_net.i"
 	@echo "... __/Modules/Net/cli/moc_net.s"
+	@echo "... home/hanxi/workspace/check_system/Modules/Conf/conf.o"
+	@echo "... home/hanxi/workspace/check_system/Modules/Conf/conf.i"
+	@echo "... home/hanxi/workspace/check_system/Modules/Conf/conf.s"
 	@echo "... home/hanxi/workspace/check_system/Modules/Log/log.o"
 	@echo "... home/hanxi/workspace/check_system/Modules/Log/log.i"
 	@echo "... home/hanxi/workspace/check_system/Modules/Log/log.s"
@@ -306,6 +357,9 @@ help:
 	@echo "... src/moc_mainwindowimpl.o"
 	@echo "... src/moc_mainwindowimpl.i"
 	@echo "... src/moc_mainwindowimpl.s"
+	@echo "... src/netOperate.o"
+	@echo "... src/netOperate.i"
+	@echo "... src/netOperate.s"
 .PHONY : help
 
 

@@ -1,7 +1,9 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/check_cli.dir/src/mainwindowimpl.cpp.o"
   "CMakeFiles/check_cli.dir/src/main.cpp.o"
+  "CMakeFiles/check_cli.dir/src/netOperate.cpp.o"
   "CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o"
+  "CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o"
   "CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Net/prot.cpp.o"
   "CMakeFiles/check_cli.dir/home/hanxi/workspace/check_system/Modules/Net/cli/net.cpp.o"
   "CMakeFiles/check_cli.dir/src/moc_mainwindowimpl.cxx.o"

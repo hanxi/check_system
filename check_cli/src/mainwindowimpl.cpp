@@ -12,6 +12,7 @@
 #include "net.h"
 #include "prot.h"
 #include "log.h"
+#include "netOperate.h"
 
 //STD
 #include <iostream>
@@ -27,17 +28,15 @@ extern Net *gNet;
 const int MAX_IMG_SIZE = 10240;
 
 //
-MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f) 
+MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f)
 	: QMainWindow(parent, f)
 {
 	setupUi(this);
-	pushButtonCheckIn->setEnabled(true);
-	pushButtonSearch->setEnabled(true);
-	pushButtonCamara->setEnabled(false);
-	pushButtonAgain->setEnabled(false);
-	pushButtonSubmit->setEnabled(false);
-	
 	m_timer   = new QTimer(this);
+    openCamara();
+
+    // 获取系统时间
+    sendProtGetTime();
 
 	/*信号和槽*/
 	connect(m_timer, SIGNAL(timeout()), this, SLOT(readShowImg()));  // 时间到，读取当前摄像头信息
@@ -46,12 +45,84 @@ MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f)
 	connect(pushButtonSearch, SIGNAL(clicked()), this, SLOT(searchInfo()));
 	connect(pushButtonAgain, SIGNAL(clicked()), this, SLOT(takingPicAgain()));
 	connect(pushButtonSubmit, SIGNAL(clicked()), this, SLOT(submitPic()));
+	connect(pushButtonSignIn, SIGNAL(clicked()), this, SLOT(signIn()));
+	connect(pushButtonCancel, SIGNAL(clicked()), this, SLOT(cancelSignIn()));
+    connect(actionAddNewEmp, SIGNAL(triggered()), this, SLOT(toAddNewEmp()));
+}
+
+// 清空界面
+void MainWindowImpl::clearUIFace()
+{
+    labelShow->setVisible(false);
+    labelName->setVisible(false);
+    labelDep->setVisible(false);
+    lineEditName->setVisible(false);
+    lineEditDep->setVisible(false);
+    pushButtonCommitCheck->setVisible(false);
+    pushButtonCheckAgain->setVisible(false);
+    pushButtonSignIn->setVisible(false);
+    pushButtonCancel->setVisible(false);
+    pushButtonSubmit->setVisible(false);
+    pushButtonAgain->setVisible(false);
+    pushButtonCamara->setVisible(false);
+    pushButtonSearch->setVisible(false);
+    pushButtonCheckIn->setVisible(false);
+    labelCheckInfo->setVisible(false);
+}
+
+// 跳转界面到添加用户界面
+void MainWindowImpl::toAddNewEmp()
+{
+    clearUIFace();
+    labelName->setVisible(true);
+    labelDep->setVisible(true);
+    labelShow->setVisible(true);
+    lineEditName->setVisible(true);
+    lineEditDep->setVisible(true);
+    pushButtonSignIn->setVisible(true);
+    pushButtonCancel->setVisible(true);
+    verticalLayout->setSizeConstraint(QLayout::SetFixedSize);
+    horizontalLayout->setSizeConstraint(QLayout::SetFixedSize);
+}
+
+// 跳转到签到界面
+void MainWindowImpl::toCheckFace()
+{
+    clearUIFace();
+    labelShow->setVisible(true);
+    pushButtonCamara->setVisible(true);
+}
+
+// 跳转到签到确认界面
+void MainWindowImpl::toCheckRightFace()
+{
+    clearUIFace();
+    labelShow->setVisible(true);
+    pushButtonCommitCheck->setVisible(true);
+    pushButtonCheckAgain->setVisible(true);
+    labelCheckInfo->setVisible(true);
+}
+
+// 注册
+void MainWindowImpl::signIn()
+{
+    toCheckFace();
+}
+
+// 取消注册
+void MainWindowImpl::cancelSignIn()
+{
+    toCheckFace();
 }
 
 //******************************
 //********* 打开摄像头 ***********
 void MainWindowImpl::openCamara()
 {
+    if (m_cap.isOpened())
+    {
+        return;
+    }
 	//设置定时器每个多少毫秒发送一个timeout()信号
     m_cap.open(0);                      // 打开摄像头
     if (!m_cap.isOpened())
@@ -123,9 +194,7 @@ void MainWindowImpl::takingPictures()
     std::cout << picName << std::endl;
     imwrite(picName.c_str(), m_frame );
     showImg();
-	pushButtonCamara->setEnabled(false);
-	pushButtonAgain->setEnabled(true);
-	pushButtonSubmit->setEnabled(true);
+    toCheckRightFace();
 }
 
 //

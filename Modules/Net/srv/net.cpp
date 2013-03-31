@@ -21,7 +21,7 @@ void Net::handleNewConnection()
     Log log(__LOGARG__,1);
     QTcpSocket* cliSck = m_tcpServer->nextPendingConnection();
     int sockId = cliSck->socketDescriptor();
-    connect(cliSck, SIGNAL(readyRead()), this, SLOT(handleReceive()));  
+    connect(cliSck, SIGNAL(readyRead()), this, SLOT(handleReceive()));
     connect(cliSck, SIGNAL(disconnected()), this, SLOT(handleDisconnected()));
     m_cliConns.insert(ConnContainer::value_type(sockId,cliSck));
     log << "有新连接,sockId=" << sockId << Log::endl;
@@ -34,9 +34,9 @@ void Net::handleReceive()
     log << "接收到消息" << Log::endl;
     QTcpSocket* cliSck = qobject_cast<QTcpSocket*>(sender());
     int sockId = cliSck->socketDescriptor();
-    
+
     int dataSize = cliSck->bytesAvailable();
-    while (dataSize>PROT_BUF_HEAD_SIZE) {
+    while (dataSize>=PROT_BUF_HEAD_SIZE) {
         static char peekBuf[PROT_BUF_HEAD_SIZE];//8byte协议头
         int protId = -1;
         int protLen = 0;
@@ -58,7 +58,7 @@ void Net::handleReceive()
             log << "读取数据到buf出错，readLen=" << readLen << Log::endl;
             return;
         }
-        
+
         if (!prot.isRightProt()) {
             log << "未知的协议号：protId=" << protId << ",protLen=" << protLen << Log::endl;
             return;
@@ -71,8 +71,10 @@ void Net::handleReceive()
             if (func==0) {
                 log << "协议号未注册." << Log::endl;
             }
-            handlerFunc handler = (handlerFunc)func;
-            handler(sockId,protId);
+            else {
+                handlerFunc handler = (handlerFunc)func;
+                handler(sockId,protId);
+            }
         }
         log << "读取数据并解析数据到prot完毕." << Log::endl;
         dataSize = cliSck->bytesAvailable();

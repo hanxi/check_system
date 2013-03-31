@@ -23,6 +23,7 @@ include_directories(/usr/local/include)
 include_directories(./src SRC_DIR)
 include_directories(../include)
 include_directories(../Modules/Log)
+include_directories(../Modules/Conf)
 include_directories(../Modules/Net)
 include_directories(../Modules/Net/cli)
 
@@ -31,6 +32,7 @@ aux_source_directory(./src SRC_DIR)
 
 ## module sources
 aux_source_directory(../Modules/Log LOG_DIR)
+aux_source_directory(../Modules/Conf CONF_DIR)
 aux_source_directory(../Modules/Net NET_DIR)
 aux_source_directory(../Modules/Net/cli NET_CLI_DIR)
 
@@ -48,9 +50,9 @@ qt4_wrap_ui(qt_UIS ${qt_UI})
 add_executable(check_cli
     ${SRC_DIR}
     ${LOG_DIR}
+    ${CONF_DIR}
     ${NET_DIR}
     ${NET_CLI_DIR}
-    ${check_cli_MOCS}
     ${qt_MOCS}
     ${qt_UIS}
 )

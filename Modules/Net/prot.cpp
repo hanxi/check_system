@@ -12,7 +12,7 @@
 #include "prot.h"
 
 
-I2M Prot::sm_protDic;      //协议词典 
+I2M Prot::sm_protDic;      //协议词典
 I2V Prot::sm_protFunc;     //协议handler函数
 
 // 用第一个字节保存整数的位数以及是正还是负
@@ -29,14 +29,14 @@ int unSerializeIntValue(long &value, char* buffer, int bufferlen){
     Log log(__LOGARG__,1);
 	try{
 		if(bufferlen<=1) return 0;
-		
+
 		char T = 0;               //取第1个字节
-		
+
 		memcpy(&T,buffer,1);
 		int totellen = 1;
-		
+
 		log << std::hex << "0x" << (int)T << std::dec;
-		
+
 		bool positive = ((T&0xF0)==0xF0)?true:false; // 判断前4位是F表示正数
         bool positive2 = ((T&0xF0)==0x00)?false:true;// 复查前4位是0表示负数
         if (positive!=positive2) {
@@ -51,7 +51,7 @@ int unSerializeIntValue(long &value, char* buffer, int bufferlen){
 		bool isInt8  = T&0x01;
 		bool isInt16 = T&0x02;
 		bool isInt32 = T&0x04;
-		
+
         if( isInt8 ){
 			assert(sizeof(char)==1);
 			if((bufferlen-totellen)<sizeof(char)) return -1;
@@ -59,7 +59,7 @@ int unSerializeIntValue(long &value, char* buffer, int bufferlen){
 			memcpy((char*)&v8,buffer+totellen,sizeof(char));
 			value = positive?(unsigned char)v8:(signed char)-v8;
 			totellen+=sizeof(char);
-			
+
             log << value << "是8bit的整型" << Log::endl;
 			if( isInt32 || isInt16 ){
 				log << "[32bit]" << (isInt32?"YES":"NO") << Log::endl;
@@ -76,7 +76,7 @@ int unSerializeIntValue(long &value, char* buffer, int bufferlen){
 			memcpy((char*)&v16,buffer+totellen,sizeof(short));
 			value = positive?(unsigned short)v16:(signed short)-v16;
 			totellen+=sizeof(short);
-			
+
             log << value << "是16bit的整型" << Log::endl;
 			if( isInt32 || isInt8 ){
 				log << "[32bit]" << (isInt32?"YES":"NO") << Log::endl;
@@ -93,7 +93,7 @@ int unSerializeIntValue(long &value, char* buffer, int bufferlen){
 			memcpy((char*)&v32,buffer+totellen,sizeof(int));
 			value = positive?(unsigned int)v32:(signed int)-v32;
 			totellen+=sizeof(int);
-			
+
             log << value << "是32bit的整型" << Log::endl;
 			if( isInt16 || isInt8 ){
 				log << "[16bit]" << (isInt16?"YES":"NO") << Log::endl;
@@ -105,16 +105,16 @@ int unSerializeIntValue(long &value, char* buffer, int bufferlen){
 		}
 		else{
 			log << "(invalid int type)" << Log::endl;
-			
+
 			return 0;
 		}
-		
+
 	}catch(...){
 		log << "(mem error)" << Log::endl;
-		
+
 		return 0;
 	}
-	
+
 	return 0;
 }
 
@@ -129,9 +129,9 @@ int serializeIntValue(long value,char *buffer,int bufferlen){
 		}else{
             log << "+" << value << Log::endl;
 		}
-		
+
 		//assert((0xFFFFFFFF00000000&value)==0); // 保证兼容32位的机器
-		
+
 		unsigned int value32 = (int)value; //先截断
         bool isInt8  = (value32<=0xFF)?true:false;
         bool isInt16 = (value32<=0xFFFF)?true:false;
@@ -149,7 +149,7 @@ int serializeIntValue(long value,char *buffer,int bufferlen){
                 int t = t1;
                 log << std::hex << "[8bit]0x" << t << std::dec << Log::endl;
 			}
-			
+
 			value = value<<24;
 			memcpy(buffer+1,value32address,sizeof(char));
 			log << "[8bit]YES" << Log::endl;
@@ -276,7 +276,7 @@ int Prot::serialize(char* bufferAddr, int bufferLength)
     int lenlimit = bufferLength;
     int protId = m_prot->first;
     int totellen = 0;
-    
+
     log << "protId=" << protId << Log::endl;
     log << "lenlimit=" << lenlimit << Log::endl;
 
@@ -294,15 +294,21 @@ int Prot::serialize(char* bufferAddr, int bufferLength)
         char type = value.getType();
         if (type==VALUE_TYPE_NUMBER) {
             ret = serializeIntValue(value.getNum(),bufferAddr+totellen,lenlimit-totellen);
-            if (ret==0) break;
+            if (ret==0) {
+                ret=-1;
+                break;
+            }
         }
         else if (type==VALUE_TYPE_STRING) {
             ret = serializeStringValue(value.getStr(),bufferAddr+totellen,lenlimit-totellen);
-            if (ret==0) break;
+            if (ret==0) {
+                ret=-1;
+                break;
+            }
         }
         totellen += ret;
     }
-    if (ret==0) return 0;
+    if (ret==-1) return 0;
     memcpy(ptotellen, (void*)&totellen, sizeof(int));
     log << "totellen=" << totellen << Log::endl;
     return totellen;
@@ -335,7 +341,7 @@ int Prot::unSerialize(char* bufferAddr, int bufferLength)
     int pkglen = 0;
     memcpy((char*)&pkglen,bufferAddr+totellen,sizeof(int));
     totellen += sizeof(int);
-    
+
     S2A &prot = m_prot->second;
     int ret = 0;
     for (S2AIter iter=prot.begin(); iter!=prot.end(); ++iter) {
@@ -346,7 +352,10 @@ int Prot::unSerialize(char* bufferAddr, int bufferLength)
         if (type==VALUE_TYPE_NUMBER) {
             long num = 0;
             ret = unSerializeIntValue(num,bufferAddr+totellen,lenlimit-totellen);
-            if (ret==0) break;
+            if (ret==0) {
+                ret = -1;
+                break;
+            }
             value = num;
             totellen += ret;
         }
@@ -354,7 +363,10 @@ int Prot::unSerialize(char* bufferAddr, int bufferLength)
             long strLen = 0;
             ret = unSerializeIntValue(strLen,bufferAddr+totellen,lenlimit-totellen);
             log << "strLen=" << strLen << Log::endl;
-            if (ret==0) break;
+            if (ret==0) {
+                ret = -1;
+                break;
+            }
             totellen += ret;
             const char *pstr = bufferAddr+totellen;
             value = AutoType(pstr,strLen);
@@ -362,7 +374,7 @@ int Prot::unSerialize(char* bufferAddr, int bufferLength)
         }
     }
     log << "ret=" << ret << Log::endl;
-    if (ret==0) return 0;
+    if (ret==-1) return 0;
     return totellen;
 }
 

@@ -37,6 +37,7 @@ SET(CMAKE_C_INCLUDE_PATH
   "../SRC_DIR"
   "../../include"
   "../../Modules/Log"
+  "../../Modules/Conf"
   "../../Modules/Net"
   "../../Modules/Net/cli"
   )

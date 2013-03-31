@@ -1,4 +1,0 @@
-[10-03-2013][21:44:17] [Enter function :test] [test.cpp] [17] 
-3039
-141
-[10-03-2013][21:44:17] [Exit  function :test] 

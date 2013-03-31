@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/test.dir/home/hanxi/workspace/check_system/check_srv/src/faceDetect.cpp.o  -o test -rdynamic -L/usr/local/lib -L/home/hanxi/workspace/check_system/lib -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_objdetect -Wl,-rpath,/usr/local/lib:/home/hanxi/workspace/check_system/lib 

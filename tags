@@ -31,11 +31,29 @@ ALPHA_XOR_PREMUL	include/opencv2/gpu/gpu.hpp	/^       ALPHA_ATOP_PREMUL, ALPHA_X
 ANGLE_ROW	include/opencv2/gpu/gpu.hpp	/^        ANGLE_ROW,$/;"	e	enum:cv::gpu::ORB_GPU::__anon231
 ANGLE_ROW	include/opencv2/gpu/gpu.hpp	/^        ANGLE_ROW,$/;"	e	enum:cv::gpu::SURF_GPU::KeypointLayout
 ANN_MLP_TrainParams	include/opencv2/ml/ml.hpp	/^typedef CvANN_MLP_TrainParams ANN_MLP_TrainParams;$/;"	t	namespace:cv
-ANSI	Modules/Net/protInitTool.cpp	/^    ANSI = 0,$/;"	e	enum:FileType	file:
-AR	Makefile	/^AR            = ar cqs$/;"	m
+ANSI	Modules/Conf/conf.h	/^    ANSI = 0,$/;"	e	enum:FileType
 AR	Modules/Net/cli/Makefile	/^AR            = ar cqs$/;"	m
 AR	Modules/Net/srv/Makefile	/^AR            = ar cqs$/;"	m
-AR	check_cli/Makefile	/^AR            = ar cqs$/;"	m
+ARCHITECTURE_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	193;"	d	file:
+ARCHITECTURE_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	196;"	d	file:
+ARCHITECTURE_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	199;"	d	file:
+ARCHITECTURE_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	202;"	d	file:
+ARCHITECTURE_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	206;"	d	file:
+ARCHITECTURE_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	181;"	d	file:
+ARCHITECTURE_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	184;"	d	file:
+ARCHITECTURE_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	187;"	d	file:
+ARCHITECTURE_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	190;"	d	file:
+ARCHITECTURE_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	194;"	d	file:
+ARCHITECTURE_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	193;"	d	file:
+ARCHITECTURE_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	196;"	d	file:
+ARCHITECTURE_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	199;"	d	file:
+ARCHITECTURE_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	202;"	d	file:
+ARCHITECTURE_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	206;"	d	file:
+ARCHITECTURE_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	181;"	d	file:
+ARCHITECTURE_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	184;"	d	file:
+ARCHITECTURE_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	187;"	d	file:
+ARCHITECTURE_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	190;"	d	file:
+ARCHITECTURE_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	194;"	d	file:
 ARRAY_BUFFER	include/opencv2/core/opengl_interop.hpp	/^        ARRAY_BUFFER = 0x8892,  \/\/ buffer will use for OpenGL arrays (vertices, colors, normals, etc)$/;"	e	enum:cv::GlBuffer::Usage
 ASSERT_ANY_THROW	include/opencv2/ts/ts_gtest.h	19398;"	d
 ASSERT_DEATH	include/opencv2/ts/ts_gtest.h	8515;"	d
@@ -391,31 +409,31 @@ CASCADE_DO_CANNY_PRUNING	include/opencv2/objdetect/objdetect.hpp	/^    CASCADE_D
 CASCADE_DO_ROUGH_SEARCH	include/opencv2/objdetect/objdetect.hpp	/^    CASCADE_DO_ROUGH_SEARCH=8$/;"	e	enum:cv::__anon280
 CASCADE_FIND_BIGGEST_OBJECT	include/opencv2/objdetect/objdetect.hpp	/^    CASCADE_FIND_BIGGEST_OBJECT=4,$/;"	e	enum:cv::__anon280
 CASCADE_SCALE_IMAGE	include/opencv2/objdetect/objdetect.hpp	/^    CASCADE_SCALE_IMAGE=2,$/;"	e	enum:cv::__anon280
-CC	Makefile	/^CC            = gcc$/;"	m
 CC	Modules/Net/cli/Makefile	/^CC            = gcc$/;"	m
 CC	Modules/Net/srv/Makefile	/^CC            = gcc$/;"	m
-CC	check_cli/Makefile	/^CC            = gcc$/;"	m
 CENTERS_GONZALES	include/opencv2/flann/defines.h	/^    CENTERS_GONZALES = 1,$/;"	e	enum:cvflann::flann_centers_init_t
 CENTERS_KMEANSPP	include/opencv2/flann/defines.h	/^    CENTERS_KMEANSPP = 2$/;"	e	enum:cvflann::flann_centers_init_t
 CENTERS_RANDOM	include/opencv2/flann/defines.h	/^    CENTERS_RANDOM = 0,$/;"	e	enum:cvflann::flann_centers_init_t
-CFLAGS	Makefile	/^CFLAGS        = -m64 -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
-CFLAGS	Modules/Net/cli/Makefile	/^CFLAGS        = -m64 -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
-CFLAGS	Modules/Net/srv/Makefile	/^CFLAGS        = -m64 -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
-CFLAGS	check_cli/Makefile	/^CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CFLAGS	Modules/Net/cli/Makefile	/^CFLAGS        = -m64 -pipe -O2 -fPIC -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CFLAGS	Modules/Net/srv/Makefile	/^CFLAGS        = -m64 -pipe -O2 -fPIC -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
 CHAIN_APPROX_NONE	include/opencv2/imgproc/imgproc.hpp	/^    CHAIN_APPROX_NONE=CV_CHAIN_APPROX_NONE,$/;"	e	enum:cv::__anon50
 CHAIN_APPROX_SIMPLE	include/opencv2/imgproc/imgproc.hpp	/^    CHAIN_APPROX_SIMPLE=CV_CHAIN_APPROX_SIMPLE,$/;"	e	enum:cv::__anon50
 CHAIN_APPROX_TC89_KCOS	include/opencv2/imgproc/imgproc.hpp	/^    CHAIN_APPROX_TC89_KCOS=CV_CHAIN_APPROX_TC89_KCOS$/;"	e	enum:cv::__anon50
 CHAIN_APPROX_TC89_L1	include/opencv2/imgproc/imgproc.hpp	/^    CHAIN_APPROX_TC89_L1=CV_CHAIN_APPROX_TC89_L1,$/;"	e	enum:cv::__anon50
 CHECK_ERR	include/opencv2/calib3d/calib3d.hpp	/^    enum { DONE=0, STARTED=1, CALC_J=2, CHECK_ERR=3 };$/;"	e	enum:CvLevMarq::__anon301
 CHECK_ERROR	include/opencv2/flann/hdf5.h	73;"	d
-CHK_DIR_EXISTS	Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
 CHK_DIR_EXISTS	Modules/Net/cli/Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
 CHK_DIR_EXISTS	Modules/Net/srv/Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
-CHK_DIR_EXISTS	check_cli/Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
 CHOW_LIU	include/opencv2/contrib/openfabmap.hpp	/^        CHOW_LIU = 8,$/;"	e	enum:cv::of2::FabMap::__anon288
 CLIQUE_END	include/opencv2/legacy/legacy.hpp	335;"	d
 CLIQUE_FOUND	include/opencv2/legacy/legacy.hpp	334;"	d
 CLIQUE_TIME_OFF	include/opencv2/legacy/legacy.hpp	333;"	d
+CMAKE_BINARY_DIR	check_cli/build/Makefile	/^CMAKE_BINARY_DIR = \/home\/hanxi\/workspace\/check_system\/check_cli\/build$/;"	m
+CMAKE_BINARY_DIR	check_srv/build/Makefile	/^CMAKE_BINARY_DIR = \/home\/hanxi\/workspace\/check_system\/check_srv\/build$/;"	m
+CMAKE_COMMAND	check_cli/build/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	check_srv/build/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_SOURCE_DIR	check_cli/build/Makefile	/^CMAKE_SOURCE_DIR = \/home\/hanxi\/workspace\/check_system\/check_cli$/;"	m
+CMAKE_SOURCE_DIR	check_srv/build/Makefile	/^CMAKE_SOURCE_DIR = \/home\/hanxi\/workspace\/check_system\/check_srv$/;"	m
 CMP_EQ	include/opencv2/core/core.hpp	/^enum { CMP_EQ=0, CMP_GT=1, CMP_GE=2, CMP_LT=3, CMP_LE=4, CMP_NE=5 };$/;"	e	enum:cv::__anon4
 CMP_GE	include/opencv2/core/core.hpp	/^enum { CMP_EQ=0, CMP_GT=1, CMP_GE=2, CMP_LT=3, CMP_LE=4, CMP_NE=5 };$/;"	e	enum:cv::__anon4
 CMP_GT	include/opencv2/core/core.hpp	/^enum { CMP_EQ=0, CMP_GT=1, CMP_GE=2, CMP_LT=3, CMP_LE=4, CMP_NE=5 };$/;"	e	enum:cv::__anon4
@@ -615,28 +633,114 @@ COLOR_YUV420sp2GRAY	include/opencv2/imgproc/imgproc.hpp	/^    COLOR_YUV420sp2GRA
 COLOR_YUV420sp2RGB	include/opencv2/imgproc/imgproc.hpp	/^    COLOR_YUV420sp2RGB = COLOR_YUV2RGB_NV21,$/;"	e	enum:cv::__anon47
 COLOR_YUV420sp2RGBA	include/opencv2/imgproc/imgproc.hpp	/^    COLOR_YUV420sp2RGBA = COLOR_YUV2RGBA_NV21,$/;"	e	enum:cv::__anon47
 COLOR_mRGBA2RGBA	include/opencv2/imgproc/imgproc.hpp	/^    COLOR_mRGBA2RGBA = 126,$/;"	e	enum:cv::__anon47
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	10;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	13;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	16;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	19;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	22;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	25;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	28;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	32;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	34;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	36;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	40;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	43;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	46;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	49;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	52;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	55;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	58;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	61;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	66;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	77;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	80;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	86;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	89;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	92;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	12;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	15;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	18;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	21;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	24;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	27;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	30;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	34;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	36;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	38;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	42;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	45;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	48;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	51;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	54;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	57;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	60;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	65;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	68;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	74;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	77;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	80;"	d	file:
+COMPILER_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	9;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	10;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	13;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	16;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	19;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	22;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	25;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	28;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	32;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	34;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	36;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	40;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	43;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	46;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	49;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	52;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	55;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	58;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	61;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	66;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	77;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	80;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	86;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	89;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	92;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	12;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	15;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	18;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	21;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	24;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	27;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	30;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	34;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	36;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	38;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	42;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	45;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	48;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	51;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	54;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	57;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	60;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	65;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	68;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	74;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	77;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	80;"	d	file:
+COMPILER_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	9;"	d	file:
 COMPOSITE	include/opencv2/flann/defines.h	/^    COMPOSITE = 3,$/;"	e	enum:cvflann::flann_algorithm_t
-COMPRESS	Makefile	/^COMPRESS      = gzip -9f$/;"	m
 COMPRESS	Modules/Net/cli/Makefile	/^COMPRESS      = gzip -9f$/;"	m
 COMPRESS	Modules/Net/srv/Makefile	/^COMPRESS      = gzip -9f$/;"	m
-COMPRESS	check_cli/Makefile	/^COMPRESS      = gzip -9f$/;"	m
 COMPRESSION_NONE	include/opencv2/legacy/legacy.hpp	/^        COMPRESSION_NONE = 0,$/;"	e	enum:cv::FernClassifier::__anon263
 COMPRESSION_PCA	include/opencv2/legacy/legacy.hpp	/^        COMPRESSION_PCA = 2,$/;"	e	enum:cv::FernClassifier::__anon263
 COMPRESSION_RANDOM_PROJ	include/opencv2/legacy/legacy.hpp	/^        COMPRESSION_RANDOM_PROJ = 1,$/;"	e	enum:cv::FernClassifier::__anon263
 CONSOLE	include/opencv2/ts/ts.hpp	/^        CONSOLE=1 << CONSOLE_IDX,$/;"	e	enum:cvtest::TS::__anon76
 CONSOLE_IDX	include/opencv2/ts/ts.hpp	/^        CONSOLE_IDX=3,$/;"	e	enum:cvtest::TS::__anon76
-COPY	Makefile	/^COPY          = cp -f$/;"	m
 COPY	Modules/Net/cli/Makefile	/^COPY          = cp -f$/;"	m
 COPY	Modules/Net/srv/Makefile	/^COPY          = cp -f$/;"	m
-COPY	check_cli/Makefile	/^COPY          = cp -f$/;"	m
-COPY_DIR	Makefile	/^COPY_DIR      = $(COPY) -r$/;"	m
 COPY_DIR	Modules/Net/cli/Makefile	/^COPY_DIR      = $(COPY) -r$/;"	m
 COPY_DIR	Modules/Net/srv/Makefile	/^COPY_DIR      = $(COPY) -r$/;"	m
-COPY_DIR	check_cli/Makefile	/^COPY_DIR      = $(COPY) -r$/;"	m
-COPY_FILE	Makefile	/^COPY_FILE     = $(COPY)$/;"	m
 COPY_FILE	Modules/Net/cli/Makefile	/^COPY_FILE     = $(COPY)$/;"	m
 COPY_FILE	Modules/Net/srv/Makefile	/^COPY_FILE     = $(COPY)$/;"	m
-COPY_FILE	check_cli/Makefile	/^COPY_FILE     = $(COPY)$/;"	m
 COST_COLOR	include/opencv2/stitching/detail/seam_finders.hpp	/^    enum { COST_COLOR, COST_COLOR_GRAD };$/;"	e	enum:cv::detail::GraphCutSeamFinderBase::__anon84
 COST_COLOR_GRAD	include/opencv2/stitching/detail/seam_finders.hpp	/^    enum { COST_COLOR, COST_COLOR_GRAD };$/;"	e	enum:cv::detail::GraphCutSeamFinderBase::__anon84
 COV_MAT_DEFAULT	include/opencv2/ml/ml.hpp	/^    enum {COV_MAT_SPHERICAL=0, COV_MAT_DIAGONAL=1, COV_MAT_GENERIC=2, COV_MAT_DEFAULT=COV_MAT_DIAGONAL};$/;"	e	enum:cv::EM::__anon90
@@ -2019,14 +2123,10 @@ CV_YUV420sp2RGB	include/opencv2/imgproc/types_c.h	/^    CV_YUV420sp2RGB = CV_YUV
 CV_YUV420sp2RGBA	include/opencv2/imgproc/types_c.h	/^    CV_YUV420sp2RGBA = CV_YUV2RGBA_NV21,$/;"	e	enum:__anon56
 CV_ZERO_OBJ	include/opencv2/core/internal.hpp	429;"	d
 CV_mRGBA2RGBA	include/opencv2/imgproc/types_c.h	/^    CV_mRGBA2RGBA = 126,$/;"	e	enum:__anon56
-CXX	Makefile	/^CXX           = g++$/;"	m
 CXX	Modules/Net/cli/Makefile	/^CXX           = g++$/;"	m
 CXX	Modules/Net/srv/Makefile	/^CXX           = g++$/;"	m
-CXX	check_cli/Makefile	/^CXX           = g++$/;"	m
-CXXFLAGS	Makefile	/^CXXFLAGS      = -m64 -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
-CXXFLAGS	Modules/Net/cli/Makefile	/^CXXFLAGS      = -m64 -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
-CXXFLAGS	Modules/Net/srv/Makefile	/^CXXFLAGS      = -m64 -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
-CXXFLAGS	check_cli/Makefile	/^CXXFLAGS      = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CXXFLAGS	Modules/Net/cli/Makefile	/^CXXFLAGS      = -m64 -pipe -O2 -fPIC -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
+CXXFLAGS	Modules/Net/srv/Makefile	/^CXXFLAGS      = -m64 -pipe -O2 -fPIC -Wall -W -D_REENTRANT $(DEFINES)$/;"	m
 CYCLE_O	include/opencv2/contrib/contrib.hpp	/^        enum {CYCLE_O, CYCLE_V};$/;"	e	enum:cv::StereoVar::__anon296
 CYCLE_V	include/opencv2/contrib/contrib.hpp	/^        enum {CYCLE_O, CYCLE_V};$/;"	e	enum:cv::StereoVar::__anon296
 C_SVC	include/opencv2/ml/ml.hpp	/^    enum { C_SVC=100, NU_SVC=101, ONE_CLASS=102, EPS_SVR=103, NU_SVR=104 };$/;"	e	enum:CvSVM::__anon87
@@ -2635,6 +2735,7 @@ CylindricalWarper	include/opencv2/stitching/warpers.hpp	/^class CylindricalWarpe
 CylindricalWarperGpu	include/opencv2/stitching/detail/warpers.hpp	/^    CylindricalWarperGpu(float scale) : CylindricalWarper(scale) {}$/;"	f	class:cv::detail::CylindricalWarperGpu
 CylindricalWarperGpu	include/opencv2/stitching/detail/warpers.hpp	/^class CV_EXPORTS CylindricalWarperGpu : public CylindricalWarper$/;"	c	namespace:cv::detail
 CylindricalWarperGpu	include/opencv2/stitching/warpers.hpp	/^class CylindricalWarperGpu: public WarperCreator$/;"	c	namespace:cv
+DB	check_srv/src/db.h	/^namespace DB$/;"	n
 DCT_INVERSE	include/opencv2/core/core.hpp	/^    DCT_INVERSE = DFT_INVERSE, DCT_ROWS=DFT_ROWS };$/;"	e	enum:cv::__anon6
 DCT_ROWS	include/opencv2/core/core.hpp	/^    DCT_INVERSE = DFT_INVERSE, DCT_ROWS=DFT_ROWS };$/;"	e	enum:cv::__anon6
 DECOMP_CHOLESKY	include/opencv2/core/core.hpp	/^enum { DECOMP_LU=0, DECOMP_SVD=1, DECOMP_EIG=2, DECOMP_CHOLESKY=3, DECOMP_QR=4, DECOMP_NORMAL=16 };$/;"	e	enum:cv::__anon2
@@ -2678,25 +2779,17 @@ DEFAULT_VIEWS	include/opencv2/legacy/legacy.hpp	/^        DEFAULT_VIEWS = 5000,$
 DEFAULT_VIEWS	include/opencv2/legacy/legacy.hpp	/^    static const int DEFAULT_VIEWS = 5000;$/;"	m	class:cv::RandomizedTree
 DEFAULT_WINSZ	include/opencv2/gpu/gpu.hpp	/^    enum { DEFAULT_NDISP = 64, DEFAULT_WINSZ = 19 };$/;"	e	enum:cv::gpu::StereoBM_GPU::__anon216
 DEFAULT_WIN_SIGMA	include/opencv2/gpu/gpu.hpp	/^    enum { DEFAULT_WIN_SIGMA = -1 };$/;"	e	enum:cv::gpu::HOGDescriptor::__anon227
-DEFINES	Makefile	/^DEFINES       = -DQT_WEBKIT -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SHARED$/;"	m
 DEFINES	Modules/Net/cli/Makefile	/^DEFINES       = -DQT_WEBKIT -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED$/;"	m
 DEFINES	Modules/Net/srv/Makefile	/^DEFINES       = -DQT_WEBKIT -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED$/;"	m
-DEFINES	check_cli/Makefile	/^DEFINES       = -DQT_WEBKIT -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED$/;"	m
 DEGREE	include/opencv2/ml/ml.hpp	/^    enum { C=0, GAMMA=1, P=2, NU=3, COEF=4, DEGREE=5 };$/;"	e	enum:CvSVM::__anon89
-DEL_DIR	Makefile	/^DEL_DIR       = rmdir$/;"	m
 DEL_DIR	Modules/Net/cli/Makefile	/^DEL_DIR       = rmdir$/;"	m
 DEL_DIR	Modules/Net/srv/Makefile	/^DEL_DIR       = rmdir$/;"	m
-DEL_DIR	check_cli/Makefile	/^DEL_DIR       = rmdir$/;"	m
-DEL_FILE	Makefile	/^DEL_FILE      = rm -f$/;"	m
 DEL_FILE	Modules/Net/cli/Makefile	/^DEL_FILE      = rm -f$/;"	m
 DEL_FILE	Modules/Net/srv/Makefile	/^DEL_FILE      = rm -f$/;"	m
-DEL_FILE	check_cli/Makefile	/^DEL_FILE      = rm -f$/;"	m
 DESCR_FORMAT_COL_BY_COL	include/opencv2/gpu/gpu.hpp	/^    enum { DESCR_FORMAT_ROW_BY_ROW, DESCR_FORMAT_COL_BY_COL };$/;"	e	enum:cv::gpu::HOGDescriptor::__anon229
 DESCR_FORMAT_ROW_BY_ROW	include/opencv2/gpu/gpu.hpp	/^    enum { DESCR_FORMAT_ROW_BY_ROW, DESCR_FORMAT_COL_BY_COL };$/;"	e	enum:cv::gpu::HOGDescriptor::__anon229
-DESTDIR	Makefile	/^DESTDIR       = $/;"	m
 DESTDIR	Modules/Net/cli/Makefile	/^DESTDIR       = $/;"	m
 DESTDIR	Modules/Net/srv/Makefile	/^DESTDIR       = $/;"	m
-DESTDIR	check_cli/Makefile	/^DESTDIR       = bin\/$/;"	m
 DEVIANCE_LOSS	include/opencv2/ml/ml.hpp	/^    enum {SQUARED_LOSS=0, ABSOLUTE_LOSS, HUBER_LOSS=3, DEVIANCE_LOSS};$/;"	e	enum:CvGBTrees::__anon97
 DFT_COMPLEX_OUTPUT	include/opencv2/core/core.hpp	/^enum { DFT_INVERSE=1, DFT_SCALE=2, DFT_ROWS=4, DFT_COMPLEX_OUTPUT=16, DFT_REAL_OUTPUT=32,$/;"	e	enum:cv::__anon6
 DFT_INVERSE	include/opencv2/core/core.hpp	/^enum { DFT_INVERSE=1, DFT_SCALE=2, DFT_ROWS=4, DFT_COMPLEX_OUTPUT=16, DFT_REAL_OUTPUT=32,$/;"	e	enum:cv::__anon6
@@ -2707,10 +2800,8 @@ DIMode	include/opencv2/gpu/gpu.hpp	/^        int       DIMode;          \/\/    
 DISCRETE	include/opencv2/ml/ml.hpp	/^    enum { DISCRETE=0, REAL=1, LOGIT=2, GENTLE=3 };$/;"	e	enum:CvBoost::__anon95
 DISP_SCALE	include/opencv2/calib3d/calib3d.hpp	/^    enum { DISP_SHIFT=4, DISP_SCALE = (1<<DISP_SHIFT) };$/;"	e	enum:cv::StereoSGBM::__anon309
 DISP_SHIFT	include/opencv2/calib3d/calib3d.hpp	/^    enum { DISP_SHIFT=4, DISP_SCALE = (1<<DISP_SHIFT) };$/;"	e	enum:cv::StereoSGBM::__anon309
-DIST	Makefile	/^DIST          = \/usr\/share\/qt4\/mkspecs\/common\/unix.conf \\$/;"	m
 DIST	Modules/Net/cli/Makefile	/^DIST          = \/usr\/share\/qt4\/mkspecs\/common\/unix.conf \\$/;"	m
 DIST	Modules/Net/srv/Makefile	/^DIST          = \/usr\/share\/qt4\/mkspecs\/common\/unix.conf \\$/;"	m
-DIST	check_cli/Makefile	/^DIST          = \/usr\/share\/qt4\/mkspecs\/common\/unix.conf \\$/;"	m
 DIST_LABEL_CCOMP	include/opencv2/imgproc/imgproc.hpp	/^    DIST_LABEL_CCOMP = 0,$/;"	e	enum:cv::__anon45
 DIST_LABEL_PIXEL	include/opencv2/imgproc/imgproc.hpp	/^    DIST_LABEL_PIXEL = 1$/;"	e	enum:cv::__anon45
 DMatch	include/opencv2/features2d/features2d.hpp	/^    CV_WRAP DMatch( int _queryIdx, int _trainIdx, float _distance ) :$/;"	f	struct:cv::DMatch
@@ -3011,7 +3102,7 @@ FEATURE_SET_COMPUTE_30	include/opencv2/core/gpumat.hpp	/^        FEATURE_SET_COM
 FEATURE_SIZE	include/opencv2/gpu/gpu.hpp	/^    static const int FEATURE_SIZE = 7;$/;"	m	class:cv::gpu::FAST_GPU
 FGDStatModel	include/opencv2/gpu/gpu.hpp	/^class CV_EXPORTS FGDStatModel$/;"	c	namespace:cv::gpu
 FGTrainFrames	include/opencv2/legacy/blobtrack.hpp	/^    int                     FGTrainFrames; \/* Number of frames needed for FG (foreground) detector to train.        *\/$/;"	m	struct:CvBlobTrackerAutoParam1
-FILETYPE	Modules/Net/protInitTool.cpp	/^}FILETYPE;$/;"	t	typeref:enum:FileType	file:
+FILETYPE	Modules/Conf/conf.h	/^}FILETYPE;$/;"	t	typeref:enum:FileType
 FIND_BIGGEST_OBJECT	include/opencv2/objdetect/objdetect.hpp	/^           FIND_BIGGEST_OBJECT = 4, DO_ROUGH_SEARCH = 8 };$/;"	e	enum:cv::CascadeClassifier::__anon282
 FIRST	include/opencv2/stitching/detail/seam_finders.hpp	/^        FIRST = 1, SECOND = 2, INTERS = 4,$/;"	e	enum:cv::detail::DpSeamFinder::ComponentState
 FISH_EYE_PRESET	include/opencv2/calib3d/calib3d.hpp	/^        BASIC_PRESET=0, FISH_EYE_PRESET=1, NARROW_PRESET=2 };$/;"	e	enum:cv::StereoBM::__anon308
@@ -3139,7 +3230,7 @@ FilePath	include/opencv2/ts/ts_gtest.h	/^  FilePath(const FilePath& rhs) : pathn
 FilePath	include/opencv2/ts/ts_gtest.h	/^  explicit FilePath(const String& pathname) : pathname_(pathname) {$/;"	f	class:testing::internal::FilePath
 FilePath	include/opencv2/ts/ts_gtest.h	/^  explicit FilePath(const char* pathname) : pathname_(pathname) {$/;"	f	class:testing::internal::FilePath
 FilePath	include/opencv2/ts/ts_gtest.h	/^class GTEST_API_ FilePath {$/;"	c	namespace:testing::internal
-FileType	Modules/Net/protInitTool.cpp	/^typedef enum FileType$/;"	g	file:
+FileType	Modules/Conf/conf.h	/^typedef enum FileType$/;"	g
 FilterEngine	include/opencv2/imgproc/imgproc.hpp	/^class CV_EXPORTS FilterEngine$/;"	c	namespace:cv
 FilterEngine_GPU	include/opencv2/gpu/gpu.hpp	/^class CV_EXPORTS FilterEngine_GPU$/;"	c	namespace:cv::gpu
 FisheyeProjector	include/opencv2/stitching/detail/warpers.hpp	/^struct CV_EXPORTS FisheyeProjector : ProjectorBase$/;"	s	namespace:cv::detail
@@ -3787,10 +3878,14 @@ HybridTracker	include/opencv2/contrib/hybridtracker.hpp	/^typedef CvHybridTracke
 HybridTrackerParams	include/opencv2/contrib/hybridtracker.hpp	/^typedef CvHybridTrackerParams HybridTrackerParams;$/;"	t	namespace:cv
 I2M	Modules/Net/prot.h	/^typedef std::map<int, S2A>                     I2M;$/;"	t
 I2MIter	Modules/Net/prot.h	/^typedef I2M::iterator                          I2MIter;$/;"	t
+I2V	Modules/Net/prot.h	/^typedef std::map<int, void*>                   I2V;$/;"	t
+I2VIter	Modules/Net/prot.h	/^typedef I2V::iterator                          I2VIter;$/;"	t
 ID	include/opencv2/core/types_c.h	/^    int  ID;                \/* version (=0)*\/$/;"	m	struct:_IplImage
 ID	include/opencv2/legacy/blobtrack.hpp	/^    int     ID;  \/* blob ID         *\/$/;"	m	struct:CvBlob
 IDENTITY	include/opencv2/ml/ml.hpp	/^    enum { IDENTITY = 0, SIGMOID_SYM = 1, GAUSSIAN = 2 };$/;"	e	enum:CvANN_MLP::__anon99
 IDR_Period	include/opencv2/gpu/gpu.hpp	/^        int       IDR_Period;      \/\/    NVVE_IDR_PERIOD,$/;"	m	struct:cv::gpu::VideoWriter_GPU::EncoderParams
+ID_VOID_MAIN	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
+ID_VOID_MAIN	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
 IDenseOptFlowEstimator	include/opencv2/videostab/optical_flow.hpp	/^class CV_EXPORTS IDenseOptFlowEstimator$/;"	c	namespace:cv::videostab
 IFRAME	include/opencv2/gpu/gpu.hpp	/^            IFRAME = 1,$/;"	e	enum:cv::gpu::VideoWriter_GPU::EncoderCallBack::PicType
 IFrameSource	include/opencv2/videostab/frame_source.hpp	/^class CV_EXPORTS IFrameSource$/;"	c	namespace:cv::videostab
@@ -3818,27 +3913,19 @@ IMatch	include/opencv2/contrib/openfabmap.hpp	/^    IMatch(int _queryIdx, int _i
 IMatch	include/opencv2/contrib/openfabmap.hpp	/^struct CV_EXPORTS IMatch {$/;"	s	namespace:cv::of2
 IMotionStabilizer	include/opencv2/videostab/motion_stabilizing.hpp	/^class CV_EXPORTS IMotionStabilizer$/;"	c	namespace:cv::videostab
 INCLUSIVE	include/opencv2/gpu/device/scan.hpp	/^    enum ScanKind { EXCLUSIVE = 0,  INCLUSIVE = 1 };$/;"	e	enum:cv::gpu::device::ScanKind
-INCPATH	Makefile	/^INCPATH       = -I\/usr\/share\/qt4\/mkspecs\/linux-g++-64 -I. -I\/usr\/include\/qt4\/QtCore -I\/usr\/include\/qt4\/QtGui -I\/usr\/include\/qt4 -I. -I.$/;"	m
 INCPATH	Modules/Net/cli/Makefile	/^INCPATH       = -I\/usr\/share\/qt4\/mkspecs\/linux-g++-64 -I. -I\/usr\/include\/qt4\/QtCore -I\/usr\/include\/qt4\/QtNetwork -I\/usr\/include\/qt4\/QtGui -I\/usr\/include\/qt4 -I. -I..\/..\/Log -I.. -I.$/;"	m
 INCPATH	Modules/Net/srv/Makefile	/^INCPATH       = -I\/usr\/share\/qt4\/mkspecs\/linux-g++-64 -I. -I\/usr\/include\/qt4\/QtCore -I\/usr\/include\/qt4\/QtNetwork -I\/usr\/include\/qt4\/QtGui -I\/usr\/include\/qt4 -I. -I..\/..\/Log -I.. -I.$/;"	m
-INCPATH	check_cli/Makefile	/^INCPATH       = -I\/usr\/share\/qt4\/mkspecs\/linux-g++ -I. -I\/usr\/include\/qt4\/QtCore -I\/usr\/include\/qt4\/QtNetwork -I\/usr\/include\/qt4\/QtGui -I\/usr\/include\/qt4 -I..\/include\/opencv -I..\/Modules\/Net\/cli -I..\/Modules\/Net -I..\/Modules\/Log -Ibuild -Ibuild$/;"	m
 INPAINT_NS	include/opencv2/photo/photo.hpp	/^    INPAINT_NS=CV_INPAINT_NS, \/\/ Navier-Stokes algorithm$/;"	e	enum:cv::__anon311
 INPAINT_TELEA	include/opencv2/photo/photo.hpp	/^    INPAINT_TELEA=CV_INPAINT_TELEA \/\/ A. Telea algorithm$/;"	e	enum:cv::__anon311
 INPUT	include/opencv2/ts/ts.hpp	/^    enum { INPUT, INPUT_OUTPUT, OUTPUT, REF_INPUT_OUTPUT, REF_OUTPUT, TEMP, MASK, MAX_ARR };$/;"	e	enum:cvtest::ArrayTest::__anon78
 INPUT_OUTPUT	include/opencv2/ts/ts.hpp	/^    enum { INPUT, INPUT_OUTPUT, OUTPUT, REF_INPUT_OUTPUT, REF_OUTPUT, TEMP, MASK, MAX_ARR };$/;"	e	enum:cvtest::ArrayTest::__anon78
 INSIDE	include/opencv2/videostab/fast_marching.hpp	/^    enum { INSIDE = 0, BAND = 1, KNOWN = 255 };$/;"	e	enum:cv::videostab::FastMarchingMethod::__anon312
-INSTALL_DIR	Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
 INSTALL_DIR	Modules/Net/cli/Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
 INSTALL_DIR	Modules/Net/srv/Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
-INSTALL_DIR	check_cli/Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
-INSTALL_FILE	Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
 INSTALL_FILE	Modules/Net/cli/Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
 INSTALL_FILE	Modules/Net/srv/Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
-INSTALL_FILE	check_cli/Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
-INSTALL_PROGRAM	Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
 INSTALL_PROGRAM	Modules/Net/cli/Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
 INSTALL_PROGRAM	Modules/Net/srv/Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
-INSTALL_PROGRAM	check_cli/Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
 INSTANTIATE_TEST_CASE_P	include/opencv2/ts/ts_gtest.h	17101;"	d
 INSTANTIATE_TYPED_TEST_CASE_P	include/opencv2/ts/ts_gtest.h	17597;"	d
 INTERS	include/opencv2/stitching/detail/seam_finders.hpp	/^        FIRST = 1, SECOND = 2, INTERS = 4,$/;"	e	enum:cv::detail::DpSeamFinder::ComponentState
@@ -4140,24 +4227,12 @@ LDA	include/opencv2/contrib/contrib.hpp	/^        LDA(const Mat& src, vector<int
 LDA	include/opencv2/contrib/contrib.hpp	/^        LDA(int num_components = 0) :$/;"	f	class:cv::LDA
 LDA	include/opencv2/contrib/contrib.hpp	/^    class CV_EXPORTS LDA$/;"	c	namespace:cv
 LDetector	include/opencv2/legacy/legacy.hpp	/^class CV_EXPORTS LDetector$/;"	c	namespace:cv
-LFLAGS	Makefile	/^LFLAGS        = -m64 -Wl,-O1$/;"	m
-LFLAGS	Modules/Net/cli/Makefile	/^LFLAGS        = -m64 -Wl,-O1$/;"	m
-LFLAGS	Modules/Net/srv/Makefile	/^LFLAGS        = -m64 -Wl,-O1$/;"	m
-LFLAGS	check_cli/Makefile	/^LFLAGS        = -Wl,-O1$/;"	m
-LIBS	Makefile	/^LIBS          = $(SUBLIBS)  -L\/usr\/lib\/x86_64-linux-gnu -lQtGui -lQtCore -lpthread $/;"	m
-LIBS	Modules/Net/cli/Makefile	/^LIBS          = $(SUBLIBS)  -L\/usr\/lib\/x86_64-linux-gnu -lQtGui -lQtNetwork -lQtCore -lpthread $/;"	m
-LIBS	Modules/Net/srv/Makefile	/^LIBS          = $(SUBLIBS)  -L\/usr\/lib\/x86_64-linux-gnu -lQtGui -lQtNetwork -lQtCore -lpthread $/;"	m
-LIBS	check_cli/Makefile	/^LIBS          = $(SUBLIBS)  -L\/usr\/lib\/x86_64-linux-gnu ..\/lib\/libopencv_calib3d.so ..\/lib\/libopencv_contrib.so ..\/lib\/libopencv_core.so ..\/lib\/libopencv_features2d.so ..\/lib\/libopencv_flann.so ..\/lib\/libopencv_highgui.so ..\/lib\/libopencv_imgproc.so ..\/lib\/libopencv_legacy.so ..\/lib\/libopencv_ml.so ..\/lib\/libopencv_objdetect.so ..\/lib\/libopencv_video.so -lQtGui -lQtNetwork -lQtCore -lpthread $/;"	m
 LINEAR	include/opencv2/flann/defines.h	/^    LINEAR = 0,$/;"	e	enum:cvflann::flann_algorithm_t
 LINEAR	include/opencv2/ml/ml.hpp	/^    enum { LINEAR=0, POLY=1, RBF=2, SIGMOID=3 };$/;"	e	enum:CvSVM::__anon88
 LINEAR_SIMILARITY	include/opencv2/videostab/global_motion.hpp	/^    LINEAR_SIMILARITY = 2,$/;"	e	enum:cv::videostab::MotionModel
 LINES	include/opencv2/core/opengl_interop.hpp	/^        LINES          = 0x0001,$/;"	e	enum:cv::RenderMode::__anon1
 LINE_LOOP	include/opencv2/core/opengl_interop.hpp	/^        LINE_LOOP      = 0x0002,$/;"	e	enum:cv::RenderMode::__anon1
 LINE_STRIP	include/opencv2/core/opengl_interop.hpp	/^        LINE_STRIP     = 0x0003,$/;"	e	enum:cv::RenderMode::__anon1
-LINK	Makefile	/^LINK          = g++$/;"	m
-LINK	Modules/Net/cli/Makefile	/^LINK          = g++$/;"	m
-LINK	Modules/Net/srv/Makefile	/^LINK          = g++$/;"	m
-LINK	check_cli/Makefile	/^LINK          = g++$/;"	m
 LMEDS	include/opencv2/calib3d/calib3d.hpp	/^    LMEDS=CV_LMEDS, \/\/!< least-median algorithm$/;"	e	enum:cv::__anon302
 LOCATION_ROW	include/opencv2/gpu/gpu.hpp	/^        LOCATION_ROW = 0,$/;"	e	enum:cv::gpu::FAST_GPU::__anon230
 LOG	include/opencv2/stitching/detail/util.hpp	82;"	d
@@ -4244,10 +4319,8 @@ MEAN_FIELD	include/opencv2/contrib/openfabmap.hpp	/^        MEAN_FIELD = 1,$/;"	
 MIN	include/opencv2/core/types_c.h	284;"	d
 MINKOWSKI	include/opencv2/flann/defines.h	/^    MINKOWSKI = 3,$/;"	e	enum:cvflann::flann_distance_t
 MISCLASS	include/opencv2/ml/ml.hpp	/^    enum { DEFAULT=0, GINI=1, MISCLASS=3, SQERR=4 };$/;"	e	enum:CvBoost::__anon96
-MKDIR	Makefile	/^MKDIR         = mkdir -p$/;"	m
 MKDIR	Modules/Net/cli/Makefile	/^MKDIR         = mkdir -p$/;"	m
 MKDIR	Modules/Net/srv/Makefile	/^MKDIR         = mkdir -p$/;"	m
-MKDIR	check_cli/Makefile	/^MKDIR         = mkdir -p$/;"	m
 MNCovariance	include/opencv2/video/tracking.hpp	/^    float* MNCovariance;        \/* =measurement_noise_cov->data.fl *\/$/;"	m	struct:CvKalman
 MOG2_GPU	include/opencv2/gpu/gpu.hpp	/^class CV_EXPORTS MOG2_GPU$/;"	c	namespace:cv::gpu
 MOG_GPU	include/opencv2/gpu/gpu.hpp	/^class CV_EXPORTS MOG_GPU$/;"	c	namespace:cv::gpu
@@ -4266,10 +4339,8 @@ MORPH_OPEN	include/opencv2/imgproc/imgproc.hpp	/^       MORPH_OPEN=CV_MOP_OPEN, 
 MORPH_RECT	include/opencv2/imgproc/imgproc.hpp	/^enum { MORPH_RECT=0, MORPH_CROSS=1, MORPH_ELLIPSE=2 };$/;"	e	enum:cv::__anon36
 MORPH_TOPHAT	include/opencv2/imgproc/imgproc.hpp	/^       MORPH_GRADIENT=CV_MOP_GRADIENT, MORPH_TOPHAT=CV_MOP_TOPHAT,$/;"	e	enum:cv::__anon35
 MOTION_MODEL	include/opencv2/contrib/openfabmap.hpp	/^        MOTION_MODEL = 16$/;"	e	enum:cv::of2::FabMap::__anon288
-MOVE	Makefile	/^MOVE          = mv -f$/;"	m
 MOVE	Modules/Net/cli/Makefile	/^MOVE          = mv -f$/;"	m
 MOVE	Modules/Net/srv/Makefile	/^MOVE          = mv -f$/;"	m
-MOVE	check_cli/Makefile	/^MOVE          = mv -f$/;"	m
 MP	include/opencv2/legacy/legacy.hpp	/^    int MP;$/;"	m	struct:CvConDensation
 MP	include/opencv2/video/tracking.hpp	/^    int MP;                     \/* number of measurement vector dimensions *\/$/;"	m	struct:CvKalman
 MPEG1	include/opencv2/gpu/gpu.hpp	/^        MPEG1 = 0,$/;"	e	enum:cv::gpu::VideoReader_GPU::Codec
@@ -4282,7 +4353,7 @@ MStep	include/opencv2/core/mat.hpp	/^inline Mat::MStep::MStep(size_t s) { p = bu
 MULTI_BAND	include/opencv2/stitching/detail/blenders.hpp	/^    enum { NO, FEATHER, MULTI_BAND };$/;"	e	enum:cv::detail::Blender::__anon82
 M_	include/opencv2/gpu/gpu.hpp	/^    GpuMat pyrLevel_[2], M_, bufM_, R_[2], blurredFrame_[2];$/;"	m	class:cv::gpu::FarnebackOpticalFlow
 MainWindow	check_cli/build/ui_mainwindow.h	/^    class MainWindow: public Ui_MainWindow {};$/;"	c	namespace:Ui
-MainWindowImpl	check_cli/src/mainwindowimpl.cpp	/^MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f) $/;"	f	class:MainWindowImpl
+MainWindowImpl	check_cli/src/mainwindowimpl.cpp	/^MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f)$/;"	f	class:MainWindowImpl
 MainWindowImpl	check_cli/src/mainwindowimpl.h	/^class MainWindowImpl : public QMainWindow, public Ui::MainWindow$/;"	c
 MaskCollection	include/opencv2/gpu/device/utility.hpp	/^        __device__ __forceinline__ MaskCollection(const MaskCollection& masks_)$/;"	f	struct:cv::gpu::device::MaskCollection
 MaskCollection	include/opencv2/gpu/device/utility.hpp	/^        explicit __host__ __device__ __forceinline__ MaskCollection(PtrStepb* maskCollection_)$/;"	f	struct:cv::gpu::device::MaskCollection
@@ -4512,14 +4583,10 @@ NullDeblurer	include/opencv2/videostab/deblurring.hpp	/^class CV_EXPORTS NullDeb
 NullFrameSource	include/opencv2/videostab/frame_source.hpp	/^class CV_EXPORTS NullFrameSource : public IFrameSource$/;"	c	namespace:cv::videostab
 NullInpainter	include/opencv2/videostab/inpainting.hpp	/^class CV_EXPORTS NullInpainter : public InpainterBase$/;"	c	namespace:cv::videostab
 NullLog	include/opencv2/videostab/log.hpp	/^class CV_EXPORTS NullLog : public ILog$/;"	c	namespace:cv::videostab
-OBJECTS	Makefile	/^OBJECTS       = QtHello.o$/;"	m
 OBJECTS	Modules/Net/cli/Makefile	/^OBJECTS       = net.o \\$/;"	m
 OBJECTS	Modules/Net/srv/Makefile	/^OBJECTS       = net.o \\$/;"	m
-OBJECTS	check_cli/Makefile	/^OBJECTS       = build\/mainwindowimpl.o \\$/;"	m
-OBJECTS_DIR	Makefile	/^OBJECTS_DIR   = .\/$/;"	m
 OBJECTS_DIR	Modules/Net/cli/Makefile	/^OBJECTS_DIR   = .\/$/;"	m
 OBJECTS_DIR	Modules/Net/srv/Makefile	/^OBJECTS_DIR   = .\/$/;"	m
-OBJECTS_DIR	check_cli/Makefile	/^OBJECTS_DIR   = build\/$/;"	m
 OCTAVE_ROW	include/opencv2/gpu/gpu.hpp	/^        OCTAVE_ROW,$/;"	e	enum:cv::gpu::ORB_GPU::__anon231
 OCTAVE_ROW	include/opencv2/gpu/gpu.hpp	/^        OCTAVE_ROW,$/;"	e	enum:cv::gpu::SURF_GPU::KeypointLayout
 OK	include/opencv2/stitching/stitcher.hpp	/^    enum Status { OK, ERR_NEED_MORE_IMGS };$/;"	e	enum:cv::Stitcher::Status
@@ -4693,6 +4760,110 @@ PERF_TESTS_LOG_TAG	include/opencv2/ts/ts_perf.hpp	16;"	d
 PERF_TEST_F	include/opencv2/ts/ts_perf.hpp	431;"	d
 PERF_TEST_P	include/opencv2/ts/ts_perf.hpp	466;"	d
 PFRAME	include/opencv2/gpu/gpu.hpp	/^            PFRAME = 2,$/;"	e	enum:cv::gpu::VideoWriter_GPU::EncoderCallBack::PicType
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	104;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	107;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	110;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	113;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	116;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	119;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	122;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	125;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	128;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	131;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	134;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	137;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	140;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	146;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	149;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	152;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	155;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	158;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	161;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	164;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	167;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	170;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	173;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	176;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	179;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	182;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	101;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	104;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	107;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	110;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	113;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	116;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	119;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	122;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	125;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	128;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	134;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	137;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	140;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	143;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	146;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	149;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	152;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	155;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	158;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	161;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	164;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	167;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	170;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	92;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	95;"	d	file:
+PLATFORM_ID	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	98;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	104;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	107;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	110;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	113;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	116;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	119;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	122;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	125;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	128;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	131;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	134;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	137;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	140;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	146;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	149;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	152;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	155;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	158;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	161;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	164;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	167;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	170;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	173;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	176;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	179;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	182;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	101;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	104;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	107;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	110;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	113;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	116;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	119;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	122;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	125;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	128;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	134;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	137;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	140;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	143;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	146;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	149;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	152;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	155;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	158;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	161;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	164;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	167;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	170;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	92;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	95;"	d	file:
+PLATFORM_ID	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	98;"	d	file:
 PNCovariance	include/opencv2/video/tracking.hpp	/^    float* PNCovariance;        \/* =process_noise_cov->data.fl *\/$/;"	m	struct:CvKalman
 POINTS	include/opencv2/core/opengl_interop.hpp	/^        POINTS         = 0x0000,$/;"	e	enum:cv::RenderMode::__anon1
 POLY	include/opencv2/ml/ml.hpp	/^    enum { LINEAR=0, POLY=1, RBF=2, SIGMOID=3 };$/;"	e	enum:CvSVM::__anon88
@@ -4709,10 +4880,10 @@ PROFILE_DOG	include/opencv2/legacy/blobtrack.hpp	536;"	d
 PROFILE_EPANECHNIKOV	include/opencv2/legacy/blobtrack.hpp	535;"	d
 PROJ_SPHERICAL_EQRECT	include/opencv2/imgproc/imgproc.hpp	/^    PROJ_SPHERICAL_EQRECT = 1$/;"	e	enum:cv::__anon42
 PROJ_SPHERICAL_ORTHO	include/opencv2/imgproc/imgproc.hpp	/^    PROJ_SPHERICAL_ORTHO = 0,$/;"	e	enum:cv::__anon42
-PROT_BUF_HEAD_SIZE	Modules/Net/cli/net.cpp	/^const int PROT_BUF_HEAD_SIZE = 8;\/\/8byte协议头$/;"	v
-PROT_BUF_HEAD_SIZE	Modules/Net/srv/net.cpp	/^const int PROT_BUF_HEAD_SIZE = 8;\/\/8byte协议头$/;"	v
-PROT_BUF_MAXSIZE	Modules/Net/cli/net.cpp	/^const int PROT_BUF_MAXSIZE = 10240;\/\/最大协议长度为10k$/;"	v
-PROT_BUF_MAXSIZE	Modules/Net/srv/net.cpp	/^const int PROT_BUF_MAXSIZE = 10240;\/\/最大协议长度为10k$/;"	v
+PROT_BUF_HEAD_SIZE	Modules/Net/cli/net.cpp	/^const int PROT_BUF_HEAD_SIZE = 8;     \/\/8byte协议头$/;"	v
+PROT_BUF_HEAD_SIZE	Modules/Net/srv/net.cpp	/^const int PROT_BUF_HEAD_SIZE = 8;     \/\/8byte协议头$/;"	v
+PROT_BUF_MAXSIZE	Modules/Net/cli/net.cpp	/^const int PROT_BUF_MAXSIZE = 10240;   \/\/最大协议长度为10k$/;"	v
+PROT_BUF_MAXSIZE	Modules/Net/srv/net.cpp	/^const int PROT_BUF_MAXSIZE = 10240;   \/\/最大协议长度为10k$/;"	v
 PTLOC_ERROR	include/opencv2/imgproc/imgproc.hpp	/^        PTLOC_ERROR = -2,$/;"	e	enum:cv::Subdiv2D::__anon51
 PTLOC_INSIDE	include/opencv2/imgproc/imgproc.hpp	/^        PTLOC_INSIDE = 0,$/;"	e	enum:cv::Subdiv2D::__anon51
 PTLOC_ON_EDGE	include/opencv2/imgproc/imgproc.hpp	/^        PTLOC_ON_EDGE = 2$/;"	e	enum:cv::Subdiv2D::__anon51
@@ -4914,14 +5085,10 @@ PyramidAdaptedFeatureDetector	include/opencv2/features2d/features2d.hpp	/^class 
 PzGL	include/opencv2/contrib/openfabmap.hpp	/^    double (FabMap::*PzGL)(int q, bool zq, bool zpq, bool Lzq);$/;"	m	class:cv::of2::FabMap
 PzGNe	include/opencv2/contrib/openfabmap.hpp	/^    double PzGNe;$/;"	m	class:cv::of2::FabMap
 PzGe	include/opencv2/contrib/openfabmap.hpp	/^    double PzGe;$/;"	m	class:cv::of2::FabMap
-QMAKE	Makefile	/^QMAKE         = \/usr\/bin\/qmake$/;"	m
 QMAKE	Modules/Net/cli/Makefile	/^QMAKE         = \/usr\/bin\/qmake$/;"	m
 QMAKE	Modules/Net/srv/Makefile	/^QMAKE         = \/usr\/bin\/qmake$/;"	m
-QMAKE	check_cli/Makefile	/^QMAKE         = \/usr\/bin\/qmake-qt4$/;"	m
-QMAKE_TARGET	Makefile	/^QMAKE_TARGET  = qt$/;"	m
 QMAKE_TARGET	Modules/Net/cli/Makefile	/^QMAKE_TARGET  = cli$/;"	m
 QMAKE_TARGET	Modules/Net/srv/Makefile	/^QMAKE_TARGET  = srv$/;"	m
-QMAKE_TARGET	check_cli/Makefile	/^QMAKE_TARGET  = check_cli$/;"	m
 QP_Level_InterB	include/opencv2/gpu/gpu.hpp	/^        int       QP_Level_InterB; \/\/    NVVE_QP_LEVEL_INTER_B,$/;"	m	struct:cv::gpu::VideoWriter_GPU::EncoderParams
 QP_Level_InterP	include/opencv2/gpu/gpu.hpp	/^        int       QP_Level_InterP; \/\/    NVVE_QP_LEVEL_INTER_P,$/;"	m	struct:cv::gpu::VideoWriter_GPU::EncoderParams
 QP_Level_Intra	include/opencv2/gpu/gpu.hpp	/^        int       QP_Level_Intra;  \/\/    NVVE_QP_LEVEL_INTRA,$/;"	m	struct:cv::gpu::VideoWriter_GPU::EncoderParams
@@ -4935,10 +5102,8 @@ R	include/opencv2/contrib/contrib.hpp	/^        int S, R, M, N;$/;"	m	class:cv::
 R	include/opencv2/stitching/detail/camera.hpp	/^    Mat R; \/\/ Rotation$/;"	m	struct:cv::detail::CameraParams
 R2Y	include/opencv2/gpu/device/detail/color_detail.hpp	/^            R2Y        = 4899,$/;"	e	enum:cv::gpu::device::color_detail::__anon211
 RAND_DIM	include/opencv2/flann/kdtree_index.h	/^        RAND_DIM=5$/;"	e	enum:cvflann::KDTreeIndex::__anon30
-RANLIB	Makefile	/^RANLIB        = $/;"	m
 RANLIB	Modules/Net/cli/Makefile	/^RANLIB        = $/;"	m
 RANLIB	Modules/Net/srv/Makefile	/^RANLIB        = $/;"	m
-RANLIB	check_cli/Makefile	/^RANLIB        = $/;"	m
 RANSAC	include/opencv2/calib3d/calib3d.hpp	/^    RANSAC=CV_RANSAC \/\/!< RANSAC algorithm$/;"	e	enum:cv::__anon302
 RBF	include/opencv2/ml/ml.hpp	/^    enum { LINEAR=0, POLY=1, RBF=2, SIGMOID=3 };$/;"	e	enum:CvSVM::__anon88
 RCType	include/opencv2/gpu/gpu.hpp	/^        int       RCType;          \/\/    NVVE_RC_TYPE,$/;"	m	struct:cv::gpu::VideoWriter_GPU::EncoderParams
@@ -5041,6 +5206,8 @@ RGB5x52RGB	include/opencv2/gpu/device/detail/color_detail.hpp	/^        template
 RGB5x52RGBConverter	include/opencv2/gpu/device/detail/color_detail.hpp	/^        template <int bidx> struct RGB5x52RGBConverter<5, bidx>$/;"	s	namespace:cv::gpu::device::color_detail
 RGB5x52RGBConverter	include/opencv2/gpu/device/detail/color_detail.hpp	/^        template <int bidx> struct RGB5x52RGBConverter<6, bidx>$/;"	s	namespace:cv::gpu::device::color_detail
 RIGID_BODY_MOTION	include/opencv2/contrib/contrib.hpp	/^           RIGID_BODY_MOTION = 4$/;"	e	enum:cv::__anon298
+RM	check_cli/build/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	check_srv/build/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
 RNG	include/opencv2/core/operations.hpp	/^inline RNG::RNG() { state = 0xffffffff; }$/;"	f	class:cv::RNG
 RNG	include/opencv2/core/operations.hpp	/^inline RNG::RNG(uint64 _state) { state = _state ? _state : 0xffffffff; }$/;"	f	class:cv::RNG
 ROTATION	include/opencv2/contrib/contrib.hpp	/^    enum { ROTATION          = 1,$/;"	e	enum:cv::__anon298
@@ -5154,6 +5321,10 @@ S	include/opencv2/contrib/contrib.hpp	/^        int S, R, M, N;$/;"	m	class:cv::
 S	include/opencv2/contrib/contrib.hpp	/^        int S, R, M, N;$/;"	m	class:cv::LogPolar_Interp
 S2A	Modules/Net/prot.h	/^typedef std::map<String, AutoType, StrCmp>     S2A;$/;"	t
 S2AIter	Modules/Net/prot.h	/^typedef S2A::iterator                          S2AIter;$/;"	t
+S2M	Modules/Conf/conf.h	/^typedef std::map<std::string, S2S>           S2M;$/;"	t
+S2MIter	Modules/Conf/conf.h	/^typedef S2M::iterator                        S2MIter;$/;"	t
+S2S	Modules/Conf/conf.h	/^typedef std::map<std::string, std::string>   S2S;$/;"	t
+S2SIter	Modules/Conf/conf.h	/^typedef S2S::iterator                        S2SIter;$/;"	t
 SADWindowSize	include/opencv2/calib3d/calib3d.hpp	/^    CV_PROP_RW int SADWindowSize;$/;"	m	class:cv::StereoSGBM
 SADWindowSize	include/opencv2/calib3d/calib3d.hpp	/^    int SADWindowSize; \/\/ ~5x5..21x21$/;"	m	struct:CvStereoBMState
 SAMPLED	include/opencv2/contrib/openfabmap.hpp	/^        SAMPLED = 2,$/;"	e	enum:cv::of2::FabMap::__anon288
@@ -5165,10 +5336,8 @@ SAVED	include/opencv2/flann/defines.h	/^    SAVED = 254,$/;"	e	enum:cvflann::fla
 SCALE_IMAGE	include/opencv2/objdetect/objdetect.hpp	/^    enum { DO_CANNY_PRUNING = 1, SCALE_IMAGE = 2,$/;"	e	enum:cv::CascadeClassifier::__anon282
 SCOPED_TRACE	include/opencv2/ts/ts_gtest.h	20017;"	d
 SECOND	include/opencv2/stitching/detail/seam_finders.hpp	/^        FIRST = 1, SECOND = 2, INTERS = 4,$/;"	e	enum:cv::detail::DpSeamFinder::ComponentState
-SED	Makefile	/^SED           = sed$/;"	m
 SED	Modules/Net/cli/Makefile	/^SED           = sed$/;"	m
 SED	Modules/Net/srv/Makefile	/^SED           = sed$/;"	m
-SED	check_cli/Makefile	/^SED           = sed$/;"	m
 SF_BGR	include/opencv2/gpu/gpu.hpp	/^        SF_BGR,$/;"	e	enum:cv::gpu::VideoWriter_GPU::SurfaceFormat
 SF_GRAY	include/opencv2/gpu/gpu.hpp	/^        SF_GRAY = SF_BGR$/;"	e	enum:cv::gpu::VideoWriter_GPU::SurfaceFormat
 SF_IYUV	include/opencv2/gpu/gpu.hpp	/^        SF_IYUV,$/;"	e	enum:cv::gpu::VideoWriter_GPU::SurfaceFormat
@@ -5177,6 +5346,8 @@ SF_UYVY	include/opencv2/gpu/gpu.hpp	/^        SF_UYVY = 0,$/;"	e	enum:cv::gpu::V
 SF_YUY2	include/opencv2/gpu/gpu.hpp	/^        SF_YUY2,$/;"	e	enum:cv::gpu::VideoWriter_GPU::SurfaceFormat
 SF_YV12	include/opencv2/gpu/gpu.hpp	/^        SF_YV12,$/;"	e	enum:cv::gpu::VideoWriter_GPU::SurfaceFormat
 SHARED_ATOMICS	include/opencv2/core/gpumat.hpp	/^        SHARED_ATOMICS = FEATURE_SET_COMPUTE_12,$/;"	e	enum:cv::gpu::FeatureSet
+SHELL	check_cli/build/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	check_srv/build/Makefile	/^SHELL = \/bin\/sh$/;"	m
 SIFT	include/opencv2/contrib/hybridtracker.hpp	/^    enum {  SIFT = 0, SURF = 1, OPTICAL_FLOW = 2 };$/;"	e	enum:cv::CvFeatureTrackerParams::__anon287
 SIFT	include/opencv2/nonfree/features2d.hpp	/^class CV_EXPORTS_W SIFT : public Feature2D$/;"	c	namespace:cv
 SIGMOID	include/opencv2/ml/ml.hpp	/^    enum { LINEAR=0, POLY=1, RBF=2, SIGMOID=3 };$/;"	e	enum:CvSVM::__anon88
@@ -5187,10 +5358,8 @@ SKIPPED	include/opencv2/ts/ts.hpp	/^        SKIPPED=1$/;"	e	enum:cvtest::TS::__a
 SL2	include/opencv2/features2d/features2d.hpp	/^struct CV_EXPORTS SL2$/;"	s	namespace:cv
 SMALL_POLICY	include/opencv2/flann/any.h	135;"	d
 SMALL_POLICY	include/opencv2/flann/any.h	151;"	d
-SOURCES	Makefile	/^SOURCES       = QtHello.cpp $/;"	m
 SOURCES	Modules/Net/cli/Makefile	/^SOURCES       = net.cpp \\$/;"	m
 SOURCES	Modules/Net/srv/Makefile	/^SOURCES       = net.cpp \\$/;"	m
-SOURCES	check_cli/Makefile	/^SOURCES       = src\/mainwindowimpl.cpp \\$/;"	m
 SQERR	include/opencv2/ml/ml.hpp	/^    enum { DEFAULT=0, GINI=1, MISCLASS=3, SQERR=4 };$/;"	e	enum:CvBoost::__anon96
 SQUARED_LOSS	include/opencv2/ml/ml.hpp	/^    enum {SQUARED_LOSS=0, ABSOLUTE_LOSS, HUBER_LOSS=3, DEVIANCE_LOSS};$/;"	e	enum:CvGBTrees::__anon97
 STARTED	include/opencv2/calib3d/calib3d.hpp	/^    enum { DONE=0, STARTED=1, CALC_J=2, CHECK_ERR=3 };$/;"	e	enum:CvLevMarq::__anon301
@@ -5201,14 +5370,14 @@ START_E_STEP	include/opencv2/ml/ml.hpp	/^    enum {START_E_STEP=1, START_M_STEP=
 START_M_STEP	include/opencv2/legacy/legacy.hpp	/^           START_M_STEP=cv::EM::START_M_STEP,$/;"	e	enum:CvEM::__anon262
 START_M_STEP	include/opencv2/ml/ml.hpp	/^    enum {START_E_STEP=1, START_M_STEP=2, START_AUTO_STEP=0};$/;"	e	enum:cv::EM::__anon92
 STRIDE	include/opencv2/gpu/device/warp.hpp	/^            STRIDE        = WARP_SIZE$/;"	e	enum:cv::gpu::device::Warp::__anon120
-STRIP	Makefile	/^STRIP         = strip$/;"	m
 STRIP	Modules/Net/cli/Makefile	/^STRIP         = strip$/;"	m
 STRIP	Modules/Net/srv/Makefile	/^STRIP         = strip$/;"	m
-STRIP	check_cli/Makefile	/^STRIP         = strip$/;"	m
 STYLE_ITALIC	include/opencv2/core/opengl_interop.hpp	/^        STYLE_ITALIC    = 1,$/;"	e	enum:cv::GlFont::Style
 STYLE_NORMAL	include/opencv2/core/opengl_interop.hpp	/^        STYLE_NORMAL    = 0,$/;"	e	enum:cv::GlFont::Style
 STYLE_UNDERLINE	include/opencv2/core/opengl_interop.hpp	/^        STYLE_UNDERLINE = 2$/;"	e	enum:cv::GlFont::Style
 SUCCEED	include/opencv2/ts/ts_gtest.h	19376;"	d
+SUFFIXES	check_cli/build/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	check_srv/build/Makefile	/^SUFFIXES =$/;"	m
 SUMMARY	include/opencv2/ts/ts.hpp	/^        SUMMARY=1 << SUMMARY_IDX,$/;"	e	enum:cvtest::TS::__anon76
 SUMMARY_IDX	include/opencv2/ts/ts.hpp	/^        SUMMARY_IDX=0,$/;"	e	enum:cvtest::TS::__anon76
 SURF	include/opencv2/contrib/hybridtracker.hpp	/^    enum {  SIFT = 0, SURF = 1, OPTICAL_FLOW = 2 };$/;"	e	enum:cv::CvFeatureTrackerParams::__anon287
@@ -5226,10 +5395,8 @@ SVM_DEGREE	include/opencv2/ml/ml.hpp	/^    enum { SVM_C=0, SVM_GAMMA=1, SVM_P=2,
 SVM_GAMMA	include/opencv2/ml/ml.hpp	/^    enum { SVM_C=0, SVM_GAMMA=1, SVM_P=2, SVM_NU=3, SVM_COEF=4, SVM_DEGREE=5 };$/;"	e	enum:CvParamGrid::__anon86
 SVM_NU	include/opencv2/ml/ml.hpp	/^    enum { SVM_C=0, SVM_GAMMA=1, SVM_P=2, SVM_NU=3, SVM_COEF=4, SVM_DEGREE=5 };$/;"	e	enum:CvParamGrid::__anon86
 SVM_P	include/opencv2/ml/ml.hpp	/^    enum { SVM_C=0, SVM_GAMMA=1, SVM_P=2, SVM_NU=3, SVM_COEF=4, SVM_DEGREE=5 };$/;"	e	enum:CvParamGrid::__anon86
-SYMLINK	Makefile	/^SYMLINK       = ln -f -s$/;"	m
 SYMLINK	Modules/Net/cli/Makefile	/^SYMLINK       = ln -f -s$/;"	m
 SYMLINK	Modules/Net/srv/Makefile	/^SYMLINK       = ln -f -s$/;"	m
-SYMLINK	check_cli/Makefile	/^SYMLINK       = ln -f -s$/;"	m
 SZ_ALL	include/opencv2/ts/ts_perf.hpp	67;"	d
 SZ_ALL_GA	include/opencv2/ts/ts_perf.hpp	64;"	d
 SZ_ALL_HD	include/opencv2/ts/ts_perf.hpp	65;"	d
@@ -5420,14 +5587,10 @@ T1	Modules/Net/prot.cpp	/^static const char T1 = 0xF1; \/\/ 正,8位$/;"	v	file:
 T2	Modules/Net/prot.cpp	/^static const char T2 = 0xF2; \/\/ 正,16位$/;"	v	file:
 T3	Modules/Net/prot.cpp	/^static const char T3 = 0xF4; \/\/ 正,32位$/;"	v	file:
 TAG_MASK	include/opencv2/gpu/device/emulation.hpp	/^            enum { TAG_MASK = (1U << ( (sizeof(unsigned int) << 3) - 5U)) - 1U };$/;"	e	enum:cv::gpu::device::Emulation::smem::__anon212
-TAR	Makefile	/^TAR           = tar -cf$/;"	m
 TAR	Modules/Net/cli/Makefile	/^TAR           = tar -cf$/;"	m
 TAR	Modules/Net/srv/Makefile	/^TAR           = tar -cf$/;"	m
-TAR	check_cli/Makefile	/^TAR           = tar -cf$/;"	m
-TARGET	Makefile	/^TARGET        = qt$/;"	m
-TARGET	Modules/Net/cli/Makefile	/^TARGET        = cli$/;"	m
-TARGET	Modules/Net/srv/Makefile	/^TARGET        = srv$/;"	m
-TARGET	check_cli/Makefile	/^TARGET        = bin\/check_cli$/;"	m
+TARGET	Modules/Net/cli/Makefile	/^TARGET        = libcli.a$/;"	m
+TARGET	Modules/Net/srv/Makefile	/^TARGET        = libsrv.a$/;"	m
 TEMP	include/opencv2/ts/ts.hpp	/^    enum { INPUT, INPUT_OUTPUT, OUTPUT, REF_INPUT_OUTPUT, REF_OUTPUT, TEMP, MASK, MAX_ARR };$/;"	e	enum:cvtest::ArrayTest::__anon78
 TERM_EXCEPTION	include/opencv2/ts/ts_perf.hpp	/^        TERM_EXCEPTION = 3,$/;"	e	enum:perf::performance_metrics::__anon79
 TERM_INTERRUPT	include/opencv2/ts/ts_perf.hpp	/^        TERM_INTERRUPT = 2,$/;"	e	enum:perf::performance_metrics::__anon79
@@ -5864,7 +6027,7 @@ UInt	include/opencv2/ts/ts_gtest.h	/^  typedef unsigned int UInt;$/;"	t	class:st
 UInt	include/opencv2/ts/ts_gtest.h	/^  typedef void UInt;$/;"	t	class:std::tr1::TypeWithSize
 UInt32	include/opencv2/ts/ts_gtest.h	/^typedef TypeWithSize<4>::UInt UInt32;$/;"	t	namespace:std::tr1
 UInt64	include/opencv2/ts/ts_gtest.h	/^typedef TypeWithSize<8>::UInt UInt64;$/;"	t	namespace:std::tr1
-UNICODE	Modules/Net/protInitTool.cpp	/^    UNICODE,$/;"	e	enum:FileType	file:
+UNICODE	Modules/Conf/conf.h	/^    UNICODE,$/;"	e	enum:FileType
 UPDATE_WEIGHTS	include/opencv2/ml/ml.hpp	/^    enum { UPDATE_WEIGHTS = 1, NO_INPUT_SCALE = 2, NO_OUTPUT_SCALE = 4 };$/;"	e	enum:CvANN_MLP::__anon100
 USE_AUTO_PARAMS	include/opencv2/contrib/contrib.hpp	/^        enum {USE_INITIAL_DISPARITY = 1, USE_EQUALIZE_HIST = 2, USE_SMART_ID = 4, USE_AUTO_PARAMS = 8, USE_MEDIAN_FILTERING = 16};$/;"	e	enum:cv::StereoVar::__anon295
 USE_EQUALIZE_HIST	include/opencv2/contrib/contrib.hpp	/^        enum {USE_INITIAL_DISPARITY = 1, USE_EQUALIZE_HIST = 2, USE_SMART_ID = 4, USE_AUTO_PARAMS = 8, USE_MEDIAN_FILTERING = 16};$/;"	e	enum:cv::StereoVar::__anon295
@@ -5873,7 +6036,7 @@ USE_MEDIAN_FILTERING	include/opencv2/contrib/contrib.hpp	/^        enum {USE_INI
 USE_SMART_ID	include/opencv2/contrib/contrib.hpp	/^        enum {USE_INITIAL_DISPARITY = 1, USE_EQUALIZE_HIST = 2, USE_SMART_ID = 4, USE_AUTO_PARAMS = 8, USE_MEDIAN_FILTERING = 16};$/;"	e	enum:cv::StereoVar::__anon295
 USE_UNORDERED_MAP	include/opencv2/flann/lsh_table.h	44;"	d
 USE_UNORDERED_MAP	include/opencv2/flann/lsh_table.h	46;"	d
-UTF8	Modules/Net/protInitTool.cpp	/^    UTF8,$/;"	e	enum:FileType	file:
+UTF8	Modules/Conf/conf.h	/^    UTF8,$/;"	e	enum:FileType
 Ui	check_cli/build/ui_mainwindow.h	/^namespace Ui {$/;"	n
 Ui_MainWindow	check_cli/build/ui_mainwindow.h	/^class Ui_MainWindow$/;"	c
 UnConst	include/opencv2/gpu/device/detail/type_traits_detail.hpp	/^        template <class U> struct UnConst$/;"	s	namespace:cv::gpu::device::type_traits_detail
@@ -6354,6 +6517,7 @@ _WIN32	include/opencv2/core/internal.hpp	58;"	d
 _WIN32	include/opencv2/core/internal.hpp	71;"	d
 __AUTOTYPE_H_	Modules/Net/autotype.h	12;"	d
 __BEGIN__	include/opencv2/core/internal.hpp	85;"	d
+__CONF_H_	Modules/Conf/conf.h	12;"	d
 __CVMSVCLOC__	include/opencv/cv.h	50;"	d
 __CVSTR1__	include/opencv/cv.h	49;"	d
 __CVSTR2__	include/opencv/cv.h	48;"	d
@@ -6373,11 +6537,18 @@ __CV_GPU_DEPR_BEFORE__	include/opencv2/core/cuda_devptrs.hpp	134;"	d
 __CV_GPU_DEPR_BEFORE__	include/opencv2/core/gpumat.hpp	274;"	d
 __CV_GPU_HOST_DEVICE__	include/opencv2/core/cuda_devptrs.hpp	49;"	d
 __CV_GPU_HOST_DEVICE__	include/opencv2/core/cuda_devptrs.hpp	51;"	d
+__DB_H_	check_srv/src/db.h	2;"	d
 __END__	include/opencv2/core/internal.hpp	86;"	d
+__FACE_RECOGNITION_H_	check_srv/src/faceRecognition.h	12;"	d
+__GLOBAL_VAR_H_	check_cli/src/globalVar.h	12;"	d
+__GLOBAL_VAR_H_	check_srv/src/globalVar.h	12;"	d
 __LOGARG__	Modules/Log/log.h	26;"	d
 __LOG_H_	Modules/Log/log.h	13;"	d
+__MAIN_H_	check_srv/src/main.h	12;"	d
 __NET_H_	Modules/Net/cli/net.h	13;"	d
 __NET_H_	Modules/Net/srv/net.h	13;"	d
+__NET_OPERATE_H_	check_cli/src/netOperate.h	2;"	d
+__NET_OPERATE_H_	check_srv/src/netOperate.h	2;"	d
 __OPENCV_ALL_HPP__	include/opencv2/opencv.hpp	44;"	d
 __OPENCV_BACKGROUND_SEGM_HPP__	include/opencv2/video/background_segm.hpp	44;"	d
 __OPENCV_CALIB3D_HPP__	include/opencv2/calib3d/calib3d.hpp	44;"	d
@@ -6483,6 +6654,7 @@ __OPENCV_VIDEOSURVEILLANCE_H__	include/opencv2/legacy/blobtrack.hpp	44;"	d
 __OPENCV_VIDEO_HPP__	include/opencv2/video/video.hpp	44;"	d
 __PROT_H_	Modules/Net/prot.h	13;"	d
 __PROT_INIT_H_	Modules/Net/protInit.h	10;"	d
+__PROT_INIT_H_	Modules/Net/protInitTool/protInit.h	10;"	d
 __STRING_H_	Modules/Net/String.h	12;"	d
 __TRACE_H_	Modules/Log/trace.h	12;"	d
 ___cudaSafeCall	include/opencv2/gpu/device/common.hpp	/^static inline void ___cudaSafeCall(cudaError_t err, const char *file, const int line, const char *func = "")$/;"	f
@@ -7047,6 +7219,7 @@ cameraParams	include/opencv2/legacy/legacy.hpp	/^    CvCamera cameraParams[MAX_C
 cameras	include/opencv2/stitching/stitcher.hpp	/^    std::vector<detail::CameraParams> cameras() const { return cameras_; }$/;"	f	class:cv::Stitcher
 cameras_	include/opencv2/stitching/stitcher.hpp	/^    std::vector<detail::CameraParams> cameras_;$/;"	m	class:cv::Stitcher
 can_use_gpu_	include/opencv2/stitching/detail/blenders.hpp	/^    bool can_use_gpu_;$/;"	m	class:cv::detail::MultiBandBlender
+cancelSignIn	check_cli/src/mainwindowimpl.cpp	/^void MainWindowImpl::cancelSignIn()$/;"	f	class:MainWindowImpl
 cand_weight	include/opencv2/legacy/legacy.hpp	/^    float* cand_weight;$/;"	m	struct:CvCliqueFinder
 cannyBuf	include/opencv2/gpu/gpu.hpp	/^    CannyBuf cannyBuf;$/;"	m	struct:cv::gpu::HoughCirclesBuf
 cannyBuf_	include/opencv2/gpu/gpu.hpp	/^    CannyBuf cannyBuf_;$/;"	m	class:cv::gpu::GeneralizedHough_GPU
@@ -7162,6 +7335,7 @@ clear	include/opencv2/flann/result_set.h	/^    void clear()$/;"	f	class:cvflann:
 clear	include/opencv2/flann/result_set.h	/^    void clear()$/;"	f	class:cvflann::KNNUniqueResultSet
 clear	include/opencv2/legacy/legacy.hpp	/^    void clear() { detach(); }$/;"	f	class:CvImage
 clear	include/opencv2/legacy/legacy.hpp	/^    void clear()$/;"	f	class:CvMatrix
+clearUIFace	check_cli/src/mainwindowimpl.cpp	/^void MainWindowImpl::clearUIFace()$/;"	f	class:MainWindowImpl
 clipInt	include/opencv2/ts/ts.hpp	/^inline int clipInt( int val, int min_val, int max_val )$/;"	f	namespace:cvtest
 clone	include/opencv2/core/gpumat.hpp	/^    inline GpuMat GpuMat::clone() const$/;"	f	class:cv::gpu::GpuMat
 clone	include/opencv2/core/mat.hpp	/^SparseMat_<_Tp>::clone() const$/;"	f	class:cv::SparseMat_
@@ -7259,6 +7433,7 @@ compute_ground_truth	include/opencv2/flann/ground_truth.h	/^void compute_ground_
 condens	include/opencv2/legacy/legacy.hpp	/^CVAPI(void)  cvConDensUpdateByTime( CvConDensation* condens);$/;"	v
 condens	include/opencv2/legacy/legacy.hpp	/^CVAPI(void)  cvReleaseConDensation( CvConDensation** condens );$/;"	v
 condensed_idx	include/opencv2/ml/ml.hpp	/^    int condensed_idx;$/;"	m	struct:CvDTreeSplit
+confMap	check_srv/src/main.cpp	/^S2M confMap;$/;"	v
 confThresh	include/opencv2/stitching/detail/motion_estimators.hpp	/^    double confThresh() const { return conf_thresh_; }$/;"	f	class:cv::detail::BundleAdjusterBase
 conf_thresh_	include/opencv2/stitching/detail/motion_estimators.hpp	/^    double conf_thresh_;$/;"	m	class:cv::detail::BundleAdjusterBase
 conf_thresh_	include/opencv2/stitching/stitcher.hpp	/^    double conf_thresh_;$/;"	m	class:cv::Stitcher
@@ -7959,6 +8134,8 @@ detail	include/opencv2/stitching/detail/util.hpp	/^namespace detail {$/;"	n	name
 detail	include/opencv2/stitching/detail/util_inl.hpp	/^namespace detail {$/;"	n	namespace:cv
 detail	include/opencv2/stitching/detail/warpers.hpp	/^namespace detail {$/;"	n	namespace:cv
 detail	include/opencv2/stitching/detail/warpers_inl.hpp	/^namespace detail {$/;"	n	namespace:cv
+detectFace	check_srv/src/faceDetect.cpp	/^void detectFace(cv::CascadeClassifier& face_cascade, cv::Mat& img, std::vector<cv::Mat>& o_faces)$/;"	f
+detectInit	check_srv/src/faceDetect.cpp	/^void detectInit()$/;"	f
 detectResultRoi	include/opencv2/stitching/detail/warpers.hpp	/^    void detectResultRoi(Size src_size, Point &dst_tl, Point &dst_br)$/;"	f	class:cv::detail::CylindricalPortraitWarper
 detectResultRoi	include/opencv2/stitching/detail/warpers.hpp	/^    void detectResultRoi(Size src_size, Point &dst_tl, Point &dst_br)$/;"	f	class:cv::detail::CylindricalWarper
 detectResultRoi	include/opencv2/stitching/detail/warpers.hpp	/^    void detectResultRoi(Size src_size, Point &dst_tl, Point &dst_br)$/;"	f	class:cv::detail::PlanePortraitWarper
@@ -8357,6 +8534,8 @@ fVarMin	include/opencv2/gpu/gpu.hpp	/^    float fVarMin;$/;"	m	class:cv::gpu::MO
 fVarMin	include/opencv2/video/background_segm.hpp	/^    float fVarMin;$/;"	m	class:cv::BackgroundSubtractorMOG2
 f_param1	include/opencv2/ml/ml.hpp	/^    double f_param1, f_param2;$/;"	m	class:CvANN_MLP
 f_param2	include/opencv2/ml/ml.hpp	/^    double f_param1, f_param2;$/;"	m	class:CvANN_MLP
+faceRecognition	check_srv/src/faceRecognition.cpp	/^int faceRecognition(cv::Mat& image)$/;"	f
+face_cascade	check_srv/src/faceDetect.cpp	/^cv::CascadeClassifier face_cascade;$/;"	v
 factory_	include/opencv2/ts/ts_gtest.h	/^  internal::TestFactoryBase* const factory_;  \/\/ The factory that creates$/;"	m	class:testing::TestInfo::internal
 failed	include/opencv2/ts/ts_gtest.h	/^  bool failed() const { return type_ != kSuccess; }$/;"	f	class:testing::TestPartResult
 failure_message	include/opencv2/ts/ts_gtest.h	/^  const char* failure_message() const { return message(); }$/;"	f	class:testing::AssertionResult
@@ -8692,7 +8871,7 @@ g9_	include/opencv2/ts/ts_gtest.h	/^  const ParamGenerator<T9> g9_;$/;"	m	class:
 g9_	include/opencv2/ts/ts_gtest.h	/^  const ParamGenerator<T9> g9_;$/;"	m	class:testing::internal::CartesianProductGenerator9
 gNet	check_cli/src/main.cpp	/^Net *gNet;$/;"	v
 gNet	check_srv/src/main.cpp	/^Net *gNet;$/;"	v
-gNet	check_srv/test.cpp	/^Net *gNet;$/;"	v
+gSockId	check_cli/src/main.cpp	/^int gSockId;$/;"	v
 gSum_	include/opencv2/videostab/deblurring.hpp	/^    Mat_<float> bSum_, gSum_, rSum_, wSum_;$/;"	m	class:cv::videostab::WeightingDeblurer
 g_point	include/opencv2/legacy/legacy.hpp	/^    CvGaussBGPoint*            g_point;$/;"	m	struct:CvGaussBGModel
 g_values	include/opencv2/legacy/legacy.hpp	/^    CvGaussBGValues* g_values;$/;"	m	struct:CvGaussBGPoint
@@ -8707,6 +8886,7 @@ gammaCorrection	include/opencv2/objdetect/objdetect.hpp	/^    CV_PROP bool gamma
 gamma_correction	include/opencv2/gpu/gpu.hpp	/^    bool gamma_correction;$/;"	m	struct:cv::gpu::HOGDescriptor
 ganglionCellsSensitivity	include/opencv2/contrib/retina.hpp	/^               float photoreceptorsLocalAdaptationSensitivity, photoreceptorsTemporalConstant, photoreceptorsSpatialConstant, horizontalCellsGain, hcellsTemporalConstant, hcellsSpatialConstant, ganglionCellsSensitivity;$/;"	m	struct:cv::Retina::RetinaParameters::OPLandIplParvoParameters
 gcd	include/opencv2/core/operations.hpp	/^template<typename _Tp> static inline _Tp gcd(_Tp a, _Tp b)$/;"	f	namespace:cv
+gdb	check_srv/src/db.cpp	/^QSqlDatabase gdb;$/;"	v
 get	include/opencv2/core/operations.hpp	/^template<typename _Tp> inline typename ParamType<_Tp>::member_type Algorithm::get(const char* _name) const$/;"	f	class:cv::Algorithm
 get	include/opencv2/core/operations.hpp	/^template<typename _Tp> inline typename ParamType<_Tp>::member_type Algorithm::get(const string& _name) const$/;"	f	class:cv::Algorithm
 get	include/opencv2/ts/ts_gtest.h	/^  T* get() const { return ptr_; }$/;"	f	struct:std::tr1::tuple_element
@@ -8718,12 +8898,14 @@ getAlpha	include/opencv2/gpu/device/detail/color_detail.hpp	/^        template <
 getBucketFromKey	include/opencv2/flann/lsh_table.h	/^    inline const Bucket* getBucketFromKey(BucketKey key) const$/;"	f	class:cvflann::lsh::LshTable
 getCenterOrdering	include/opencv2/flann/kmeans_index.h	/^    void getCenterOrdering(KMeansNodePtr node, const ElementType* q, int* sort_indices)$/;"	f	class:cvflann::KMeansIndex
 getClusterCenters	include/opencv2/flann/kmeans_index.h	/^    int getClusterCenters(Matrix<DistanceType>& centers)$/;"	f	class:cvflann::KMeansIndex
+getConfMap	check_srv/src/main.cpp	/^S2M& getConfMap()$/;"	f
 getData	include/opencv2/legacy/legacy.hpp	/^inline uchar* getData(IplImage* image)$/;"	f	namespace:cv
 getDistanceToBorder	include/opencv2/flann/kmeans_index.h	/^    DistanceType getDistanceToBorder(DistanceType* p, DistanceType* c, DistanceType* q)$/;"	f	class:cvflann::KMeansIndex
 getExactNeighbors	include/opencv2/flann/kdtree_index.h	/^    void getExactNeighbors(ResultSet<DistanceType>& result, const ElementType* vec, float epsError)$/;"	f	class:cvflann::KDTreeIndex
 getField	Modules/Net/prot.h	/^AutoType& Prot::getField(const char* fieldName)$/;"	f	class:Prot
 getFirstTopLevelNode	include/opencv2/core/operations.hpp	/^inline FileNode FileStorage::getFirstTopLevelNode() const$/;"	f	class:cv::FileStorage
 getFloatSignature	include/opencv2/legacy/legacy.hpp	/^    void getFloatSignature(IplImage *patch, float *sig) const { getSignature(patch, sig); }$/;"	f	class:cv::RTreeClassifier
+getHandler	Modules/Net/prot.cpp	/^void* Prot::getHandler(int protId)$/;"	f	class:Prot
 getIndex	include/opencv2/flann/flann_base.hpp	/^    FLANN_DEPRECATED NNIndex<Distance>* getIndex()$/;"	f	class:cvflann::Index
 getIndexParameters	include/opencv2/flann/flann.hpp	/^        FLANN_DEPRECATED const ::cvflann::IndexParams* getIndexParameters() { return nnIndex->getIndexParameters(); }$/;"	f	class:cv::flann::GenericIndex
 getIndexParameters	include/opencv2/flann/flann.hpp	/^        FLANN_DEPRECATED const ::cvflann::IndexParams* getIndexParameters()$/;"	f	class:cv::flann::Index_
@@ -8739,6 +8921,8 @@ getModalities	include/opencv2/objdetect/objdetect.hpp	/^  const std::vector< Ptr
 getNeighbors	include/opencv2/flann/kdtree_index.h	/^    void getNeighbors(ResultSet<DistanceType>& result, const ElementType* vec, int maxCheck, float epsError)$/;"	f	class:cvflann::KDTreeIndex
 getNeighbors	include/opencv2/flann/lsh_index.h	/^    void getNeighbors(const ElementType* vec, ResultSet<DistanceType>& result)$/;"	f	class:cvflann::LshIndex
 getNeighbors	include/opencv2/flann/lsh_index.h	/^    void getNeighbors(const ElementType* vec, bool \/*do_radius*\/, float radius, bool do_k, unsigned int k_nn,$/;"	f	class:cvflann::LshIndex
+getNet	check_cli/src/main.cpp	/^Net* getNet()$/;"	f
+getNet	check_srv/src/main.cpp	/^Net* getNet()$/;"	f
 getNextId	include/opencv2/contrib/detection_based_tracker.hpp	/^            static int getNextId()$/;"	f	struct:DetectionBasedTracker::TrackedObject
 getNodes	include/opencv2/contrib/contrib.hpp	/^        const vector<Node>& getNodes() const { return nodes; }$/;"	f	class:cv::Octree
 getNum	Modules/Net/autotype.h	/^long AutoType::getNum() {$/;"	f	class:AutoType
@@ -8765,13 +8949,13 @@ getSpinCount	include/opencv2/contrib/contrib.hpp	/^        size_t getSpinCount()
 getSpinImage	include/opencv2/contrib/contrib.hpp	/^        Mat getSpinImage(size_t index) const { return spinImages.row((int)index); }$/;"	f	class:cv::SpinImageModel
 getSpinNormal	include/opencv2/contrib/contrib.hpp	/^        const Point3f& getSpinNormal(size_t index) const { return mesh.normals[subset[index]]; }$/;"	f	class:cv::SpinImageModel
 getSpinVertex	include/opencv2/contrib/contrib.hpp	/^        const Point3f& getSpinVertex(size_t index) const { return mesh.vtx[subset[index]]; }$/;"	f	class:cv::SpinImageModel
-getStaticMetaObject	Modules/Net/cli/moc_net.cpp	/^const QMetaObject &Net::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:Net
-getStaticMetaObject	Modules/Net/srv/moc_net.cpp	/^const QMetaObject &Net::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:Net
-getStaticMetaObject	check_cli/build/moc_mainwindowimpl.cpp	/^const QMetaObject &MainWindowImpl::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:MainWindowImpl
+getStaticMetaObject	check_cli/build/__/Modules/Net/cli/moc_net.cxx	/^const QMetaObject &Net::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:Net
+getStaticMetaObject	check_cli/build/src/moc_mainwindowimpl.cxx	/^const QMetaObject &MainWindowImpl::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:MainWindowImpl
+getStaticMetaObject	check_srv/build/__/Modules/Net/srv/moc_net.cxx	/^const QMetaObject &Net::getStaticMetaObject() { return staticMetaObject; }$/;"	f	class:Net
 getStats	include/opencv2/flann/lsh_table.h	/^inline LshStats LshTable<unsigned char>::getStats() const$/;"	f	class:cvflann::lsh::LshTable
 getStr	Modules/Net/autotype.h	/^const char* AutoType::getStr()$/;"	f	class:AutoType
 getT	include/opencv2/objdetect/objdetect.hpp	/^  int getT(int pyramid_level) const { return T_at_level[pyramid_level]; }$/;"	f	class:cv::linemod::Detector
-getTextFileType	Modules/Net/protInitTool.cpp	/^FILETYPE getTextFileType(const char *fileName)$/;"	f
+getTextFileType	Modules/Conf/conf.cpp	/^FILETYPE getTextFileType(const char *fileName)$/;"	f
 getType	Modules/Net/autotype.h	/^    char getType() {return type;}$/;"	f	class:AutoType
 getType	include/opencv2/flann/autotuned_index.h	/^    virtual flann_algorithm_t getType() const$/;"	f	class:cvflann::AutotunedIndex
 getType	include/opencv2/flann/composite_index.h	/^    flann_algorithm_t getType() const$/;"	f	class:cvflann::CompositeIndex
@@ -8901,6 +9085,8 @@ handleDisconnected	Modules/Net/srv/net.cpp	/^void Net::handleDisconnected()$/;"	
 handleNewConnection	Modules/Net/srv/net.cpp	/^void Net::handleNewConnection()$/;"	f	class:Net
 handleReceive	Modules/Net/cli/net.cpp	/^void Net::handleReceive()$/;"	f	class:Net
 handleReceive	Modules/Net/srv/net.cpp	/^void Net::handleReceive()$/;"	f	class:Net
+handlerFunc	Modules/Net/cli/net.cpp	/^typedef void (*handlerFunc)(int,int); \/\/ 协议handler函数格式$/;"	t	file:
+handlerFunc	Modules/Net/srv/net.cpp	/^typedef void (*handlerFunc)(int,int); \/\/ 协议handler函数格式$/;"	t	file:
 harrisK	include/opencv2/gpu/gpu.hpp	/^    double harrisK;$/;"	m	class:cv::gpu::GoodFeaturesToTrackDetector_GPU
 has_new_fatal_failure	include/opencv2/ts/ts_gtest.h	/^  bool has_new_fatal_failure() const { return has_new_fatal_failure_; }$/;"	f	class:testing::internal::HasNewFatalFailureHelper
 has_new_fatal_failure_	include/opencv2/ts/ts_gtest.h	/^  bool has_new_fatal_failure_;$/;"	m	class:testing::internal::HasNewFatalFailureHelper
@@ -9167,6 +9353,18 @@ info	include/opencv2/core/core_c.h	/^    CvModuleInfo* info;$/;"	m	struct:CvModu
 info	include/opencv2/core/core_c.h	/^    CvTypeInfo* info;$/;"	m	struct:CvType
 info	include/opencv2/core/core_c.h	/^CVAPI(void) cvRegisterType( const CvTypeInfo* info );$/;"	v
 info	include/opencv2/core/types_c.h	/^    struct CvTypeInfo* info; \/* type information$/;"	m	struct:CvFileNode	typeref:struct:CvFileNode::CvTypeInfo
+info_arch	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_arch	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_arch	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_arch	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_compiler	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_compiler	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_compiler	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_compiler	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_platform	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_platform	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_platform	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_platform	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
 init	include/opencv2/flann/random.h	/^    void init(int n)$/;"	f	class:cvflann::UniqueRandom
 init	include/opencv2/flann/result_set.h	/^    void init()$/;"	f	class:cvflann::RadiusResultSet
 init	include/opencv2/flann/result_set.h	/^    void init(int* indices_, DistanceType* dists_)$/;"	f	class:cvflann::KNNResultSet
@@ -9219,7 +9417,7 @@ iplimage_allowed	include/opencv2/ts/ts.hpp	/^    bool iplimage_allowed;$/;"	m	cl
 ippiSize	include/opencv2/core/internal.hpp	/^CV_INLINE IppiSize ippiSize(int width, int height)$/;"	f
 isAligned	include/opencv2/gpu/device/common.hpp	/^    static inline bool isAligned(size_t step, size_t size)$/;"	f	namespace:cv::gpu
 isAligned	include/opencv2/gpu/device/common.hpp	/^    template <typename T> static inline bool isAligned(const T* ptr, size_t size)$/;"	f	namespace:cv::gpu
-isAllDigit	Modules/Net/protInitTool.cpp	/^inline bool isAllDigit(const std::string& str)$/;"	f
+isAllDigit	Modules/Conf/conf.h	/^inline bool isAllDigit(const std::string& str)$/;"	f
 isArith	include/opencv2/gpu/device/type_traits.hpp	/^        enum { isArith          = isIntegral || isFloat };$/;"	e	enum:cv::gpu::device::TypeTraits::__anon130
 isCalibrated	include/opencv2/legacy/legacy.hpp	/^    bool    isCalibrated;$/;"	m	class:CvCalibFilter
 isConst	include/opencv2/gpu/device/type_traits.hpp	/^        enum { isConst          = type_traits_detail::UnConst<T>::value };$/;"	e	enum:cv::gpu::device::TypeTraits::__anon122
@@ -9398,7 +9596,7 @@ l	include/opencv2/gpu/gpu.hpp	/^    GpuMat lab, l, ab;$/;"	m	class:cv::gpu::Fast
 l	include/opencv2/gpu/gpu.hpp	/^    GpuMat u, d, l, r, u2, d2, l2, r2;$/;"	m	class:cv::gpu::StereoBeliefPropagation
 l	include/opencv2/objdetect/objdetect.hpp	/^    int l;$/;"	m	struct:CvLSVMFilterPosition
 l2	include/opencv2/gpu/gpu.hpp	/^    GpuMat u, d, l, r, u2, d2, l2, r2;$/;"	m	class:cv::gpu::StereoBeliefPropagation
-lTrim	Modules/Net/protInitTool.cpp	/^inline std::string& lTrim(std::string &ss)$/;"	f
+lTrim	Modules/Conf/conf.h	/^inline std::string& lTrim(std::string &ss)$/;"	f
 lab	include/opencv2/gpu/gpu.hpp	/^    GpuMat lab, l, ab;$/;"	m	class:cv::gpu::FastNonLocalMeansDenoising
 label	include/opencv2/objdetect/objdetect.hpp	/^  int label; \/\/\/< Quantization$/;"	m	struct:cv::linemod::Feature
 labelShow	check_cli/build/ui_mainwindow.h	/^    QLabel *labelShow;$/;"	m	class:Ui_MainWindow
@@ -9509,6 +9707,7 @@ linked_ptr	include/opencv2/ts/ts_gtest.h	/^class linked_ptr {$/;"	c	namespace:te
 linked_ptr_internal	include/opencv2/ts/ts_gtest.h	/^class linked_ptr_internal {$/;"	c	namespace:testing::internal
 list	include/opencv2/gpu/gpu.hpp	/^    GpuMat list;$/;"	m	struct:cv::gpu::HoughCirclesBuf
 list	include/opencv2/gpu/gpu.hpp	/^    GpuMat list;$/;"	m	struct:cv::gpu::HoughLinesBuf
+loadImageFromDB	check_srv/src/faceRecognition.cpp	/^void loadImageFromDB(std::vector<cv::Mat>& images, std::vector<int> labels)$/;"	f
 loadIndex	include/opencv2/flann/autotuned_index.h	/^    virtual void loadIndex(FILE* stream)$/;"	f	class:cvflann::AutotunedIndex
 loadIndex	include/opencv2/flann/composite_index.h	/^    void loadIndex(FILE* stream)$/;"	f	class:cvflann::CompositeIndex
 loadIndex	include/opencv2/flann/flann_base.hpp	/^    virtual void loadIndex(FILE* stream)$/;"	f	class:cvflann::Index
@@ -9657,14 +9856,19 @@ m_train_features	include/opencv2/legacy/legacy.hpp	/^    vector<KeyPoint> m_trai
 m_train_patch	include/opencv2/legacy/legacy.hpp	/^    IplImage* m_train_patch;$/;"	m	class:cv::OneWayDescriptor
 m_transforms	include/opencv2/legacy/legacy.hpp	/^    CvMat** m_transforms; \/\/ an array of affine transforms corresponding to poses$/;"	m	class:cv::OneWayDescriptor
 m_transforms	include/opencv2/legacy/legacy.hpp	/^    CvMat** m_transforms; \/\/ array of affine transformations corresponding to poses$/;"	m	class:cv::OneWayDescriptorBase
-main	Modules/Log/test.cpp	/^int main(int argc, char** argv)$/;"	f
-main	Modules/Net/cli/test.cpp	/^int main(int argc, char **argv)$/;"	f
-main	Modules/Net/protInitTool.cpp	/^int main(int argc, const char **argv)$/;"	f
-main	Modules/Net/srv/test.cpp	/^int main(int argc, char **argv)$/;"	f
-main	Modules/Net/test.cpp	/^int main(int argc, const char** argv)$/;"	f
+main	Modules/Log/test/test.cpp	/^int main(int argc, char** argv)$/;"	f
+main	Modules/Net/cli/test/test.cpp	/^int main(int argc, char **argv)$/;"	f
+main	Modules/Net/protInitTool/protInitTool.cpp	/^int main(int argc, const char **argv)$/;"	f
+main	Modules/Net/srv/test/test.cpp	/^int main(int argc, char **argv)$/;"	f
+main	Modules/Net/test/test.cpp	/^int main(int argc, const char** argv)$/;"	f
+main	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^int main(int argc, char* argv[])$/;"	f
+main	check_cli/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
+main	check_cli/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f
 main	check_cli/src/main.cpp	/^int main(int argc, char ** argv)$/;"	f
+main	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^int main(int argc, char* argv[])$/;"	f
+main	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
+main	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f
 main	check_srv/src/main.cpp	/^int main(int argc, char **argv)$/;"	f
-main	check_srv/test.cpp	/^int main(int argc, char **argv)$/;"	f
 majorVersion	include/opencv2/core/gpumat.hpp	/^        int majorVersion() const { return majorVersion_; }$/;"	f	class:cv::gpu::DeviceInfo
 majorVersion_	include/opencv2/core/gpumat.hpp	/^        int majorVersion_;$/;"	m	class:cv::gpu::DeviceInfo
 make	include/opencv2/gpu/device/vec_traits.hpp	/^        static __device__ __host__ __forceinline__ char make(char x) {return x;}$/;"	f	struct:cv::gpu::device::VecTraits
@@ -9894,9 +10098,9 @@ message	include/opencv2/ts/ts_gtest.h	/^  const char* message() const {$/;"	f	cl
 message_	include/opencv2/ts/ts_gtest.h	/^  internal::String message_;  \/\/ The test failure message.$/;"	m	class:testing::TestPartResult
 message_	include/opencv2/ts/ts_gtest.h	/^  internal::scoped_ptr< ::std::string> message_;$/;"	m	class:testing::AssertionResult
 messages_buffers	include/opencv2/gpu/gpu.hpp	/^    GpuMat messages_buffers;$/;"	m	class:cv::gpu::StereoConstantSpaceBP
-metaObject	Modules/Net/cli/moc_net.cpp	/^const QMetaObject *Net::metaObject() const$/;"	f	class:Net
-metaObject	Modules/Net/srv/moc_net.cpp	/^const QMetaObject *Net::metaObject() const$/;"	f	class:Net
-metaObject	check_cli/build/moc_mainwindowimpl.cpp	/^const QMetaObject *MainWindowImpl::metaObject() const$/;"	f	class:MainWindowImpl
+metaObject	check_cli/build/__/Modules/Net/cli/moc_net.cxx	/^const QMetaObject *Net::metaObject() const$/;"	f	class:Net
+metaObject	check_cli/build/src/moc_mainwindowimpl.cxx	/^const QMetaObject *MainWindowImpl::metaObject() const$/;"	f	class:MainWindowImpl
+metaObject	check_srv/build/__/Modules/Net/srv/moc_net.cxx	/^const QMetaObject *Net::metaObject() const$/;"	f	class:Net
 method_	include/opencv2/videostab/inpainting.hpp	/^    int method_;$/;"	m	class:cv::videostab::ColorInpainter
 metrics	include/opencv2/ts/ts_perf.hpp	/^    performance_metrics metrics;$/;"	m	class:perf::TestBase
 middleSplit	include/opencv2/flann/kdtree_single_index.h	/^    void middleSplit(int* ind, int count, int& index, int& cutfeat, DistanceType& cutval, const BoundingBox& bbox)$/;"	f	class:cvflann::KDTreeSingleIndex
@@ -10026,6 +10230,8 @@ ms_path	Modules/Log/log.h	/^    static const char       *ms_path;          \/\/l
 ms_tracker_weight	include/opencv2/contrib/hybridtracker.hpp	/^    float ms_tracker_weight;$/;"	m	struct:cv::CvHybridTrackerParams
 msg	include/opencv2/core/core.hpp	/^    string msg; \/\/\/< the formatted error message$/;"	m	class:cv::Exception
 msg	include/opencv2/objdetect/objdetect.hpp	/^  char msg[4];$/;"	m	struct:CvDataMatrixCode
+msgOnGetTime	check_cli/src/netOperate.cpp	/^void msgOnGetTime(int sockId, int protId)$/;"	f
+msgOnGetTime	check_srv/src/netOperate.cpp	/^void msgOnGetTime(int sockId, int protId)$/;"	f
 msg_type	include/opencv2/gpu/gpu.hpp	/^    int msg_type;$/;"	m	class:cv::gpu::StereoBeliefPropagation
 msg_type	include/opencv2/gpu/gpu.hpp	/^    int msg_type;$/;"	m	class:cv::gpu::StereoConstantSpaceBP
 mstracker	include/opencv2/contrib/hybridtracker.hpp	/^    CvMeanShiftTracker* mstracker;$/;"	m	class:cv::CvHybridTracker
@@ -10220,6 +10426,7 @@ normType	include/opencv2/features2d/features2d.hpp	/^    enum { normType = NORM_
 normType	include/opencv2/features2d/features2d.hpp	/^    enum { normType = NORM_L2 };$/;"	e	enum:cv::L2::__anon273
 normType	include/opencv2/features2d/features2d.hpp	/^    enum { normType = NORM_L2SQR };$/;"	e	enum:cv::SL2::__anon272
 normType	include/opencv2/features2d/features2d.hpp	/^    int normType;$/;"	m	class:cv::BFMatcher
+norm_0_255	check_srv/src/faceRecognition.cpp	/^static cv::Mat norm_0_255(cv::InputArray _src)$/;"	f	file:
 normalRadius	include/opencv2/contrib/contrib.hpp	/^        float normalRadius;$/;"	m	class:cv::SpinImageModel
 normal_	include/opencv2/core/opengl_interop.hpp	/^    GlBuffer normal_;$/;"	m	class:cv::GlArrays
 normaliseOutput	include/opencv2/contrib/retina.hpp	/^               bool colorMode, normaliseOutput;$/;"	m	struct:cv::Retina::RetinaParameters::OPLandIplParvoParameters
@@ -10246,7 +10453,7 @@ nu12	include/opencv2/imgproc/imgproc.hpp	/^    CV_PROP_RW double  nu20, nu11, nu
 nu20	include/opencv2/imgproc/imgproc.hpp	/^    CV_PROP_RW double  nu20, nu11, nu02, nu30, nu21, nu12, nu03;$/;"	m	class:cv::Moments
 nu21	include/opencv2/imgproc/imgproc.hpp	/^    CV_PROP_RW double  nu20, nu11, nu02, nu30, nu21, nu12, nu03;$/;"	m	class:cv::Moments
 nu30	include/opencv2/imgproc/imgproc.hpp	/^    CV_PROP_RW double  nu20, nu11, nu02, nu30, nu21, nu12, nu03;$/;"	m	class:cv::Moments
-num2str	Modules/Net/protInitTool.cpp	/^inline void num2str(int num, std::string& o_s)$/;"	f
+num2str	Modules/Conf/conf.h	/^inline void num2str(int num, std::string& o_s)$/;"	f
 numBands	include/opencv2/stitching/detail/blenders.hpp	/^    int numBands() const { return actual_num_bands_; }$/;"	f	class:cv::detail::MultiBandBlender
 numClasses	include/opencv2/objdetect/objdetect.hpp	/^  int numClasses() const { return static_cast<int>(class_templates.size()); }$/;"	f	class:cv::linemod::Detector
 numDetectedFrames	include/opencv2/contrib/detection_based_tracker.hpp	/^            int numDetectedFrames;$/;"	m	struct:DetectionBasedTracker::TrackedObject
@@ -11291,9 +11498,13 @@ project2nd	include/opencv2/gpu/device/functional.hpp	/^    template <typename T1
 projectionMatrix_	include/opencv2/core/opengl_interop.hpp	/^    Mat projectionMatrix_;$/;"	m	class:cv::GlCamera
 projector_	include/opencv2/stitching/detail/warpers.hpp	/^    P projector_;$/;"	m	class:cv::detail::RotationWarperBase
 protCheckIn_C2S	Modules/Net/protInit.h	/^const int protCheckIn_C2S = 1;$/;"	v
+protCheckIn_C2S	Modules/Net/protInitTool/protInit.h	/^const int protCheckIn_C2S = 1;$/;"	v
 protCheckIn_S2C	Modules/Net/protInit.h	/^const int protCheckIn_S2C = 2;$/;"	v
+protCheckIn_S2C	Modules/Net/protInitTool/protInit.h	/^const int protCheckIn_S2C = 2;$/;"	v
 protSearch_C2S	Modules/Net/protInit.h	/^const int protSearch_C2S = 3;$/;"	v
+protSearch_C2S	Modules/Net/protInitTool/protInit.h	/^const int protSearch_C2S = 3;$/;"	v
 protSearch_S2C	Modules/Net/protInit.h	/^const int protSearch_S2C = 4;$/;"	v
+protSearch_S2C	Modules/Net/protInitTool/protInit.h	/^const int protSearch_S2C = 4;$/;"	v
 proto2	include/opencv2/ts/ts_gtest.h	/^namespace proto2 { class Message; }$/;"	n
 pruned_tree_idx	include/opencv2/ml/ml.hpp	/^    int pruned_tree_idx;$/;"	m	class:CvDTree
 pt	include/opencv2/features2d/features2d.hpp	/^    CV_PROP_RW Point2f pt; \/\/!< coordinates of the keypoints$/;"	m	class:cv::KeyPoint
@@ -11367,21 +11578,21 @@ q	include/opencv2/contrib/openfabmap.hpp	/^        int q;$/;"	m	struct:cv::of2::
 qangle	include/opencv2/gpu/gpu.hpp	/^    GpuMat grad, qangle, grad_buf, qangle_buf;$/;"	m	struct:cv::gpu::HOGDescriptor
 qangle_buf	include/opencv2/gpu/gpu.hpp	/^    GpuMat grad, qangle, grad_buf, qangle_buf;$/;"	m	struct:cv::gpu::HOGDescriptor
 qedges	include/opencv2/imgproc/imgproc.hpp	/^    vector<QuadEdge> qedges;$/;"	m	class:cv::Subdiv2D
-qt_meta_data_MainWindowImpl	check_cli/build/moc_mainwindowimpl.cpp	/^static const uint qt_meta_data_MainWindowImpl[] = {$/;"	v	file:
-qt_meta_data_Net	Modules/Net/cli/moc_net.cpp	/^static const uint qt_meta_data_Net[] = {$/;"	v	file:
-qt_meta_data_Net	Modules/Net/srv/moc_net.cpp	/^static const uint qt_meta_data_Net[] = {$/;"	v	file:
-qt_meta_stringdata_MainWindowImpl	check_cli/build/moc_mainwindowimpl.cpp	/^static const char qt_meta_stringdata_MainWindowImpl[] = {$/;"	v	file:
-qt_meta_stringdata_Net	Modules/Net/cli/moc_net.cpp	/^static const char qt_meta_stringdata_Net[] = {$/;"	v	file:
-qt_meta_stringdata_Net	Modules/Net/srv/moc_net.cpp	/^static const char qt_meta_stringdata_Net[] = {$/;"	v	file:
-qt_metacall	Modules/Net/cli/moc_net.cpp	/^int Net::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:Net
-qt_metacall	Modules/Net/srv/moc_net.cpp	/^int Net::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:Net
-qt_metacall	check_cli/build/moc_mainwindowimpl.cpp	/^int MainWindowImpl::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:MainWindowImpl
-qt_metacast	Modules/Net/cli/moc_net.cpp	/^void *Net::qt_metacast(const char *_clname)$/;"	f	class:Net
-qt_metacast	Modules/Net/srv/moc_net.cpp	/^void *Net::qt_metacast(const char *_clname)$/;"	f	class:Net
-qt_metacast	check_cli/build/moc_mainwindowimpl.cpp	/^void *MainWindowImpl::qt_metacast(const char *_clname)$/;"	f	class:MainWindowImpl
-qt_static_metacall	Modules/Net/cli/moc_net.cpp	/^void Net::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:Net
-qt_static_metacall	Modules/Net/srv/moc_net.cpp	/^void Net::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:Net
-qt_static_metacall	check_cli/build/moc_mainwindowimpl.cpp	/^void MainWindowImpl::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:MainWindowImpl
+qt_meta_data_MainWindowImpl	check_cli/build/src/moc_mainwindowimpl.cxx	/^static const uint qt_meta_data_MainWindowImpl[] = {$/;"	v	file:
+qt_meta_data_Net	check_cli/build/__/Modules/Net/cli/moc_net.cxx	/^static const uint qt_meta_data_Net[] = {$/;"	v	file:
+qt_meta_data_Net	check_srv/build/__/Modules/Net/srv/moc_net.cxx	/^static const uint qt_meta_data_Net[] = {$/;"	v	file:
+qt_meta_stringdata_MainWindowImpl	check_cli/build/src/moc_mainwindowimpl.cxx	/^static const char qt_meta_stringdata_MainWindowImpl[] = {$/;"	v	file:
+qt_meta_stringdata_Net	check_cli/build/__/Modules/Net/cli/moc_net.cxx	/^static const char qt_meta_stringdata_Net[] = {$/;"	v	file:
+qt_meta_stringdata_Net	check_srv/build/__/Modules/Net/srv/moc_net.cxx	/^static const char qt_meta_stringdata_Net[] = {$/;"	v	file:
+qt_metacall	check_cli/build/__/Modules/Net/cli/moc_net.cxx	/^int Net::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:Net
+qt_metacall	check_cli/build/src/moc_mainwindowimpl.cxx	/^int MainWindowImpl::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:MainWindowImpl
+qt_metacall	check_srv/build/__/Modules/Net/srv/moc_net.cxx	/^int Net::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:Net
+qt_metacast	check_cli/build/__/Modules/Net/cli/moc_net.cxx	/^void *Net::qt_metacast(const char *_clname)$/;"	f	class:Net
+qt_metacast	check_cli/build/src/moc_mainwindowimpl.cxx	/^void *MainWindowImpl::qt_metacast(const char *_clname)$/;"	f	class:MainWindowImpl
+qt_metacast	check_srv/build/__/Modules/Net/srv/moc_net.cxx	/^void *Net::qt_metacast(const char *_clname)$/;"	f	class:Net
+qt_static_metacall	check_cli/build/__/Modules/Net/cli/moc_net.cxx	/^void Net::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:Net
+qt_static_metacall	check_cli/build/src/moc_mainwindowimpl.cxx	/^void MainWindowImpl::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:MainWindowImpl
+qt_static_metacall	check_srv/build/__/Modules/Net/srv/moc_net.cxx	/^void Net::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:Net
 quad	include/opencv2/legacy/legacy.hpp	/^    CvPoint2D32f quad[2][4]; \/* coordinates of destination quadrangle after$/;"	m	struct:CvStereoCamera
 quality	include/opencv2/ml/ml.hpp	/^    float quality;$/;"	m	struct:CvDTreeSplit
 qualityLevel	include/opencv2/features2d/features2d.hpp	/^    double qualityLevel;$/;"	m	class:cv::GFTTDetector
@@ -11397,7 +11608,7 @@ r	include/opencv2/ml/ml.hpp	/^    double r;   \/\/ for Solver_NU$/;"	m	struct:Cv
 r	include/opencv2/objdetect/objdetect.hpp	/^        CvRect r;$/;"	m	struct:CvHaarFeature::__anon278
 r2	include/opencv2/gpu/gpu.hpp	/^    GpuMat u, d, l, r, u2, d2, l2, r2;$/;"	m	class:cv::gpu::StereoBeliefPropagation
 rSum_	include/opencv2/videostab/deblurring.hpp	/^    Mat_<float> bSum_, gSum_, rSum_, wSum_;$/;"	m	class:cv::videostab::WeightingDeblurer
-rTrim	Modules/Net/protInitTool.cpp	/^inline std::string& rTrim(std::string &ss)$/;"	f
+rTrim	Modules/Conf/conf.h	/^inline std::string& rTrim(std::string &ss)$/;"	f
 r_kinv	include/opencv2/stitching/detail/warpers.hpp	/^    float r_kinv[9];$/;"	m	struct:cv::detail::ProjectorBase
 radius	include/opencv2/features2d/features2d.hpp	/^      double radius;$/;"	m	struct:cv::SimpleBlobDetector::Center
 radius	include/opencv2/flann/kmeans_index.h	/^        DistanceType radius;$/;"	m	struct:cvflann::KMeansIndex::KMeansNode
@@ -11448,8 +11659,9 @@ read	include/opencv2/core/operations.hpp	/^static inline void read(const FileNod
 read	include/opencv2/core/operations.hpp	/^static inline void read(const FileNode& node, ushort& value, ushort default_value)$/;"	f	namespace:cv
 read	include/opencv2/core/types_c.h	/^    CvReadFunc read;$/;"	m	struct:CvTypeInfo
 read	include/opencv2/legacy/legacy.hpp	/^void CalonderDescriptorExtractor<T>::read( const FileNode& )$/;"	f	class:cv::CalonderDescriptorExtractor
+readConfFile	Modules/Conf/conf.cpp	/^void readConfFile(const char *confFileName, S2M& confMap)$/;"	f
 readFrame	check_cli/src/mainwindowimpl.cpp	/^bool MainWindowImpl::readFrame()$/;"	f	class:MainWindowImpl
-readProfileWriteProtInit	Modules/Net/protInitTool.cpp	/^void readProfileWriteProtInit(const char *profileName, const char* path)$/;"	f
+readProfileWriteProtInit	Modules/Net/protInitTool/protInitTool.cpp	/^void readProfileWriteProtInit(const char *profileName, const char* path)$/;"	f
 readRaw	include/opencv2/core/operations.hpp	/^inline void FileNode::readRaw( const string& fmt, uchar* vec, size_t len ) const$/;"	f	class:cv::FileNode
 readShowImg	check_cli/src/mainwindowimpl.cpp	/^void MainWindowImpl::readShowImg()$/;"	f	class:MainWindowImpl
 read_type	include/opencv2/gpu/device/detail/transform_detail.hpp	/^            typedef typename TypeVec<T, shift>::vec_type read_type;$/;"	t	struct:cv::gpu::device::transform_detail::UnaryReadWriteTraits
@@ -11510,6 +11722,9 @@ reference	include/opencv2/core/operations.hpp	/^    typedef _Tp& reference;$/;"	
 reference	include/opencv2/ts/ts_gtest.h	/^  typedef const T& reference;$/;"	t	class:testing::internal::ParamIterator
 refinementMask	include/opencv2/stitching/detail/motion_estimators.hpp	/^    const Mat refinementMask() const { return refinement_mask_.clone(); }$/;"	f	class:cv::detail::BundleAdjusterBase
 refinement_mask_	include/opencv2/stitching/detail/motion_estimators.hpp	/^    Mat refinement_mask_;$/;"	m	class:cv::detail::BundleAdjusterBase
+regAllHandler	check_cli/src/netOperate.cpp	/^void regAllHandler()$/;"	f
+regAllHandler	check_srv/src/netOperate.cpp	/^void regAllHandler()$/;"	f
+regHandler	Modules/Net/prot.cpp	/^void Prot::regHandler(int protId, void *func)$/;"	f	class:Prot
 regRNG	include/opencv2/ts/ts_perf.hpp	/^    cv::RNG regRNG;\/\/own random numbers generator to make collection and verification work identical$/;"	m	class:perf::Regression
 registered_	include/opencv2/ts/ts_gtest.h	/^  bool registered_;$/;"	m	class:testing::internal::TypedTestCasePState
 registr_resol_	include/opencv2/stitching/stitcher.hpp	/^    double registr_resol_;$/;"	m	class:cv::Stitcher
@@ -11689,6 +11904,7 @@ s	include/opencv2/legacy/legacy.hpp	/^    int* s; \/\/for selected candidate$/;"
 sFactor	include/opencv2/contrib/openfabmap.hpp	/^    double sFactor;$/;"	m	class:cv::of2::FabMap
 s_init	Modules/Log/log.h	/^void Log::s_init(const char* i_path, int i_logLevel, int i_fileType)$/;"	f	class:Log
 s_init	Modules/Net/protInit.h	/^void Prot::s_init()$/;"	f	class:Prot
+s_init	Modules/Net/protInitTool/protInit.h	/^void Prot::s_init()$/;"	f	class:Prot
 s_range	include/opencv2/contrib/hybridtracker.hpp	/^    vector<float> s_range;$/;"	m	struct:cv::CvMeanShiftTrackerParams
 s_stop	Modules/Log/log.h	/^void Log::s_stop()$/;"	f	class:Log
 sample_count	include/opencv2/ml/ml.hpp	/^    int sample_count, var_all, var_count, max_c_count;$/;"	m	struct:CvDTreeTrainData
@@ -11896,6 +12112,7 @@ select_working_set_func	include/opencv2/ml/ml.hpp	/^    SelectWorkingSet select_
 selectedPairs0	include/opencv2/features2d/features2d.hpp	/^    vector<int> selectedPairs0;$/;"	m	class:cv::FREAK
 sendProt	Modules/Net/cli/net.cpp	/^void Net::sendProt(int sockId, int protId)$/;"	f	class:Net
 sendProt	Modules/Net/srv/net.cpp	/^void Net::sendProt(int sockId, int protId)$/;"	f	class:Net
+sendProtGetTime	check_cli/src/netOperate.cpp	/^void sendProtGetTime()$/;"	f
 sensitivity	include/opencv2/videostab/deblurring.hpp	/^    float sensitivity() const { return sensitivity_; }$/;"	f	class:cv::videostab::WeightingDeblurer
 sensitivity_	include/opencv2/videostab/deblurring.hpp	/^    float sensitivity_;$/;"	m	class:cv::videostab::WeightingDeblurer
 separateDetectionWork	include/opencv2/contrib/detection_based_tracker.hpp	/^        cv::Ptr<SeparateDetectionWork> separateDetectionWork;$/;"	m	class:DetectionBasedTracker
@@ -12033,6 +12250,7 @@ sigma	include/opencv2/features2d/features2d.hpp	/^        float sigma; \/\/ Gaus
 sigma	include/opencv2/legacy/blobtrack.hpp	/^    float   sigma;$/;"	m	struct:CvBlobTrackerParamMS
 sigma	include/opencv2/nonfree/features2d.hpp	/^    CV_PROP_RW double sigma;$/;"	m	class:cv::SIFT
 sigma_range	include/opencv2/gpu/gpu.hpp	/^    float sigma_range;$/;"	m	class:cv::gpu::DisparityBilateralFilter
+signIn	check_cli/src/mainwindowimpl.cpp	/^void MainWindowImpl::signIn()$/;"	f	class:MainWindowImpl
 sign_bit	include/opencv2/ts/ts_gtest.h	/^  Bits sign_bit() const { return kSignBitMask & u_.bits_; }$/;"	f	class:testing::internal::FloatingPoint
 signaling_NaN	include/opencv2/gpu/device/limits.hpp	/^        __device__ __forceinline__ static type signaling_NaN() { return T(); }$/;"	f	struct:cv::gpu::device::numeric_limits
 signature	include/opencv2/core/types_c.h	/^    int signature;$/;"	m	struct:CvMemStorage
@@ -12108,6 +12326,8 @@ skinHueHistogram	include/opencv2/contrib/contrib.hpp	/^    Histogram histogramHu
 slidingSumBuf	include/opencv2/calib3d/calib3d.hpp	/^    CvMat* slidingSumBuf;$/;"	m	struct:CvStereoBMState
 sm_protDic	Modules/Net/prot.cpp	/^I2M Prot::sm_protDic;      \/\/协议词典 $/;"	m	class:Prot	file:
 sm_protDic	Modules/Net/prot.h	/^    static I2M sm_protDic;      \/\/协议词典 $/;"	m	class:Prot
+sm_protFunc	Modules/Net/prot.cpp	/^I2V Prot::sm_protFunc;     \/\/协议handler函数$/;"	m	class:Prot	file:
+sm_protFunc	Modules/Net/prot.h	/^    static I2V sm_protFunc;     \/\/协议handler函数$/;"	m	class:Prot
 smallSize	include/opencv2/contrib/contrib.hpp	/^        int smallSize;$/;"	m	class:cv::SelfSimDescriptor
 small_any_policy	include/opencv2/flann/any.h	/^struct small_any_policy : typed_base_any_policy<T>$/;"	s	namespace:cvflann::anyimpl
 smart_block_dim_x	include/opencv2/gpu/device/functional.hpp	/^        enum { smart_block_dim_x = 16 };$/;"	e	enum:cv::gpu::device::DefaultTransformFunctorTraits::__anon117
@@ -12134,7 +12354,7 @@ spect_len	include/opencv2/gpu/gpu.hpp	/^    int spect_len;$/;"	m	struct:cv::gpu:
 speed_level_	include/opencv2/flann/lsh_table.h	/^    SpeedLevel speed_level_;$/;"	m	class:cvflann::lsh::LshTable
 speedup_	include/opencv2/flann/autotuned_index.h	/^    float speedup_;$/;"	m	class:cvflann::AutotunedIndex
 spinImages	include/opencv2/contrib/contrib.hpp	/^        Mat spinImages;$/;"	m	class:cv::SpinImageModel
-split	Modules/Net/protInitTool.cpp	/^inline void split(std::string& str, std::string& str1, std::string& str2, char splitChar)$/;"	f
+split	Modules/Conf/conf.h	/^inline void split(std::string& str, std::string& str1, std::string& str2, char splitChar)$/;"	f
 split	include/opencv2/core/mat.hpp	/^template<typename _Tp> void split(const Mat& src, vector<Mat_<_Tp> >& mv)$/;"	f	namespace:cv
 split	include/opencv2/ml/ml.hpp	/^    CvDTreeSplit* split;$/;"	m	struct:CvDTreeNode
 split_buf	include/opencv2/ml/ml.hpp	/^    CvMat* split_buf;$/;"	m	struct:CvDTreeTrainData
@@ -12168,6 +12388,7 @@ stageType	include/opencv2/objdetect/objdetect.hpp	/^        int stageType;$/;"	m
 stage_classifier	include/opencv2/objdetect/objdetect.hpp	/^    CvHaarStageClassifier* stage_classifier;$/;"	m	struct:CvHaarClassifierCascade
 stages	include/opencv2/objdetect/objdetect.hpp	/^        vector<Stage> stages;$/;"	m	class:cv::CascadeClassifier::Data
 stale	include/opencv2/legacy/legacy.hpp	/^    int stale;$/;"	m	struct:CvBGCodeBookElem
+start	check_srv/src/db.cpp	/^bool DB::start()$/;"	f	class:DB
 start	include/opencv2/flann/timer.h	/^    void start()$/;"	f	class:cvflann::StartStopTimer
 start	include/opencv2/imgproc/types_c.h	/^    CvPoint* start; \/* point of the contour where the defect begins *\/$/;"	m	struct:CvConvexityDefect
 startDistanceBucket	include/opencv2/contrib/contrib.hpp	/^        int startDistanceBucket;$/;"	m	class:cv::SelfSimDescriptor
@@ -12193,12 +12414,12 @@ state_	include/opencv2/ts/ts_gtest.h	/^  UInt32 state_;$/;"	m	class:testing::int
 state_post	include/opencv2/video/tracking.hpp	/^    CvMat* state_post;          \/* corrected state (x(k)):$/;"	m	struct:CvKalman
 state_pre	include/opencv2/video/tracking.hpp	/^    CvMat* state_pre;           \/* predicted state (x'(k)):$/;"	m	struct:CvKalman
 states_	include/opencv2/stitching/detail/seam_finders.hpp	/^    std::vector<ComponentState> states_;$/;"	m	class:cv::detail::DpSeamFinder
-staticMetaObject	Modules/Net/cli/moc_net.cpp	/^const QMetaObject Net::staticMetaObject = {$/;"	m	class:Net	file:
-staticMetaObject	Modules/Net/srv/moc_net.cpp	/^const QMetaObject Net::staticMetaObject = {$/;"	m	class:Net	file:
-staticMetaObject	check_cli/build/moc_mainwindowimpl.cpp	/^const QMetaObject MainWindowImpl::staticMetaObject = {$/;"	m	class:MainWindowImpl	file:
-staticMetaObjectExtraData	Modules/Net/cli/moc_net.cpp	/^const QMetaObjectExtraData Net::staticMetaObjectExtraData = {$/;"	m	class:Net	file:
-staticMetaObjectExtraData	Modules/Net/srv/moc_net.cpp	/^const QMetaObjectExtraData Net::staticMetaObjectExtraData = {$/;"	m	class:Net	file:
-staticMetaObjectExtraData	check_cli/build/moc_mainwindowimpl.cpp	/^const QMetaObjectExtraData MainWindowImpl::staticMetaObjectExtraData = {$/;"	m	class:MainWindowImpl	file:
+staticMetaObject	check_cli/build/__/Modules/Net/cli/moc_net.cxx	/^const QMetaObject Net::staticMetaObject = {$/;"	m	class:Net	file:
+staticMetaObject	check_cli/build/src/moc_mainwindowimpl.cxx	/^const QMetaObject MainWindowImpl::staticMetaObject = {$/;"	m	class:MainWindowImpl	file:
+staticMetaObject	check_srv/build/__/Modules/Net/srv/moc_net.cxx	/^const QMetaObject Net::staticMetaObject = {$/;"	m	class:Net	file:
+staticMetaObjectExtraData	check_cli/build/__/Modules/Net/cli/moc_net.cxx	/^const QMetaObjectExtraData Net::staticMetaObjectExtraData = {$/;"	m	class:Net	file:
+staticMetaObjectExtraData	check_cli/build/src/moc_mainwindowimpl.cxx	/^const QMetaObjectExtraData MainWindowImpl::staticMetaObjectExtraData = {$/;"	m	class:MainWindowImpl	file:
+staticMetaObjectExtraData	check_srv/build/__/Modules/Net/srv/moc_net.cxx	/^const QMetaObjectExtraData Net::staticMetaObjectExtraData = {$/;"	m	class:Net	file:
 static_delete	include/opencv2/flann/any.h	/^    virtual void static_delete(void** x)$/;"	f	struct:cvflann::anyimpl::big_any_policy
 static_delete	include/opencv2/flann/any.h	/^    virtual void static_delete(void**) { }$/;"	f	struct:cvflann::anyimpl::small_any_policy
 status	include/opencv2/legacy/legacy.hpp	/^    int status;$/;"	m	struct:CvCliqueFinder
@@ -12237,6 +12458,7 @@ stereoCamera	include/opencv2/legacy/legacy.hpp	/^CVAPI(int) icvComputeCoeffForSt
 stereoCamera	include/opencv2/legacy/legacy.hpp	/^CVAPI(void) icvComputeStereoParamsForCameras(CvStereoCamera* stereoCamera);$/;"	v
 stereoCamera	include/opencv2/legacy/legacy.hpp	/^CVAPI(void) icvGetQuadsTransformStruct(  CvStereoCamera* stereoCamera);$/;"	v
 stereoparams	include/opencv2/legacy/legacy.hpp	/^CVAPI(int) icvComputeRestStereoParams(CvStereoCamera *stereoparams);$/;"	v
+stop	check_srv/src/db.cpp	/^void DB::stop()$/;"	f	class:DB
 stop	include/opencv2/flann/timer.h	/^    void stop()$/;"	f	class:cvflann::StartStopTimer
 storage	include/opencv2/core/core_c.h	/^CVAPI(void)  cvClearMemStorage( CvMemStorage* storage );$/;"	v
 storage	include/opencv2/core/core_c.h	/^CVAPI(void)  cvReleaseMemStorage( CvMemStorage** storage );$/;"	v
@@ -12251,7 +12473,7 @@ storageOutPath	include/opencv2/ts/ts_perf.hpp	/^    std::string storageOutPath;$
 str	Modules/Net/String.h	/^    char *str;$/;"	m	class:String
 str	include/opencv2/core/types_c.h	/^        CvString str; \/* text string *\/$/;"	m	union:CvFileNode::__anon28
 str	include/opencv2/core/types_c.h	/^    CvString str;$/;"	m	struct:CvStringHashNode
-str2num	Modules/Net/protInitTool.cpp	/^inline int str2num(std::string& s)$/;"	f
+str2num	Modules/Conf/conf.h	/^inline int str2num(std::string& s)$/;"	f
 strdup	include/opencv2/legacy/blobtrack.hpp	56;"	d
 stream	include/opencv2/flann/logger.h	/^    FILE* stream;$/;"	m	class:cvflann::Logger
 stricmp	include/opencv2/legacy/blobtrack.hpp	57;"	d
@@ -12371,7 +12593,7 @@ term_criteria_	include/opencv2/stitching/detail/motion_estimators.hpp	/^    CvTe
 termcrit	include/opencv2/features2d/features2d.hpp	/^    TermCriteria termcrit;$/;"	m	class:cv::BOWKMeansTrainer
 terminal_cost_	include/opencv2/stitching/detail/seam_finders.hpp	/^    float terminal_cost_;$/;"	m	class:cv::detail::GraphCutSeamFinderGpu
 terminationReason	include/opencv2/ts/ts_perf.hpp	/^    int terminationReason;$/;"	m	struct:perf::performance_metrics
-test	Modules/Log/test.cpp	/^void test()$/;"	f
+test	Modules/Log/test/test.cpp	/^void test()$/;"	f
 test	include/opencv2/flann/dynamic_bitset.h	/^    bool test(size_t index) const$/;"	f	class:cvflann::DynamicBitset
 test	include/opencv2/ts/ts.hpp	/^    BaseTest* test;$/;"	m	struct:cvtest::TestInfo
 test	include/opencv2/ts/ts_perf.hpp	/^        TestBase* test;$/;"	m	class:perf::TestBase::_declareHelper
@@ -12394,6 +12616,7 @@ test_case_infos_	include/opencv2/ts/ts_gtest.h	/^  TestCaseInfoContainer test_ca
 test_case_name	include/opencv2/ts/ts_gtest.h	/^  const char* test_case_name() const { return test_case_name_.c_str(); }$/;"	f	class:testing::TestInfo
 test_case_name_	include/opencv2/ts/ts_gtest.h	/^  const std::string test_case_name_;     \/\/ Test case name$/;"	m	class:testing::TestInfo
 test_case_name_	include/opencv2/ts/ts_gtest.h	/^  const string test_case_name_;$/;"	m	class:testing::internal::ParameterizedTestCaseInfo
+test_detectFace	check_srv/src/faceDetect.cpp	/^void test_detectFace()$/;"	f
 test_fn_	include/opencv2/features2d/features2d.hpp	/^    PixelTestFn test_fn_;$/;"	m	class:cv::BriefDescriptorExtractor
 test_index_checks	include/opencv2/flann/index_testing.h	/^float test_index_checks(NNIndex<Distance>& index, const Matrix<typename Distance::ElementType>& inputData,$/;"	f	namespace:cvflann
 test_index_precision	include/opencv2/flann/index_testing.h	/^float test_index_precision(NNIndex<Distance>& index, const Matrix<typename Distance::ElementType>& inputData,$/;"	f	namespace:cvflann
@@ -12473,6 +12696,9 @@ tl	include/opencv2/core/operations.hpp	/^template<typename _Tp> inline Point_<_T
 tls_	include/opencv2/stitching/detail/seam_finders.hpp	/^    std::vector<Point> tls_, brs_;$/;"	m	class:cv::detail::DpSeamFinder
 tmpCorners_	include/opencv2/gpu/gpu.hpp	/^    GpuMat tmpCorners_;$/;"	m	class:cv::gpu::GoodFeaturesToTrackDetector_GPU
 to	include/opencv2/stitching/detail/util.hpp	/^    int from, to;$/;"	m	struct:cv::detail::GraphEdge
+toAddNewEmp	check_cli/src/mainwindowimpl.cpp	/^void MainWindowImpl::toAddNewEmp()$/;"	f	class:MainWindowImpl
+toCheckFace	check_cli/src/mainwindowimpl.cpp	/^void MainWindowImpl::toCheckFace()$/;"	f	class:MainWindowImpl
+toCheckRightFace	check_cli/src/mainwindowimpl.cpp	/^void MainWindowImpl::toCheckRightFace()$/;"	f	class:MainWindowImpl
 top	include/opencv2/contrib/contrib.hpp	/^        int top, bottom,left,right;$/;"	m	class:cv::LogPolar_Adjacent
 top	include/opencv2/contrib/contrib.hpp	/^        int top, bottom,left,right;$/;"	m	class:cv::LogPolar_Interp
 top	include/opencv2/contrib/contrib.hpp	/^        int top, bottom,left,right;$/;"	m	class:cv::LogPolar_Overlapping
@@ -12547,7 +12773,7 @@ trees	include/opencv2/ml/ml.hpp	/^    CvForestTree** trees;$/;"	m	class:CvRTrees
 trees_	include/opencv2/flann/hierarchical_clustering_index.h	/^    int trees_;$/;"	m	class:cvflann::HierarchicalClusteringIndex
 trees_	include/opencv2/flann/kdtree_index.h	/^    int trees_;$/;"	m	class:cvflann::KDTreeIndex
 trees_	include/opencv2/legacy/legacy.hpp	/^    vector<RandomizedTree> trees_;$/;"	m	class:cv::RTreeClassifier
-trim	Modules/Net/protInitTool.cpp	/^inline std::string& trim(std::string &st)$/;"	f
+trim	Modules/Conf/conf.h	/^inline std::string& trim(std::string &st)$/;"	f
 trimRatio	include/opencv2/videostab/stabilizer.hpp	/^    float trimRatio() const { return trimRatio_; }$/;"	f	class:cv::videostab::StabilizerBase
 trimRatio_	include/opencv2/videostab/stabilizer.hpp	/^    float trimRatio_;$/;"	m	class:cv::videostab::StabilizerBase
 true_type	include/opencv2/ts/ts_gtest.h	/^typedef bool_constant<true> true_type;$/;"	t	namespace:std::tr1
@@ -12827,6 +13053,7 @@ update	include/opencv2/videostab/inpainting.hpp	/^    virtual void update() {}$/
 update	include/opencv2/videostab/motion_stabilizing.hpp	/^    virtual void update() {}$/;"	f	class:cv::videostab::MotionFilterBase
 updateBackgroundModel	include/opencv2/gpu/gpu.hpp	/^    bool updateBackgroundModel;$/;"	m	class:cv::gpu::GMG_GPU
 updateBackgroundModel	include/opencv2/video/background_segm.hpp	/^    bool updateBackgroundModel;$/;"	m	class:cv::BackgroundSubtractorGMG
+updateFaceLibrary	check_srv/src/faceRecognition.cpp	/^void updateFaceLibrary()$/;"	f
 upper_bound_n	include/opencv2/ml/ml.hpp	/^    double upper_bound_n;$/;"	m	struct:CvSVMSolutionInfo
 upper_bound_p	include/opencv2/ml/ml.hpp	/^    double upper_bound_p;$/;"	m	struct:CvSVMSolutionInfo
 upright	include/opencv2/gpu/gpu.hpp	/^    bool upright;$/;"	m	class:cv::gpu::SURF_GPU
@@ -14486,6 +14713,9 @@ workScale	include/opencv2/stitching/stitcher.hpp	/^    double workScale() const 
 work_scale_	include/opencv2/stitching/stitcher.hpp	/^    double work_scale_;$/;"	m	class:cv::Stitcher
 work_type	include/opencv2/gpu/device/filters.hpp	/^        typedef typename TypeVec<float, VecTraits<elem_type>::cn>::vec_type work_type;$/;"	t	struct:cv::gpu::device::CubicFilter
 work_var_count	include/opencv2/ml/ml.hpp	/^    int ord_var_count, cat_var_count, work_var_count;$/;"	m	struct:CvDTreeTrainData
+worktimeAltEmpId	check_srv/src/db.cpp	/^bool DB::worktimeAltEmpId(int worktimeId, int empId)$/;"	f	class:DB
+worktimeAltTime	check_srv/src/db.cpp	/^bool DB::worktimeAltTime(int worktimeId, const char* time)$/;"	f	class:DB
+worktimeInsert	check_srv/src/db.cpp	/^bool DB::worktimeInsert(int empId, const char* time, const char* photo)$/;"	f	class:DB
 worktype_f	include/opencv2/gpu/device/detail/color_detail.hpp	/^            typedef float worktype_f;$/;"	t	struct:cv::gpu::device::color_detail::ColorChannel
 worstDist	include/opencv2/flann/result_set.h	/^    DistanceType worstDist() const$/;"	f	class:cvflann::KNNResultSet
 worstDist	include/opencv2/flann/result_set.h	/^    DistanceType worstDist() const$/;"	f	class:cvflann::KNNSimpleResultSet
