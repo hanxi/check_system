@@ -1,12 +1,20 @@
 ﻿// 获取系统时间
 [protGetTime_C2S]
-
 [protGetTime_S2C]
 time = "2013-3-30 10:48"
 
+// 注册新用户
+[protSignIn_C2S]
+name = "名字"
+dep = "所属部门"
+photo = "010"
+[protSignIn_S2C]
+result = -1
+// 注册成功:0,失败:-1
+
 // 查看照片信息
 [protGetPhotoInfo_C2S]
-img = "010"
+photo = "010"
 [protGetPhotoInfo_S2C]
 result = -1
 dep = "所属部门"

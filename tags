@@ -10230,8 +10230,10 @@ ms_path	Modules/Log/log.h	/^    static const char       *ms_path;          \/\/l
 ms_tracker_weight	include/opencv2/contrib/hybridtracker.hpp	/^    float ms_tracker_weight;$/;"	m	struct:cv::CvHybridTrackerParams
 msg	include/opencv2/core/core.hpp	/^    string msg; \/\/\/< the formatted error message$/;"	m	class:cv::Exception
 msg	include/opencv2/objdetect/objdetect.hpp	/^  char msg[4];$/;"	m	struct:CvDataMatrixCode
+msgOnGetPhotoInfo	check_cli/src/netOperate.cpp	/^void msgOnGetPhotoInfo(int sockId, int protId)$/;"	f
 msgOnGetTime	check_cli/src/netOperate.cpp	/^void msgOnGetTime(int sockId, int protId)$/;"	f
 msgOnGetTime	check_srv/src/netOperate.cpp	/^void msgOnGetTime(int sockId, int protId)$/;"	f
+msgOnSignIn	check_cli/src/netOperate.cpp	/^void msgOnSignIn(int sockId, int protId)$/;"	f
 msg_type	include/opencv2/gpu/gpu.hpp	/^    int msg_type;$/;"	m	class:cv::gpu::StereoBeliefPropagation
 msg_type	include/opencv2/gpu/gpu.hpp	/^    int msg_type;$/;"	m	class:cv::gpu::StereoConstantSpaceBP
 mstracker	include/opencv2/contrib/hybridtracker.hpp	/^    CvMeanShiftTracker* mstracker;$/;"	m	class:cv::CvHybridTracker
@@ -12112,7 +12114,9 @@ select_working_set_func	include/opencv2/ml/ml.hpp	/^    SelectWorkingSet select_
 selectedPairs0	include/opencv2/features2d/features2d.hpp	/^    vector<int> selectedPairs0;$/;"	m	class:cv::FREAK
 sendProt	Modules/Net/cli/net.cpp	/^void Net::sendProt(int sockId, int protId)$/;"	f	class:Net
 sendProt	Modules/Net/srv/net.cpp	/^void Net::sendProt(int sockId, int protId)$/;"	f	class:Net
+sendProtGetPhotoInfo	check_cli/src/netOperate.cpp	/^void sendProtGetPhotoInfo()$/;"	f
 sendProtGetTime	check_cli/src/netOperate.cpp	/^void sendProtGetTime()$/;"	f
+sendProtToSignIn	check_cli/src/netOperate.cpp	/^void sendProtToSignIn(const char *name, const char *dep, const char *photo)$/;"	f
 sensitivity	include/opencv2/videostab/deblurring.hpp	/^    float sensitivity() const { return sensitivity_; }$/;"	f	class:cv::videostab::WeightingDeblurer
 sensitivity_	include/opencv2/videostab/deblurring.hpp	/^    float sensitivity_;$/;"	m	class:cv::videostab::WeightingDeblurer
 separateDetectionWork	include/opencv2/contrib/detection_based_tracker.hpp	/^        cv::Ptr<SeparateDetectionWork> separateDetectionWork;$/;"	m	class:DetectionBasedTracker

@@ -17,6 +17,7 @@
 //STD
 #include <iostream>
 #include <string>
+#include <vector>
 
 //QT
 #include <QString>
@@ -106,6 +107,21 @@ void MainWindowImpl::toCheckRightFace()
 // 注册
 void MainWindowImpl::signIn()
 {
+    Log log(__LOGARG__,1);
+    std::vector<unsigned char> buff;
+    std::vector<int> param = std::vector<int>(2);
+    param[0]=CV_IMWRITE_JPEG_QUALITY;
+    param[1]=95;//default(95) 0-100
+    cv::imencode(".jpg",m_frame,buff,param);
+    char photo[10240] = {0};
+    char name[128] = {0};
+    char dep[128] = {0};
+    strncpy(photo,reinterpret_cast<char*> (&buff[0]),buff.size());
+    strncpy(name,((lineEditName->text()).toAscii()).data(),(lineEditName->text()).length());
+    strncpy(dep,((lineEditDep->text()).toAscii()).data(),(lineEditName->text()).length());
+    log << "name=" << name << Log::endl;
+    log << "dep=" << dep << Log::endl;
+    sendProtToSignIn(name, dep, photo);
     toCheckFace();
 }
 
