@@ -161,9 +161,32 @@ CMakeFiles/check_srv.dir/src/netOperate.cpp.o.provides: CMakeFiles/check_srv.dir
 
 CMakeFiles/check_srv.dir/src/netOperate.cpp.o.provides.build: CMakeFiles/check_srv.dir/src/netOperate.cpp.o
 
+CMakeFiles/check_srv.dir/src/sqlitedb.cpp.o: CMakeFiles/check_srv.dir/flags.make
+CMakeFiles/check_srv.dir/src/sqlitedb.cpp.o: ../src/sqlitedb.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_srv/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/check_srv.dir/src/sqlitedb.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/check_srv.dir/src/sqlitedb.cpp.o -c /home/hanxi/workspace/check_system/check_srv/src/sqlitedb.cpp
+
+CMakeFiles/check_srv.dir/src/sqlitedb.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/check_srv.dir/src/sqlitedb.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hanxi/workspace/check_system/check_srv/src/sqlitedb.cpp > CMakeFiles/check_srv.dir/src/sqlitedb.cpp.i
+
+CMakeFiles/check_srv.dir/src/sqlitedb.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/check_srv.dir/src/sqlitedb.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hanxi/workspace/check_system/check_srv/src/sqlitedb.cpp -o CMakeFiles/check_srv.dir/src/sqlitedb.cpp.s
+
+CMakeFiles/check_srv.dir/src/sqlitedb.cpp.o.requires:
+.PHONY : CMakeFiles/check_srv.dir/src/sqlitedb.cpp.o.requires
+
+CMakeFiles/check_srv.dir/src/sqlitedb.cpp.o.provides: CMakeFiles/check_srv.dir/src/sqlitedb.cpp.o.requires
+	$(MAKE) -f CMakeFiles/check_srv.dir/build.make CMakeFiles/check_srv.dir/src/sqlitedb.cpp.o.provides.build
+.PHONY : CMakeFiles/check_srv.dir/src/sqlitedb.cpp.o.provides
+
+CMakeFiles/check_srv.dir/src/sqlitedb.cpp.o.provides.build: CMakeFiles/check_srv.dir/src/sqlitedb.cpp.o
+
 CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o: CMakeFiles/check_srv.dir/flags.make
 CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o: /home/hanxi/workspace/check_system/Modules/Log/log.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_srv/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_srv/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o -c /home/hanxi/workspace/check_system/Modules/Log/log.cpp
 
@@ -186,7 +209,7 @@ CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o
 
 CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o: CMakeFiles/check_srv.dir/flags.make
 CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o: /home/hanxi/workspace/check_system/Modules/Conf/conf.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_srv/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_srv/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o -c /home/hanxi/workspace/check_system/Modules/Conf/conf.cpp
 
@@ -209,7 +232,7 @@ CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp
 
 CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Net/prot.cpp.o: CMakeFiles/check_srv.dir/flags.make
 CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Net/prot.cpp.o: /home/hanxi/workspace/check_system/Modules/Net/prot.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_srv/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_srv/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Net/prot.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Net/prot.cpp.o -c /home/hanxi/workspace/check_system/Modules/Net/prot.cpp
 
@@ -232,7 +255,7 @@ CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Net/prot.cpp.
 
 CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Net/srv/net.cpp.o: CMakeFiles/check_srv.dir/flags.make
 CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Net/srv/net.cpp.o: /home/hanxi/workspace/check_system/Modules/Net/srv/net.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_srv/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_srv/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Net/srv/net.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Net/srv/net.cpp.o -c /home/hanxi/workspace/check_system/Modules/Net/srv/net.cpp
 
@@ -255,7 +278,7 @@ CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Net/srv/net.c
 
 CMakeFiles/check_srv.dir/__/Modules/Net/srv/moc_net.cxx.o: CMakeFiles/check_srv.dir/flags.make
 CMakeFiles/check_srv.dir/__/Modules/Net/srv/moc_net.cxx.o: __/Modules/Net/srv/moc_net.cxx
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_srv/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_srv/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/check_srv.dir/__/Modules/Net/srv/moc_net.cxx.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/check_srv.dir/__/Modules/Net/srv/moc_net.cxx.o -c /home/hanxi/workspace/check_system/check_srv/build/__/Modules/Net/srv/moc_net.cxx
 
@@ -277,9 +300,9 @@ CMakeFiles/check_srv.dir/__/Modules/Net/srv/moc_net.cxx.o.provides: CMakeFiles/c
 CMakeFiles/check_srv.dir/__/Modules/Net/srv/moc_net.cxx.o.provides.build: CMakeFiles/check_srv.dir/__/Modules/Net/srv/moc_net.cxx.o
 
 __/Modules/Net/srv/moc_net.cxx: /home/hanxi/workspace/check_system/Modules/Net/srv/net.h
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_srv/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hanxi/workspace/check_system/check_srv/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating __/Modules/Net/srv/moc_net.cxx"
-	/usr/bin/moc-qt4 -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtSql -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtDesigner -I/usr/include/qt4/QtDeclarative -I/usr/include/qt4/QtScriptTools -I/usr/include/qt4/QtDBus -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtOpenGL -I/usr/include/qt4/QtXmlPatterns -I/usr/include/qt4/QtWebKit -I/usr/include/qt4/QtHelp -I/usr/include/qt4/QtUiTools -I/usr/include/qt4/QtTest -I/usr/include/qt4/QtScript -I/usr/include/qt4/QtSvg -I/usr/include/qt4/Qt3Support -I/usr/share/qt4/mkspecs/default -I/home/hanxi/workspace/check_system/check_srv/build -I/home/hanxi/workspace/check_system/check_srv -I/usr/local/include -I/home/hanxi/workspace/check_system/check_srv/./src -I/home/hanxi/workspace/check_system/check_srv/SRC_DIR -I/home/hanxi/workspace/check_system/check_srv/../include -I/home/hanxi/workspace/check_system/check_srv/../Modules/Log -I/home/hanxi/workspace/check_system/check_srv/../Modules/Conf -I/home/hanxi/workspace/check_system/check_srv/../Modules/Net -I/home/hanxi/workspace/check_system/check_srv/../Modules/Net/srv -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -o /home/hanxi/workspace/check_system/check_srv/build/__/Modules/Net/srv/moc_net.cxx /home/hanxi/workspace/check_system/Modules/Net/srv/net.h
+	/usr/bin/moc-qt4 -I/usr/include/qt4 -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtSql -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtDesigner -I/usr/include/qt4/QtDeclarative -I/usr/include/qt4/QtScriptTools -I/usr/include/qt4/QtDBus -I/usr/include/qt4/QtXml -I/usr/include/qt4/QtOpenGL -I/usr/include/qt4/QtXmlPatterns -I/usr/include/qt4/QtWebKit -I/usr/include/qt4/QtHelp -I/usr/include/qt4/QtUiTools -I/usr/include/qt4/QtTest -I/usr/include/qt4/QtScript -I/usr/include/qt4/QtSvg -I/usr/include/qt4/Qt3Support -I/usr/share/qt4/mkspecs/default -I/home/hanxi/workspace/check_system/check_srv/build -I/home/hanxi/workspace/check_system/check_srv -I/usr/local/include -I/home/hanxi/workspace/check_system/check_srv/./src -I/home/hanxi/workspace/check_system/check_srv/SRC_DIR -I/home/hanxi/workspace/check_system/check_srv/../include -I/home/hanxi/workspace/check_system/check_srv/../Modules/Log -I/home/hanxi/workspace/check_system/check_srv/../Modules/Conf -I/home/hanxi/workspace/check_system/check_srv/../Modules/Net -I/home/hanxi/workspace/check_system/check_srv/../Modules/Net/srv -D__USE_SQLITE__ -DQT_GUI_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -o /home/hanxi/workspace/check_system/check_srv/build/__/Modules/Net/srv/moc_net.cxx /home/hanxi/workspace/check_system/Modules/Net/srv/net.h
 
 # Object files for target check_srv
 check_srv_OBJECTS = \
@@ -288,6 +311,7 @@ check_srv_OBJECTS = \
 "CMakeFiles/check_srv.dir/src/faceRecognition.cpp.o" \
 "CMakeFiles/check_srv.dir/src/faceDetect.cpp.o" \
 "CMakeFiles/check_srv.dir/src/netOperate.cpp.o" \
+"CMakeFiles/check_srv.dir/src/sqlitedb.cpp.o" \
 "CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o" \
 "CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o" \
 "CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Net/prot.cpp.o" \
@@ -302,6 +326,7 @@ check_srv_EXTERNAL_OBJECTS =
 /home/hanxi/workspace/check_system/bin.check_srv/check_srv: CMakeFiles/check_srv.dir/src/faceRecognition.cpp.o
 /home/hanxi/workspace/check_system/bin.check_srv/check_srv: CMakeFiles/check_srv.dir/src/faceDetect.cpp.o
 /home/hanxi/workspace/check_system/bin.check_srv/check_srv: CMakeFiles/check_srv.dir/src/netOperate.cpp.o
+/home/hanxi/workspace/check_system/bin.check_srv/check_srv: CMakeFiles/check_srv.dir/src/sqlitedb.cpp.o
 /home/hanxi/workspace/check_system/bin.check_srv/check_srv: CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o
 /home/hanxi/workspace/check_system/bin.check_srv/check_srv: CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o
 /home/hanxi/workspace/check_system/bin.check_srv/check_srv: CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Net/prot.cpp.o
@@ -325,6 +350,7 @@ CMakeFiles/check_srv.dir/requires: CMakeFiles/check_srv.dir/src/main.cpp.o.requi
 CMakeFiles/check_srv.dir/requires: CMakeFiles/check_srv.dir/src/faceRecognition.cpp.o.requires
 CMakeFiles/check_srv.dir/requires: CMakeFiles/check_srv.dir/src/faceDetect.cpp.o.requires
 CMakeFiles/check_srv.dir/requires: CMakeFiles/check_srv.dir/src/netOperate.cpp.o.requires
+CMakeFiles/check_srv.dir/requires: CMakeFiles/check_srv.dir/src/sqlitedb.cpp.o.requires
 CMakeFiles/check_srv.dir/requires: CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o.requires
 CMakeFiles/check_srv.dir/requires: CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o.requires
 CMakeFiles/check_srv.dir/requires: CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Net/prot.cpp.o.requires

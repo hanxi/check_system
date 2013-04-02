@@ -26,7 +26,7 @@ static const char T3 = 0xF4; // 正,32位
 static const char t3 = 0x04; // 负,32位
 
 int unSerializeIntValue(long &value, char* buffer, int bufferlen){
-    Log log(__LOGARG__,1);
+    Log log(__LOGARG__,5);
 	try{
 		if(bufferlen<=1) return 0;
 
@@ -119,7 +119,7 @@ int unSerializeIntValue(long &value, char* buffer, int bufferlen){
 }
 
 int serializeIntValue(long value,char *buffer,int bufferlen){
-    Log log(__LOGARG__,1);
+    Log log(__LOGARG__,5);
 	try{
 		bool positive = true;
 		if(value<0) {
@@ -206,7 +206,7 @@ int serializeIntValue(long value,char *buffer,int bufferlen){
 
 void testSerializeIntValueUnserializeIntValue()
 {
-    Log log(__LOGARG__,1);
+    Log log(__LOGARG__,5);
     char buf[1024] = {0};
     long value;
     serializeIntValue(0xff,buf,1024);
@@ -220,9 +220,9 @@ void testSerializeIntValueUnserializeIntValue()
     log << "value3=" << value << Log::endl;
 }
 
-int serializeStringValue(const char* value,char *buffer,int bufferlen){
+int serializeStringValue(const char* value,int strLen,char *buffer,int bufferlen){
 	try{
-		int length = (int)strlen(value);
+		int length = strLen;
 		int totellen = 0;
 		int ret = 0;
 		ret = serializeIntValue(length,buffer,bufferlen);
@@ -244,10 +244,10 @@ int serializeStringValue(const char* value,char *buffer,int bufferlen){
 
 void testSerializeStringValue()
 {
-    Log log(__LOGARG__,1);
+    Log log(__LOGARG__,5);
     char buf[1024] = {0};
     const char* str = "hello";
-    serializeStringValue(str,buf,1204);
+    serializeStringValue(str,6,buf,1204);
     long len=0;
     int ret = unSerializeIntValue(len,buf,1024);
     std::cout << ret << std::endl;
@@ -272,7 +272,7 @@ int Prot::serialize(char* bufferAddr, int bufferLength)
     // |--------|
     // |prot    |
     // |--------|
-    Log log(__LOGARG__,1);
+    Log log(__LOGARG__,5);
     int lenlimit = bufferLength;
     int protId = m_prot->first;
     int totellen = 0;
@@ -300,7 +300,7 @@ int Prot::serialize(char* bufferAddr, int bufferLength)
             }
         }
         else if (type==VALUE_TYPE_STRING) {
-            ret = serializeStringValue(value.getStr(),bufferAddr+totellen,lenlimit-totellen);
+            ret = serializeStringValue(value.getStr(),value.getLen(),bufferAddr+totellen,lenlimit-totellen);
             if (ret==0) {
                 ret=-1;
                 break;
@@ -331,7 +331,7 @@ bool Prot::peekBufferInfo(char* bufferAddr, int bufferLength, int& o_protId, int
 int Prot::unSerialize(char* bufferAddr, int bufferLength)
 {
     //进入本函数,默认调用者已经使用了CFGPickBufferInfo检查了length,在这里不在头检查,在运算中检查
-    Log log(__LOGARG__,1);
+    Log log(__LOGARG__,5);
     int lenlimit = bufferLength;
     log << "lenlimit=" << lenlimit << Log::endl;
 

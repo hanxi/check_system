@@ -4,6 +4,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/check_srv.dir/src/faceRecognition.cpp.o"
   "CMakeFiles/check_srv.dir/src/faceDetect.cpp.o"
   "CMakeFiles/check_srv.dir/src/netOperate.cpp.o"
+  "CMakeFiles/check_srv.dir/src/sqlitedb.cpp.o"
   "CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Log/log.cpp.o"
   "CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Conf/conf.cpp.o"
   "CMakeFiles/check_srv.dir/home/hanxi/workspace/check_system/Modules/Net/prot.cpp.o"

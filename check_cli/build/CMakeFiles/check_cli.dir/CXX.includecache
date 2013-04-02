@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+../../Modules/Conf/conf.h
+map
+-
+string
+-
+algorithm
+-
+sstream
+-
+
 ../../Modules/Log/log.h
 iostream
 -
@@ -30,6 +40,10 @@ climits
 cstring
 -
 cassert
+-
+vector
+-
+opencv2/opencv.hpp
 -
 
 ../../Modules/Net/cli/net.h
@@ -64,27 +78,29 @@ protInit.h
 prot.h
 ../../Modules/Net/prot.h
 
-/home/hanxi/workspace/check_system/check_cli/src/mainwindowimpl.cpp
+/home/hanxi/workspace/check_system/check_cli/src/globalVar.h
 mainwindowimpl.h
 /home/hanxi/workspace/check_system/check_cli/src/mainwindowimpl.h
 net.h
 /home/hanxi/workspace/check_system/check_cli/src/net.h
-prot.h
-/home/hanxi/workspace/check_system/check_cli/src/prot.h
+
+/home/hanxi/workspace/check_system/check_cli/src/main.cpp
+QApplication
+-
+mainwindowimpl.h
+/home/hanxi/workspace/check_system/check_cli/src/mainwindowimpl.h
+globalVar.h
+/home/hanxi/workspace/check_system/check_cli/src/globalVar.h
 log.h
 /home/hanxi/workspace/check_system/check_cli/src/log.h
+prot.h
+/home/hanxi/workspace/check_system/check_cli/src/prot.h
+net.h
+/home/hanxi/workspace/check_system/check_cli/src/net.h
+conf.h
+/home/hanxi/workspace/check_system/check_cli/src/conf.h
 netOperate.h
 /home/hanxi/workspace/check_system/check_cli/src/netOperate.h
-iostream
--
-string
--
-vector
--
-QString
--
-QDateTime
--
 
 /home/hanxi/workspace/check_system/check_cli/src/mainwindowimpl.h
 QMainWindow
@@ -98,7 +114,19 @@ opencv2/opencv.hpp
 ui_mainwindow.h
 /home/hanxi/workspace/check_system/check_cli/src/ui_mainwindow.h
 
+/home/hanxi/workspace/check_system/check_cli/src/netOperate.cpp
+netOperate.h
 /home/hanxi/workspace/check_system/check_cli/src/netOperate.h
+globalVar.h
+/home/hanxi/workspace/check_system/check_cli/src/globalVar.h
+protInit.h
+/home/hanxi/workspace/check_system/check_cli/src/protInit.h
+log.h
+/home/hanxi/workspace/check_system/check_cli/src/log.h
+
+/home/hanxi/workspace/check_system/check_cli/src/netOperate.h
+autotype.h
+/home/hanxi/workspace/check_system/check_cli/src/autotype.h
 
 /usr/include/qt4/Qt3Support/q3cstring.h
 QtCore/qbytearray.h
@@ -123,10 +151,6 @@ qbytearray.h
 /usr/include/qt4/QtCore/qbytearray.h
 
 /usr/include/qt4/QtCore/QDate
-qdatetime.h
-/usr/include/qt4/QtCore/qdatetime.h
-
-/usr/include/qt4/QtCore/QDateTime
 qdatetime.h
 /usr/include/qt4/QtCore/qdatetime.h
 

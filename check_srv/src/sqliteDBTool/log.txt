@@ -1,0 +1,11 @@
+[02-04-2013][22:40:15] [Enter function :main] [main.cpp] [125] 
+int book_info_insert(const char* emp_name, const char* dep_name, const char* hire_time, AutoType& photo) {
+	sqlite3_prepare(conn, "insert into book_info(emp_name, dep_name, hire_time, photo)values(?, ?, ?, ?);",-1,&stmt,0);
+	sqlite3_bind_text(stmt,1,emp_name, 1+strlen(emp_name), NULL);
+	sqlite3_bind_text(stmt,2,dep_name, 1+strlen(dep_name), NULL);
+	sqlite3_bind_text(stmt,3,hire_time, 1+strlen(hire_time), NULL);
+	sqlite3_bind_blob(stmt,4,photo.getStr(), photo.getLen(), NULL);
+	sqlite3_step(stmt);
+	return sqlite3_last_insert_rowid(conn);
+}
+

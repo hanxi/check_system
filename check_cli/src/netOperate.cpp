@@ -29,7 +29,7 @@ void msgOnGetTime(int sockId, int protId)
 }
 
 // 注册新用户
-void sendProtToSignIn(const char *name, const char *dep, const char *photo)
+void sendProtToSignIn(const AutoType& name, const AutoType& dep, const AutoType& photo)
 {
     Log log(__LOGARG__,1);
     log << "注册新用户" << Log::endl;
@@ -37,8 +37,8 @@ void sendProtToSignIn(const char *name, const char *dep, const char *photo)
     prot.setField("name",name);
     prot.setField("dep",dep);
     prot.setField("photo",photo);
-    log << "name=" << name << Log::endl;
-    log << "dep=" << dep << Log::endl;
+    log << "name=" << name.getStr() << Log::endl;
+    log << "dep=" << dep.getStr() << Log::endl;
     Net* net = getNet();
     net->sendProt(gSockId,protSignIn_C2S);
 }
@@ -48,6 +48,7 @@ void msgOnSignIn(int sockId, int protId)
     Prot prot(protId);
     AutoType& result = prot.getField("result");
     log << "注册" << ((result.getNum()==0)?"成功":"失败") << Log::endl;
+    win->toCheckFace();
 }
 
 // 获取照片详细信息
@@ -61,5 +62,6 @@ void msgOnGetPhotoInfo(int sockId, int protId)
 void regAllHandler()
 {
     Prot::regHandler(protGetTime_S2C, (void*)msgOnGetTime);
+    Prot::regHandler(protSignIn_S2C, (void*)msgOnSignIn);
 }
 

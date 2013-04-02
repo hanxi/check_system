@@ -12,6 +12,7 @@
 #include "globalVar.h"
 #include "protInit.h"
 #include "log.h"
+#include "db.h"
 
 void msgOnGetTime(int sockId, int protId)
 {
@@ -27,8 +28,31 @@ void msgOnGetTime(int sockId, int protId)
     log << "time=" << strTime.toStdString() << Log::endl;
 }
 
+void msgOnSignIn(int sockId, int protId)
+{
+    Log log(__LOGARG__,1);
+    Prot prot(protId);
+    AutoType& name = prot.getField("name");
+    AutoType& dep = prot.getField("dep");
+    AutoType& photo = prot.getField("photo");
+    log << "name=" << name.getStr() << Log::endl;
+    log << "dep=" << dep.getStr() << Log::endl;
+    log << "photoLen=" << photo.getLen() << Log::endl;
+
+    // 保存数据到数据库
+    int empId = DB::bookInfoInsert(name.getStr(), dep.getStr(), photo);
+    log << "empId=" << empId << Log::endl;
+    //bool ret = DB::modelImgInsert(empId, photo);
+
+    prot.setProt(protSignIn_S2C);
+    prot.setField("result",(long)0);
+    Net* net = getNet();
+    net->sendProt(sockId,protSignIn_S2C);
+}
+
 void regAllHandler()
 {
     Prot::regHandler(protGetTime_C2S, (void*)msgOnGetTime);
+    Prot::regHandler(protSignIn_C2S, (void*)msgOnSignIn);
 }
 

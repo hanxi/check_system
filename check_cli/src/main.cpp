@@ -15,6 +15,8 @@ Net* getNet()
 }
 
 int gSockId;
+MainWindowImpl *win;
+
 //
 int main(int argc, char ** argv)
 {
@@ -30,12 +32,13 @@ int main(int argc, char ** argv)
 
     QApplication app(argc, argv);
     gNet = new Net(ip,port);
-	MainWindowImpl win;
-	win.show();
+    win = new MainWindowImpl();
+	win->show();
 	app.connect( &app, SIGNAL( lastWindowClosed() ), &app, SLOT( quit() ) );
 	app.exec();
 
     delete gNet;
     Log::s_stop();
+    delete win;
     return 0;
 }

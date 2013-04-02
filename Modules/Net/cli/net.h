@@ -37,7 +37,7 @@ private slots:
 inline
 Net::Net(const char *ip, int port)
 {
-    Log log(__LOGARG__,1);
+    Log log(__LOGARG__,5);
     log << "连接服务器：ip = " << ip << ",port=" << port << Log::endl;
     m_tcpSocket = new QTcpSocket(this);
 

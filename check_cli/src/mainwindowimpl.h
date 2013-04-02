@@ -29,6 +29,9 @@ public:
 	MainWindowImpl( QWidget * parent = 0, Qt::WFlags f = 0 );
 	virtual ~MainWindowImpl();
 
+public slots:
+    void toCheckFace();     // 跳到签到界面
+
 private slots:
 	void takingPictures();  // 拍照
 	void checkIn();         // 签到
@@ -38,7 +41,6 @@ private slots:
 	void submitPic();       // 提交
     void clearUIFace();     // 隐藏界面元素
     void toAddNewEmp();     // 跳转界面到添加新用户
-    void toCheckFace();     // 跳到签到界面
     void toCheckRightFace();// 跳到签到确认界面
     void signIn();          // 注册
     void cancelSignIn();    // 取消注册

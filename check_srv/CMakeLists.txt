@@ -5,8 +5,12 @@ FIND_PACKAGE(Qt4 REQUIRED)
 #########################################
 set(EXECUTABLE_OUTPUT_PATH ../../bin.check_srv)
 set(LIBRARY_OUTPUT_PATH ../libs)
+set(CMAKE_BUILD_TYPE Debug)
 
-add_definitions (${QT_DEFINITIONS})
+## 添加预定义，使用sqlite数据库
+add_definitions(-D__USE_SQLITE__)
+
+add_definitions(${QT_DEFINITIONS})
 set(QT_USE_QTNETWORK true)
 set(QT_USE_QTSQL true)
 
@@ -54,5 +58,5 @@ add_executable(check_srv
 )
 
 ## link libs
-target_link_libraries(check_srv ${QT_LIBRARIES} opencv_core opencv_contrib opencv_objdetect opencv_highgui opencv_imgproc)
+target_link_libraries(check_srv ${QT_LIBRARIES} opencv_core opencv_contrib opencv_objdetect opencv_highgui opencv_imgproc sqlite3)
 

@@ -11,10 +11,12 @@
 #ifndef __GLOBAL_VAR_H_
 #define __GLOBAL_VAR_H_
 
+#include "mainwindowimpl.h"
 #include "net.h"
 
 Net* getNet();
 extern int  gSockId;
+extern MainWindowImpl *win;
 
 #endif
 

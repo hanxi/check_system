@@ -14,16 +14,18 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/hanxi/workspace/check_system/check_srv/src/faceRecognition.cpp" "/home/hanxi/workspace/check_system/check_srv/build/CMakeFiles/check_srv.dir/src/faceRecognition.cpp.o"
   "/home/hanxi/workspace/check_system/check_srv/src/main.cpp" "/home/hanxi/workspace/check_system/check_srv/build/CMakeFiles/check_srv.dir/src/main.cpp.o"
   "/home/hanxi/workspace/check_system/check_srv/src/netOperate.cpp" "/home/hanxi/workspace/check_system/check_srv/build/CMakeFiles/check_srv.dir/src/netOperate.cpp.o"
+  "/home/hanxi/workspace/check_system/check_srv/src/sqlitedb.cpp" "/home/hanxi/workspace/check_system/check_srv/build/CMakeFiles/check_srv.dir/src/sqlitedb.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 SET(CMAKE_TARGET_DEFINITIONS
-  "QT_NO_DEBUG"
+  "__USE_SQLITE__"
   "QT_GUI_LIB"
   "QT_SQL_LIB"
   "QT_NETWORK_LIB"
   "QT_CORE_LIB"
+  "QT_DEBUG"
   )
 
 # Targets to which this target links.

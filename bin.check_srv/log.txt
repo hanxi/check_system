@@ -1,0 +1,18 @@
+[02-04-2013][18:29:21] [Enter function :regHandler] [/home/hanxi/workspace/check_system/Modules/Net/prot.cpp] [401] 
+[02-04-2013][18:29:21] [Exit  function :regHandler] 
+[02-04-2013][18:29:21] [Enter function :regHandler] [/home/hanxi/workspace/check_system/Modules/Net/prot.cpp] [401] 
+[02-04-2013][18:29:21] [Exit  function :regHandler] 
+[02-04-2013][18:29:22] [Enter function :getHandler] [/home/hanxi/workspace/check_system/Modules/Net/prot.cpp] [417] 
+[02-04-2013][18:29:22] [Exit  function :getHandler] 
+[02-04-2013][18:29:22] [Enter function :msgOnGetTime] [/home/hanxi/workspace/check_system/check_srv/src/netOperate.cpp] [19] 
+接收到获取服务器时间的消息
+time=2013-04-02 18:29:22
+[02-04-2013][18:29:22] [Exit  function :msgOnGetTime] 
+[02-04-2013][18:29:28] [Enter function :getHandler] [/home/hanxi/workspace/check_system/Modules/Net/prot.cpp] [417] 
+[02-04-2013][18:29:28] [Exit  function :getHandler] 
+[02-04-2013][18:29:28] [Enter function :msgOnSignIn] [/home/hanxi/workspace/check_system/check_srv/src/netOperate.cpp] [33] 
+name=adfs
+dep=adsf
+photoLen=38034
+empId=2
+[02-04-2013][18:29:29] [Exit  function :msgOnSignIn] 

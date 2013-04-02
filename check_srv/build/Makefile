@@ -348,6 +348,30 @@ src/netOperate.cpp.s:
 	$(MAKE) -f CMakeFiles/check_srv.dir/build.make CMakeFiles/check_srv.dir/src/netOperate.cpp.s
 .PHONY : src/netOperate.cpp.s
 
+src/sqlitedb.o: src/sqlitedb.cpp.o
+.PHONY : src/sqlitedb.o
+
+# target to build an object file
+src/sqlitedb.cpp.o:
+	$(MAKE) -f CMakeFiles/check_srv.dir/build.make CMakeFiles/check_srv.dir/src/sqlitedb.cpp.o
+.PHONY : src/sqlitedb.cpp.o
+
+src/sqlitedb.i: src/sqlitedb.cpp.i
+.PHONY : src/sqlitedb.i
+
+# target to preprocess a source file
+src/sqlitedb.cpp.i:
+	$(MAKE) -f CMakeFiles/check_srv.dir/build.make CMakeFiles/check_srv.dir/src/sqlitedb.cpp.i
+.PHONY : src/sqlitedb.cpp.i
+
+src/sqlitedb.s: src/sqlitedb.cpp.s
+.PHONY : src/sqlitedb.s
+
+# target to generate assembly for a file
+src/sqlitedb.cpp.s:
+	$(MAKE) -f CMakeFiles/check_srv.dir/build.make CMakeFiles/check_srv.dir/src/sqlitedb.cpp.s
+.PHONY : src/sqlitedb.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -387,6 +411,9 @@ help:
 	@echo "... src/netOperate.o"
 	@echo "... src/netOperate.i"
 	@echo "... src/netOperate.s"
+	@echo "... src/sqlitedb.o"
+	@echo "... src/sqlitedb.i"
+	@echo "... src/sqlitedb.s"
 .PHONY : help
 
 

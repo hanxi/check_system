@@ -12,13 +12,13 @@
 #include "net.h"
 #include "prot.h"
 
-const int PROT_BUF_HEAD_SIZE = 8;     //8byte协议头
-const int PROT_BUF_MAXSIZE = 10240;   //最大协议长度为10k
-typedef void (*handlerFunc)(int,int); // 协议handler函数格式
+const int PROT_BUF_HEAD_SIZE = 8;      //8byte协议头
+const int PROT_BUF_MAXSIZE = 102400;   //最大协议长度为100k
+typedef void (*handlerFunc)(int,int);  // 协议handler函数格式
 
 void Net::handleReceive()
 {
-    Log log(__LOGARG__,1);
+    Log log(__LOGARG__,5);
     log << "接收到消息" << Log::endl;
     QTcpSocket* cliSck = qobject_cast<QTcpSocket*>(sender());
     int sockId = 1; // 客户端，固定为1
@@ -71,7 +71,7 @@ void Net::handleReceive()
 
 void Net::handleDisconnected()
 {
-    Log log(__LOGARG__,1);
+    Log log(__LOGARG__,5);
     QTcpSocket* cliSck = qobject_cast<QTcpSocket*>(sender());
     log << "连接已经断开" << Log::endl;
 
@@ -82,7 +82,7 @@ void Net::handleDisconnected()
 void Net::sendProt(int sockId, int protId)
 {
     sockId = 1; // 客户端，固定为1
-    Log log(__LOGARG__,1);
+    Log log(__LOGARG__,5);
     Prot prot(protId);
     if (!prot.isRightProt()) {
         log << "未知的协议号：protId=" << protId << Log::endl;

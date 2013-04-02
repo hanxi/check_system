@@ -8,9 +8,11 @@ ANSI	protInitTool.cpp	/^    ANSI = 0,$/;"	e	enum:FileType	file:
 AutoType	autotype.h	/^AutoType::AutoType()$/;"	f	class:AutoType
 AutoType	autotype.h	/^AutoType::AutoType(const AutoType& at)$/;"	f	class:AutoType
 AutoType	autotype.h	/^AutoType::AutoType(const char* str)$/;"	f	class:AutoType
-AutoType	autotype.h	/^AutoType::AutoType(const char* str, int len)$/;"	f	class:AutoType
+AutoType	autotype.h	/^AutoType::AutoType(const void* str, int len)$/;"	f	class:AutoType
 AutoType	autotype.h	/^AutoType::AutoType(long num)$/;"	f	class:AutoType
+AutoType	autotype.h	/^AutoType::AutoType(std::vector<unsigned char>& vuchar)$/;"	f	class:AutoType
 AutoType	autotype.h	/^class AutoType {$/;"	c
+AutoType2Mat	autotype.h	/^cv::Mat AutoType2Mat(AutoType& at)$/;"	f
 ConnContainer	srv/net.h	/^    typedef std::map<int, QTcpSocket*> ConnContainer;$/;"	t	class:Net
 FILETYPE	protInitTool.cpp	/^}FILETYPE;$/;"	t	typeref:enum:FileType	file:
 FileType	protInitTool.cpp	/^typedef enum FileType$/;"	g	file:
@@ -18,14 +20,15 @@ I2M	prot.h	/^typedef std::map<int, S2A>                     I2M;$/;"	t
 I2MIter	prot.h	/^typedef I2M::iterator                          I2MIter;$/;"	t
 I2V	prot.h	/^typedef std::map<int, void*>                   I2V;$/;"	t
 I2VIter	prot.h	/^typedef I2V::iterator                          I2VIter;$/;"	t
+Mat2AutoType	autotype.h	/^AutoType Mat2AutoType(cv::Mat& mat)$/;"	f
 Net	cli/net.h	/^Net::Net(const char *ip, int port)$/;"	f	class:Net
 Net	cli/net.h	/^class Net : public QObject$/;"	c
 Net	srv/net.h	/^Net::Net(int port):m_tcpServer(0)$/;"	f	class:Net
 Net	srv/net.h	/^class Net : public QObject$/;"	c
-PROT_BUF_HEAD_SIZE	cli/net.cpp	/^const int PROT_BUF_HEAD_SIZE = 8;     \/\/8byte协议头$/;"	v
-PROT_BUF_HEAD_SIZE	srv/net.cpp	/^const int PROT_BUF_HEAD_SIZE = 8;     \/\/8byte协议头$/;"	v
-PROT_BUF_MAXSIZE	cli/net.cpp	/^const int PROT_BUF_MAXSIZE = 10240;   \/\/最大协议长度为10k$/;"	v
-PROT_BUF_MAXSIZE	srv/net.cpp	/^const int PROT_BUF_MAXSIZE = 10240;   \/\/最大协议长度为10k$/;"	v
+PROT_BUF_HEAD_SIZE	cli/net.cpp	/^const int PROT_BUF_HEAD_SIZE = 8;      \/\/8byte协议头$/;"	v
+PROT_BUF_HEAD_SIZE	srv/net.cpp	/^const int PROT_BUF_HEAD_SIZE = 8;      \/\/8byte协议头$/;"	v
+PROT_BUF_MAXSIZE	cli/net.cpp	/^const int PROT_BUF_MAXSIZE = 102400;   \/\/最大协议长度为100k$/;"	v
+PROT_BUF_MAXSIZE	srv/net.cpp	/^const int PROT_BUF_MAXSIZE = 102400;   \/\/最大协议长度为100k$/;"	v
 Prot	prot.h	/^Prot::Prot(int protId)$/;"	f	class:Prot
 Prot	prot.h	/^class Prot$/;"	c
 S2A	prot.h	/^typedef std::map<String, AutoType, StrCmp>     S2A;$/;"	t
@@ -47,22 +50,26 @@ __NET_H_	srv/net.h	13;"	d
 __PROT_H_	prot.h	13;"	d
 __PROT_INIT_H_	protInit.h	10;"	d
 __STRING_H_	String.h	12;"	d
+begin	autotype.h	/^char* AutoType::begin()$/;"	f	class:AutoType
+bufLen	autotype.h	/^    int  bufLen;$/;"	m	class:AutoType
 buffer	autotype.h	/^    char *buffer;$/;"	m	class:AutoType
 c_str	String.h	/^    const char* c_str() const {return str;}$/;"	f	class:String
 confpath	protInitTool/Makefile	/^confpath = ..\/..\/Conf$/;"	m
+end	autotype.h	/^char* AutoType::end()$/;"	f	class:AutoType
 getField	prot.h	/^AutoType& Prot::getField(const char* fieldName)$/;"	f	class:Prot
 getHandler	prot.cpp	/^void* Prot::getHandler(int protId)$/;"	f	class:Prot
+getLen	autotype.h	/^    int getLen() const {return bufLen;}$/;"	f	class:AutoType
 getNum	autotype.h	/^long AutoType::getNum() {$/;"	f	class:AutoType
-getStr	autotype.h	/^const char* AutoType::getStr()$/;"	f	class:AutoType
+getStr	autotype.h	/^const char* AutoType::getStr() const$/;"	f	class:AutoType
 getTextFileType	protInitTool.cpp	/^FILETYPE getTextFileType(const char *fileName)$/;"	f
-getType	autotype.h	/^    char getType() {return type;}$/;"	f	class:AutoType
+getType	autotype.h	/^    const char getType() const {return type;}$/;"	f	class:AutoType
 handleDisconnected	cli/net.cpp	/^void Net::handleDisconnected()$/;"	f	class:Net
 handleDisconnected	srv/net.cpp	/^void Net::handleDisconnected()$/;"	f	class:Net
 handleNewConnection	srv/net.cpp	/^void Net::handleNewConnection()$/;"	f	class:Net
 handleReceive	cli/net.cpp	/^void Net::handleReceive()$/;"	f	class:Net
 handleReceive	srv/net.cpp	/^void Net::handleReceive()$/;"	f	class:Net
-handlerFunc	cli/net.cpp	/^typedef void (*handlerFunc)(int,int); \/\/ 协议handler函数格式$/;"	t	file:
-handlerFunc	srv/net.cpp	/^typedef void (*handlerFunc)(int,int); \/\/ 协议handler函数格式$/;"	t	file:
+handlerFunc	cli/net.cpp	/^typedef void (*handlerFunc)(int,int);  \/\/ 协议handler函数格式$/;"	t	file:
+handlerFunc	srv/net.cpp	/^typedef void (*handlerFunc)(int,int);  \/\/ 协议handler函数格式$/;"	t	file:
 isAllDigit	protInitTool.cpp	/^inline bool isAllDigit(const std::string& str)$/;"	f
 isRightProt	prot.h	/^bool Prot::isRightProt() const$/;"	f	class:Prot
 lTrim	protInitTool.cpp	/^inline std::string& lTrim(std::string &ss)$/;"	f
@@ -97,12 +104,13 @@ sendProt	cli/net.cpp	/^void Net::sendProt(int sockId, int protId)$/;"	f	class:Ne
 sendProt	srv/net.cpp	/^void Net::sendProt(int sockId, int protId)$/;"	f	class:Net
 serialize	prot.cpp	/^int Prot::serialize(char* bufferAddr, int bufferLength)$/;"	f	class:Prot
 serializeIntValue	prot.cpp	/^int serializeIntValue(long value,char *buffer,int bufferlen){$/;"	f
-serializeStringValue	prot.cpp	/^int serializeStringValue(const char* value,char *buffer,int bufferlen){$/;"	f
+serializeStringValue	prot.cpp	/^int serializeStringValue(const char* value,int strLen,char *buffer,int bufferlen){$/;"	f
+setField	prot.h	/^bool Prot::setField(const char* fieldName, const AutoType& value)$/;"	f	class:Prot
 setField	prot.h	/^bool Prot::setField(const char* fieldName, const char *value)$/;"	f	class:Prot
 setField	prot.h	/^bool Prot::setField(const char* fieldName, long value)$/;"	f	class:Prot
 setProt	prot.h	/^bool Prot::setProt(int protId)$/;"	f	class:Prot
 sm_protDic	prot.cpp	/^I2M Prot::sm_protDic;      \/\/协议词典$/;"	m	class:Prot	file:
-sm_protDic	prot.h	/^    static I2M sm_protDic;      \/\/协议词典 $/;"	m	class:Prot
+sm_protDic	prot.h	/^    static I2M sm_protDic;      \/\/协议词典$/;"	m	class:Prot
 sm_protFunc	prot.cpp	/^I2V Prot::sm_protFunc;     \/\/协议handler函数$/;"	m	class:Prot	file:
 sm_protFunc	prot.h	/^    static I2V sm_protFunc;     \/\/协议handler函数$/;"	m	class:Prot
 split	protInitTool.cpp	/^inline void split(std::string& str, std::string& str1, std::string& str2, char splitChar)$/;"	f

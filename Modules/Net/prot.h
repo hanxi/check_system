@@ -30,15 +30,15 @@ void testSerializeUnserialize();
 // key---------------prot
 // <id,           map         >
 //         <string,  AutoType >
-//              
-// <1, 
+//
+// <1,
 //         <"name", {2,"hanxi"}>
-//         <"pass", {1,12345}  > 
+//         <"pass", {1,12345}  >
 // >
 
 class StrCmp:std::less<String>
 {
-public:                                   
+public:
     bool operator()(const String &str1, const String &str2) const{
         std::string strA = std::string(str1.c_str());
         std::string strB = std::string(str2.c_str());
@@ -56,7 +56,7 @@ typedef I2V::iterator                          I2VIter;
 class Prot
 {
 private:
-    static I2M sm_protDic;      //协议词典 
+    static I2M sm_protDic;      //协议词典
     static I2V sm_protFunc;     //协议handler函数
 
     I2MIter m_prot;             //当前协议
@@ -75,6 +75,7 @@ public:
 
     bool setField(const char* fieldName, long value);
     bool setField(const char* fieldName, const char *value);
+    bool setField(const char* fieldName, const AutoType& value);
     AutoType& getField(const char* fieldName);
 
     void printProt();
@@ -155,6 +156,20 @@ bool Prot::setField(const char* fieldName, const char *value)
 }
 
 inline
+bool Prot::setField(const char* fieldName, const AutoType& value)
+{
+    if (m_prot==sm_protDic.end()) {
+        return false;
+    }
+    S2AIter iter = (m_prot->second).find(fieldName);
+    if ((iter->second).getType() != value.getType()) {
+        return false;
+    }
+    iter->second = value;
+    return true;
+}
+
+inline
 AutoType& Prot::getField(const char* fieldName)
 {
     if (m_prot==sm_protDic.end()) {
@@ -175,7 +190,7 @@ AutoType& Prot::getField(const char* fieldName)
 inline
 void Prot::printProt()
 {
-    Log log(__LOGARG__,1);
+    Log log(__LOGARG__,5);
     S2A &prot = m_prot->second;
     int i=0;
     for (S2AIter iter=prot.begin(); iter!=prot.end(); ++iter) {

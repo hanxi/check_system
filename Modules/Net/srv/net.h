@@ -42,7 +42,7 @@ private slots:
 inline
 Net::Net(int port):m_tcpServer(0)
 {
-    Log log(__LOGARG__,1);
+    Log log(__LOGARG__,5);
     if (m_tcpServer!=0) {
         log << "重启服务器中。。。" << Log::endl;
         delete m_tcpServer;

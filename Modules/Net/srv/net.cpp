@@ -12,13 +12,13 @@
 #include "net.h"
 #include "prot.h"
 
-const int PROT_BUF_HEAD_SIZE = 8;     //8byte协议头
-const int PROT_BUF_MAXSIZE = 10240;   //最大协议长度为10k
-typedef void (*handlerFunc)(int,int); // 协议handler函数格式
+const int PROT_BUF_HEAD_SIZE = 8;      //8byte协议头
+const int PROT_BUF_MAXSIZE = 102400;   //最大协议长度为100k
+typedef void (*handlerFunc)(int,int);  // 协议handler函数格式
 
 void Net::handleNewConnection()
 {
-    Log log(__LOGARG__,1);
+    Log log(__LOGARG__,5);
     QTcpSocket* cliSck = m_tcpServer->nextPendingConnection();
     int sockId = cliSck->socketDescriptor();
     connect(cliSck, SIGNAL(readyRead()), this, SLOT(handleReceive()));
@@ -30,7 +30,7 @@ void Net::handleNewConnection()
 
 void Net::handleReceive()
 {
-    Log log(__LOGARG__,1);
+    Log log(__LOGARG__,5);
     log << "接收到消息" << Log::endl;
     QTcpSocket* cliSck = qobject_cast<QTcpSocket*>(sender());
     int sockId = cliSck->socketDescriptor();
@@ -83,7 +83,7 @@ void Net::handleReceive()
 
 void Net::handleDisconnected()
 {
-    Log log(__LOGARG__,1);
+    Log log(__LOGARG__,5);
     QTcpSocket* cliSck = qobject_cast<QTcpSocket*>(sender());
     for (ConnContainer::iterator iter=m_cliConns.begin(); iter!=m_cliConns.end();) {
         if (iter->second==cliSck) {
@@ -100,7 +100,7 @@ void Net::handleDisconnected()
 
 void Net::sendProt(int sockId, int protId)
 {
-    Log log(__LOGARG__,1);
+    Log log(__LOGARG__,5);
     Prot prot(protId);
     if (!prot.isRightProt()) {
         log << "未知的协议号：protId=" << protId << Log::endl;

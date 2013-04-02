@@ -178,6 +178,7 @@ AutoType	Modules/Net/autotype.h	/^AutoType::AutoType(const char* str)$/;"	f	clas
 AutoType	Modules/Net/autotype.h	/^AutoType::AutoType(const char* str, int len)$/;"	f	class:AutoType
 AutoType	Modules/Net/autotype.h	/^AutoType::AutoType(long num)$/;"	f	class:AutoType
 AutoType	Modules/Net/autotype.h	/^class AutoType {$/;"	c
+AutoType2QByteArray	check_srv/src/db.cpp	/^QByteArray AutoType2QByteArray(AutoType& at)$/;"	f	namespace:DB
 AutotunedIndex	include/opencv2/flann/autotuned_index.h	/^    AutotunedIndex(const Matrix<ElementType>& inputData, const IndexParams& params = AutotunedIndexParams(), Distance d = Distance()) :$/;"	f	class:cvflann::AutotunedIndex
 AutotunedIndex	include/opencv2/flann/autotuned_index.h	/^class AutotunedIndex : public NNIndex<Distance>$/;"	c	namespace:cvflann
 AutotunedIndexParams	include/opencv2/flann/autotuned_index.h	/^    AutotunedIndexParams(float target_precision = 0.8, float build_weight = 0.01, float memory_weight = 0, float sample_fraction = 0.1)$/;"	f	struct:cvflann::AutotunedIndexParams
@@ -2735,7 +2736,10 @@ CylindricalWarper	include/opencv2/stitching/warpers.hpp	/^class CylindricalWarpe
 CylindricalWarperGpu	include/opencv2/stitching/detail/warpers.hpp	/^    CylindricalWarperGpu(float scale) : CylindricalWarper(scale) {}$/;"	f	class:cv::detail::CylindricalWarperGpu
 CylindricalWarperGpu	include/opencv2/stitching/detail/warpers.hpp	/^class CV_EXPORTS CylindricalWarperGpu : public CylindricalWarper$/;"	c	namespace:cv::detail
 CylindricalWarperGpu	include/opencv2/stitching/warpers.hpp	/^class CylindricalWarperGpu: public WarperCreator$/;"	c	namespace:cv
+DB	check_srv/src/db.cpp	/^namespace DB{$/;"	n	file:
 DB	check_srv/src/db.h	/^namespace DB$/;"	n
+DB	check_srv/src/sqlitedb.cpp	/^namespace DB$/;"	n	file:
+DB	check_srv/src/sqlitedb.h	/^namespace DB$/;"	n
 DCT_INVERSE	include/opencv2/core/core.hpp	/^    DCT_INVERSE = DFT_INVERSE, DCT_ROWS=DFT_ROWS };$/;"	e	enum:cv::__anon6
 DCT_ROWS	include/opencv2/core/core.hpp	/^    DCT_INVERSE = DFT_INVERSE, DCT_ROWS=DFT_ROWS };$/;"	e	enum:cv::__anon6
 DECOMP_CHOLESKY	include/opencv2/core/core.hpp	/^enum { DECOMP_LU=0, DECOMP_SVD=1, DECOMP_EIG=2, DECOMP_CHOLESKY=3, DECOMP_QR=4, DECOMP_NORMAL=16 };$/;"	e	enum:cv::__anon2
@@ -5085,6 +5089,7 @@ PyramidAdaptedFeatureDetector	include/opencv2/features2d/features2d.hpp	/^class 
 PzGL	include/opencv2/contrib/openfabmap.hpp	/^    double (FabMap::*PzGL)(int q, bool zq, bool zpq, bool Lzq);$/;"	m	class:cv::of2::FabMap
 PzGNe	include/opencv2/contrib/openfabmap.hpp	/^    double PzGNe;$/;"	m	class:cv::of2::FabMap
 PzGe	include/opencv2/contrib/openfabmap.hpp	/^    double PzGe;$/;"	m	class:cv::of2::FabMap
+QByteArray2Mat	check_srv/src/db.cpp	/^cv::Mat QByteArray2Mat(QByteArray& qba, int len)$/;"	f	namespace:DB
 QMAKE	Modules/Net/cli/Makefile	/^QMAKE         = \/usr\/bin\/qmake$/;"	m
 QMAKE	Modules/Net/srv/Makefile	/^QMAKE         = \/usr\/bin\/qmake$/;"	m
 QMAKE_TARGET	Modules/Net/cli/Makefile	/^QMAKE_TARGET  = cli$/;"	m
@@ -5324,6 +5329,7 @@ S2AIter	Modules/Net/prot.h	/^typedef S2A::iterator                          S2AI
 S2M	Modules/Conf/conf.h	/^typedef std::map<std::string, S2S>           S2M;$/;"	t
 S2MIter	Modules/Conf/conf.h	/^typedef S2M::iterator                        S2MIter;$/;"	t
 S2S	Modules/Conf/conf.h	/^typedef std::map<std::string, std::string>   S2S;$/;"	t
+S2S	check_srv/src/sqliteDBTool/main.cpp	/^typedef map<string,string> S2S;$/;"	t	file:
 S2SIter	Modules/Conf/conf.h	/^typedef S2S::iterator                        S2SIter;$/;"	t
 SADWindowSize	include/opencv2/calib3d/calib3d.hpp	/^    CV_PROP_RW int SADWindowSize;$/;"	m	class:cv::StereoSGBM
 SADWindowSize	include/opencv2/calib3d/calib3d.hpp	/^    int SADWindowSize; \/\/ ~5x5..21x21$/;"	m	struct:CvStereoBMState
@@ -6537,7 +6543,7 @@ __CV_GPU_DEPR_BEFORE__	include/opencv2/core/cuda_devptrs.hpp	134;"	d
 __CV_GPU_DEPR_BEFORE__	include/opencv2/core/gpumat.hpp	274;"	d
 __CV_GPU_HOST_DEVICE__	include/opencv2/core/cuda_devptrs.hpp	49;"	d
 __CV_GPU_HOST_DEVICE__	include/opencv2/core/cuda_devptrs.hpp	51;"	d
-__DB_H_	check_srv/src/db.h	2;"	d
+__DB_H_	check_srv/src/db.h	12;"	d
 __END__	include/opencv2/core/internal.hpp	86;"	d
 __FACE_RECOGNITION_H_	check_srv/src/faceRecognition.h	12;"	d
 __GLOBAL_VAR_H_	check_cli/src/globalVar.h	12;"	d
@@ -6655,12 +6661,14 @@ __OPENCV_VIDEO_HPP__	include/opencv2/video/video.hpp	44;"	d
 __PROT_H_	Modules/Net/prot.h	13;"	d
 __PROT_INIT_H_	Modules/Net/protInit.h	10;"	d
 __PROT_INIT_H_	Modules/Net/protInitTool/protInit.h	10;"	d
+__SQLITE_DB_H_	check_srv/src/sqlitedb.h	12;"	d
 __STRING_H_	Modules/Net/String.h	12;"	d
 __TRACE_H_	Modules/Log/trace.h	12;"	d
 ___cudaSafeCall	include/opencv2/gpu/device/common.hpp	/^static inline void ___cudaSafeCall(cudaError_t err, const char *file, const int line, const char *func = "")$/;"	f
 __pf	Modules/Log/log.h	/^Log& Log::operator<<(Log& (*__pf)(Log&))$/;"	f	class:Log
 __xgetbv	include/opencv2/core/internal.hpp	129;"	d
 __xgetbv	include/opencv2/core/internal.hpp	131;"	d
+_book_info_Rec	check_srv/src/sqlitedb.cpp	/^typedef struct _book_info_Rec{$/;"	s	namespace:DB	file:
 _dataAsRow	include/opencv2/contrib/contrib.hpp	/^        bool _dataAsRow;$/;"	m	class:cv::LDA
 _declareHelper	include/opencv2/ts/ts_perf.hpp	/^    class CV_EXPORTS _declareHelper$/;"	c	class:perf::TestBase
 _eigenvalues	include/opencv2/contrib/contrib.hpp	/^        Mat _eigenvalues;$/;"	m	class:cv::LDA
@@ -7096,6 +7104,11 @@ blurredFrame_	include/opencv2/gpu/gpu.hpp	/^    GpuMat pyrLevel_[2], M_, bufM_, 
 blurrinessRates	include/opencv2/videostab/deblurring.hpp	/^    virtual const std::vector<float>& blurrinessRates() const { return *blurrinessRates_; }$/;"	f	class:cv::videostab::DeblurerBase
 blurrinessRates_	include/opencv2/videostab/deblurring.hpp	/^    const std::vector<float> *blurrinessRates_;$/;"	m	class:cv::videostab::DeblurerBase
 blurrinessRates_	include/opencv2/videostab/stabilizer.hpp	/^    std::vector<float> blurrinessRates_;$/;"	m	class:cv::videostab::StabilizerBase
+boo_info_Rec	check_srv/src/sqlitedb.cpp	/^}boo_info_Rec;$/;"	t	namespace:DB	typeref:struct:DB::_book_info_Rec	file:
+bookInfoInsert	check_srv/src/db.cpp	/^int bookInfoInsert(const char* name, const char* depName, AutoType& photo)$/;"	f	namespace:DB
+book_info_insert	check_srv/src/sqlitedb.cpp	/^int book_info_insert(const char* name, const char* depName, AutoType& photo)$/;"	f	namespace:DB
+book_info_select_by_emp_id	check_srv/src/sqlitedb.cpp	/^void book_info_select_by_emp_id(int emp_id, vector<book_info_Rec>& rec)$/;"	f	namespace:DB
+book_info_update_emp_name	check_srv/src/sqlitedb.cpp	/^void book_info_update_emp_name(int emp_id, const char* emp_name)$/;"	f	namespace:DB
 bool_constant	include/opencv2/ts/ts_gtest.h	/^struct bool_constant {$/;"	s	namespace:std::tr1
 boost_type	include/opencv2/ml/ml.hpp	/^    CV_PROP_RW int boost_type;$/;"	m	struct:CvBoostParams
 border	include/opencv2/legacy/legacy.hpp	/^    CvPoint2D32f border[2][4];$/;"	m	struct:CvStereoCamera
@@ -7449,6 +7462,7 @@ conj	include/opencv2/core/operations.hpp	/^template<typename _Tp> inline Complex
 conj	include/opencv2/core/operations.hpp	/^template<typename _Tp> inline Scalar_<_Tp> Scalar_<_Tp>::conj() const$/;"	f	class:cv::Scalar_
 conjugate	include/opencv2/core/operations.hpp	/^template<typename _Tp> Vec<_Tp, 2> conjugate(const Vec<_Tp, 2>& v)$/;"	f	namespace:cv
 conjugate	include/opencv2/core/operations.hpp	/^template<typename _Tp> Vec<_Tp, 4> conjugate(const Vec<_Tp, 4>& v)$/;"	f	namespace:cv
+conn	check_srv/src/sqlitedb.cpp	/^sqlite3* conn = NULL;$/;"	m	namespace:DB	file:
 constBorderRow	include/opencv2/imgproc/imgproc.hpp	/^    vector<uchar> constBorderRow;$/;"	m	class:cv::FilterEngine
 constBorderValue	include/opencv2/imgproc/imgproc.hpp	/^    vector<uchar> constBorderValue;$/;"	m	class:cv::FilterEngine
 const_iterator	include/opencv2/core/operations.hpp	/^    typedef const _Tp* const_iterator;$/;"	t	class:cv::Vector
@@ -8089,6 +8103,7 @@ deltaP	include/opencv2/contrib/contrib.hpp	/^        CvMat* deltaP; \/\/computed
 deltas	include/opencv2/imgproc/types_c.h	/^    schar     deltas[8][2];$/;"	m	struct:CvChainPtReader
 denorm_min	include/opencv2/gpu/device/limits.hpp	/^        __device__ __forceinline__ static type denorm_min()  { return type(); }$/;"	f	struct:cv::gpu::device::numeric_limits
 density	include/opencv2/contrib/contrib.hpp	/^        double density;$/;"	m	class:CvFuzzyMeanShiftTracker::SearchWindow
+dep_name	check_srv/src/sqlitedb.cpp	/^    AutoType dep_name;$/;"	m	struct:DB::_book_info_Rec	file:
 depart	include/opencv2/ts/ts_gtest.h	/^  void depart() {$/;"	f	class:testing::internal::linked_ptr
 depth	include/opencv2/core/gpumat.hpp	/^    inline int GpuMat::depth() const$/;"	f	class:cv::gpu::GpuMat
 depth	include/opencv2/core/mat.hpp	/^inline int Mat::depth() const { return CV_MAT_DEPTH(flags); }$/;"	f	class:cv::Mat
@@ -8340,6 +8355,8 @@ ellipseAngle	include/opencv2/contrib/contrib.hpp	/^        double ellipseAngle;$
 ellipseHeight	include/opencv2/contrib/contrib.hpp	/^        int width, height, maxWidth, maxHeight, ellipseHeight, ellipseWidth;$/;"	m	class:CvFuzzyMeanShiftTracker::SearchWindow
 ellipseWidth	include/opencv2/contrib/contrib.hpp	/^        int width, height, maxWidth, maxHeight, ellipseHeight, ellipseWidth;$/;"	m	class:CvFuzzyMeanShiftTracker::SearchWindow
 emObj	include/opencv2/legacy/legacy.hpp	/^    cv::EM emObj;$/;"	m	class:CvEM
+emp_id	check_srv/src/sqlitedb.cpp	/^    AutoType emp_id;$/;"	m	struct:DB::_book_info_Rec	file:
+emp_name	check_srv/src/sqlitedb.cpp	/^    AutoType emp_name;$/;"	m	struct:DB::_book_info_Rec	file:
 empty	include/opencv2/core/gpumat.hpp	/^    inline bool GpuMat::empty() const$/;"	f	class:cv::gpu::GpuMat
 empty	include/opencv2/core/mat.hpp	/^inline bool Mat::empty() const { return data == 0 || total() == 0; }$/;"	f	class:cv::Mat
 empty	include/opencv2/core/opengl_interop.hpp	/^    inline bool empty() const { return rows_ == 0 || cols_ == 0; }$/;"	f	class:cv::GlBuffer
@@ -9145,6 +9162,7 @@ hierarchicalClustering	include/opencv2/flann/flann.hpp	/^FLANN_DEPRECATED int hi
 hierarchicalClustering	include/opencv2/flann/flann.hpp	/^int hierarchicalClustering(const Mat& features, Mat& centers, const ::cvflann::KMeansIndexParams& params,$/;"	f	namespace:cv::flann
 hierarchicalClustering	include/opencv2/flann/flann_base.hpp	/^int hierarchicalClustering(const Matrix<typename Distance::ElementType>& points, Matrix<typename Distance::ResultType>& centers,$/;"	f	namespace:cvflann
 high	include/opencv2/flann/kdtree_single_index.h	/^        DistanceType low, high;$/;"	m	struct:cvflann::KDTreeSingleIndex::Interval
+hire_time	check_srv/src/sqlitedb.cpp	/^    AutoType hire_time;$/;"	m	struct:DB::_book_info_Rec	file:
 hist	include/opencv2/contrib/hybridtracker.hpp	/^    MatND hist;$/;"	m	class:cv::CvMeanShiftTracker
 hist	include/opencv2/imgproc/imgproc_c.h	/^CVAPI(void)  cvClearHist( CvHistogram* hist );$/;"	v
 hist	include/opencv2/imgproc/imgproc_c.h	/^CVAPI(void)  cvReleaseHist( CvHistogram** hist );$/;"	v
@@ -9684,6 +9702,7 @@ level	include/opencv2/legacy/legacy.hpp	/^    int level; \/* 0 - lowest(i.e its 
 levels	include/opencv2/contrib/contrib.hpp	/^        CV_PROP_RW int      levels;$/;"	m	class:cv::StereoVar
 levels	include/opencv2/gpu/gpu.hpp	/^    int levels;$/;"	m	class:cv::gpu::StereoBeliefPropagation
 levels	include/opencv2/gpu/gpu.hpp	/^    int levels;$/;"	m	class:cv::gpu::StereoConstantSpaceBP
+ligpath	check_srv/src/sqliteDBTool/Makefile	/^ligpath = ..\/..\/..\/lib$/;"	m
 likelihood	include/opencv2/contrib/openfabmap.hpp	/^    double likelihood;  \/\/raw loglikelihood$/;"	m	struct:cv::of2::IMatch
 line	include/opencv2/core/core.hpp	/^    int line; \/\/\/< line number in the source file where the error has occured$/;"	m	class:cv::Exception
 line	include/opencv2/ts/ts_gtest.h	/^    int                const line;$/;"	m	struct:testing::internal::AssertHelper::AssertHelperData
@@ -9754,6 +9773,7 @@ logical_not	include/opencv2/gpu/device/functional.hpp	/^    template <typename T
 logical_or	include/opencv2/gpu/device/functional.hpp	/^        __device__ __forceinline__ logical_or():binary_function<T,T,bool>(){}$/;"	f	struct:cv::gpu::device::logical_or
 logical_or	include/opencv2/gpu/device/functional.hpp	/^        __device__ __forceinline__ logical_or(const logical_or& other):binary_function<T,T,bool>(){}$/;"	f	struct:cv::gpu::device::logical_or
 logical_or	include/opencv2/gpu/device/functional.hpp	/^    template <typename T> struct logical_or : binary_function<T, T, bool>$/;"	s	namespace:cv::gpu::device
+logpath	check_srv/src/sqliteDBTool/Makefile	/^logpath = ..\/..\/..\/Modules\/Log$/;"	m
 longPairs_	include/opencv2/features2d/features2d.hpp	/^    BriskLongPair* longPairs_;             \/\/ d>_dMin$/;"	m	class:cv::BRISK
 loss_function_type	include/opencv2/ml/ml.hpp	/^    CV_PROP_RW int loss_function_type;$/;"	m	struct:CvGBTreesParams
 low	include/opencv2/flann/kdtree_single_index.h	/^        DistanceType low, high;$/;"	m	struct:cvflann::KDTreeSingleIndex::Interval
@@ -9869,6 +9889,7 @@ main	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^int main(int ar
 main	check_srv/build/CMakeFiles/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
 main	check_srv/build/CMakeFiles/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f
 main	check_srv/src/main.cpp	/^int main(int argc, char **argv)$/;"	f
+main	check_srv/src/sqliteDBTool/main.cpp	/^int main(int argc, char** argv)$/;"	f
 majorVersion	include/opencv2/core/gpumat.hpp	/^        int majorVersion() const { return majorVersion_; }$/;"	f	class:cv::gpu::DeviceInfo
 majorVersion_	include/opencv2/core/gpumat.hpp	/^        int majorVersion_;$/;"	m	class:cv::gpu::DeviceInfo
 make	include/opencv2/gpu/device/vec_traits.hpp	/^        static __device__ __host__ __forceinline__ char make(char x) {return x;}$/;"	f	struct:cv::gpu::device::VecTraits
@@ -10193,6 +10214,7 @@ modMax	include/opencv2/legacy/legacy.hpp	/^    uchar modMax[3];$/;"	m	struct:CvB
 modMin	include/opencv2/legacy/legacy.hpp	/^    uchar modMin[3];$/;"	m	struct:CvBGCodeBookModel
 modalities	include/opencv2/objdetect/objdetect.hpp	/^  std::vector< Ptr<Modality> > modalities;$/;"	m	class:cv::linemod::Detector
 model	include/opencv2/legacy/legacy.hpp	/^CVAPI(void) cvReleaseBGCodeBookModel( CvBGCodeBookModel** model );$/;"	v
+modelImgInsert	check_srv/src/db.cpp	/^bool modelImgInsert(int empId, AutoType& photo)$/;"	f	namespace:DB
 modelPoints	include/opencv2/legacy/legacy.hpp	/^    vector<KeyPoint> modelPoints;$/;"	m	class:cv::PlanarObjectDetector
 modelROI	include/opencv2/legacy/legacy.hpp	/^    Rect modelROI;$/;"	m	class:cv::PlanarObjectDetector
 module_info	include/opencv2/core/core_c.h	/^CVAPI(int)  cvRegisterModule( const CvModuleInfo* module_info );$/;"	v
@@ -10234,6 +10256,7 @@ msgOnGetPhotoInfo	check_cli/src/netOperate.cpp	/^void msgOnGetPhotoInfo(int sock
 msgOnGetTime	check_cli/src/netOperate.cpp	/^void msgOnGetTime(int sockId, int protId)$/;"	f
 msgOnGetTime	check_srv/src/netOperate.cpp	/^void msgOnGetTime(int sockId, int protId)$/;"	f
 msgOnSignIn	check_cli/src/netOperate.cpp	/^void msgOnSignIn(int sockId, int protId)$/;"	f
+msgOnSignIn	check_srv/src/netOperate.cpp	/^void msgOnSignIn(int sockId, int protId)$/;"	f
 msg_type	include/opencv2/gpu/gpu.hpp	/^    int msg_type;$/;"	m	class:cv::gpu::StereoBeliefPropagation
 msg_type	include/opencv2/gpu/gpu.hpp	/^    int msg_type;$/;"	m	class:cv::gpu::StereoConstantSpaceBP
 mstracker	include/opencv2/contrib/hybridtracker.hpp	/^    CvMeanShiftTracker* mstracker;$/;"	m	class:cv::CvHybridTracker
@@ -10456,6 +10479,7 @@ nu20	include/opencv2/imgproc/imgproc.hpp	/^    CV_PROP_RW double  nu20, nu11, nu
 nu21	include/opencv2/imgproc/imgproc.hpp	/^    CV_PROP_RW double  nu20, nu11, nu02, nu30, nu21, nu12, nu03;$/;"	m	class:cv::Moments
 nu30	include/opencv2/imgproc/imgproc.hpp	/^    CV_PROP_RW double  nu20, nu11, nu02, nu30, nu21, nu12, nu03;$/;"	m	class:cv::Moments
 num2str	Modules/Conf/conf.h	/^inline void num2str(int num, std::string& o_s)$/;"	f
+num2str	check_srv/src/sqliteDBTool/main.cpp	/^void num2str(int num, std::string& o_s)$/;"	f
 numBands	include/opencv2/stitching/detail/blenders.hpp	/^    int numBands() const { return actual_num_bands_; }$/;"	f	class:cv::detail::MultiBandBlender
 numClasses	include/opencv2/objdetect/objdetect.hpp	/^  int numClasses() const { return static_cast<int>(class_templates.size()); }$/;"	f	class:cv::linemod::Detector
 numDetectedFrames	include/opencv2/contrib/detection_based_tracker.hpp	/^            int numDetectedFrames;$/;"	m	struct:DetectionBasedTracker::TrackedObject
@@ -11368,6 +11392,7 @@ perspectiveProjection_	include/opencv2/core/opengl_interop.hpp	/^    bool perspe
 phi	include/opencv2/legacy/legacy.hpp	/^    float phi;$/;"	m	class:cv::CvAffinePose
 phiMax	include/opencv2/legacy/legacy.hpp	/^    double phiMin, phiMax;$/;"	m	class:cv::PatchGenerator
 phiMin	include/opencv2/legacy/legacy.hpp	/^    double phiMin, phiMax;$/;"	m	class:cv::PatchGenerator
+photo	check_srv/src/sqlitedb.cpp	/^    AutoType photo;$/;"	m	struct:DB::_book_info_Rec	file:
 photoreceptorsLocalAdaptationSensitivity	include/opencv2/contrib/retina.hpp	/^               float photoreceptorsLocalAdaptationSensitivity, photoreceptorsTemporalConstant, photoreceptorsSpatialConstant, horizontalCellsGain, hcellsTemporalConstant, hcellsSpatialConstant, ganglionCellsSensitivity;$/;"	m	struct:cv::Retina::RetinaParameters::OPLandIplParvoParameters
 photoreceptorsSpatialConstant	include/opencv2/contrib/retina.hpp	/^               float photoreceptorsLocalAdaptationSensitivity, photoreceptorsTemporalConstant, photoreceptorsSpatialConstant, horizontalCellsGain, hcellsTemporalConstant, hcellsSpatialConstant, ganglionCellsSensitivity;$/;"	m	struct:cv::Retina::RetinaParameters::OPLandIplParvoParameters
 photoreceptorsTemporalConstant	include/opencv2/contrib/retina.hpp	/^               float photoreceptorsLocalAdaptationSensitivity, photoreceptorsTemporalConstant, photoreceptorsSpatialConstant, horizontalCellsGain, hcellsTemporalConstant, hcellsSpatialConstant, ganglionCellsSensitivity;$/;"	m	struct:cv::Retina::RetinaParameters::OPLandIplParvoParameters
@@ -11489,6 +11514,7 @@ process	include/opencv2/core/mat.hpp	/^process( const Mat_<T1>& m1, const Mat_<T
 process	include/opencv2/objdetect/objdetect.hpp	/^  Ptr<QuantizedPyramid> process(const Mat& src,$/;"	f	class:cv::linemod::Modality
 processNoiseCov	include/opencv2/video/tracking.hpp	/^    Mat processNoiseCov;    \/\/!< process noise covariance matrix (Q)$/;"	m	class:cv::KalmanFilter
 process_noise_cov	include/opencv2/video/tracking.hpp	/^    CvMat* process_noise_cov;   \/* process noise covariance matrix (Q) *\/$/;"	m	struct:CvKalman
+productInsertFunc	check_srv/src/sqliteDBTool/main.cpp	/^string productInsertFunc(string& tbl_name, vector<string>& fieldNames, vector<string>& fieldTypes,S2S& type2args, S2S& type2bind)$/;"	f
 productsum	include/opencv2/ml/ml.hpp	/^    CvMat** productsum;$/;"	m	class:CvNormalBayesClassifier
 progress	include/opencv2/ts/ts.hpp	/^    int progress;$/;"	m	class:cvtest::BadArgTest
 project1st	include/opencv2/gpu/device/functional.hpp	/^        __device__ __forceinline__ project1st():binary_function<T1,T2,T1>(){}$/;"	f	struct:cv::gpu::device::project1st
@@ -12116,7 +12142,7 @@ sendProt	Modules/Net/cli/net.cpp	/^void Net::sendProt(int sockId, int protId)$/;
 sendProt	Modules/Net/srv/net.cpp	/^void Net::sendProt(int sockId, int protId)$/;"	f	class:Net
 sendProtGetPhotoInfo	check_cli/src/netOperate.cpp	/^void sendProtGetPhotoInfo()$/;"	f
 sendProtGetTime	check_cli/src/netOperate.cpp	/^void sendProtGetTime()$/;"	f
-sendProtToSignIn	check_cli/src/netOperate.cpp	/^void sendProtToSignIn(const char *name, const char *dep, const char *photo)$/;"	f
+sendProtToSignIn	check_cli/src/netOperate.cpp	/^void sendProtToSignIn(const AutoType& name, const AutoType& dep, const AutoType& photo)$/;"	f
 sensitivity	include/opencv2/videostab/deblurring.hpp	/^    float sensitivity() const { return sensitivity_; }$/;"	f	class:cv::videostab::WeightingDeblurer
 sensitivity_	include/opencv2/videostab/deblurring.hpp	/^    float sensitivity_;$/;"	m	class:cv::videostab::WeightingDeblurer
 separateDetectionWork	include/opencv2/contrib/detection_based_tracker.hpp	/^        cv::Ptr<SeparateDetectionWork> separateDetectionWork;$/;"	m	class:DetectionBasedTracker
@@ -12392,7 +12418,9 @@ stageType	include/opencv2/objdetect/objdetect.hpp	/^        int stageType;$/;"	m
 stage_classifier	include/opencv2/objdetect/objdetect.hpp	/^    CvHaarStageClassifier* stage_classifier;$/;"	m	struct:CvHaarClassifierCascade
 stages	include/opencv2/objdetect/objdetect.hpp	/^        vector<Stage> stages;$/;"	m	class:cv::CascadeClassifier::Data
 stale	include/opencv2/legacy/legacy.hpp	/^    int stale;$/;"	m	struct:CvBGCodeBookElem
-start	check_srv/src/db.cpp	/^bool DB::start()$/;"	f	class:DB
+start	check_srv/src/db.cpp	/^bool start()$/;"	f	namespace:DB
+start	check_srv/src/sqliteDBTool/main.cpp	/^bool start()$/;"	f
+start	check_srv/src/sqlitedb.cpp	/^bool start()$/;"	f	namespace:DB
 start	include/opencv2/flann/timer.h	/^    void start()$/;"	f	class:cvflann::StartStopTimer
 start	include/opencv2/imgproc/types_c.h	/^    CvPoint* start; \/* point of the contour where the defect begins *\/$/;"	m	struct:CvConvexityDefect
 startDistanceBucket	include/opencv2/contrib/contrib.hpp	/^        int startDistanceBucket;$/;"	m	class:cv::SelfSimDescriptor
@@ -12462,7 +12490,11 @@ stereoCamera	include/opencv2/legacy/legacy.hpp	/^CVAPI(int) icvComputeCoeffForSt
 stereoCamera	include/opencv2/legacy/legacy.hpp	/^CVAPI(void) icvComputeStereoParamsForCameras(CvStereoCamera* stereoCamera);$/;"	v
 stereoCamera	include/opencv2/legacy/legacy.hpp	/^CVAPI(void) icvGetQuadsTransformStruct(  CvStereoCamera* stereoCamera);$/;"	v
 stereoparams	include/opencv2/legacy/legacy.hpp	/^CVAPI(int) icvComputeRestStereoParams(CvStereoCamera *stereoparams);$/;"	v
-stop	check_srv/src/db.cpp	/^void DB::stop()$/;"	f	class:DB
+stmt	check_srv/src/sqliteDBTool/main.cpp	/^sqlite3_stmt *stmt = NULL;$/;"	v
+stmt	check_srv/src/sqlitedb.cpp	/^sqlite3_stmt *stmt = NULL;$/;"	m	namespace:DB	file:
+stop	check_srv/src/db.cpp	/^void stop()$/;"	f	namespace:DB
+stop	check_srv/src/sqliteDBTool/main.cpp	/^void stop()$/;"	f
+stop	check_srv/src/sqlitedb.cpp	/^void stop()$/;"	f	namespace:DB
 stop	include/opencv2/flann/timer.h	/^    void stop()$/;"	f	class:cvflann::StartStopTimer
 storage	include/opencv2/core/core_c.h	/^CVAPI(void)  cvClearMemStorage( CvMemStorage* storage );$/;"	v
 storage	include/opencv2/core/core_c.h	/^CVAPI(void)  cvReleaseMemStorage( CvMemStorage** storage );$/;"	v
@@ -14700,6 +14732,7 @@ width	include/opencv2/legacy/legacy.hpp	/^    float width;$/;"	m	struct:CvLCMEdg
 width	include/opencv2/legacy/legacy.hpp	/^    int width() const { return image ? image->width : 0; }$/;"	f	class:CvImage
 width	include/opencv2/objdetect/objdetect.hpp	/^  int width;$/;"	m	struct:cv::linemod::Template
 widthStep	include/opencv2/core/types_c.h	/^    int  widthStep;         \/* Size of aligned image row in bytes.    *\/$/;"	m	struct:_IplImage
+win	check_cli/src/main.cpp	/^MainWindowImpl *win;$/;"	v
 winSigma	include/opencv2/objdetect/objdetect.hpp	/^    CV_PROP double winSigma;$/;"	m	struct:cv::HOGDescriptor
 winSize	include/opencv2/gpu/gpu.hpp	/^    Size winSize;$/;"	m	class:cv::gpu::PyrLKOpticalFlow
 winSize	include/opencv2/gpu/gpu.hpp	/^    int winSize;$/;"	m	class:cv::gpu::FarnebackOpticalFlow
@@ -14717,9 +14750,9 @@ workScale	include/opencv2/stitching/stitcher.hpp	/^    double workScale() const 
 work_scale_	include/opencv2/stitching/stitcher.hpp	/^    double work_scale_;$/;"	m	class:cv::Stitcher
 work_type	include/opencv2/gpu/device/filters.hpp	/^        typedef typename TypeVec<float, VecTraits<elem_type>::cn>::vec_type work_type;$/;"	t	struct:cv::gpu::device::CubicFilter
 work_var_count	include/opencv2/ml/ml.hpp	/^    int ord_var_count, cat_var_count, work_var_count;$/;"	m	struct:CvDTreeTrainData
-worktimeAltEmpId	check_srv/src/db.cpp	/^bool DB::worktimeAltEmpId(int worktimeId, int empId)$/;"	f	class:DB
-worktimeAltTime	check_srv/src/db.cpp	/^bool DB::worktimeAltTime(int worktimeId, const char* time)$/;"	f	class:DB
-worktimeInsert	check_srv/src/db.cpp	/^bool DB::worktimeInsert(int empId, const char* time, const char* photo)$/;"	f	class:DB
+worktimeAltEmpId	check_srv/src/db.cpp	/^bool worktimeAltEmpId(int worktimeId, int empId)$/;"	f	namespace:DB
+worktimeAltTime	check_srv/src/db.cpp	/^bool worktimeAltTime(int worktimeId, const char* time)$/;"	f	namespace:DB
+worktimeInsert	check_srv/src/db.cpp	/^bool worktimeInsert(int empId, const char* time, const char* photo)$/;"	f	namespace:DB
 worktype_f	include/opencv2/gpu/device/detail/color_detail.hpp	/^            typedef float worktype_f;$/;"	t	struct:cv::gpu::device::color_detail::ColorChannel
 worstDist	include/opencv2/flann/result_set.h	/^    DistanceType worstDist() const$/;"	f	class:cvflann::KNNResultSet
 worstDist	include/opencv2/flann/result_set.h	/^    DistanceType worstDist() const$/;"	f	class:cvflann::KNNSimpleResultSet

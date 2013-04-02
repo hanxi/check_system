@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindowimpl.h'
 **
-** Created: Sun Mar 31 23:31:45 2013
+** Created: Mon Apr 1 12:56:36 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -31,13 +31,13 @@ static const uint qt_meta_data_MainWindowImpl[] = {
        0,       // signalCount
 
  // slots: signature, parameters, type, tag, flags
-      16,   15,   15,   15, 0x08,
-      33,   15,   15,   15, 0x08,
-      43,   15,   15,   15, 0x08,
-      56,   15,   15,   15, 0x08,
+      16,   15,   15,   15, 0x0a,
+      30,   15,   15,   15, 0x08,
+      47,   15,   15,   15, 0x08,
+      57,   15,   15,   15, 0x08,
       70,   15,   15,   15, 0x08,
-      87,   15,   15,   15, 0x08,
-      99,   15,   15,   15, 0x08,
+      84,   15,   15,   15, 0x08,
+     101,   15,   15,   15, 0x08,
      113,   15,   15,   15, 0x08,
      127,   15,   15,   15, 0x08,
      141,   15,   15,   15, 0x08,
@@ -48,10 +48,10 @@ static const uint qt_meta_data_MainWindowImpl[] = {
 };
 
 static const char qt_meta_stringdata_MainWindowImpl[] = {
-    "MainWindowImpl\0\0takingPictures()\0"
-    "checkIn()\0searchInfo()\0readShowImg()\0"
-    "takingPicAgain()\0submitPic()\0clearUIFace()\0"
-    "toAddNewEmp()\0toCheckFace()\0"
+    "MainWindowImpl\0\0toCheckFace()\0"
+    "takingPictures()\0checkIn()\0searchInfo()\0"
+    "readShowImg()\0takingPicAgain()\0"
+    "submitPic()\0clearUIFace()\0toAddNewEmp()\0"
     "toCheckRightFace()\0signIn()\0cancelSignIn()\0"
 };
 
@@ -61,15 +61,15 @@ void MainWindowImpl::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         Q_ASSERT(staticMetaObject.cast(_o));
         MainWindowImpl *_t = static_cast<MainWindowImpl *>(_o);
         switch (_id) {
-        case 0: _t->takingPictures(); break;
-        case 1: _t->checkIn(); break;
-        case 2: _t->searchInfo(); break;
-        case 3: _t->readShowImg(); break;
-        case 4: _t->takingPicAgain(); break;
-        case 5: _t->submitPic(); break;
-        case 6: _t->clearUIFace(); break;
-        case 7: _t->toAddNewEmp(); break;
-        case 8: _t->toCheckFace(); break;
+        case 0: _t->toCheckFace(); break;
+        case 1: _t->takingPictures(); break;
+        case 2: _t->checkIn(); break;
+        case 3: _t->searchInfo(); break;
+        case 4: _t->readShowImg(); break;
+        case 5: _t->takingPicAgain(); break;
+        case 6: _t->submitPic(); break;
+        case 7: _t->clearUIFace(); break;
+        case 8: _t->toAddNewEmp(); break;
         case 9: _t->toCheckRightFace(); break;
         case 10: _t->signIn(); break;
         case 11: _t->cancelSignIn(); break;
