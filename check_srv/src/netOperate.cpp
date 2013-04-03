@@ -40,9 +40,12 @@ void msgOnSignIn(int sockId, int protId)
     log << "photoLen=" << photo.getLen() << Log::endl;
 
     // 保存数据到数据库
-    int empId = DB::bookInfoInsert(name.getStr(), dep.getStr(), photo);
+    QDateTime t = QDateTime::currentDateTime();//获取系统现在的时间
+    QString strTime = t.toString("yyyy-MM-dd hh:mm:ss"); //设置显示格式
+    int empId = DB::book_info_insert(name.getStr(), dep.getStr(), (strTime.toStdString()).c_str(), photo);
     log << "empId=" << empId << Log::endl;
-    //bool ret = DB::modelImgInsert(empId, photo);
+    int model_img_id = DB::model_img_insert(empId, photo);
+    log << "model_img_id=" << model_img_id << Log::endl;
 
     prot.setProt(protSignIn_S2C);
     prot.setField("result",(long)0);

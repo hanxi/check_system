@@ -20,9 +20,13 @@ ctime
 cstdlib
 -
 
-../../Modules/Net/autotype.h
+/home/hanxi/workspace/check_system/Modules/Net/String.h
+cstring
+-
+
+/home/hanxi/workspace/check_system/Modules/Net/autotype.h
 log.h
-../../Modules/Net/log.h
+/home/hanxi/workspace/check_system/Modules/Net/log.h
 climits
 -
 cstring
@@ -36,23 +40,31 @@ algorithm
 opencv2/opencv.hpp
 -
 
-../../include/sqlite3.h
-stdarg.h
--
+/home/hanxi/workspace/check_system/Modules/Net/prot.cpp
+prot.h
+/home/hanxi/workspace/check_system/Modules/Net/prot.h
 
-/home/hanxi/workspace/check_system/check_srv/src/db.h
+/home/hanxi/workspace/check_system/Modules/Net/prot.h
+map
+-
+iostream
+-
+cassert
+-
+string
+-
 autotype.h
-/home/hanxi/workspace/check_system/check_srv/src/autotype.h
-
-/home/hanxi/workspace/check_system/check_srv/src/sqlitedb.cpp
-db.h
-/home/hanxi/workspace/check_system/check_srv/src/db.h
+/home/hanxi/workspace/check_system/Modules/Net/autotype.h
+String.h
+/home/hanxi/workspace/check_system/Modules/Net/String.h
 log.h
-/home/hanxi/workspace/check_system/check_srv/src/log.h
-sqlite3.h
--
-opencv2/opencv.hpp
--
+/home/hanxi/workspace/check_system/Modules/Net/log.h
+protInit.h
+/home/hanxi/workspace/check_system/Modules/Net/protInit.h
+
+/home/hanxi/workspace/check_system/Modules/Net/protInit.h
+prot.h
+/home/hanxi/workspace/check_system/Modules/Net/prot.h
 
 /usr/local/include/opencv2/calib3d/calib3d.hpp
 opencv2/core/core.hpp

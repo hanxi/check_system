@@ -1,3 +1,4 @@
+[03-04-2013][12:47:40] [Enter function :main] [main.cpp] [321] 
 /*=============================================================================
 #     FileName: sqlitedb.cpp
 #         Desc: 操作sqlite3数据库
@@ -797,3 +798,4 @@ bool work_time_update_check_photo_by_check_time(AutoType& check_photo, const cha
 
 }// end namespace DB
 #endif // #ifdef __USE_SQLITE__
+

@@ -20,7 +20,7 @@ MainWindowImpl *win;
 //
 int main(int argc, char ** argv)
 {
-    Log::s_init("./log.html",1,HTML_LOG);
+    Log::s_init("./log.txt",1,TXT_LOG);
     Prot::s_init();
     regAllHandler();
 

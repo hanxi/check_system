@@ -398,7 +398,7 @@ void testSerializeUnserialize()
 // 注册函数
 void Prot::regHandler(int protId, void *func)
 {
-    Log log(__LOGARG__,1);
+    Log log(__LOGARG__,5);
     I2VIter iter = sm_protFunc.find(protId);
     if (iter!=sm_protFunc.end()) {
         log << "此协议号以被注册过，请检查.protId=" << protId << Log::endl;
@@ -414,7 +414,7 @@ void Prot::regHandler(int protId, void *func)
 // 根据协议id获取注册函数
 void* Prot::getHandler(int protId)
 {
-    Log log(__LOGARG__,1);
+    Log log(__LOGARG__,5);
     I2VIter iter = sm_protFunc.find(protId);
     if (iter==sm_protFunc.end()) {
         log << "此协议号没有被注册过，找不到handler函数,请检查.protId=" << protId << Log::endl;
