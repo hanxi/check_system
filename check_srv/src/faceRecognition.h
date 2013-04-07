@@ -11,7 +11,10 @@
 #ifndef __FACE_RECOGNITION_H_
 #define __FACE_RECOGNITION_H_
 
+#include "opencv2/opencv.hpp"
 
+bool updateFaceLibrary();
+int faceRecognition(cv::Mat& image);
 
 #endif
 

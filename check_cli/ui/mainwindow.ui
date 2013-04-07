@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>793</width>
-    <height>454</height>
+    <width>852</width>
+    <height>457</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>771</width>
-      <height>371</height>
+      <width>841</width>
+      <height>381</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -49,9 +49,9 @@
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>10</x>
        <y>340</y>
-       <width>815</width>
+       <width>838</width>
        <height>30</height>
       </rect>
      </property>
@@ -95,9 +95,9 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButtonAgain">
+       <widget class="QPushButton" name="pushButtonUpdateModel">
         <property name="text">
-         <string>重拍</string>
+         <string>更新模板数据</string>
         </property>
        </widget>
       </item>
@@ -182,7 +182,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>793</width>
+     <width>852</width>
      <height>26</height>
     </rect>
    </property>

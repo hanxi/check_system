@@ -17,6 +17,7 @@
 #include "db.h"
 #include "netOperate.h"
 #include "conf.h"
+#include "faceDetect.h"
 
 Net *gNet;
 Net* getNet()
@@ -37,6 +38,7 @@ int main(int argc, char **argv)
     Log::s_init("./log.txt.log",1,TXT_LOG);
     Prot::s_init();
     regAllHandler();
+    detectInit();
 
     QCoreApplication app(argc, argv);
     int port = 10086;

@@ -65,7 +65,7 @@ void num2str(int num, std::string& o_s)
 typedef map<string,string> S2S;
 
 // 生成插入数据函数
-string productInsertFunc(string& tbl_name, vector<string>& fieldNames, vector<string>& fieldTypes,S2S& type2args, S2S& type2bind,string& o_insertFuncName)
+string productInsertFunc(const string& tbl_name, const vector<string>& fieldNames, const vector<string>& fieldTypes, S2S& type2args, S2S& type2bind, string& o_insertFuncName)
 {
     string insertFunc;
     string insertFuncName = "int "+tbl_name+"_insert";
@@ -127,7 +127,7 @@ string productInsertFunc(string& tbl_name, vector<string>& fieldNames, vector<st
 }
 
 // 生成结构体类型，一条记录
-string productStruct(string& tbl_name, vector<string>& fieldNames, vector<string>& fieldTypes)
+string productStruct(const string& tbl_name, const vector<string>& fieldNames, const vector<string>& fieldTypes)
 {
     string structStr("typedef struct _");
     structStr += tbl_name+"_Rec{\n\t";
@@ -149,8 +149,98 @@ string productStruct(string& tbl_name, vector<string>& fieldNames, vector<string
     return structStr;
 }
 
+// 生成获取主键函数
+string productSelectPrimary(const string& tbl_name, const string& primaryName, string& o_funcName)
+{
+    string funcStr;
+    string funcName("bool ");
+    string prepareStr("sqlite3_prepare(conn, \"select ");
+    string whileStr = ("while (1) {\n\t\t");
+
+    funcName += tbl_name+"_primarys(std::vector<int>& primarys)";
+    o_funcName += funcName+";\n";
+    funcName += " {\n\t";
+    prepareStr += primaryName+" from "+tbl_name+";\",-1,&stmt,0);\n\t";
+    whileStr += "int s = sqlite3_step(stmt);\n\t\t";
+    whileStr += "if (s==SQLITE_ROW) {\n\t\t\t";
+    whileStr += "int primary = sqlite3_column_int(stmt,0);\n\t\t\t";
+    whileStr += "primarys.push_back(primary);\n\t\t";
+    whileStr += "}\n\t\t";
+    whileStr += "else if (s==SQLITE_DONE) {\n\t\t\t";
+    whileStr += "break;\n\t\t";
+    whileStr += "}\n\t\t";
+    whileStr += "else {\n\t\t\t";
+    whileStr += "printf(\"\\nselect failed.\\n\");\n\t\t\t";
+    whileStr += "return false;\n\t\t";
+    whileStr += "}\n\t";
+    whileStr += "}\n\t";
+    whileStr += "return true;\n";
+    whileStr += "}\n";
+    funcStr = funcName+prepareStr+whileStr;
+    return funcStr;
+}
+
+// 生成查询所有数据函数
+string productSelectAllFunc(const string& tbl_name, const vector<string>& fieldNames, const vector<string>& fieldTypes, S2S& type2args, S2S& type2bind, string& o_selectFuncName)
+{
+    string selectFunc;
+    string selectFuncName("bool ");
+    string prepareStr("sqlite3_prepare(conn, \"select * from ");
+    string whileStr("while (1) {\n\t\t");
+
+    selectFuncName += tbl_name+"_select_all(std::vector<"+tbl_name+"_Rec>& recs)";
+    o_selectFuncName += selectFuncName + ";\n";
+    selectFuncName += " {\n\t";
+
+    prepareStr += tbl_name+"\",-1,&stmt,0);\n\t";
+
+    whileStr += "int s = sqlite3_step(stmt);\n\t\t";
+    whileStr += "if (s==SQLITE_ROW) {\n\t\t\t";
+    whileStr += tbl_name+"_Rec rec;\n\t\t\t";
+    whileStr += "int bytes=0;\n\t\t\t";
+
+    for (int i=0; i<fieldNames.size(); ++i) {
+        string stri;
+        num2str(i,stri);
+        if (fieldTypes[i]=="INTEGER") {
+            whileStr += "int "+fieldNames[i]+"_t = sqlite3_column_int(stmt,"+stri+");\n\t\t\t";
+            whileStr += "rec."+fieldNames[i]+" = "+fieldNames[i]+"_t;\n\t\t\t";
+        }
+        else if (fieldTypes[i]=="REAL") {
+            whileStr += "double "+fieldNames[i]+"_t = sqlite3_column_doulbe(stmt,"+stri+");\n\t\t\t";
+            whileStr += "rec."+fieldNames[i]+" = "+fieldNames[i]+"_t;\n\t\t\t";
+        }
+        else if (fieldTypes[i]=="TEXT") {
+            whileStr += "bytes = sqlite3_column_bytes(stmt,"+stri+");\n\t\t\t";
+            whileStr += "const unsigned char* "+fieldNames[i]+"_t = sqlite3_column_text(stmt,"+stri+");\n\t\t\t";
+            whileStr += "rec."+fieldNames[i]+" = AutoType("+fieldNames[i]+"_t,bytes);\n\t\t\t";
+        }
+        else if (fieldTypes[i]=="BLOB") {
+            whileStr += "bytes = sqlite3_column_bytes(stmt,"+stri+");\n\t\t\t";
+            whileStr += "const void* "+fieldNames[i]+"_t = sqlite3_column_blob(stmt,"+stri+");\n\t\t\t";
+            whileStr += "rec."+fieldNames[i]+" = AutoType("+fieldNames[i]+"_t,bytes);\n\t\t\t";
+        }
+    }
+    whileStr += "recs.push_back(rec);\n\t\t";
+    whileStr += "}\n\t\t";
+    whileStr += "else if (s==SQLITE_DONE) {\n\t\t\t";
+    whileStr += "break;\n\t\t";
+    whileStr += "}\n\t\t";
+    whileStr += "else {\n\t\t\t";
+    whileStr += "printf(\"\\nselect failed.\\n\");\n\t\t\t";
+    whileStr += "return false;\n\t\t";
+    whileStr += "}\n\t";
+    whileStr += "}\n\t";
+    whileStr += "return true;\n";
+    whileStr += "}\n";
+
+    selectFunc = selectFuncName+prepareStr+whileStr;
+
+   return selectFunc;
+}
+
 // 生成查询数据函数
-string productSelectFunc(string& tbl_name, int select, vector<string>& fieldNames,vector<string>& fieldTypes,S2S& type2args, S2S& type2bind, string& o_selectFuncName)
+string productSelectFunc(const string& tbl_name, int select, const vector<string>& fieldNames, const vector<string>& fieldTypes, S2S& type2args, S2S& type2bind, string& o_selectFuncName)
 {
     string selectFunc;
     string selectFuncName("bool ");
@@ -214,7 +304,7 @@ string productSelectFunc(string& tbl_name, int select, vector<string>& fieldName
     whileStr += "return false;\n\t\t";
     whileStr += "}\n\t";
     whileStr += "}\n\t";
-    whileStr += "return false;\n";
+    whileStr += "return true;\n";
     whileStr += "}\n";
 
     selectFunc = selectFuncName+prepareStr+bindStr+whileStr;
@@ -223,7 +313,7 @@ string productSelectFunc(string& tbl_name, int select, vector<string>& fieldName
 }
 
 // 修改字段函数
-string productUpdateFunc(string& tbl_name, string& updateName, string& updateType, string& updateByName, string& updateByType,S2S& type2args, S2S& type2bind, string& o_updateFuncName)
+string productUpdateFunc(const string& tbl_name, const string& updateName, const string& updateType, const string& updateByName, const string& updateByType, S2S& type2args, S2S& type2bind, string& o_updateFuncName)
 {
     string updateFunc;
     string updateFuncName("bool ");
@@ -288,7 +378,7 @@ void productTalNames(vector<string>& tbl_names)
     }
 }
 
-void productFields(string& tbl_name, vector<string>& fieldNames, vector<string>& fieldTypes)
+void productFields(const string& tbl_name, vector<string>& fieldNames, vector<string>& fieldTypes)
 {
     string sql("PRAGMA table_info(" +tbl_name+");");
     sqlite3_prepare(conn, sql.c_str(), -1, &stmt, 0);
@@ -348,6 +438,7 @@ int main(int argc, char** argv)
 #include \"log.h\"\n\
 #include <sqlite3.h>\n\
 #include <vector>\n\n\
+#include <cstdio>\n\n\
 namespace DB\n\
 {\n\n\
 sqlite3* conn = NULL;\n\
@@ -366,7 +457,7 @@ void stop()\n\
 // 关闭数据库\n\t\
 sqlite3_finalize(stmt);\n\t\
 sqlite3_close(conn);\n\
-}");
+}\n\n");
     string tailStrcpp("\n}// end namespace DB\n\
 #endif // #ifdef __USE_SQLITE__\n");
     string headStrh("/*=============================================================================\n\
@@ -396,8 +487,12 @@ void stop();\n\n\
     string structStr;
     string insertFunc;
     string insertFuncName;
+    string selectPrimaryFunc;
+    string selectPrimaryFuncName;
     string selectFunc;
     string selectFuncName;
+    string selectAllFunc;
+    string selectAllFuncName;
     string updateFunc;
     string updateFuncName;
     for (vector<string>::iterator iter=tbl_names.begin(); iter!=tbl_names.end(); ++iter) {
@@ -409,6 +504,13 @@ void stop();\n\n\
         structStr += "\n";
         insertFunc += productInsertFunc(*iter,fieldNames,fieldTypes,type2args,type2bind,insertFuncName);
         insertFunc += "\n";
+
+        selectPrimaryFunc += productSelectPrimary(*iter, fieldNames[0], selectPrimaryFuncName);
+        selectPrimaryFunc += "\n";
+
+        selectAllFunc += productSelectAllFunc(*iter, fieldNames,fieldTypes,type2args,type2bind,selectAllFuncName);
+        selectAllFunc += "\n";
+
         for (int i=0; i<fieldNames.size(); ++i) {
             selectFunc += productSelectFunc(*iter,i, fieldNames,fieldTypes,type2args,type2bind,selectFuncName);
             selectFunc += "\n";
@@ -423,8 +525,8 @@ void stop();\n\n\
         }
     }
     stop();
-    buffcpp += headStrcpp + insertFunc+selectFunc+updateFunc + tailStrcpp;
-    buffh += headStrh + structStr + insertFuncName + selectFuncName + updateFuncName + tailStrh;
+    buffcpp+=headStrcpp+insertFunc+selectAllFunc+selectPrimaryFunc+selectFunc+updateFunc+tailStrcpp;
+    buffh+=headStrh+structStr+insertFuncName+selectAllFuncName+selectPrimaryFuncName+selectFuncName+updateFuncName+tailStrh;
     log << buffcpp << Log::endl;
     Log::s_stop();
 

@@ -42,6 +42,12 @@ typedef struct _work_time_Rec{
 int book_info_insert(const char* emp_name, const char* dep_name, const char* hire_time, AutoType& photo);
 int model_img_insert(int emp_id, AutoType& photo);
 int work_time_insert(int emp_id, const char* check_time, AutoType& check_photo);
+bool book_info_select_all(std::vector<book_info_Rec>& recs);
+bool model_img_select_all(std::vector<model_img_Rec>& recs);
+bool work_time_select_all(std::vector<work_time_Rec>& recs);
+bool book_info_primarys(std::vector<int>& primarys);
+bool model_img_primarys(std::vector<int>& primarys);
+bool work_time_primarys(std::vector<int>& primarys);
 bool book_info_select_by_emp_id(int emp_id, std::vector<book_info_Rec>& recs);
 bool book_info_select_by_emp_name(const char* emp_name, std::vector<book_info_Rec>& recs);
 bool book_info_select_by_dep_name(const char* dep_name, std::vector<book_info_Rec>& recs);

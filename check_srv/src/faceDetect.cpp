@@ -8,62 +8,46 @@
 #   LastChange: 2013-03-20 13:59:40
 #      History:
 =============================================================================*/
+#include "faceDetect.h"
 #include "opencv2/opencv.hpp"
-#include "log.h"
-#include <iostream>
-#include <cstdio>
-#include<ctime>
-#include <sstream>
-#include <string>
 
-cv::CascadeClassifier face_cascade;
-
-// 函数声明
-void detectFace(cv::CascadeClassifier& face_cascade, cv::Mat& img, std::vector<cv::Mat>& o_faces);
+static cv::CascadeClassifier face_cascade;
 
 void detectInit()
 {
-    Log log(__LOGARG__,1);
-    //-- 1. 加载级联分类器文件
-    std::string face_cascade_name = "haarcascade_frontalface_alt_tree.xml";
+    // 加载级联分类器文件
+    std::string face_cascade_name = "haarcascade_frontalface_default.xml";
     if (!face_cascade.load(face_cascade_name)) {
-        log << "--(!)Error loading" << Log::endl;
+        std::cout << "加载级联分类器失败" << std::endl;
         exit(-1);
     }
 }
 
-void detectFace(cv::CascadeClassifier& face_cascade, cv::Mat& img, std::vector<cv::Mat>& o_faces)
+cv::Mat detectOneFace(cv::Mat& img)
 {
-    std::vector<cv::Rect> facesRect;
     cv::Mat img_gray;
+    std::vector<cv::Rect> facesRect;
 
     cv::cvtColor(img, img_gray, CV_BGR2GRAY);
     cv::equalizeHist(img_gray, img_gray);
 
-    //-- 多尺寸检测人脸
+    // 多尺寸检测人脸
     face_cascade.detectMultiScale(img_gray, facesRect, 1.1, 2, 0|CV_HAAR_SCALE_IMAGE, cv::Size(30, 30));
 
-    for(int i=0; i<facesRect.size(); i++)
+    if (facesRect.size()==0) {
+        return img;
+    }
+    double maxSquare = facesRect[0].width*facesRect[0].height;
+    int maxSquareIdx = 0;
+    for(int i=1; i<facesRect.size(); i++)
     {
-        cv::Mat face = img(cv::Rect(facesRect[i].x,facesRect[i].y,facesRect[i].width,facesRect[i].height));
-        o_faces.push_back(face);
-        rectangle(img,
-                cv::Point(facesRect[i].x, facesRect[i].y),
-                cv::Point(facesRect[i].x+facesRect[i].width, facesRect[i].y+facesRect[i].height),
-                cv::Scalar(0, 255, 255),
-                1,
-                8);
+        double square = facesRect[i].width*facesRect[i].height;
+        if (square>maxSquare) {
+            maxSquare = square;
+            maxSquareIdx = i;
+        }
    }
+   int i = maxSquareIdx;
+   return img(cv::Rect(facesRect[i].x,facesRect[i].y,facesRect[i].width,facesRect[i].height));
 }
-
-// 测试
-void test_detectFace()
-{
-    std::vector<cv::Mat> o_faces;
-    cv::Mat img;    // 照片
-
-    detectInit();
-    detectFace(face_cascade, img, o_faces);
-}
-
 

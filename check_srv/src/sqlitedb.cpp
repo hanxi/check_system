@@ -15,6 +15,8 @@
 #include <sqlite3.h>
 #include <vector>
 
+#include <cstdio>
+
 namespace DB
 {
 
@@ -36,7 +38,9 @@ void stop()
 	// 关闭数据库
 	sqlite3_finalize(stmt);
 	sqlite3_close(conn);
-}int book_info_insert(const char* emp_name, const char* dep_name, const char* hire_time, AutoType& photo) {
+}
+
+int book_info_insert(const char* emp_name, const char* dep_name, const char* hire_time, AutoType& photo) {
 	sqlite3_prepare(conn, "insert into book_info(emp_name, dep_name, hire_time, photo)values(?, ?, ?, ?);",-1,&stmt,0);
 	sqlite3_bind_text(stmt,1,emp_name, 1+strlen(emp_name), NULL);
 	sqlite3_bind_text(stmt,2,dep_name, 1+strlen(dep_name), NULL);
@@ -61,6 +65,154 @@ int work_time_insert(int emp_id, const char* check_time, AutoType& check_photo) 
 	sqlite3_bind_blob(stmt,3,check_photo.getStr(), check_photo.getLen(), NULL);
 	sqlite3_step(stmt);
 	return sqlite3_last_insert_rowid(conn);
+}
+
+bool book_info_select_all(std::vector<book_info_Rec>& recs) {
+	sqlite3_prepare(conn, "select * from book_info",-1,&stmt,0);
+	while (1) {
+		int s = sqlite3_step(stmt);
+		if (s==SQLITE_ROW) {
+			book_info_Rec rec;
+			int bytes=0;
+			int emp_id_t = sqlite3_column_int(stmt,0);
+			rec.emp_id = emp_id_t;
+			bytes = sqlite3_column_bytes(stmt,1);
+			const unsigned char* emp_name_t = sqlite3_column_text(stmt,1);
+			rec.emp_name = AutoType(emp_name_t,bytes);
+			bytes = sqlite3_column_bytes(stmt,2);
+			const unsigned char* dep_name_t = sqlite3_column_text(stmt,2);
+			rec.dep_name = AutoType(dep_name_t,bytes);
+			bytes = sqlite3_column_bytes(stmt,3);
+			const unsigned char* hire_time_t = sqlite3_column_text(stmt,3);
+			rec.hire_time = AutoType(hire_time_t,bytes);
+			bytes = sqlite3_column_bytes(stmt,4);
+			const void* photo_t = sqlite3_column_blob(stmt,4);
+			rec.photo = AutoType(photo_t,bytes);
+			recs.push_back(rec);
+		}
+		else if (s==SQLITE_DONE) {
+			break;
+		}
+		else {
+			printf("\nselect failed.\n");
+			return false;
+		}
+	}
+	return true;
+}
+
+bool model_img_select_all(std::vector<model_img_Rec>& recs) {
+	sqlite3_prepare(conn, "select * from model_img",-1,&stmt,0);
+	while (1) {
+		int s = sqlite3_step(stmt);
+		if (s==SQLITE_ROW) {
+			model_img_Rec rec;
+			int bytes=0;
+			int model_img_id_t = sqlite3_column_int(stmt,0);
+			rec.model_img_id = model_img_id_t;
+			int emp_id_t = sqlite3_column_int(stmt,1);
+			rec.emp_id = emp_id_t;
+			bytes = sqlite3_column_bytes(stmt,2);
+			const void* photo_t = sqlite3_column_blob(stmt,2);
+			rec.photo = AutoType(photo_t,bytes);
+			recs.push_back(rec);
+		}
+		else if (s==SQLITE_DONE) {
+			break;
+		}
+		else {
+			printf("\nselect failed.\n");
+			return false;
+		}
+	}
+	return true;
+}
+
+bool work_time_select_all(std::vector<work_time_Rec>& recs) {
+	sqlite3_prepare(conn, "select * from work_time",-1,&stmt,0);
+	while (1) {
+		int s = sqlite3_step(stmt);
+		if (s==SQLITE_ROW) {
+			work_time_Rec rec;
+			int bytes=0;
+			int work_time_id_t = sqlite3_column_int(stmt,0);
+			rec.work_time_id = work_time_id_t;
+			int emp_id_t = sqlite3_column_int(stmt,1);
+			rec.emp_id = emp_id_t;
+			bytes = sqlite3_column_bytes(stmt,2);
+			const unsigned char* check_time_t = sqlite3_column_text(stmt,2);
+			rec.check_time = AutoType(check_time_t,bytes);
+			bytes = sqlite3_column_bytes(stmt,3);
+			const void* check_photo_t = sqlite3_column_blob(stmt,3);
+			rec.check_photo = AutoType(check_photo_t,bytes);
+			recs.push_back(rec);
+		}
+		else if (s==SQLITE_DONE) {
+			break;
+		}
+		else {
+			printf("\nselect failed.\n");
+			return false;
+		}
+	}
+	return true;
+}
+
+bool book_info_primarys(std::vector<int>& primarys) {
+	sqlite3_prepare(conn, "select emp_id from book_info;",-1,&stmt,0);
+	while (1) {
+		int s = sqlite3_step(stmt);
+		if (s==SQLITE_ROW) {
+			int primary = sqlite3_column_int(stmt,0);
+			primarys.push_back(primary);
+		}
+		else if (s==SQLITE_DONE) {
+			break;
+		}
+		else {
+			printf("\nselect failed.\n");
+			return false;
+		}
+	}
+	return true;
+}
+
+bool model_img_primarys(std::vector<int>& primarys) {
+	sqlite3_prepare(conn, "select model_img_id from model_img;",-1,&stmt,0);
+	while (1) {
+		int s = sqlite3_step(stmt);
+		if (s==SQLITE_ROW) {
+			int primary = sqlite3_column_int(stmt,0);
+			primarys.push_back(primary);
+		}
+		else if (s==SQLITE_DONE) {
+			break;
+		}
+		else {
+			printf("\nselect failed.\n");
+			return false;
+		}
+	}
+	return true;
+}
+
+bool work_time_primarys(std::vector<int>& primarys) {
+	sqlite3_prepare(conn, "select work_time_id from work_time;",-1,&stmt,0);
+	while (1) {
+		int s = sqlite3_step(stmt);
+		if (s==SQLITE_ROW) {
+			int primary = sqlite3_column_int(stmt,0);
+			primarys.push_back(primary);
+		}
+		else if (s==SQLITE_DONE) {
+			break;
+		}
+		else {
+			printf("\nselect failed.\n");
+			return false;
+		}
+	}
+	return true;
 }
 
 bool book_info_select_by_emp_id(int emp_id, std::vector<book_info_Rec>& recs) {
@@ -95,7 +247,7 @@ bool book_info_select_by_emp_id(int emp_id, std::vector<book_info_Rec>& recs) {
 			return false;
 		}
 	}
-	return false;
+	return true;
 }
 
 bool book_info_select_by_emp_name(const char* emp_name, std::vector<book_info_Rec>& recs) {
@@ -130,7 +282,7 @@ bool book_info_select_by_emp_name(const char* emp_name, std::vector<book_info_Re
 			return false;
 		}
 	}
-	return false;
+	return true;
 }
 
 bool book_info_select_by_dep_name(const char* dep_name, std::vector<book_info_Rec>& recs) {
@@ -165,7 +317,7 @@ bool book_info_select_by_dep_name(const char* dep_name, std::vector<book_info_Re
 			return false;
 		}
 	}
-	return false;
+	return true;
 }
 
 bool book_info_select_by_hire_time(const char* hire_time, std::vector<book_info_Rec>& recs) {
@@ -200,7 +352,7 @@ bool book_info_select_by_hire_time(const char* hire_time, std::vector<book_info_
 			return false;
 		}
 	}
-	return false;
+	return true;
 }
 
 bool book_info_select_by_photo(AutoType& photo, std::vector<book_info_Rec>& recs) {
@@ -235,7 +387,7 @@ bool book_info_select_by_photo(AutoType& photo, std::vector<book_info_Rec>& recs
 			return false;
 		}
 	}
-	return false;
+	return true;
 }
 
 bool model_img_select_by_model_img_id(int model_img_id, std::vector<model_img_Rec>& recs) {
@@ -263,7 +415,7 @@ bool model_img_select_by_model_img_id(int model_img_id, std::vector<model_img_Re
 			return false;
 		}
 	}
-	return false;
+	return true;
 }
 
 bool model_img_select_by_emp_id(int emp_id, std::vector<model_img_Rec>& recs) {
@@ -291,7 +443,7 @@ bool model_img_select_by_emp_id(int emp_id, std::vector<model_img_Rec>& recs) {
 			return false;
 		}
 	}
-	return false;
+	return true;
 }
 
 bool model_img_select_by_photo(AutoType& photo, std::vector<model_img_Rec>& recs) {
@@ -319,7 +471,7 @@ bool model_img_select_by_photo(AutoType& photo, std::vector<model_img_Rec>& recs
 			return false;
 		}
 	}
-	return false;
+	return true;
 }
 
 bool work_time_select_by_work_time_id(int work_time_id, std::vector<work_time_Rec>& recs) {
@@ -350,7 +502,7 @@ bool work_time_select_by_work_time_id(int work_time_id, std::vector<work_time_Re
 			return false;
 		}
 	}
-	return false;
+	return true;
 }
 
 bool work_time_select_by_emp_id(int emp_id, std::vector<work_time_Rec>& recs) {
@@ -381,7 +533,7 @@ bool work_time_select_by_emp_id(int emp_id, std::vector<work_time_Rec>& recs) {
 			return false;
 		}
 	}
-	return false;
+	return true;
 }
 
 bool work_time_select_by_check_time(const char* check_time, std::vector<work_time_Rec>& recs) {
@@ -412,7 +564,7 @@ bool work_time_select_by_check_time(const char* check_time, std::vector<work_tim
 			return false;
 		}
 	}
-	return false;
+	return true;
 }
 
 bool work_time_select_by_check_photo(AutoType& check_photo, std::vector<work_time_Rec>& recs) {
@@ -443,7 +595,7 @@ bool work_time_select_by_check_photo(AutoType& check_photo, std::vector<work_tim
 			return false;
 		}
 	}
-	return false;
+	return true;
 }
 
 bool book_info_update_emp_name_by_emp_id(const char* emp_name, int emp_id) {

@@ -29,7 +29,7 @@ void msgOnGetTime(int sockId, int protId)
 }
 
 // 注册新用户
-void sendProtToSignIn(const AutoType& name, const AutoType& dep, const AutoType& photo)
+void sendProtToSignIn(const AutoType& name, const AutoType& dep, const AutoType& photo, int idx)
 {
     Log log(__LOGARG__,1);
     log << "注册新用户" << Log::endl;
@@ -37,6 +37,7 @@ void sendProtToSignIn(const AutoType& name, const AutoType& dep, const AutoType&
     prot.setField("name",name);
     prot.setField("dep",dep);
     prot.setField("photo",photo);
+    prot.setField("idx",idx);
     log << "name=" << name.getStr() << Log::endl;
     log << "dep=" << dep.getStr() << Log::endl;
     Net* net = getNet();
@@ -52,16 +53,37 @@ void msgOnSignIn(int sockId, int protId)
 }
 
 // 获取照片详细信息
-void sendProtGetPhotoInfo()
+void sendProtGetPhotoInfo(const AutoType& photo)
 {
+    Prot prot(protGetPhotoInfo_C2S);
+    prot.setField("photo",photo);
+    Net* net = getNet();
+    net->sendProt(gSockId,protGetPhotoInfo_C2S);
 }
 void msgOnGetPhotoInfo(int sockId, int protId)
 {
+    Log log(__LOGARG__,1);
+    Prot prot(protId);
+    AutoType& result = prot.getField("result");
+    AutoType& dep    = prot.getField("dep");
+    AutoType& name   = prot.getField("name");
+    AutoType& id     = prot.getField("id");
+    log << "查询" << ((result.getNum()==0)?"成功":"失败") << Log::endl;
+    log << "id=" << id.getNum() << Log::endl;
+}
+
+void sendProtToUpdateModel()
+{
+    Log log(__LOGARG__,1);
+    log << "更新相片模板" << Log::endl;
+    Net* net = getNet();
+    net->sendProt(gSockId,protUpdateFaceModel_C2S);
 }
 
 void regAllHandler()
 {
     Prot::regHandler(protGetTime_S2C, (void*)msgOnGetTime);
     Prot::regHandler(protSignIn_S2C, (void*)msgOnSignIn);
+    Prot::regHandler(protGetPhotoInfo_S2C, (void*)msgOnGetPhotoInfo);
 }
 

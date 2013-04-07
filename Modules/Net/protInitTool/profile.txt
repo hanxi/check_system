@@ -8,9 +8,15 @@ time = "2013-3-30 10:48"
 name = "名字"
 dep = "所属部门"
 photo = "010"
+idx = -1
 [protSignIn_S2C]
 result = -1
 // 注册成功:0,失败:-1
+
+// 更新相片库
+[protUpdateFaceModel_C2S]
+[protUpdateFaceModel_S2C]
+result = -1
 
 // 查看照片信息
 [protGetPhotoInfo_C2S]
@@ -19,7 +25,7 @@ photo = "010"
 result = -1
 dep = "所属部门"
 name = "名字"
-id = "考勤Id"
+id = -1
 // result=0表示有此照片信息
 // result=-1表示无此照片信息
 

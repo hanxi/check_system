@@ -9,6 +9,7 @@
 #      History:
 =============================================================================*/
 #include "netOperate.h"
+#include "faceRecognition.h"
 #include "globalVar.h"
 #include "protInit.h"
 #include "log.h"
@@ -35,6 +36,7 @@ void msgOnSignIn(int sockId, int protId)
     AutoType& name = prot.getField("name");
     AutoType& dep = prot.getField("dep");
     AutoType& photo = prot.getField("photo");
+    AutoType& idx = prot.getField("idx");
     log << "name=" << name.getStr() << Log::endl;
     log << "dep=" << dep.getStr() << Log::endl;
     log << "photoLen=" << photo.getLen() << Log::endl;
@@ -42,10 +44,20 @@ void msgOnSignIn(int sockId, int protId)
     // 保存数据到数据库
     QDateTime t = QDateTime::currentDateTime();//获取系统现在的时间
     QString strTime = t.toString("yyyy-MM-dd hh:mm:ss"); //设置显示格式
-    int empId = DB::book_info_insert(name.getStr(), dep.getStr(), (strTime.toStdString()).c_str(), photo);
-    log << "empId=" << empId << Log::endl;
-    int model_img_id = DB::model_img_insert(empId, photo);
+
+    static std::map<std::string,int> name2Id;
+    std::string nameStr(name.getStr());
+    if (name2Id.end()==name2Id.find(nameStr)) {
+        int empId = DB::book_info_insert(name.getStr(), dep.getStr(), (strTime.toStdString()).c_str(), photo);
+        log << "empId=" << empId << Log::endl;
+        name2Id[nameStr] = empId;
+    }
+    int model_img_id = DB::model_img_insert(name2Id[nameStr], photo);
     log << "model_img_id=" << model_img_id << Log::endl;
+
+    if (idx.getNum()==19) { // 注册发19张照片
+        name2Id.erase(nameStr);
+    }
 
     prot.setProt(protSignIn_S2C);
     prot.setField("result",(long)0);
@@ -53,9 +65,51 @@ void msgOnSignIn(int sockId, int protId)
     net->sendProt(sockId,protSignIn_S2C);
 }
 
+void msgOnUpdateFaceModel(int sockId, int protId)
+{
+    bool ret = updateFaceLibrary();
+    int result = -1;
+    if (ret) {
+        result = 0;
+    }
+    Prot prot(protUpdateFaceModel_S2C);
+    prot.setField("result",result);
+    Net* net = getNet();
+    net->sendProt(sockId,protUpdateFaceModel_S2C);
+}
+
+void msgOnGetPhotoInfo(int sockId, int protId)
+{
+    Prot prot(protId);
+    AutoType& photo = prot.getField("photo");
+    cv::Mat image = AutoType2Mat(photo);
+
+    AutoType dep("empty");
+    AutoType name("empty");
+    int result = 0;
+    int id = faceRecognition(image);
+    if (-1==id) {
+        result = -1;
+    }
+    else {
+        dep = "hao";
+        name = "hanxi";
+    }
+
+    prot.setProt(protGetPhotoInfo_S2C);
+    prot.setField("result",AutoType(result));
+    prot.setField("dep",dep);
+    prot.setField("name",name);
+    prot.setField("id",AutoType(id));
+    Net* net = getNet();
+    net->sendProt(sockId,protGetPhotoInfo_S2C);
+}
+
 void regAllHandler()
 {
     Prot::regHandler(protGetTime_C2S, (void*)msgOnGetTime);
     Prot::regHandler(protSignIn_C2S, (void*)msgOnSignIn);
+    Prot::regHandler(protUpdateFaceModel_C2S, (void*)msgOnUpdateFaceModel);
+    Prot::regHandler(protGetPhotoInfo_C2S, (void*)msgOnGetPhotoInfo);
 }
 

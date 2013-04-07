@@ -46,7 +46,7 @@ MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f)
 	connect(pushButtonCamara, SIGNAL(clicked()), this, SLOT(takingPictures()));
 	connect(pushButtonCheckIn, SIGNAL(clicked()), this, SLOT(checkIn()));
 	connect(pushButtonSearch, SIGNAL(clicked()), this, SLOT(searchInfo()));
-	connect(pushButtonAgain, SIGNAL(clicked()), this, SLOT(takingPicAgain()));
+	connect(pushButtonUpdateModel, SIGNAL(clicked()), this, SLOT(updateModel()));
 	connect(pushButtonSubmit, SIGNAL(clicked()), this, SLOT(submitPic()));
 	connect(pushButtonSignIn, SIGNAL(clicked()), this, SLOT(signIn()));
 	connect(pushButtonCancel, SIGNAL(clicked()), this, SLOT(cancelSignIn()));
@@ -66,7 +66,6 @@ void MainWindowImpl::clearUIFace()
     pushButtonSignIn->setVisible(false);
     pushButtonCancel->setVisible(false);
     pushButtonSubmit->setVisible(false);
-    pushButtonAgain->setVisible(false);
     pushButtonCamara->setVisible(false);
     pushButtonSearch->setVisible(false);
     pushButtonCheckIn->setVisible(false);
@@ -109,11 +108,12 @@ void MainWindowImpl::toCheckRightFace()
 // 注册
 void MainWindowImpl::signIn()
 {
-    Log log(__LOGARG__,1);
-    AutoType name(((lineEditName->text()).toUtf8()).constData());
-    AutoType dep(((lineEditDep->text()).toUtf8()).constData());
-    AutoType photo = Mat2AutoType(m_frame);
-    sendProtToSignIn(name, dep, photo);
+    for (int i=0; i<20; i++) {
+        AutoType name(((lineEditName->text()).toUtf8()).constData());
+        AutoType dep(((lineEditDep->text()).toUtf8()).constData());
+        AutoType photo = Mat2AutoType(m_frame);
+        sendProtToSignIn(name, dep, photo, i);
+    }
 }
 
 // 取消注册
@@ -214,7 +214,6 @@ void MainWindowImpl::checkIn()
     pushButtonCheckIn->setEnabled(false);
 	pushButtonSearch->setEnabled(true);
 	pushButtonCamara->setEnabled(true);
-	pushButtonAgain->setEnabled(false);
 	pushButtonSubmit->setEnabled(false);
 }
 
@@ -228,17 +227,10 @@ void MainWindowImpl::searchInfo()
 	pushButtonCheckIn->setEnabled(true);
 	pushButtonSearch->setEnabled(false);
 	pushButtonCamara->setEnabled(true);
-	pushButtonAgain->setEnabled(false);
 	pushButtonSubmit->setEnabled(false);
-}
 
-// 重拍
-void MainWindowImpl::takingPicAgain()
-{
-	m_timer->start(60);                 // 开始计时，超时则发出timeout()信号
-	pushButtonCamara->setEnabled(true);
-	pushButtonAgain->setEnabled(false);
-	pushButtonSubmit->setEnabled(false);
+    AutoType photo = Mat2AutoType(m_frame);
+    sendProtGetPhotoInfo(photo);
 }
 
 // 提交
@@ -259,5 +251,12 @@ MainWindowImpl::~MainWindowImpl()
 	closeCamara();
     delete m_timer;
 }
+
+// 更新模板图片数据
+void MainWindowImpl::updateModel()
+{
+    sendProtToUpdateModel();
+}
+
 
 //

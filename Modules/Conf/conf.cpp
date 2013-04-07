@@ -29,13 +29,13 @@ FILETYPE getTextFileType(const char *fileName)
     {
         char szFlag[3] = {0};
         file.read(szFlag, sizeof(char) * 3);
-        if ((unsigned char)szFlag[0] == 0xFF 
+        if ((unsigned char)szFlag[0] == 0xFF
             && (unsigned char)szFlag[1] == 0xFE)
         {
             fileType = UNICODE;
         }
-        else if ((unsigned char)szFlag[0] == 0xEF 
-            && (unsigned char)szFlag[1] == 0xBB 
+        else if ((unsigned char)szFlag[0] == 0xEF
+            && (unsigned char)szFlag[1] == 0xBB
             && (unsigned char)szFlag[2] == 0xBF)
         {
             fileType = UTF8;

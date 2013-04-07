@@ -179,7 +179,7 @@ AutoType Mat2AutoType(cv::Mat& mat)
 inline
 cv::Mat AutoType2Mat(AutoType& at)
 {
-    Log log(__LOGARG__,1);
+    Log log(__LOGARG__,5);
     if (at.getType()==VALUE_TYPE_STRING) {
         int len = at.getLen();
         std::vector<unsigned char> buff(at.begin(),at.end());
