@@ -40,17 +40,20 @@ MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f)
 
     // 获取系统时间
     sendProtGetTime();
+    toCheckFace();
 
 	/*信号和槽*/
 	connect(m_timer, SIGNAL(timeout()), this, SLOT(readShowImg()));  // 时间到，读取当前摄像头信息
 	connect(pushButtonCamara, SIGNAL(clicked()), this, SLOT(takingPictures()));
-	connect(pushButtonCheckIn, SIGNAL(clicked()), this, SLOT(checkIn()));
 	connect(pushButtonSearch, SIGNAL(clicked()), this, SLOT(searchInfo()));
 	connect(pushButtonUpdateModel, SIGNAL(clicked()), this, SLOT(updateModel()));
 	connect(pushButtonSubmit, SIGNAL(clicked()), this, SLOT(submitPic()));
 	connect(pushButtonSignIn, SIGNAL(clicked()), this, SLOT(signIn()));
 	connect(pushButtonCancel, SIGNAL(clicked()), this, SLOT(cancelSignIn()));
+    connect(pushButtonCommitCheck, SIGNAL(clicked()), this, SLOT(commitCheck()));
+    connect(pushButtonCheckAgain, SIGNAL(clicked()), this, SLOT(checkAgain()));
     connect(actionAddNewEmp, SIGNAL(triggered()), this, SLOT(toAddNewEmp()));
+    connect(actionManageEmp, SIGNAL(triggered()), this, SLOT(toManageFace()));
 }
 
 // 清空界面
@@ -68,7 +71,7 @@ void MainWindowImpl::clearUIFace()
     pushButtonSubmit->setVisible(false);
     pushButtonCamara->setVisible(false);
     pushButtonSearch->setVisible(false);
-    pushButtonCheckIn->setVisible(false);
+    pushButtonUpdateModel->setVisible(false);
     labelCheckInfo->setVisible(false);
 }
 
@@ -85,6 +88,7 @@ void MainWindowImpl::toAddNewEmp()
     pushButtonCancel->setVisible(true);
     verticalLayout->setSizeConstraint(QLayout::SetFixedSize);
     horizontalLayout->setSizeConstraint(QLayout::SetFixedSize);
+	m_timer->start(60);                 // 开始计时，超时则发出timeout()信号
 }
 
 // 跳转到签到界面
@@ -93,6 +97,9 @@ void MainWindowImpl::toCheckFace()
     clearUIFace();
     labelShow->setVisible(true);
     pushButtonCamara->setVisible(true);
+    verticalLayout->setSizeConstraint(QLayout::SetFixedSize);
+    horizontalLayout->setSizeConstraint(QLayout::SetFixedSize);
+	m_timer->start(60);                 // 开始计时，超时则发出timeout()信号
 }
 
 // 跳转到签到确认界面
@@ -103,6 +110,17 @@ void MainWindowImpl::toCheckRightFace()
     pushButtonCommitCheck->setVisible(true);
     pushButtonCheckAgain->setVisible(true);
     labelCheckInfo->setVisible(true);
+    verticalLayout->setSizeConstraint(QLayout::SetFixedSize);
+    horizontalLayout->setSizeConstraint(QLayout::SetFixedSize);
+}
+
+void MainWindowImpl::toManageFace()
+{
+    clearUIFace();
+    pushButtonUpdateModel->setVisible(true);
+    pushButtonCancel->setVisible(true);
+    verticalLayout->setSizeConstraint(QLayout::SetFixedSize);
+    horizontalLayout->setSizeConstraint(QLayout::SetFixedSize);
 }
 
 // 注册
@@ -199,23 +217,13 @@ void MainWindowImpl::takingPictures()
     QString str = t.toString("yyyyMMddhhmmss"); //设置显示格式
     std::string picName = "./images/"+str.toStdString()+".jpg";
     std::cout << picName << std::endl;
+    AutoType photo = Mat2AutoType(m_frame);
+    sendProtCheckIn(photo);
+    toCheckRightFace();
     imwrite(picName.c_str(), m_frame );
     showImg();
-    toCheckRightFace();
 }
 
-//
-void MainWindowImpl::checkIn()
-{
-    if (!m_cap.isOpened())
-	{
-        openCamara();
-	}
-    pushButtonCheckIn->setEnabled(false);
-	pushButtonSearch->setEnabled(true);
-	pushButtonCamara->setEnabled(true);
-	pushButtonSubmit->setEnabled(false);
-}
 
 // 查询
 void MainWindowImpl::searchInfo()
@@ -224,10 +232,6 @@ void MainWindowImpl::searchInfo()
 	{
         openCamara();
 	}
-	pushButtonCheckIn->setEnabled(true);
-	pushButtonSearch->setEnabled(false);
-	pushButtonCamara->setEnabled(true);
-	pushButtonSubmit->setEnabled(false);
 
     AutoType photo = Mat2AutoType(m_frame);
     sendProtGetPhotoInfo(photo);
@@ -237,13 +241,6 @@ void MainWindowImpl::searchInfo()
 void MainWindowImpl::submitPic()
 {
     Log log(__LOGARG__,1);
-	// sendToSrv
-    char data[MAX_IMG_SIZE] = {0};
-    memcpy(data,m_frame.data,sizeof(data));
-
-    Prot prot(protCheckIn_C2S);
-    prot.setField("imgBin",data);
-    gNet->sendProt(1,protCheckIn_C2S);
 }
 
 MainWindowImpl::~MainWindowImpl()
@@ -258,5 +255,19 @@ void MainWindowImpl::updateModel()
     sendProtToUpdateModel();
 }
 
+void MainWindowImpl::setLabelCheckInfo(QString& info)
+{
+    labelCheckInfo->setText(info);
+}
+
+void MainWindowImpl::commitCheck()
+{
+    toCheckFace();
+}
+
+void MainWindowImpl::checkAgain()
+{
+    toCheckFace();
+}
 
 //

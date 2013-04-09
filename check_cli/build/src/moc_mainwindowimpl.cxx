@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindowimpl.h'
 **
-** Created: Thu Apr 4 01:21:09 2013
+** Created: Tue Apr 9 08:58:56 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindowImpl[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-      12,   14, // methods
+      13,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -31,28 +31,30 @@ static const uint qt_meta_data_MainWindowImpl[] = {
        0,       // signalCount
 
  // slots: signature, parameters, type, tag, flags
-      16,   15,   15,   15, 0x0a,
-      30,   15,   15,   15, 0x08,
-      47,   15,   15,   15, 0x08,
-      57,   15,   15,   15, 0x08,
-      70,   15,   15,   15, 0x08,
-      84,   15,   15,   15, 0x08,
-      96,   15,   15,   15, 0x08,
-     110,   15,   15,   15, 0x08,
-     124,   15,   15,   15, 0x08,
+      16,   15,   15,   15, 0x08,
+      33,   15,   15,   15, 0x08,
+      46,   15,   15,   15, 0x08,
+      60,   15,   15,   15, 0x08,
+      72,   15,   15,   15, 0x08,
+      86,   15,   15,   15, 0x08,
+     100,   15,   15,   15, 0x08,
+     119,   15,   15,   15, 0x08,
+     128,   15,   15,   15, 0x08,
      143,   15,   15,   15, 0x08,
-     152,   15,   15,   15, 0x08,
-     167,   15,   15,   15, 0x08,
+     157,   15,   15,   15, 0x08,
+     171,   15,   15,   15, 0x08,
+     184,   15,   15,   15, 0x08,
 
        0        // eod
 };
 
 static const char qt_meta_stringdata_MainWindowImpl[] = {
-    "MainWindowImpl\0\0toCheckFace()\0"
-    "takingPictures()\0checkIn()\0searchInfo()\0"
-    "readShowImg()\0submitPic()\0clearUIFace()\0"
-    "toAddNewEmp()\0toCheckRightFace()\0"
-    "signIn()\0cancelSignIn()\0updateModel()\0"
+    "MainWindowImpl\0\0takingPictures()\0"
+    "searchInfo()\0readShowImg()\0submitPic()\0"
+    "clearUIFace()\0toAddNewEmp()\0"
+    "toCheckRightFace()\0signIn()\0cancelSignIn()\0"
+    "updateModel()\0commitCheck()\0checkAgain()\0"
+    "toManageFace()\0"
 };
 
 void MainWindowImpl::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -61,18 +63,19 @@ void MainWindowImpl::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         Q_ASSERT(staticMetaObject.cast(_o));
         MainWindowImpl *_t = static_cast<MainWindowImpl *>(_o);
         switch (_id) {
-        case 0: _t->toCheckFace(); break;
-        case 1: _t->takingPictures(); break;
-        case 2: _t->checkIn(); break;
-        case 3: _t->searchInfo(); break;
-        case 4: _t->readShowImg(); break;
-        case 5: _t->submitPic(); break;
-        case 6: _t->clearUIFace(); break;
-        case 7: _t->toAddNewEmp(); break;
-        case 8: _t->toCheckRightFace(); break;
-        case 9: _t->signIn(); break;
-        case 10: _t->cancelSignIn(); break;
-        case 11: _t->updateModel(); break;
+        case 0: _t->takingPictures(); break;
+        case 1: _t->searchInfo(); break;
+        case 2: _t->readShowImg(); break;
+        case 3: _t->submitPic(); break;
+        case 4: _t->clearUIFace(); break;
+        case 5: _t->toAddNewEmp(); break;
+        case 6: _t->toCheckRightFace(); break;
+        case 7: _t->signIn(); break;
+        case 8: _t->cancelSignIn(); break;
+        case 9: _t->updateModel(); break;
+        case 10: _t->commitCheck(); break;
+        case 11: _t->checkAgain(); break;
+        case 12: _t->toManageFace(); break;
         default: ;
         }
     }
@@ -113,9 +116,9 @@ int MainWindowImpl::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 12)
+        if (_id < 13)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 12;
+        _id -= 13;
     }
     return _id;
 }

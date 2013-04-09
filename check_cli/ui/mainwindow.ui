@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>852</width>
-    <height>457</height>
+    <width>812</width>
+    <height>452</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>841</width>
+      <width>791</width>
       <height>381</height>
      </rect>
     </property>
@@ -51,7 +51,7 @@
       <rect>
        <x>10</x>
        <y>340</y>
-       <width>838</width>
+       <width>747</width>
        <height>30</height>
       </rect>
      </property>
@@ -115,13 +115,6 @@
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QPushButton" name="pushButtonCheckIn">
-        <property name="text">
-         <string>签到</string>
-        </property>
-       </widget>
-      </item>
      </layout>
     </widget>
     <widget class="QWidget" name="layoutWidget">
@@ -182,7 +175,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>852</width>
+     <width>812</width>
      <height>26</height>
     </rect>
    </property>

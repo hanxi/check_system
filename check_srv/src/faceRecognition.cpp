@@ -57,6 +57,7 @@ bool loadImageFromDB(cv::vector<cv::Mat>& images, cv::vector<int>& labels)
         cv::Size dsize(DST_IMG_WIDTH,SRC_IMG_HEIGH);
         cv::Mat dst(dsize,mat.type());
         cv::resize(mat, dst,dsize);
+        log << "image:channels=" << dst.channels() << Log::endl;
         cv::cvtColor(dst, dst, CV_BGR2GRAY);
         dst.convertTo(dst,CV_32SC1);
         dst = norm_0_255(dst);
@@ -101,6 +102,7 @@ bool updateFaceLibrary()
 // 人脸识别
 int faceRecognition(cv::Mat& image)
 {
+    Log log(__LOGARG__,1);
     //cv::Ptr<cv::FaceRecognizer> model = cv::createFisherFaceRecognizer();
     cv::Ptr<cv::FaceRecognizer> model = cv::createEigenFaceRecognizer();
     // cv::Ptr<cv::FaceRecognizer> model = cv::createLBPHFaceRecognizer();
@@ -108,7 +110,8 @@ int faceRecognition(cv::Mat& image)
     //缩放
     cv::Size dsize(DST_IMG_WIDTH,SRC_IMG_HEIGH);
     cv::Mat dst(dsize,image.type());
-    cv::resize(image, dst,dsize);
+    cv::resize(image, dst, dsize);
+    log << "image:channels=" << dst.channels() << Log::endl;
     cv::cvtColor(dst, dst, CV_BGR2GRAY);
     dst.convertTo(dst,CV_32SC1);
     dst = norm_0_255(dst);

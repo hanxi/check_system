@@ -28,13 +28,12 @@ Q_OBJECT
 public:
 	MainWindowImpl( QWidget * parent = 0, Qt::WFlags f = 0 );
 	virtual ~MainWindowImpl();
-
-public slots:
     void toCheckFace();     // 跳到签到界面
+    void setLabelCheckInfo(QString& info);
+
 
 private slots:
 	void takingPictures();  // 拍照
-	void checkIn();         // 签到
 	void searchInfo();      // 查询
     void readShowImg();     // 读取图片并显示
 	void submitPic();       // 提交
@@ -44,6 +43,9 @@ private slots:
     void signIn();          // 注册
     void cancelSignIn();    // 取消注册
 	void updateModel();     // 更新模板相片数据
+    void commitCheck();
+    void checkAgain();
+    void toManageFace();    // 到管理页面
 
 private:
 	QTimer           *m_timer;

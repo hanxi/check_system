@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created: Thu Apr 4 01:21:08 2013
+** Created: Tue Apr 9 08:50:50 2013
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -49,7 +49,6 @@ public:
     QPushButton *pushButtonUpdateModel;
     QPushButton *pushButtonCamara;
     QPushButton *pushButtonSearch;
-    QPushButton *pushButtonCheckIn;
     QWidget *layoutWidget1;
     QVBoxLayout *verticalLayout;
     QSplitter *splitter;
@@ -67,7 +66,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(852, 457);
+        MainWindow->resize(812, 452);
         actionAddNewEmp = new QAction(MainWindow);
         actionAddNewEmp->setObjectName(QString::fromUtf8("actionAddNewEmp"));
         actionManageEmp = new QAction(MainWindow);
@@ -78,7 +77,7 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         frame = new QFrame(centralwidget);
         frame->setObjectName(QString::fromUtf8("frame"));
-        frame->setGeometry(QRect(10, 10, 841, 381));
+        frame->setGeometry(QRect(10, 10, 791, 381));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Raised);
         labelShow = new QLabel(frame);
@@ -87,7 +86,7 @@ public:
         labelShow->setScaledContents(false);
         layoutWidget = new QWidget(frame);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 340, 838, 30));
+        layoutWidget->setGeometry(QRect(10, 340, 747, 30));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setSizeConstraint(QLayout::SetMinimumSize);
@@ -132,11 +131,6 @@ public:
 
         horizontalLayout->addWidget(pushButtonSearch);
 
-        pushButtonCheckIn = new QPushButton(layoutWidget);
-        pushButtonCheckIn->setObjectName(QString::fromUtf8("pushButtonCheckIn"));
-
-        horizontalLayout->addWidget(pushButtonCheckIn);
-
         layoutWidget1 = new QWidget(frame);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
         layoutWidget1->setGeometry(QRect(100, 90, 176, 60));
@@ -173,7 +167,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 852, 26));
+        menubar->setGeometry(QRect(0, 0, 812, 26));
         menu_2 = new QMenu(menubar);
         menu_2->setObjectName(QString::fromUtf8("menu_2"));
         MainWindow->setMenuBar(menubar);
@@ -209,7 +203,6 @@ public:
         pushButtonUpdateModel->setText(QApplication::translate("MainWindow", "\346\233\264\346\226\260\346\250\241\346\235\277\346\225\260\346\215\256", 0, QApplication::UnicodeUTF8));
         pushButtonCamara->setText(QApplication::translate("MainWindow", "\346\213\215\347\205\247", 0, QApplication::UnicodeUTF8));
         pushButtonSearch->setText(QApplication::translate("MainWindow", "\346\237\245\350\257\242", 0, QApplication::UnicodeUTF8));
-        pushButtonCheckIn->setText(QApplication::translate("MainWindow", "\347\255\276\345\210\260", 0, QApplication::UnicodeUTF8));
         labelName->setText(QApplication::translate("MainWindow", "\345\247\223\345\220\215\357\274\232", 0, QApplication::UnicodeUTF8));
         labelDep->setText(QApplication::translate("MainWindow", "\351\203\250\351\227\250\357\274\232", 0, QApplication::UnicodeUTF8));
         labelCheckInfo->setText(QApplication::translate("MainWindow", "\347\255\276\345\210\260\344\277\241\346\201\257\346\230\276\347\244\272", 0, QApplication::UnicodeUTF8));

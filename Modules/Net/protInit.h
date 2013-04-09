@@ -88,8 +88,8 @@ void Prot::s_init()
     s2a.clear();
 
     protId = 9;
-    s = "imgBin";
-    a = "0101010001010101001010";
+    s = "photo";
+    a = "010";
     s2a.insert(S2A::value_type(s,a));
     sm_protDic.insert(I2M::value_type(protId,s2a));
     s2a.clear();
@@ -98,22 +98,14 @@ void Prot::s_init()
     s = "result";
     a = -1;
     s2a.insert(S2A::value_type(s,a));
-    sm_protDic.insert(I2M::value_type(protId,s2a));
-    s2a.clear();
-
-    protId = 11;
-    s = "imgBin";
-    a = "0101010101011010101010";
+    s = "dep";
+    a = "所属部门";
     s2a.insert(S2A::value_type(s,a));
-    sm_protDic.insert(I2M::value_type(protId,s2a));
-    s2a.clear();
-
-    protId = 12;
-    s = "result";
+    s = "name";
+    a = "名字";
+    s2a.insert(S2A::value_type(s,a));
+    s = "id";
     a = -1;
-    s2a.insert(S2A::value_type(s,a));
-    s = "resultInfo";
-    a = "";
     s2a.insert(S2A::value_type(s,a));
     sm_protDic.insert(I2M::value_type(protId,s2a));
     s2a.clear();
@@ -129,8 +121,6 @@ const int protGetPhotoInfo_C2S = 7;
 const int protGetPhotoInfo_S2C = 8;
 const int protCheckIn_C2S = 9;
 const int protCheckIn_S2C = 10;
-const int protSearch_C2S = 11;
-const int protSearch_S2C = 12;
 
 #endif
 

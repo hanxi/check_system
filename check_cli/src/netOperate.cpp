@@ -72,6 +72,39 @@ void msgOnGetPhotoInfo(int sockId, int protId)
     log << "id=" << id.getNum() << Log::endl;
 }
 
+void sendProtCheckIn(const AutoType& photo)
+{
+    Prot prot(protCheckIn_C2S);
+    prot.setField("photo",photo);
+    Net* net = getNet();
+    net->sendProt(gSockId,protCheckIn_C2S);
+}
+
+void msgOnCheckIn(int sockId, int protId)
+{
+    Log log(__LOGARG__,1);
+    Prot prot(protId);
+    AutoType& result = prot.getField("result");
+    AutoType& dep    = prot.getField("dep");
+    AutoType& name   = prot.getField("name");
+    AutoType& id     = prot.getField("id");
+    log << "查询" << ((result.getNum()==0)?"成功":"失败") << Log::endl;
+    log << "id=" << id.getNum() << Log::endl;
+    if (result.getNum()==-1) {
+        QString info(QString::fromLocal8Bit("未找到"));
+        win->setLabelCheckInfo(info);
+    }
+    else {
+        QString info("姓名：");
+        info += name.getStr();
+        info += "\n";
+        info += "部门：";
+        info += dep.getStr();
+        info = QString::fromLocal8Bit(info.toAscii());
+        win->setLabelCheckInfo(info);
+    }
+}
+
 void sendProtToUpdateModel()
 {
     Log log(__LOGARG__,1);
@@ -85,5 +118,6 @@ void regAllHandler()
     Prot::regHandler(protGetTime_S2C, (void*)msgOnGetTime);
     Prot::regHandler(protSignIn_S2C, (void*)msgOnSignIn);
     Prot::regHandler(protGetPhotoInfo_S2C, (void*)msgOnGetPhotoInfo);
+    Prot::regHandler(protCheckIn_S2C, (void*)msgOnCheckIn);
 }
 

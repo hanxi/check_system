@@ -776,6 +776,7 @@ CMakeFiles/check_srv.dir/src/db.cpp.o: /usr/local/include/opencv2/video/backgrou
 CMakeFiles/check_srv.dir/src/db.cpp.o: /usr/local/include/opencv2/video/tracking.hpp
 CMakeFiles/check_srv.dir/src/db.cpp.o: /usr/local/include/opencv2/video/video.hpp
 
+CMakeFiles/check_srv.dir/src/faceDetect.cpp.o: ../../Modules/Log/log.h
 CMakeFiles/check_srv.dir/src/faceDetect.cpp.o: ../src/faceDetect.cpp
 CMakeFiles/check_srv.dir/src/faceDetect.cpp.o: ../src/faceDetect.h
 CMakeFiles/check_srv.dir/src/faceDetect.cpp.o: /usr/local/include/opencv2/calib3d/calib3d.hpp

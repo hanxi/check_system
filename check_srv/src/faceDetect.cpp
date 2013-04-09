@@ -10,6 +10,7 @@
 =============================================================================*/
 #include "faceDetect.h"
 #include "opencv2/opencv.hpp"
+#include "log.h"
 
 static cv::CascadeClassifier face_cascade;
 
@@ -25,9 +26,11 @@ void detectInit()
 
 cv::Mat detectOneFace(cv::Mat& img)
 {
+    Log log(__LOGARG__,1);
     cv::Mat img_gray;
     std::vector<cv::Rect> facesRect;
 
+    log << "image:channels=" << img.channels() << Log::endl;
     cv::cvtColor(img, img_gray, CV_BGR2GRAY);
     cv::equalizeHist(img_gray, img_gray);
 

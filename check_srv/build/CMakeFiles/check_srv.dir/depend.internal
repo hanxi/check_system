@@ -777,6 +777,7 @@ CMakeFiles/check_srv.dir/src/db.cpp.o
  /usr/local/include/opencv2/video/tracking.hpp
  /usr/local/include/opencv2/video/video.hpp
 CMakeFiles/check_srv.dir/src/faceDetect.cpp.o
+ ../../Modules/Log/log.h
  /home/hanxi/workspace/check_system/check_srv/src/faceDetect.cpp
  /home/hanxi/workspace/check_system/check_srv/src/faceDetect.h
  /usr/local/include/opencv2/calib3d/calib3d.hpp

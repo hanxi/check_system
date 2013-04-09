@@ -4451,7 +4451,7 @@ M	include/opencv2/contrib/contrib.hpp	/^        int S, R, M, N;$/;"	m	language:C
 M	include/opencv2/contrib/openfabmap.hpp	/^        mutable double M;$/;"	m	language:C++	struct:cv::of2::FabMapFBO::WordStats
 M	include/opencv2/gpu/device/detail/reduce.hpp	/^            enum { M = N \/ 32 };$/;"	e	language:C++	enum:cv::gpu::device::reduce_detail::GenericOptimized32::__anon140
 M	include/opencv2/gpu/device/detail/reduce_key_val.hpp	/^            enum { M = N \/ 32 };$/;"	e	language:C++	enum:cv::gpu::device::reduce_key_val_detail::GenericOptimized32::__anon216
-MAINWINDOWIMPL_H	check_cli/src/mainwindowimpl.h	12;"	d	language:C++
+MAINWINDOWIMPL_H	check_cli/src/mainwindowimpl.h	12;"	d
 MANHATTAN	include/opencv2/flann/defines.h	/^    MANHATTAN = 2,$/;"	e	language:C++	enum:cvflann::flann_distance_t
 MASK	include/opencv2/ts/ts.hpp	/^    enum { INPUT, INPUT_OUTPUT, OUTPUT, REF_INPUT_OUTPUT, REF_OUTPUT, TEMP, MASK, MAX_ARR };$/;"	e	language:C++	enum:cvtest::ArrayTest::__anon79
 MAX	include/opencv2/core/types_c.h	288;"	d	language:C++
@@ -4499,7 +4499,7 @@ MULTI_BAND	include/opencv2/stitching/detail/blenders.hpp	/^    enum { NO, FEATHE
 M_	include/opencv2/gpu/gpu.hpp	/^    GpuMat pyrLevel_[2], M_, bufM_, R_[2], blurredFrame_[2];$/;"	m	language:C++	class:cv::gpu::FarnebackOpticalFlow
 MainWindow	check_cli/build/ui_mainwindow.h	/^    class MainWindow: public Ui_MainWindow {};$/;"	c	language:C++	namespace:Ui
 MainWindowImpl	check_cli/src/mainwindowimpl.cpp	/^MainWindowImpl::MainWindowImpl( QWidget * parent, Qt::WFlags f)$/;"	f	class:MainWindowImpl
-MainWindowImpl	check_cli/src/mainwindowimpl.h	/^class MainWindowImpl : public QMainWindow, public Ui::MainWindow$/;"	c	language:C++
+MainWindowImpl	check_cli/src/mainwindowimpl.h	/^class MainWindowImpl : public QMainWindow, public Ui::MainWindow$/;"	c
 MaskCollection	include/opencv2/gpu/device/utility.hpp	/^        __device__ __forceinline__ MaskCollection(const MaskCollection& masks_)$/;"	f	language:C++	struct:cv::gpu::device::MaskCollection	signature:(const MaskCollection& masks_)
 MaskCollection	include/opencv2/gpu/device/utility.hpp	/^        explicit __host__ __device__ __forceinline__ MaskCollection(PtrStepb* maskCollection_)$/;"	f	language:C++	struct:cv::gpu::device::MaskCollection	signature:(PtrStepb* maskCollection_)
 MaskCollection	include/opencv2/gpu/device/utility.hpp	/^    struct MaskCollection$/;"	s	language:C++	namespace:cv::gpu::device
@@ -7842,7 +7842,7 @@ check	include/opencv2/gpu/device/static_check.hpp	/^            __OPENCV_GPU_HOS
 check	include/opencv2/gpu/device/utility.hpp	/^        static __device__ __forceinline__ bool check(int, int)$/;"	f	language:C++	struct:cv::gpu::device::WithOutMask	signature:(int, int)
 check	include/opencv2/gpu/device/utility.hpp	/^        static __device__ __forceinline__ bool check(int, int, int)$/;"	f	language:C++	struct:cv::gpu::device::WithOutMask	signature:(int, int, int)
 check	include/opencv2/ml/ml.hpp	55;"	d	language:C++
-checkIn	check_cli/src/mainwindowimpl.cpp	/^void MainWindowImpl::checkIn()$/;"	f	class:MainWindowImpl
+checkAgain	check_cli/src/mainwindowimpl.cpp	/^void MainWindowImpl::checkAgain()$/;"	f	class:MainWindowImpl
 check_photo	check_srv/src/db.h	/^	AutoType check_photo;$/;"	m	language:C++	struct:DB::_work_time_Rec
 check_time	check_srv/src/db.h	/^	AutoType check_time;$/;"	m	language:C++	struct:DB::_work_time_Rec
 child	include/opencv2/objdetect/objdetect.hpp	/^    int child;$/;"	m	language:C++	struct:CvHaarStageClassifier
@@ -7976,6 +7976,7 @@ cols_	include/opencv2/core/opengl_interop_deprecated.hpp	/^    int cols_;$/;"	m	
 columnBorderType	include/opencv2/imgproc/imgproc.hpp	/^    int rowBorderType, columnBorderType;$/;"	m	language:C++	class:cv::FilterEngine
 columnFilter	include/opencv2/imgproc/imgproc.hpp	/^    Ptr<BaseColumnFilter> columnFilter;$/;"	m	language:C++	class:cv::FilterEngine
 comLen	include/opencv2/legacy/blobtrack.hpp	/^    int comLen; \/\/common length for two tracks$/;"	m	language:C++	struct:CvTracksTimePos
+commitCheck	check_cli/src/mainwindowimpl.cpp	/^void MainWindowImpl::commitCheck()$/;"	f	class:MainWindowImpl
 comparators	include/opencv2/ts/ts_perf.hpp	/^namespace comparators$/;"	n	language:C++	namespace:perf
 compatible	include/opencv2/flann/any.h	/^    bool compatible(const any& x) const$/;"	f	language:C++	struct:cvflann::any	signature:(const any& x) const
 completeSymmFlag	include/opencv2/calib3d/calib3d.hpp	/^    bool completeSymmFlag;$/;"	m	language:C++	class:CvLevMarq
@@ -10468,18 +10469,18 @@ m_Wnd	include/opencv2/legacy/blobtrack.hpp	/^    int         m_Wnd;$/;"	m	langua
 m_affine_poses	include/opencv2/legacy/legacy.hpp	/^    CvAffinePose* m_affine_poses; \/\/ an array of poses$/;"	m	language:C++	class:cv::OneWayDescriptor
 m_back_project	include/opencv2/legacy/legacy.hpp	/^    IplImage*  m_back_project;$/;"	m	language:C++	class:CvCamShiftTracker
 m_box	include/opencv2/legacy/legacy.hpp	/^    CvBox2D    m_box;$/;"	m	language:C++	class:CvCamShiftTracker
-m_cap	check_cli/src/mainwindowimpl.h	/^    cv::VideoCapture  m_cap;   \/\/ 视频获取结构$/;"	m	language:C++	class:MainWindowImpl
+m_cap	check_cli/src/mainwindowimpl.h	/^    cv::VideoCapture  m_cap;   \/\/ 视频获取结构$/;"	m	class:MainWindowImpl
 m_center	include/opencv2/legacy/legacy.hpp	/^    CvPoint m_center; \/\/ the coordinates of the feature (the center of the input image ROI)$/;"	m	language:C++	class:cv::OneWayDescriptor
 m_cliConns	Modules/Net/srv/net.h	/^    ConnContainer  m_cliConns;$/;"	m	language:C++	class:Net
 m_color_planes	include/opencv2/legacy/legacy.hpp	/^    IplImage*  m_color_planes[CV_MAX_DIM];$/;"	m	language:C++	class:CvCamShiftTracker
 m_comp	include/opencv2/legacy/legacy.hpp	/^    CvConnectedComp m_comp;$/;"	m	language:C++	class:CvCamShiftTracker
 m_descriptors	include/opencv2/legacy/legacy.hpp	/^    OneWayDescriptor* m_descriptors; \/\/ array of train feature descriptors$/;"	m	language:C++	class:cv::OneWayDescriptorBase
 m_feature_name	include/opencv2/legacy/legacy.hpp	/^    string m_feature_name; \/\/ the name of the feature associated with the descriptor$/;"	m	language:C++	class:cv::OneWayDescriptor
-m_frame	check_cli/src/mainwindowimpl.h	/^	cv::Mat           m_frame; \/\/ 存放每一帧图像$/;"	m	language:C++	class:MainWindowImpl
+m_frame	check_cli/src/mainwindowimpl.h	/^	cv::Mat           m_frame; \/\/ 存放每一帧图像$/;"	m	class:MainWindowImpl
 m_hist	include/opencv2/legacy/legacy.hpp	/^    CvHistogram* m_hist;$/;"	m	language:C++	class:CvCamShiftTracker
 m_hist_ranges	include/opencv2/legacy/legacy.hpp	/^    float*     m_hist_ranges[CV_MAX_DIM];$/;"	m	language:C++	class:CvCamShiftTracker
 m_hist_ranges_data	include/opencv2/legacy/legacy.hpp	/^    float      m_hist_ranges_data[CV_MAX_DIM][2];$/;"	m	language:C++	class:CvCamShiftTracker
-m_image	check_cli/src/mainwindowimpl.h	/^	QImage            m_image;$/;"	m	language:C++	class:MainWindowImpl
+m_image	check_cli/src/mainwindowimpl.h	/^	QImage            m_image;$/;"	m	class:MainWindowImpl
 m_image	include/opencv2/legacy/blobtrack.hpp	/^    IplImage* m_image;$/;"	m	language:C++	class:CvImageDrawer
 m_input_patch	include/opencv2/legacy/legacy.hpp	/^    IplImage* m_input_patch;$/;"	m	language:C++	class:cv::OneWayDescriptor
 m_mask	include/opencv2/legacy/legacy.hpp	/^    IplImage*  m_mask;$/;"	m	language:C++	class:CvCamShiftTracker
@@ -10523,7 +10524,7 @@ m_tcpSocket	Modules/Net/cli/net.h	/^    QTcpSocket *m_tcpSocket;$/;"	m	language:
 m_temp	include/opencv2/legacy/legacy.hpp	/^    IplImage*  m_temp;$/;"	m	language:C++	class:CvCamShiftTracker
 m_theFunctionName	Modules/Log/log.h	/^    std::string             *m_theFunctionName;\/\/进入的函数名$/;"	m	language:C++	class:Log
 m_threshold	include/opencv2/legacy/legacy.hpp	/^    int        m_threshold;$/;"	m	language:C++	class:CvCamShiftTracker
-m_timer	check_cli/src/mainwindowimpl.h	/^	QTimer           *m_timer;$/;"	m	language:C++	class:MainWindowImpl
+m_timer	check_cli/src/mainwindowimpl.h	/^	QTimer           *m_timer;$/;"	m	class:MainWindowImpl
 m_train_feature_count	include/opencv2/legacy/legacy.hpp	/^    int m_train_feature_count; \/\/ the number of the training features$/;"	m	language:C++	class:cv::OneWayDescriptorBase
 m_train_features	include/opencv2/legacy/legacy.hpp	/^    vector<KeyPoint> m_train_features; \/\/ train features$/;"	m	language:C++	class:cv::OneWayDescriptorObject
 m_train_patch	include/opencv2/legacy/legacy.hpp	/^    IplImage* m_train_patch;$/;"	m	language:C++	class:cv::OneWayDescriptor
@@ -10937,6 +10938,8 @@ ms_path	Modules/Log/log.h	/^    static const char       *ms_path;          \/\/l
 ms_tracker_weight	include/opencv2/contrib/hybridtracker.hpp	/^    float ms_tracker_weight;$/;"	m	language:C++	struct:cv::CvHybridTrackerParams
 msg	include/opencv2/core/core.hpp	/^    string msg; \/\/\/< the formatted error message$/;"	m	language:C++	class:cv::Exception
 msg	include/opencv2/objdetect/objdetect.hpp	/^  char msg[4];$/;"	m	language:C++	struct:CvDataMatrixCode
+msgOnCheckIn	check_cli/src/netOperate.cpp	/^void msgOnCheckIn(int sockId, int protId)$/;"	f
+msgOnCheckIn	check_srv/src/netOperate.cpp	/^void msgOnCheckIn(int sockId, int protId)$/;"	f
 msgOnGetPhotoInfo	check_cli/src/netOperate.cpp	/^void msgOnGetPhotoInfo(int sockId, int protId)$/;"	f
 msgOnGetPhotoInfo	check_srv/src/netOperate.cpp	/^void msgOnGetPhotoInfo(int sockId, int protId)$/;"	f
 msgOnGetTime	check_cli/src/netOperate.cpp	/^void msgOnGetTime(int sockId, int protId)$/;"	f
@@ -12896,6 +12899,7 @@ select_working_set_func	include/opencv2/ml/ml.hpp	/^    SelectWorkingSet select_
 selectedPairs0	include/opencv2/features2d/features2d.hpp	/^    vector<int> selectedPairs0;$/;"	m	language:C++	class:cv::FREAK
 sendProt	Modules/Net/cli/net.cpp	/^void Net::sendProt(int sockId, int protId)$/;"	f	language:C++	class:Net	signature:(int sockId, int protId)
 sendProt	Modules/Net/srv/net.cpp	/^void Net::sendProt(int sockId, int protId)$/;"	f	language:C++	class:Net	signature:(int sockId, int protId)
+sendProtCheckIn	check_cli/src/netOperate.cpp	/^void sendProtCheckIn(const AutoType& photo)$/;"	f
 sendProtGetPhotoInfo	check_cli/src/netOperate.cpp	/^void sendProtGetPhotoInfo(const AutoType& photo)$/;"	f
 sendProtGetTime	check_cli/src/netOperate.cpp	/^void sendProtGetTime()$/;"	f
 sendProtToSignIn	check_cli/src/netOperate.cpp	/^void sendProtToSignIn(const AutoType& name, const AutoType& dep, const AutoType& photo, int idx)$/;"	f
@@ -12947,6 +12951,7 @@ setFrameSource	include/opencv2/videostab/stabilizer.hpp	/^    void setFrameSourc
 setFrames	include/opencv2/videostab/deblurring.hpp	/^    virtual void setFrames(const std::vector<Mat> &val) { frames_ = &val; }$/;"	f	language:C++	class:cv::videostab::DeblurerBase	signature:(const std::vector<Mat> &val)
 setFrames	include/opencv2/videostab/inpainting.hpp	/^    virtual void setFrames(const std::vector<Mat> &val) { frames_ = &val; }$/;"	f	language:C++	class:cv::videostab::InpainterBase	signature:(const std::vector<Mat> &val)
 setInpainter	include/opencv2/videostab/stabilizer.hpp	/^    void setInpainter(Ptr<InpainterBase> val) { inpainter_ = val; }$/;"	f	language:C++	class:cv::videostab::StabilizerBase	signature:(Ptr<InpainterBase> val)
+setLabelCheckInfo	check_cli/src/mainwindowimpl.cpp	/^void MainWindowImpl::setLabelCheckInfo(QString& info)$/;"	f	class:MainWindowImpl
 setLevel	include/opencv2/flann/logger.h	/^    static void setLevel(int level) { instance().logLevel = level; }$/;"	f	language:C++	class:cvflann::Logger	signature:(int level)
 setLog	include/opencv2/videostab/stabilizer.hpp	/^    void setLog(Ptr<ILog> _log) { log_ = _log; }$/;"	f	language:C++	class:cv::videostab::StabilizerBase	signature:(Ptr<ILog> _log)
 setMask	include/opencv2/gpu/device/utility.hpp	/^        __device__ __forceinline__ void setMask(int z)$/;"	f	language:C++	struct:cv::gpu::device::MaskCollection	signature:(int z)
@@ -13570,6 +13575,7 @@ to	include/opencv2/stitching/detail/util.hpp	/^    int from, to;$/;"	m	language:
 toAddNewEmp	check_cli/src/mainwindowimpl.cpp	/^void MainWindowImpl::toAddNewEmp()$/;"	f	class:MainWindowImpl
 toCheckFace	check_cli/src/mainwindowimpl.cpp	/^void MainWindowImpl::toCheckFace()$/;"	f	class:MainWindowImpl
 toCheckRightFace	check_cli/src/mainwindowimpl.cpp	/^void MainWindowImpl::toCheckRightFace()$/;"	f	class:MainWindowImpl
+toManageFace	check_cli/src/mainwindowimpl.cpp	/^void MainWindowImpl::toManageFace()$/;"	f	class:MainWindowImpl
 top	include/opencv2/contrib/contrib.hpp	/^        int top, bottom,left,right;$/;"	m	language:C++	class:cv::LogPolar_Adjacent
 top	include/opencv2/contrib/contrib.hpp	/^        int top, bottom,left,right;$/;"	m	language:C++	class:cv::LogPolar_Interp
 top	include/opencv2/contrib/contrib.hpp	/^        int top, bottom,left,right;$/;"	m	language:C++	class:cv::LogPolar_Overlapping

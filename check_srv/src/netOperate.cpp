@@ -80,20 +80,34 @@ void msgOnUpdateFaceModel(int sockId, int protId)
 
 void msgOnGetPhotoInfo(int sockId, int protId)
 {
+    Log log(__LOGARG__,1);
     Prot prot(protId);
     AutoType& photo = prot.getField("photo");
     cv::Mat image = AutoType2Mat(photo);
+    log << "image:channels=" << image.channels() << Log::endl;
+    cv::imwrite("tmp2.jpg",image);
 
     AutoType dep("empty");
     AutoType name("empty");
     int result = 0;
     int id = faceRecognition(image);
+
     if (-1==id) {
         result = -1;
     }
     else {
-        dep = "hao";
-        name = "hanxi";
+        std::vector<DB::book_info_Rec> recs;
+        bool ret = book_info_select_by_emp_id(id, recs);
+        if (!ret || recs.size()<1) {
+            result = -1;
+            dep = "hao";
+            name = "hanxi";
+        }
+        else {
+            result = 0;
+            dep = recs[0].dep_name;
+            name = recs[0].emp_name;
+        }
     }
 
     prot.setProt(protGetPhotoInfo_S2C);
@@ -105,11 +119,55 @@ void msgOnGetPhotoInfo(int sockId, int protId)
     net->sendProt(sockId,protGetPhotoInfo_S2C);
 }
 
+void msgOnCheckIn(int sockId, int protId)
+{
+    Log log(__LOGARG__,1);
+    Prot prot(protId);
+    AutoType& photo = prot.getField("photo");
+    cv::Mat image = AutoType2Mat(photo);
+    log << "image:channels=" << image.channels() << Log::endl;
+    cv::imwrite("tmp2.jpg",image);
+
+    AutoType dep("empty");
+    AutoType name("empty");
+    int result = 0;
+    int id = faceRecognition(image);
+    if (-1==id) {
+        result = -1;
+    }
+    else {
+        std::vector<DB::book_info_Rec> recs;
+        bool ret = book_info_select_by_emp_id(id, recs);
+        if (!ret || recs.size()<1) {
+            result = -1;
+            dep = "hao";
+            name = "hanxi";
+        }
+        else {
+            result = 0;
+            dep = recs[0].dep_name;
+            name = recs[0].emp_name;
+        }
+    }
+    QDateTime t = QDateTime::currentDateTime();//获取系统现在的时间
+    QString strTime = t.toString("yyyy-MM-dd hh:mm:ss"); //设置显示格式
+    DB::work_time_insert(id, (strTime.toStdString()).c_str(), photo);
+
+    prot.setProt(protCheckIn_S2C);
+    prot.setField("result",AutoType(result));
+    prot.setField("dep",dep);
+    prot.setField("name",name);
+    prot.setField("id",AutoType(id));
+    Net* net = getNet();
+    net->sendProt(sockId,protCheckIn_S2C);
+}
+
 void regAllHandler()
 {
     Prot::regHandler(protGetTime_C2S, (void*)msgOnGetTime);
     Prot::regHandler(protSignIn_C2S, (void*)msgOnSignIn);
     Prot::regHandler(protUpdateFaceModel_C2S, (void*)msgOnUpdateFaceModel);
     Prot::regHandler(protGetPhotoInfo_C2S, (void*)msgOnGetPhotoInfo);
+    Prot::regHandler(protCheckIn_C2S,(void*)msgOnCheckIn);
 }
 
